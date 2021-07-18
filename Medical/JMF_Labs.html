@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<head>
+<script>
+ var UPARROW = "\u25B2";
+ var DOWNARROW = "\u25BC";
+ var RIGHTARROW = "\u25B6";
+ var LEFTARROW = "\u25C0";
+
+ var last_h_Toggle = 0;
+ var last_v_Toggle = 0;
+ /* hToggle(testname,counter)
+    Toggle columns that are blank for a specific test */
+ function hToggle(myElement,which){
+  var whichOne = parseInt(which) - 1;
+  var myStyle = document.styleSheets[1];	//Second style sheet
+  var myRow= document.getElementById('labTable').
+	children[1].children[whichOne].children;//Get testname
+
+  /* If setting a different one, reset old one first */
+  if(last_h_Toggle && last_h_Toggle != myElement){	//If last different than this
+   for(var i=1; i<myRow.length; i++){		//Loop through labtable style
+    myStyle.cssRules[i].style.display="table-cell";//turn back on
+   }
+   last_h_Toggle.children[0].innerHTML = LEFTARROW;	//Reset icon
+   last_h_Toggle.children[0].style.color = 'black';	//and color
+  }
+
+  /* Now toggle this one. On or off */
+  var n = myElement.children[0].innerHTML;	//Find this row of values
+  if(n == RIGHTARROW){				//If off
+   for(var i=1; i<myRow.length; i++){
+    myStyle.cssRules[i].style.display="table-cell";//Turn on
+   }
+   myElement.children[0].innerHTML = LEFTARROW;//Set icon
+   myElement.children[0].style.color = 'black';	//and color
+  } else {
+   for(var i=1; i<myRow.length; i++){		//Check each row value
+    if(myRow[i].innerHTML == ""){		//If blank
+     myStyle.cssRules[i].style.display="none";	//Change cooresponding class
+    } else {					//to None
+     myStyle.cssRules[i].style.display="table-cell";//or turn on
+    }
+   }
+   myElement.children[0].innerHTML = RIGHTARROW;//Set icon
+   myElement.children[0].style.color = 'blue';	//and color
+  }  
+  last_h_Toggle = myElement;			//Remember the one we just did
+ }
+
+ function vToggle(myElement,which){
+  var whichOne = parseInt(which);
+  var myRows = document.getElementById('labTable').
+	children[1].children;
+  if(last_v_Toggle && last_v_Toggle != myElement){
+   last_v_Toggle.children[0].innerHTML = RIGHTARROW;
+   last_v_Toggle.children[0].style.color = "black";
+   for(i=0; i<myRows.length; i++){
+    myRows[i].parentElement.children[i].style.display='table-row';
+   }
+  } 
+
+  if(myElement.children[0].innerHTML == RIGHTARROW){
+   newstyle = "none";
+   myElement.children[0].innerHTML = LEFTARROW;
+   myElement.children[0].style.color = "blue";
+  } else {
+   newstyle = "table-row";
+   myElement.children[0].innerHTML = RIGHTARROW;
+   myElement.children[0].style.color = "black";
+  }
+  for(i=0; i<myRows.length; i++){
+   if(myRows[i].innerHTML.indexOf('panelName') == -1){
+    if(myRows[i].children[whichOne].innerHTML){
+     myRows[i].parentElement.children[i].style.display='table-row';
+    } else {
+     myRows[i].parentElement.children[i].style.display=newstyle;
+    }
+   }
+  }
+  last_v_Toggle = myElement;
+ } 
+ function panelToggle(myElement,which){
+  if(myElement.children[0].innerHTML == UPARROW){
+   d="none";
+   myElement.children[0].innerHTML = DOWNARROW;
+  } else {
+   d="table-row";
+   myElement.children[0].innerHTML = UPARROW;
+  }
+  var myRows = document.querySelectorAll("#pg"+which);
+  for(i=0; i<myRows.length; i++){ myRows[i].style.display=d;}
+ } 
+</script>
+<style>
+body {padding: 0;margin: 0;}
+table#labTable {
+  font-family: "Verdana", serif;
+  font-size:	8pt;
+  white-space:	nowrap;
+  margin:	0;
+  border:	1px solid black;
+  border-spacing: 0;
+  table-layout: fixed;
+  padding:	0;
+}
+table#labTable thead tr p {
+  display:	inline-block;
+  padding:	5px 0.4em 0px 0px;
+  margin:	0px;
+  float:	left;
+  text-align:	center;
+}
+table#labTable td,
+table#labTable th {
+  border:	1px solid black;
+  padding:	0.1em 0.2em;
+}
+table#labTable td {
+ min-width:	3.4em;
+ max-width:	3.4em;
+ text-align:	right;
+ white-space:	nowrap;
+ overflow:	hidden;
+}
+table#labTable thead th,table#labTable thead td {
+  padding:	2px;
+  position:	sticky;
+  top:		0;
+  z-index:	2;
+  background-color: lightgray;
+  height:	8em;
+  white-space:	nowrap;
+}
+table#labTable thead th > div {
+  font-size:	140%;
+}
+table#labTable thead td:nth-child(n+2) > div {
+  cursor:	pointer;
+  font-weight:	bold;
+  text-align:	left;
+  transform:
+    translate(0px, 2em) 
+    rotate(270deg);
+}
+table#labTable td {
+  padding:	2px 3px;
+  text-align:	center;
+}
+table#labTable tbody th {
+  text-align:	left;
+  position:	relative;
+  border:	1px solid black;
+}
+table#labTable thead th:first-child{
+ position:	sticky;
+ left:		0;
+ z-index:	3;
+}
+
+table#labTable tbody th {
+ position:	sticky;
+ left:		0;
+ background-color: white;
+ z-index:	2;
+  cursor: pointer;
+}
+
+table#labTable tbody tr th#panelName {
+ border-right-color: transparent;
+ font-weight:	bold;
+ font-size:	150%;
+ font-style:	italic;
+ z-index:	1;
+ cursor:	pointer;
+ color:		blue;
+}
+table#labTable tbody tr td#panelName {
+ border-left-color: transparent;
+ background-color: white;
+}
+table#labTable tbody tr th span {
+ float:		right;
+ padding:	0px 0.25em;
+ font-weight:	bold;
+ color:		black;
+} 
+table#labTable tbody tr th#panelName span {
+ float:		left;
+} 
+.IU {background-color: rgba(255,192,192,.25);}
+.Labcorp { background-color: rgba(192,192,255,.25);}
+.AHN {background-color: rgba(192,255,192,.25);}
+.low_color { color: blue;}
+.high_color { color: red;}
+.normal_color {color: inherit;}
+</style>
+</head>
+<body>
+<table id="labTable">
+ <thead>
+  <tr>
+   <th><div><span>Jeanne Fortriede</span></div></th>
+   <td><div onClick=vToggle(this,1)>
+		<p>&#9654;</p>
+		<span>5/10/21<br>Labcorp</span>
+		</div>
+   </td>
+   <td><div onClick=vToggle(this,2)>
+		<p>&#9654;</p>
+		<span>3/4/20<br>Labcorp</span>
+		</div>
+   </td>
+   <td><div onClick=vToggle(this,3)>
+		<p>&#9654;</p>
+		<span>9/16/19<br>Labcorp</span>
+		</div>
+   </td>
+   <td><div onClick=vToggle(this,4)>
+		<p>&#9654;</p>
+		<span>4/29/19<br>Labcorp</span>
+		</div>
+   </td>
+  </tr>
+ </thead>
+ <tbody>
+ <tr>
+  <th id="panelName" colspan=4 onClick='panelToggle(this,1);'>
+    <span>&#9650;</span>CBC With Differential/Platelet</th>
+  <td id="panelName" colspan=4>&nbsp;</td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 3.4-10.8"
+       onClick="hToggle(this,2);"><span>&#9664;</span>WBC&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">5.9</td>
+   <td class="normal_color Labcorp">7.2</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 3.77-5.28"
+       onClick="hToggle(this,3);"><span>&#9664;</span>RBC&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">4.09</td>
+   <td class="normal_color Labcorp">4.01</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 11.1-15.9"
+       onClick="hToggle(this,4);"><span>&#9664;</span>Hemoglobin&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">11.8</td>
+   <td class="normal_color Labcorp">11.7</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 34-46.6"
+       onClick="hToggle(this,5);"><span>&#9664;</span>Hematocrit&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">35.7</td>
+   <td class="normal_color Labcorp">35.9</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 79-97"
+       onClick="hToggle(this,6);"><span>&#9664;</span>MCV&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">87</td>
+   <td class="normal_color Labcorp">90</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 26.6-33"
+       onClick="hToggle(this,7);"><span>&#9664;</span>MCH&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">28.9</td>
+   <td class="normal_color Labcorp">29.2</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 31.5-35.7"
+       onClick="hToggle(this,8);"><span>&#9664;</span>MCHC&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">33.1</td>
+   <td class="normal_color Labcorp">32.6</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 11.7-15.4"
+       onClick="hToggle(this,9);"><span>&#9664;</span>RDW&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">13.6</td>
+   <td class="normal_color Labcorp">13.4</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 150-450"
+       onClick="hToggle(this,10);"><span>&#9664;</span>Platelets&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">360</td>
+   <td class="normal_color Labcorp">349</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = Reference Range:  Not Estab. %"
+       onClick="hToggle(this,11);"><span>&#9664;</span>Neutrophils&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">53</td>
+   <td class="normal_color Labcorp">58</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = Reference Range:  Not Estab. %"
+       onClick="hToggle(this,12);"><span>&#9664;</span>Lymphs&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">35</td>
+   <td class="normal_color Labcorp">29</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = Reference Range:  Not Estab. %"
+       onClick="hToggle(this,13);"><span>&#9664;</span>Monocytes&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">9</td>
+   <td class="normal_color Labcorp">9</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = Reference Range:  Not Estab. %"
+       onClick="hToggle(this,14);"><span>&#9664;</span>Eos&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">2</td>
+   <td class="normal_color Labcorp">3</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = Reference Range:  Not Estab. %"
+       onClick="hToggle(this,15);"><span>&#9664;</span>Basos&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">1</td>
+   <td class="normal_color Labcorp">1</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 1.4-7"
+       onClick="hToggle(this,16);"><span>&#9664;</span>Neutrophils (Absolute)&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">3.1</td>
+   <td class="normal_color Labcorp">4.1</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 0.7-3.1"
+       onClick="hToggle(this,17);"><span>&#9664;</span>Lymphs (Absolute)&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">2.1</td>
+   <td class="normal_color Labcorp">2.1</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 0.1-0.9"
+       onClick="hToggle(this,18);"><span>&#9664;</span>Monocytes (Absolute)&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">0.6</td>
+   <td class="normal_color Labcorp">0.7</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 0-0.4"
+       onClick="hToggle(this,19);"><span>&#9664;</span>Eos (Absolute)&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">0.1</td>
+   <td class="normal_color Labcorp">0.2</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 0-0.2"
+       onClick="hToggle(this,20);"><span>&#9664;</span>Baso (Absolute)&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">0.1</td>
+   <td class="normal_color Labcorp">0.1</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = Reference Range:  Not Estab. %"
+       onClick="hToggle(this,21);"><span>&#9664;</span>Immature Granulocytes&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">0</td>
+   <td class="normal_color Labcorp">0</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg1">
+   <th title="Normal range/value = 0-0.1"
+       onClick="hToggle(this,22);"><span>&#9664;</span>Immature Grans (Abs)&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">0.0</td>
+   <td class="normal_color Labcorp">0.0</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+ <tr>
+  <th id="panelName" colspan=4 onClick='panelToggle(this,2);'>
+    <span>&#9650;</span>Comp. Metabolic Panel (14)</th>
+  <td id="panelName" colspan=4>&nbsp;</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 65-99"
+       onClick="hToggle(this,24);"><span>&#9664;</span>Glucose&emsp;&emsp;</th>
+   <td class="high_color Labcorp">103</td>
+   <td class="normal_color Labcorp">74</td>
+   <td class="normal_color Labcorp">73</td>
+   <td class="high_color Labcorp">147</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 8-27"
+       onClick="hToggle(this,25);"><span>&#9664;</span>BUN&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">19</td>
+   <td class="high_color Labcorp">28</td>
+   <td class="normal_color Labcorp">23</td>
+   <td class="normal_color Labcorp">17</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 0.57-1"
+       onClick="hToggle(this,26);"><span>&#9664;</span>Creatinine&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">0.78</td>
+   <td class="normal_color Labcorp">0.70</td>
+   <td class="normal_color Labcorp">0.66</td>
+   <td class="normal_color Labcorp">0.69</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = Reference Range:  >59 mL/min/1.73"
+       onClick="hToggle(this,27);"><span>&#9664;</span>eGFR If NonAfricn Am&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">80</td>
+   <td class="normal_color Labcorp">93</td>
+   <td class="normal_color Labcorp">94</td>
+   <td class="normal_color Labcorp">93</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = Reference Range:  >59 mL/min/1.73"
+       onClick="hToggle(this,28);"><span>&#9664;</span>eGFR If Africn Am&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">92</td>
+   <td class="normal_color Labcorp">107</td>
+   <td class="normal_color Labcorp">109</td>
+   <td class="normal_color Labcorp">107</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 12-28"
+       onClick="hToggle(this,29);"><span>&#9664;</span>BUN/Creatinine Ratio&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">24</td>
+   <td class="high_color Labcorp">40</td>
+   <td class="high_color Labcorp">35</td>
+   <td class="normal_color Labcorp">25</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 134-144"
+       onClick="hToggle(this,30);"><span>&#9664;</span>Sodium&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">143</td>
+   <td class="normal_color Labcorp">141</td>
+   <td class="high_color Labcorp">146</td>
+   <td class="normal_color Labcorp">141</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 3.5-5.2"
+       onClick="hToggle(this,31);"><span>&#9664;</span>Potassium&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">4.6</td>
+   <td class="normal_color Labcorp">4.4</td>
+   <td class="normal_color Labcorp">3.8</td>
+   <td class="normal_color Labcorp">4.4</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 96-106"
+       onClick="hToggle(this,32);"><span>&#9664;</span>Chloride&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">105</td>
+   <td class="normal_color Labcorp">101</td>
+   <td class="high_color Labcorp">107</td>
+   <td class="normal_color Labcorp">102</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 20-29"
+       onClick="hToggle(this,33);"><span>&#9664;</span>Carbon Dioxide, Total&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">24</td>
+   <td class="normal_color Labcorp">24</td>
+   <td class="normal_color Labcorp">24</td>
+   <td class="normal_color Labcorp">23</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 8.7-10.3"
+       onClick="hToggle(this,34);"><span>&#9664;</span>Calcium&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">9.2</td>
+   <td class="normal_color Labcorp">9.1</td>
+   <td class="normal_color Labcorp">9.0</td>
+   <td class="normal_color Labcorp">9.1</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 6-8.5"
+       onClick="hToggle(this,35);"><span>&#9664;</span>Protein, Total&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">6.9</td>
+   <td class="normal_color Labcorp">6.8</td>
+   <td class="normal_color Labcorp">6.4</td>
+   <td class="normal_color Labcorp">6.8</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 3.8-4.8"
+       onClick="hToggle(this,36);"><span>&#9664;</span>Albumin&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">4.4</td>
+   <td class="normal_color Labcorp">4.2</td>
+   <td class="normal_color Labcorp">4.0</td>
+   <td class="normal_color Labcorp">4.2</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 1.5-4.5"
+       onClick="hToggle(this,37);"><span>&#9664;</span>Globulin, Total&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">2.5</td>
+   <td class="normal_color Labcorp">2.6</td>
+   <td class="normal_color Labcorp">2.4</td>
+   <td class="normal_color Labcorp">2.6</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 1.2-2.2"
+       onClick="hToggle(this,38);"><span>&#9664;</span>A/G Ratio&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">1.8</td>
+   <td class="normal_color Labcorp">1.6</td>
+   <td class="normal_color Labcorp">1.7</td>
+   <td class="normal_color Labcorp">1.6</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 0-1.2"
+       onClick="hToggle(this,39);"><span>&#9664;</span>Bilirubin, Total&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">0.8</td>
+   <td class="normal_color Labcorp">0.8</td>
+   <td class="normal_color Labcorp">0.6</td>
+   <td class="normal_color Labcorp">1.0</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 39-117"
+       onClick="hToggle(this,40);"><span>&#9664;</span>Alkaline Phosphatase&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">67</td>
+   <td class="normal_color Labcorp">60</td>
+   <td class="normal_color Labcorp">65</td>
+   <td class="normal_color Labcorp">73</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 0-40"
+       onClick="hToggle(this,41);"><span>&#9664;</span>AST (SGOT)&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">18</td>
+   <td class="normal_color Labcorp">18</td>
+   <td class="normal_color Labcorp">22</td>
+   <td class="normal_color Labcorp">18</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = 0-32"
+       onClick="hToggle(this,42);"><span>&#9664;</span>ALT (SGPT)&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">19</td>
+   <td class="normal_color Labcorp">19</td>
+   <td class="normal_color Labcorp">23</td>
+   <td class="normal_color Labcorp">21</td>
+  </tr>
+ <tr>
+  <th id="panelName" colspan=4 onClick='panelToggle(this,3);'>
+    <span>&#9650;</span>Lipid Panel</th>
+  <td id="panelName" colspan=4>&nbsp;</td>
+  </tr>
+  <tr id="pg3">
+   <th title="Normal range/value = 100-199"
+       onClick="hToggle(this,44);"><span>&#9664;</span>Cholesterol, Total&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">147</td>
+   <td class="normal_color Labcorp">170</td>
+   <td class="normal_color Labcorp">135</td>
+   <td class="normal_color Labcorp">168</td>
+  </tr>
+  <tr id="pg3">
+   <th title="Normal range/value = 0-149"
+       onClick="hToggle(this,45);"><span>&#9664;</span>Triglycerides&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">136</td>
+   <td class="high_color Labcorp">186</td>
+   <td class="normal_color Labcorp">132</td>
+   <td class="high_color Labcorp">195</td>
+  </tr>
+  <tr id="pg3">
+   <th title="Normal range/value = Reference Range:  >39 mg/dL"
+       onClick="hToggle(this,46);"><span>&#9664;</span>HDL Cholesterol&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">43</td>
+   <td class="normal_color Labcorp">46</td>
+   <td class="normal_color Labcorp">36</td>
+   <td class="normal_color Labcorp">42</td>
+  </tr>
+  <tr id="pg3">
+   <th title="Normal range/value = 5-40"
+       onClick="hToggle(this,47);"><span>&#9664;</span>VLDL Cholesterol Cal&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">24</td>
+   <td class="normal_color Labcorp">37</td>
+   <td class="normal_color Labcorp">26</td>
+   <td class="normal_color Labcorp">39</td>
+  </tr>
+  <tr id="pg3">
+   <th title="Normal range/value = 0-99"
+       onClick="hToggle(this,48);"><span>&#9664;</span>LDL Chol Calc (NIH)&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">80</td>
+   <td class="normal_color Labcorp">87</td>
+   <td class="normal_color Labcorp">73</td>
+   <td class="normal_color Labcorp">87</td>
+  </tr>
+ <tr>
+  <th id="panelName" colspan=4 onClick='panelToggle(this,4);'>
+    <span>&#9650;</span>Hemoglobin A1c</th>
+  <td id="panelName" colspan=4>&nbsp;</td>
+  </tr>
+  <tr id="pg4">
+   <th title="Normal range/value = 4.8-5.6"
+       onClick="hToggle(this,50);"><span>&#9664;</span>Hemoglobin A1c&emsp;&emsp;</th>
+   <td class="high_color Labcorp">7.7</td>
+   <td class="high_color Labcorp">7.6</td>
+   <td class="high_color Labcorp">8.7</td>
+   <td class="high_color Labcorp">10.3</td>
+  </tr>
+ <tr>
+  <th id="panelName" colspan=4 onClick='panelToggle(this,5);'>
+    <span>&#9650;</span>TSH</th>
+  <td id="panelName" colspan=4>&nbsp;</td>
+  </tr>
+  <tr id="pg5">
+   <th title="Normal range/value = 0.45-4.5"
+       onClick="hToggle(this,52);"><span>&#9664;</span>TSH&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">1.580</td>
+   <td class="normal_color Labcorp">2.420</td>
+   <td class="low_color Labcorp"></td>
+   <td class="normal_color Labcorp">1.640</td>
+  </tr>
+ <tr>
+  <th id="panelName" colspan=4 onClick='panelToggle(this,6);'>
+    <span>&#9650;</span>Vitamins</th>
+  <td id="panelName" colspan=4>&nbsp;</td>
+  </tr>
+  <tr id="pg6">
+   <th title="Normal range/value = 30-100"
+       onClick="hToggle(this,54);"><span>&#9664;</span>25-Hydroxy, Vitamin D&emsp;&emsp;</th>
+   <td class="low_color Labcorp">19.4</td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+   <td class="low_color Labcorp"></td>
+  </tr>
+ </tbody>
+</table>
+<style>
+table#labTable td:nth-child(1) {display:table-cell;}
+table#labTable td:nth-child(2) {display:table-cell;}
+table#labTable td:nth-child(3) {display:table-cell;}
+table#labTable td:nth-child(4) {display:table-cell;}
+table#labTable td:nth-child(5) {display:table-cell;}
+table#labTable td:nth-child(6) {display:table-cell;}
+table#labTable td:nth-child(7) {display:table-cell;}
+table#labTable td:nth-child(8) {display:table-cell;}
+table#labTable td:nth-child(9) {display:table-cell;}
+table#labTable td:nth-child(10) {display:table-cell;}
+table#labTable td:nth-child(11) {display:table-cell;}
+table#labTable td:nth-child(12) {display:table-cell;}
+table#labTable td:nth-child(13) {display:table-cell;}
+table#labTable td:nth-child(14) {display:table-cell;}
+table#labTable td:nth-child(15) {display:table-cell;}
+table#labTable td:nth-child(16) {display:table-cell;}
+table#labTable td:nth-child(17) {display:table-cell;}
+table#labTable td:nth-child(18) {display:table-cell;}
+table#labTable td:nth-child(19) {display:table-cell;}
+table#labTable td:nth-child(20) {display:table-cell;}
+table#labTable td:nth-child(21) {display:table-cell;}
+table#labTable td:nth-child(22) {display:table-cell;}
+table#labTable td:nth-child(23) {display:table-cell;}
+table#labTable td:nth-child(24) {display:table-cell;}
+table#labTable td:nth-child(25) {display:table-cell;}
+table#labTable td:nth-child(26) {display:table-cell;}
+table#labTable td:nth-child(27) {display:table-cell;}
+table#labTable td:nth-child(28) {display:table-cell;}
+table#labTable td:nth-child(29) {display:table-cell;}
+table#labTable td:nth-child(30) {display:table-cell;}
+table#labTable td:nth-child(31) {display:table-cell;}
+table#labTable td:nth-child(32) {display:table-cell;}
+table#labTable td:nth-child(33) {display:table-cell;}
+table#labTable td:nth-child(34) {display:table-cell;}
+table#labTable td:nth-child(35) {display:table-cell;}
+table#labTable td:nth-child(36) {display:table-cell;}
+table#labTable td:nth-child(37) {display:table-cell;}
+table#labTable td:nth-child(38) {display:table-cell;}
+table#labTable td:nth-child(39) {display:table-cell;}
+table#labTable td:nth-child(40) {display:table-cell;}
+table#labTable td:nth-child(41) {display:table-cell;}
+table#labTable td:nth-child(42) {display:table-cell;}
+table#labTable td:nth-child(43) {display:table-cell;}
+table#labTable td:nth-child(44) {display:table-cell;}
+table#labTable td:nth-child(45) {display:table-cell;}
+table#labTable td:nth-child(46) {display:table-cell;}
+table#labTable td:nth-child(47) {display:table-cell;}
+table#labTable td:nth-child(48) {display:table-cell;}
+table#labTable td:nth-child(49) {display:table-cell;}
+table#labTable td:nth-child(50) {display:table-cell;}
+table#labTable td:nth-child(51) {display:table-cell;}
+table#labTable td:nth-child(52) {display:table-cell;}
+table#labTable td:nth-child(53) {display:table-cell;}
+table#labTable td:nth-child(54) {display:table-cell;}
+</style>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<style>
+@media only screen and (max-width: 768px) {
+* {font-size: 8pt;}
+}
+.flexContainer{
+ display:   flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ background-color:transparent;
+}
+li {
+ list-style-type:none;
+ margin:    0px;
+ padding:   2px;
+ color:     green;
+}
+.flexContainer > li:nth-child(-n+4){
+ color:     white;
+ background-color:green;
+ text-align:    left;
+}
+.flexContainer > li:nth-child(5n+1){min-width: 34%;}
+.flexContainer > li:nth-child(5n+2){min-width: 20%;}
+.flexContainer > li:nth-child(5n+3){min-width: 11%;text-align:center;}
+.flexContainer > li:nth-child(5n+4){min-width: 23%;text-align:center;}
+.flexContainer > li:nth-child(5n+5){
+ flex-basis:    100%;
+ margin:    0px;
+ padding:   0px;
+ height:    0px;
+ max-width: 100%;
+}
+</style>
+<div class='flexContainer' id='myFrame'>
+ <li>Medicine
+ <li>Brand
+ <li>Dosage
+ <li>Frequency
+ <li>
+ <li>Colesevelam 
+ <li>Welchol
+ <li>625mg
+ <li>3 x BID
+ <li>
+ <li>Cyclobenzaprine HCL
+ <li>Flexiril
+ <li>5mg
+ <li>QD
+ <li>
+ <li>Famotidine
+ <li>
+ <li>20mg
+ <li>BID
+ <li>
+ <li>Lisinopril-hctz
+ <li>
+ <li>10-12.5mg
+ <li>QD
+ <li>
+ <li>Metformin HCL ER
+ <li>
+ <li>500mg
+ <li>2 x BID
+ <li>
+ <li>Pioglitazone Hcl
+ <li>Actos
+ <li>30mg
+ <li>QD
+ <li>
+ <li>Tresiba
+ <li>
+ <li>38iu
+ <li>QD
+ <li>
+</div>
+<script>
+ if(window.screen.width > 360){
+  document.styleSheets[0].deleteRule(0);
+  document.getElementById('myFrame').style.width = '550px';
+ } else {
+  document.getElementById('myFrame').style.width = '300px';
+ }
+</script>

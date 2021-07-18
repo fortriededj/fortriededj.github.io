@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script>
+ function doPerson(A){
+  j = "./" + A + ".html";
+  window.location.assign(j);
+ }
+</script>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+ <h1>Fortriede Medical Information</h1>
+ <div class="flexContainer">
+  <div class="PERSON" onClick="doPerson('DKF');">
+   <img src='images/DKF.png' alt=''>
+   <p>Dan Fortriede</p>
+   <p>66 year old, white, male 6' 2"</p>
+  </div>
+  <div class="PERSON" onClick="doPerson('JMF');">
+   <img src='images/JMF.png' alt=''>
+   <p>Jeanne Fortriede</p>
+   <p>65 year old, white, female 4' 11"</p>
+  </div>
+ </div>
+</body>
+</html>

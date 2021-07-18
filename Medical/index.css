@@ -1,0 +1,249 @@
+<style>
+div#implants figure {float:left;width:30%;}
+
+@media only screen and (max-width: 768px) {
+ body {font-size: 8pt;}
+ div#implants figure {
+  float:left;
+  width:80%;
+ }
+ div#hcr img {height:32px;width:auto;}
+}
+h1 {
+ color:		darkBlue;
+ margin:	0px 0px 5px 0px;
+ padding:	4px;
+ border-bottom:	1px solid darkBlue;
+}
+
+h3 {
+ padding:	3px;
+ margin:	2px;
+ color:		darkgreen;
+ font-size:	140%;
+}
+
+body > div {
+ width:		100%;
+ display:	table;
+ float:		left;
+ clear:		both;
+ margin:	2px;
+}
+
+div {
+ display:	inline-block;
+ margin:	2px;
+}
+
+ul {padding: 0px 3px; margin: 2px 0px;}
+
+ul#person {
+ padding:	3px; 
+ margin:	2px;
+ border:	1px solid darkgreen;
+ display:	inline-block;
+ float:		left;
+}
+
+li {
+ list-style-type:none;
+ font-weight:	normal;
+}
+
+div.flexContainer{
+ display:	flex;
+ padding:	0px;
+ flex-wrap:	wrap;
+}
+div#ice div.flexContainer>ul{
+ width:		18.5em;
+ background-color: cornsilk;
+}
+div#providers div.flexContainer>ul{
+ width:		18em;
+ background-color: aliceblue;
+ border: 1px solid darkblue;
+}
+div#surgeries div.flexContainer>ul{
+ width:		22em;
+ border:	1px solid forestgreen;
+ background-color: MintCream;
+ margin-right:	4px;
+}
+div#patient>ul#person {
+ font-size:	130%;
+ background-color:ivory;
+}
+
+div.PERSON{
+ width:		20em;
+ font-size:	120%;
+ text-align:	center;
+ background-color:#eeeeee;
+ color:		#333333;
+ padding:	2px;
+ border-width:	2px;
+ border-style:	solid;
+ border-radius: 10px;
+ border-top-color:	#CCCCCC;
+ border-right-color:	#333333;
+ border-bottom-color:	#333333;
+ border-left-color:	#CCCCCC;
+ cursor:	pointer;
+}
+div.PERSON:active{
+ border-top-color:	#333333;
+ border-right-color:	#cccccc;
+ border-bottom-color:	#cccccc;
+ border-left-color:	#333333;
+}
+div.PERSON img{
+ padding:	4px;
+ width:		100px;
+ vertical-align:middle;
+ float:		left;
+}
+div.PERSON p{
+ margin:	0px;
+}
+div.PERSON p:first-of-type{
+ font-size:	150%;
+ color:		blue;
+}
+
+div#ice {
+ display:	block;
+ clear:		left;
+ padding:	0px;
+}
+
+div#patient li.name {font-size: 175%;color:blue;}
+div#ice li.name{font-size: 140%;color: red;}
+div#providers li.name{font-size: 120%;color: blue;}
+
+div#criticalInfo {
+ padding:	3px;
+ border:	2px solid firebrick;
+ font-size:	130%;
+ background-color:yellow;
+ color:		FireBrick;
+ float:		left;
+}
+div#criticalInfo ul {
+ padding:	0px;
+ margin:	0px 20px;
+ font-size:	120%;
+}
+div#criticalInfo li {
+ font-weight:	normal;
+ font-size:	80%;
+ list-style-type:disc;
+}
+div#hcr {
+ padding:	3px;
+ float:		left;
+ width:		12em;
+}
+div#hcr img {
+ float:		left;
+ vertical-align:text-top;
+}
+
+div#links {
+ color:		blue;
+ position:	fixed;
+ top:		2%;
+ right:		2%;
+ width:		9.5em;
+ background-color: #d0d0f0;
+ box-shadow:	5px 5px #b0b080;
+}
+div#links a {display: none;}
+div#links:hover a {display: block;}
+div#links a:link,
+div#links a:visited,
+div#links a:hover,
+div#links a:active {
+ color:		green;
+ float:		left;
+ clear:		left;
+ padding-left:	0.5em;
+ text-decoration: none; 
+}
+
+div#conditions div {
+ border:	1px solid darkgreen;
+ background-color: #eeffee;
+ color:		green;
+}
+div#immunization div {
+ border:	1px solid darkblue;
+ background-color: rgba(192,192,255,0.25);
+ color:		darkblue;
+}
+div#conditions div,div#immunization div{
+ min-width:	20em;
+ max-width:	20em;
+}
+div#conditions li,div#immunization li{
+ padding:	1px 2px 1px 15px;
+ margin:	0px;
+}
+div#conditions li:first-child,div#immunization li:first-child{
+ padding-left:	3px;
+ font-weight:	bold;
+}
+div#medicine iframe {
+ margin:	2px;
+ padding:	0px;
+ border:	1px solid green;
+ background-color: ivory;
+ width:		7000px;
+}
+figure {
+ float:		left;
+ display:	inline-block;
+ margin:	3px;
+ padding:	0px;
+ border:	1px solid blue;
+ height:	auto;
+ max-width:	400px;
+}
+figure img {width: 100%;}
+figure figcaption {
+ color:		blue;
+ clear:		left;
+ font-size:	130%;
+ text-align:	center;
+ vertical-align:bottom;
+}
+
+::before {
+ display:	inline-block;
+ min-width:	5.7em;
+ color:		green;
+ font-style:	italic;
+ font-size:	85%;
+}
+[class^="address"]::before {content: "Address: ";}
+[class^="condition"]::before {content: "Condition: ";}
+[class^="date"]::before{content: "Date: "}
+[class^="location"]::before{content: "Location: "}
+[class^="phone"]::before {content: "Phone: ";}
+[class^="surgeon"]::before {content: "Condition: ";}
+[class^="specialty"]::before {content: "Specialty: "}
+[class^="title"]::before{content: "Procedure: "}
+[class$="2"]::before {content: " ";}
+.age::before {
+ content:	"Age: ";
+ min-width:	1px;
+ adding-left:	1em;
+}
+.race::before {content: "Race: ";}
+.anesthesia::before{content: "Anesthesia: "}
+.dob::before {content: "DOB: ";}
+.sex::before {content: "Sex: ";}
+.phonetic::before {content: "Phonetic: ";}
+.preferredName::before {content: "Preferred: ";}
+.relation::before {content: "Relation: ";}

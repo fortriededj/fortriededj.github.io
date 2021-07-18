@@ -1,0 +1,143 @@
+<style>
+@media only screen and (max-width: 768px) {
+* {font-size: 8pt;}
+}
+.flexContainer{
+ display:   flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ background-color:transparent;
+}
+li {
+ list-style-type:none;
+ margin:    0px;
+ padding:   2px;
+ color:     green;
+}
+.flexContainer > li:nth-child(-n+4){
+ color:     white;
+ background-color:green;
+ text-align:left;
+}
+.flexContainer > li:nth-child(5n+1){min-width: 34%;}
+.flexContainer > li:nth-child(5n+2){min-width: 20%;}
+.flexContainer > li:nth-child(5n+3){min-width: 11%;text-align:center;}
+.flexContainer > li:nth-child(5n+4){min-width: 23%;text-align:center;}
+.flexContainer > li:nth-child(5n+5){
+ flex-basis:    100%;
+ margin:    0px;
+ padding:   0px;
+ height:    0px;
+ max-width: 100%;
+}
+</style>
+<div class='flexContainer' id='myFrame'>
+ <li>Medicine
+ <li>Brand
+ <li>Dosage
+ <li>Frequency
+ <li>
+ <li>Alendronate
+ <li>Fosamax
+ <li>70mg
+ <li>Tuesday
+ <li>
+ <li>Allopurinol
+ <li>Zyloprim
+ <li>100mg
+ <li>QD
+ <li>
+ <li>Aspirin
+ <li>Ecotrin
+ <li>81mg
+ <li>QD
+ <li>
+ <li>Atorvastatin
+ <li>Lipitor Tabs
+ <li>40mg
+ <li>QD
+ <li>
+ <li>B12
+ <li>
+ <li>1000mcg
+ <li>QD
+ <li>
+ <li>Colchicine
+ <li>Colcrys
+ <li>0.6mg
+ <li>PRN
+ <li>
+ <li>Creon 24-76-120K
+ <li>Creon
+ <li>24K IU
+ <li>2 x QID
+ <li>
+ <li>Cyclobenzaprine
+ <li>Flexiril
+ <li>5mg
+ <li>PRN
+ <li>
+ <li>D3 1000 units
+ <li>
+ <li>1000iu
+ <li>QD
+ <li>
+ <li>Furosemide
+ <li>
+ <li>20mg
+ <li>QD
+ <li>
+ <li>L-Thryoxine
+ <li>Synthroid
+ <li>150mcg
+ <li>QD
+ <li>
+ <li>Metoprolol Tartrate
+ <li>Lopressor
+ <li>50mg
+ <li>QD
+ <li>
+ <li>Multi-vitamin
+ <li>
+ <li>
+ <li>QD
+ <li>
+ <li>Mycophenolate
+ <li>Cellcept
+ <li>500mg
+ <li>2 x BID
+ <li>
+ <li>Prednisone
+ <li>
+ <li>2.5mg
+ <li>M W F x QD
+ <li>
+ <li>Tacrolimus
+ <li>Prograf
+ <li>0.5mg
+ <li>PM QD
+ <li>
+ <li>Tacrolimus
+ <li>Prograf
+ <li>1.0mg
+ <li>AM QD
+ <li>
+ <li>Ticagrelor
+ <li>Brilinta
+ <li>90mg
+ <li>BID
+ <li>
+ <li>Tresiba
+ <li>
+ <li>10iu
+ <li>BID
+ <li>
+</div>
+<script>
+ if(window.screen.width > 360){
+  document.styleSheets[0].deleteRule(0);
+  document.getElementById('myFrame').style.width = '550px';
+ } else {
+  document.getElementById('myFrame').style.width = '300px';
+ }
+</script>

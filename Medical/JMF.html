@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head><Title>Jeanne Fortriede Medical Information</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="index.css">
+<script src="index.js"></script>
+</head>
+<body onLoad="userLoaded();">
+ <div id="links">
+  <h3>Quick Links</h3>
+  <a href="#patient">Patient Info</a>
+  <a href="#ice">ICE Contacts</a>
+  <a href="#conditions">Medical Conditions</a>
+  <a href="#immunization">Immunizations</a>
+  <a href="#medicine">Prescriptions</a>
+  <a href="#labResults">Lab Results</a>
+  <a href="#surgeries">Surgeries</a>
+  <a href="#providers">Doctors/Providers</a>
+  <a href="./index.html">Different Patient</a>
+ </div>
+ <div id="patient">
+  <h3>Patient Information</h3>
+  <ul id="person">
+   <li class="name">Jeanne M. Fortriede
+   <li class="dob">4/27/1956
+   <li class="sex">Female
+   <li class="race">White
+   <li class="preferredName">Jeanne
+   <li class="phonetic">Jean'-knee Fort'-reed
+  </ul>
+  <div id="criticalInfo">
+   <ul>Critical Information
+   <li>Type II Diabetes
+   <li>Blood Type: AB+
+   <li>No Known Allergies (NKA)
+   </ul>
+  </div>
+  <div id="hcr"><img src="images/PDF Icon.png" alt="">
+<a href="images/JMF Health Care Representative.pdf">Health Care Representative Form</a>
+  </div>
+  <div id="ice">
+   <h3>ICE Contacts</h3>
+   <div class="flexContainer">
+   <ul id="person">
+    <li class="name">Dan Fortriede
+    <li class="relation">Husband
+    <li class="phone">7657290388
+    <li class="address">1910 W County Road 1000 N
+    <li class="address2">Muncie, IN 47303-9745
+   </ul>
+   <ul id="person">
+    <li class="name">Joshua Fortriede
+    <li class="relation">Son
+    <li class="phone">765-729-5767
+    <li class="address">5921 Monticello Ave
+    <li class="address2">Cincinnati, OH 45224-2319
+   </ul>
+   </div>
+  </div>
+ </div>
+ <div class='flexContainer'>
+  <div id="conditions">
+   <h3>Current Medical Conditions</h3>
+   <div>
+    <ul>
+     <li>Diabetes mellitus
+     <li>Insulin Dependant
+    </ul>
+    <ul>
+     <li>Hypercholesteremia
+    </ul>
+    <ul>
+     <li>Fibromyalgia
+    </ul>
+    <ul>
+     <li>HTN (hypertension)
+    </ul>
+   </div>
+  </div>
+  <div id="immunization">
+   <h3>Immunizations</h3>
+   <div>
+    <ul>
+     <li>Covid
+     <li>Pfizer Lot # EN6208 3/16/2021
+     <li>Pfizer Lot # ER8737 4/7/2021
+    </ul>
+    <ul>
+     <li>Flu
+     <li>Flucelvax 11/6/2018
+     <li>Flu 10/20/2020
+    </ul>
+    <ul>
+     <li>Shingles
+     <li>Shingrix 9/25/2020
+     <li>Shingrix 12/2/2020
+    </ul>
+    <ul>
+     <li>Tdap 1/9/2015
+    </ul>
+   </div>
+  </div>
+  <div id="medicine">
+   <h3>Prescriptions: Medicine and Vitamins</h3>
+   <iframe id='medicineIframe'
+	src='Jeanne_Medicine_List.html' height="10">
+   </iframe>
+  </div>
+ </div>
+ <div id="labResults">
+  <h3>Lab Results from Multiple Sources (IU, AHN, LabCorp)</h3>
+  <iframe id="labsIframe" src="JMF_Labs.html"
+	width="100%" height="400"
+	style="border:none;">
+  </iframe>
+ </div>
+ <div id="surgeries">
+  <h3>Surgeries and Procedures</h3>
+  <div class="flexContainer">
+  <ul id="surgery">
+   <li class="title">Laparoscopic Cholecystectomy
+   <li class="location">IU BMH Muncie
+   <li class="date">4/11/2011
+   <li class="anesthesia">Yes
+  </ul>
+ </div>
+ <div id="providers">
+  <h3>Doctors and Providers</h3>
+  <div class="flexContainer">
+  <ul id="person">
+   <li class="name">John C. Peterson MD
+   <li class="specialty">Primary Care Physician
+   <li class="phone">7652827475
+   <li class="phone2">7652827438
+   <li class="address">2423 West Jackson
+   <li class="address2">Muncie, IN
+  </ul>
+  <ul id="person">
+   <li class="name">David M. Wilson, OD
+   <li class="specialty">Optometry
+   <li class="phone">7652887744
+   <li class="address">Family Vision Care
+   <li class="address2">4801 W Bethel Ave
+   <li class="address2">Muncie, IN 47304
+  </ul>
+  </div>
+ </div>
+</body>
+</html>
