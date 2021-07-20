@@ -2,7 +2,6 @@
 div#implants figure {float:left;width:30%;}
 
 @media only screen and (max-width: 768px) {
- body {font-size: 8pt;}
  div#implants figure {
   float:left;
   width:80%;
@@ -290,7 +289,7 @@ table#labTable thead th,table#labTable thead td {
 table#labTable thead th > div {
   font-size:	160%;
 }
-table#labTable thead td:nth-child(n+1) > div {
+table#labTable thead td:nth-child(n+2) > div {
   cursor:	pointer;
   width:	4em;
   font-weight:	bold;
@@ -350,3 +349,33 @@ table#labTable tbody tr th#panelName span {
 .low_color { color: blue;}
 .high_color { color: red;}
 .normal_color {color: inherit;}
+
+.medFlexContainer{
+ display:   flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ background-color:transparent;
+}
+.medFlexContainer > li {
+ list-style-type:none;
+ margin:    0px;
+ padding:   2px;
+ color:     green;
+}
+.medFlexContainer > li:nth-child(-n+4){
+ color:     white;
+ background-color:green;
+ text-align:    left;
+}
+.medFlexContainer > li:nth-child(5n+1){min-width: 34%;}
+.medFlexContainer > li:nth-child(5n+2){min-width: 20%;}
+.medFlexContainer > li:nth-child(5n+3){min-width: 11%;text-align:center;}
+.medFlexContainer > li:nth-child(5n+4){min-width: 23%;text-align:center;}
+.medFlexContainer > li:nth-child(5n+5){
+ flex-basis:    100%;
+ margin:    0px;
+ padding:   0px;
+ height:    0px;
+ max-width: 100%;
+}
+

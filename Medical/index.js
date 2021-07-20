@@ -9,8 +9,9 @@ var last_v_Toggle = 0;
 function userLoaded(){
  var myIframe = document.getElementById("medicineIframe");
  var myBody = myIframe.contentWindow.document.body;
+ alert(window.screen.width);
  if(parseInt(window.screen.width) > 360){ 
-	myIframe.style.width = "570px"; 
+	myIframe.style.width = "508px"; 
  } else {
 	myIframe.style.width = "330px";
  }
