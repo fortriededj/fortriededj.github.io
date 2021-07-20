@@ -10,7 +10,7 @@ function userLoaded(){
  var myIframe = document.getElementById("medicineIframe");
  var myBody = myIframe.contentWindow.document.body;
  if(parseInt(window.screen.width) > 360){ 
-	myIframe.style.width = "500px"; 
+	myIframe.style.width = "520px"; 
  } else {
 	myIframe.style.width = "330px";
  }
