@@ -247,3 +247,106 @@ figure figcaption {
 .phonetic::before {content: "Phonetic: ";}
 .preferredName::before {content: "Preferred: ";}
 .relation::before {content: "Relation: ";}
+
+body {padding: 0;margin: 0;}
+table#labTable {
+  font-family: "Verdana", serif;
+  font-size:	8pt;
+  white-space:	nowrap;
+  margin:	0;
+  border:	1px solid black;
+  border-spacing: 0;
+  table-layout: fixed;
+  padding:	0;
+}
+table#labTable thead tr p {
+  display:	inline-block;
+  padding:	5px 0.4em 0px 0px;
+  margin:	0px;
+  float:	left;
+  text-align:	center;
+}
+table#labTable td,
+table#labTable th {
+  border:	1px solid black;
+  padding:	0.1em 0.2em;
+}
+table#labTable td {
+ min-width:	3.4em;
+ max-width:	3.4em;
+ text-align:	right;
+ white-space:	nowrap;
+ overflow:	hidden;
+}
+table#labTable thead th,table#labTable thead td {
+  padding:	2px;
+  position:	sticky;
+  top:		0;
+  z-index:	2;
+  background-color: lightgray;
+  height:	8em;
+  white-space:	nowrap;
+}
+table#labTable thead th > div {
+  font-size:	160%;
+}
+table#labTable thead td:nth-child(n+1) > div {
+  cursor:	pointer;
+  width:	4em;
+  font-weight:	bold;
+  text-align:	center;
+  transform:
+    translate(-0.7em, 2em) 
+    rotate(270deg);
+}
+table#labTable tbody td {
+  padding:	2px 3px;
+  text-align:	center;
+}
+table#labTable tbody th {
+  text-align:	left;
+  position:	relative;
+  border:	1px solid black;
+}
+table#labTable thead th:first-child{
+ position:	sticky;
+ left:		0;
+ z-index:	3;
+}
+
+table#labTable tbody th {
+ position:	sticky;
+ left:		0;
+ background-color: white;
+ z-index:	2;
+  cursor: pointer;
+}
+
+table#labTable tbody tr th#panelName {
+ border-right-color: transparent;
+ font-weight:	bold;
+ font-size:	150%;
+ font-style:	italic;
+ z-index:	1;
+ cursor:	pointer;
+ color:		blue;
+}
+table#labTable tbody tr td#panelName {
+ border-left-color: transparent;
+ background-color: white;
+}
+table#labTable tbody tr th span {
+ float:		right;
+ padding:	0px 0.25em;
+ font-weight:	bold;
+ color:		black;
+} 
+table#labTable tbody tr th#panelName span {
+ float:		left;
+} 
+.IU {background-color: rgba(255,192,192,.25);}
+.Labcorp { background-color: rgba(192,192,255,.25);}
+.AHN {background-color: rgba(192,255,192,.25);}
+.low_color { color: blue;}
+.high_color { color: red;}
+.normal_color {color: inherit;}
