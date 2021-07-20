@@ -1,9 +1,9 @@
 <style>
-* {font-size: 8pt;}
+* {font-size: 16pt;}
 div#implants figure {float:left;width:30%;}
 
 @media only screen and (max-width: 768px) {
- * {font-size: 16pt;}
+ * {font-size: 8pt;}
  div#implants figure {
   float:left;
   width:80%;
