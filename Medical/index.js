@@ -7,7 +7,6 @@ var last_h_Toggle = 0;
 var last_v_Toggle = 0;
 
 function userLoaded(){
-alert("HERE");
  var myIframe = document.getElementById("medicineIframe");
  var myBody = myIframe.contentWindow.document.body;
  if(parseInt(window.screen.width) > 360){ 
