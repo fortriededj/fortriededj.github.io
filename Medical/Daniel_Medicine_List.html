@@ -107,11 +107,12 @@
  <li>
 </div>
 <script>
-alert("fixing myFrame version 2");
+alert("fixing myFrame version 5.1");
+ var f = document.getElementById('myFrame');
  if(window.screen.width > 360){
-/*  document.styleSheets[0].deleteRule(0); */
-  document.getElementById('myFrame').style.width = '500px';
+  f.style.width='500px';
+  f.style.fontSize='16pt';
  } else {
-  document.getElementById('myFrame').style.width = '300px';
+  f.style.width='300px';
  }
 </script>
