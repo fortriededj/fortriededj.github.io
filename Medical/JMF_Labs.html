@@ -1,199 +1,7 @@
 <!DOCTYPE html>
 <head>
-<script>
- var UPARROW = "\u25B2";
- var DOWNARROW = "\u25BC";
- var RIGHTARROW = "\u25B6";
- var LEFTARROW = "\u25C0";
-
- var last_h_Toggle = 0;
- var last_v_Toggle = 0;
- /* hToggle(testname,counter)
-    Toggle columns that are blank for a specific test */
- function hToggle(myElement,which){
-  var whichOne = parseInt(which) - 1;
-  var myStyle = document.styleSheets[1];	//Second style sheet
-  var myRow= document.getElementById('labTable').
-	children[1].children[whichOne].children;//Get testname
-
-  /* If setting a different one, reset old one first */
-  if(last_h_Toggle && last_h_Toggle != myElement){	//If last different than this
-   for(var i=1; i<myRow.length; i++){		//Loop through labtable style
-    myStyle.cssRules[i].style.display="table-cell";//turn back on
-   }
-   last_h_Toggle.children[0].innerHTML = LEFTARROW;	//Reset icon
-   last_h_Toggle.children[0].style.color = 'black';	//and color
-  }
-
-  /* Now toggle this one. On or off */
-  var n = myElement.children[0].innerHTML;	//Find this row of values
-  if(n == RIGHTARROW){				//If off
-   for(var i=1; i<myRow.length; i++){
-    myStyle.cssRules[i].style.display="table-cell";//Turn on
-   }
-   myElement.children[0].innerHTML = LEFTARROW;//Set icon
-   myElement.children[0].style.color = 'black';	//and color
-  } else {
-   for(var i=1; i<myRow.length; i++){		//Check each row value
-    if(myRow[i].innerHTML == ""){		//If blank
-     myStyle.cssRules[i].style.display="none";	//Change cooresponding class
-    } else {					//to None
-     myStyle.cssRules[i].style.display="table-cell";//or turn on
-    }
-   }
-   myElement.children[0].innerHTML = RIGHTARROW;//Set icon
-   myElement.children[0].style.color = 'blue';	//and color
-  }  
-  last_h_Toggle = myElement;			//Remember the one we just did
- }
-
- function vToggle(myElement,which){
-  var whichOne = parseInt(which);
-  var myRows = document.getElementById('labTable').
-	children[1].children;
-  if(last_v_Toggle && last_v_Toggle != myElement){
-   last_v_Toggle.children[0].innerHTML = RIGHTARROW;
-   last_v_Toggle.children[0].style.color = "black";
-   for(i=0; i<myRows.length; i++){
-    myRows[i].parentElement.children[i].style.display='table-row';
-   }
-  } 
-
-  if(myElement.children[0].innerHTML == RIGHTARROW){
-   newstyle = "none";
-   myElement.children[0].innerHTML = LEFTARROW;
-   myElement.children[0].style.color = "blue";
-  } else {
-   newstyle = "table-row";
-   myElement.children[0].innerHTML = RIGHTARROW;
-   myElement.children[0].style.color = "black";
-  }
-  for(i=0; i<myRows.length; i++){
-   if(myRows[i].innerHTML.indexOf('panelName') == -1){
-    if(myRows[i].children[whichOne].innerHTML){
-     myRows[i].parentElement.children[i].style.display='table-row';
-    } else {
-     myRows[i].parentElement.children[i].style.display=newstyle;
-    }
-   }
-  }
-  last_v_Toggle = myElement;
- } 
- function panelToggle(myElement,which){
-  if(myElement.children[0].innerHTML == UPARROW){
-   d="none";
-   myElement.children[0].innerHTML = DOWNARROW;
-  } else {
-   d="table-row";
-   myElement.children[0].innerHTML = UPARROW;
-  }
-  var myRows = document.querySelectorAll("#pg"+which);
-  for(i=0; i<myRows.length; i++){ myRows[i].style.display=d;}
- } 
-</script>
-<style>
-body {padding: 0;margin: 0;}
-table#labTable {
-  font-family: "Verdana", serif;
-  font-size:	8pt;
-  white-space:	nowrap;
-  margin:	0;
-  border:	1px solid black;
-  border-spacing: 0;
-  table-layout: fixed;
-  padding:	0;
-}
-table#labTable thead tr p {
-  display:	inline-block;
-  padding:	5px 0.4em 0px 0px;
-  margin:	0px;
-  float:	left;
-  text-align:	center;
-}
-table#labTable td,
-table#labTable th {
-  border:	1px solid black;
-  padding:	0.1em 0.2em;
-}
-table#labTable td {
- min-width:	3.4em;
- max-width:	3.4em;
- text-align:	right;
- white-space:	nowrap;
- overflow:	hidden;
-}
-table#labTable thead th,table#labTable thead td {
-  padding:	2px;
-  position:	sticky;
-  top:		0;
-  z-index:	2;
-  background-color: lightgray;
-  height:	8em;
-  white-space:	nowrap;
-}
-table#labTable thead th > div {
-  font-size:	140%;
-}
-table#labTable thead td:nth-child(n+2) > div {
-  cursor:	pointer;
-  font-weight:	bold;
-  text-align:	left;
-  transform:
-    translate(0px, 2em) 
-    rotate(270deg);
-}
-table#labTable td {
-  padding:	2px 3px;
-  text-align:	center;
-}
-table#labTable tbody th {
-  text-align:	left;
-  position:	relative;
-  border:	1px solid black;
-}
-table#labTable thead th:first-child{
- position:	sticky;
- left:		0;
- z-index:	3;
-}
-
-table#labTable tbody th {
- position:	sticky;
- left:		0;
- background-color: white;
- z-index:	2;
-  cursor: pointer;
-}
-
-table#labTable tbody tr th#panelName {
- border-right-color: transparent;
- font-weight:	bold;
- font-size:	150%;
- font-style:	italic;
- z-index:	1;
- cursor:	pointer;
- color:		blue;
-}
-table#labTable tbody tr td#panelName {
- border-left-color: transparent;
- background-color: white;
-}
-table#labTable tbody tr th span {
- float:		right;
- padding:	0px 0.25em;
- font-weight:	bold;
- color:		black;
-} 
-table#labTable tbody tr th#panelName span {
- float:		left;
-} 
-.IU {background-color: rgba(255,192,192,.25);}
-.Labcorp { background-color: rgba(192,192,255,.25);}
-.AHN {background-color: rgba(192,255,192,.25);}
-.low_color { color: blue;}
-.high_color { color: red;}
-.normal_color {color: inherit;}
-</style>
+<script src="index.js"></script>
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
 <table id="labTable">
@@ -230,7 +38,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg1">
    <th title="Normal range/value = 3.4-10.8"
-       onClick="hToggle(this,2);"><span>&#9664;</span>WBC&emsp;&emsp;</th>
+       onClick="hToggle(this,2);"><span>&#9664;</span>WBC Esterase&emsp;&emsp;</th>
    <td class="normal_color Labcorp">5.9</td>
    <td class="normal_color Labcorp">7.2</td>
    <td class="low_color Labcorp"></td>
@@ -238,7 +46,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg1">
    <th title="Normal range/value = 3.77-5.28"
-       onClick="hToggle(this,3);"><span>&#9664;</span>RBC&emsp;&emsp;</th>
+       onClick="hToggle(this,3);"><span>&#9664;</span>Occult Blood&emsp;&emsp;</th>
    <td class="normal_color Labcorp">4.09</td>
    <td class="normal_color Labcorp">4.01</td>
    <td class="low_color Labcorp"></td>
@@ -310,7 +118,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg1">
    <th title="Normal range/value = Reference Range:  Not Estab. %"
-       onClick="hToggle(this,12);"><span>&#9664;</span>Lymphs&emsp;&emsp;</th>
+       onClick="hToggle(this,12);"><span>&#9664;</span>Lymphocytes&emsp;&emsp;</th>
    <td class="normal_color Labcorp">35</td>
    <td class="normal_color Labcorp">29</td>
    <td class="normal_color Labcorp"></td>
@@ -326,7 +134,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg1">
    <th title="Normal range/value = Reference Range:  Not Estab. %"
-       onClick="hToggle(this,14);"><span>&#9664;</span>Eos&emsp;&emsp;</th>
+       onClick="hToggle(this,14);"><span>&#9664;</span>Eosinophils&emsp;&emsp;</th>
    <td class="normal_color Labcorp">2</td>
    <td class="normal_color Labcorp">3</td>
    <td class="normal_color Labcorp"></td>
@@ -334,7 +142,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg1">
    <th title="Normal range/value = Reference Range:  Not Estab. %"
-       onClick="hToggle(this,15);"><span>&#9664;</span>Basos&emsp;&emsp;</th>
+       onClick="hToggle(this,15);"><span>&#9664;</span>Basophils&emsp;&emsp;</th>
    <td class="normal_color Labcorp">1</td>
    <td class="normal_color Labcorp">1</td>
    <td class="normal_color Labcorp"></td>
@@ -350,7 +158,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg1">
    <th title="Normal range/value = 0.7-3.1"
-       onClick="hToggle(this,17);"><span>&#9664;</span>Lymphs (Absolute)&emsp;&emsp;</th>
+       onClick="hToggle(this,17);"><span>&#9664;</span>Lymphocytes (Absolute)&emsp;&emsp;</th>
    <td class="normal_color Labcorp">2.1</td>
    <td class="normal_color Labcorp">2.1</td>
    <td class="low_color Labcorp"></td>
@@ -366,7 +174,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg1">
    <th title="Normal range/value = 0-0.4"
-       onClick="hToggle(this,19);"><span>&#9664;</span>Eos (Absolute)&emsp;&emsp;</th>
+       onClick="hToggle(this,19);"><span>&#9664;</span>Eosinophils (Absolute)&emsp;&emsp;</th>
    <td class="normal_color Labcorp">0.1</td>
    <td class="normal_color Labcorp">0.2</td>
    <td class="normal_color Labcorp"></td>
@@ -374,7 +182,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg1">
    <th title="Normal range/value = 0-0.2"
-       onClick="hToggle(this,20);"><span>&#9664;</span>Baso (Absolute)&emsp;&emsp;</th>
+       onClick="hToggle(this,20);"><span>&#9664;</span>Basophils (Absolute)&emsp;&emsp;</th>
    <td class="normal_color Labcorp">0.1</td>
    <td class="normal_color Labcorp">0.1</td>
    <td class="normal_color Labcorp"></td>
@@ -410,8 +218,24 @@ table#labTable tbody tr th#panelName span {
    <td class="high_color Labcorp">147</td>
   </tr>
   <tr id="pg2">
+   <th title="Normal range/value = 4.8-5.6"
+       onClick="hToggle(this,25);"><span>&#9664;</span>A1C&emsp;&emsp;</th>
+   <td class="high_color Labcorp">7.7</td>
+   <td class="high_color Labcorp">7.6</td>
+   <td class="high_color Labcorp">8.7</td>
+   <td class="high_color Labcorp">10.3</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = -"
+       onClick="hToggle(this,26);"><span>&#9664;</span>MBG&emsp;&emsp;</th>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg2">
    <th title="Normal range/value = 8-27"
-       onClick="hToggle(this,25);"><span>&#9664;</span>BUN&emsp;&emsp;</th>
+       onClick="hToggle(this,27);"><span>&#9664;</span>BUN&emsp;&emsp;</th>
    <td class="normal_color Labcorp">19</td>
    <td class="high_color Labcorp">28</td>
    <td class="normal_color Labcorp">23</td>
@@ -419,27 +243,11 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 0.57-1"
-       onClick="hToggle(this,26);"><span>&#9664;</span>Creatinine&emsp;&emsp;</th>
+       onClick="hToggle(this,28);"><span>&#9664;</span>Creatinine&emsp;&emsp;</th>
    <td class="normal_color Labcorp">0.78</td>
    <td class="normal_color Labcorp">0.70</td>
    <td class="normal_color Labcorp">0.66</td>
    <td class="normal_color Labcorp">0.69</td>
-  </tr>
-  <tr id="pg2">
-   <th title="Normal range/value = Reference Range:  >59 mL/min/1.73"
-       onClick="hToggle(this,27);"><span>&#9664;</span>eGFR If NonAfricn Am&emsp;&emsp;</th>
-   <td class="normal_color Labcorp">80</td>
-   <td class="normal_color Labcorp">93</td>
-   <td class="normal_color Labcorp">94</td>
-   <td class="normal_color Labcorp">93</td>
-  </tr>
-  <tr id="pg2">
-   <th title="Normal range/value = Reference Range:  >59 mL/min/1.73"
-       onClick="hToggle(this,28);"><span>&#9664;</span>eGFR If Africn Am&emsp;&emsp;</th>
-   <td class="normal_color Labcorp">92</td>
-   <td class="normal_color Labcorp">107</td>
-   <td class="normal_color Labcorp">109</td>
-   <td class="normal_color Labcorp">107</td>
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 12-28"
@@ -450,8 +258,24 @@ table#labTable tbody tr th#panelName span {
    <td class="normal_color Labcorp">25</td>
   </tr>
   <tr id="pg2">
+   <th title="Normal range/value = Reference Range:  >59 mL/min/1.73"
+       onClick="hToggle(this,30);"><span>&#9664;</span>eGFR If NonAfricn Am&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">80</td>
+   <td class="normal_color Labcorp">93</td>
+   <td class="normal_color Labcorp">94</td>
+   <td class="normal_color Labcorp">93</td>
+  </tr>
+  <tr id="pg2">
+   <th title="Normal range/value = Reference Range:  >59 mL/min/1.73"
+       onClick="hToggle(this,31);"><span>&#9664;</span>eGFR If Africn Am&emsp;&emsp;</th>
+   <td class="normal_color Labcorp">92</td>
+   <td class="normal_color Labcorp">107</td>
+   <td class="normal_color Labcorp">109</td>
+   <td class="normal_color Labcorp">107</td>
+  </tr>
+  <tr id="pg2">
    <th title="Normal range/value = 134-144"
-       onClick="hToggle(this,30);"><span>&#9664;</span>Sodium&emsp;&emsp;</th>
+       onClick="hToggle(this,32);"><span>&#9664;</span>Sodium&emsp;&emsp;</th>
    <td class="normal_color Labcorp">143</td>
    <td class="normal_color Labcorp">141</td>
    <td class="high_color Labcorp">146</td>
@@ -459,7 +283,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 3.5-5.2"
-       onClick="hToggle(this,31);"><span>&#9664;</span>Potassium&emsp;&emsp;</th>
+       onClick="hToggle(this,33);"><span>&#9664;</span>Potassium&emsp;&emsp;</th>
    <td class="normal_color Labcorp">4.6</td>
    <td class="normal_color Labcorp">4.4</td>
    <td class="normal_color Labcorp">3.8</td>
@@ -467,7 +291,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 96-106"
-       onClick="hToggle(this,32);"><span>&#9664;</span>Chloride&emsp;&emsp;</th>
+       onClick="hToggle(this,34);"><span>&#9664;</span>Chloride&emsp;&emsp;</th>
    <td class="normal_color Labcorp">105</td>
    <td class="normal_color Labcorp">101</td>
    <td class="high_color Labcorp">107</td>
@@ -475,7 +299,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 20-29"
-       onClick="hToggle(this,33);"><span>&#9664;</span>Carbon Dioxide, Total&emsp;&emsp;</th>
+       onClick="hToggle(this,35);"><span>&#9664;</span>Carbon Dioxide, Total&emsp;&emsp;</th>
    <td class="normal_color Labcorp">24</td>
    <td class="normal_color Labcorp">24</td>
    <td class="normal_color Labcorp">24</td>
@@ -483,7 +307,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 8.7-10.3"
-       onClick="hToggle(this,34);"><span>&#9664;</span>Calcium&emsp;&emsp;</th>
+       onClick="hToggle(this,36);"><span>&#9664;</span>Calcium&emsp;&emsp;</th>
    <td class="normal_color Labcorp">9.2</td>
    <td class="normal_color Labcorp">9.1</td>
    <td class="normal_color Labcorp">9.0</td>
@@ -491,7 +315,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 6-8.5"
-       onClick="hToggle(this,35);"><span>&#9664;</span>Protein, Total&emsp;&emsp;</th>
+       onClick="hToggle(this,37);"><span>&#9664;</span>Protein, Total&emsp;&emsp;</th>
    <td class="normal_color Labcorp">6.9</td>
    <td class="normal_color Labcorp">6.8</td>
    <td class="normal_color Labcorp">6.4</td>
@@ -499,7 +323,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 3.8-4.8"
-       onClick="hToggle(this,36);"><span>&#9664;</span>Albumin&emsp;&emsp;</th>
+       onClick="hToggle(this,38);"><span>&#9664;</span>Albumin&emsp;&emsp;</th>
    <td class="normal_color Labcorp">4.4</td>
    <td class="normal_color Labcorp">4.2</td>
    <td class="normal_color Labcorp">4.0</td>
@@ -507,7 +331,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 1.5-4.5"
-       onClick="hToggle(this,37);"><span>&#9664;</span>Globulin, Total&emsp;&emsp;</th>
+       onClick="hToggle(this,39);"><span>&#9664;</span>Globulin, Total&emsp;&emsp;</th>
    <td class="normal_color Labcorp">2.5</td>
    <td class="normal_color Labcorp">2.6</td>
    <td class="normal_color Labcorp">2.4</td>
@@ -515,7 +339,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 1.2-2.2"
-       onClick="hToggle(this,38);"><span>&#9664;</span>A/G Ratio&emsp;&emsp;</th>
+       onClick="hToggle(this,40);"><span>&#9664;</span>A/G Ratio&emsp;&emsp;</th>
    <td class="normal_color Labcorp">1.8</td>
    <td class="normal_color Labcorp">1.6</td>
    <td class="normal_color Labcorp">1.7</td>
@@ -523,7 +347,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 0-1.2"
-       onClick="hToggle(this,39);"><span>&#9664;</span>Bilirubin, Total&emsp;&emsp;</th>
+       onClick="hToggle(this,41);"><span>&#9664;</span>Bilirubin, Total&emsp;&emsp;</th>
    <td class="normal_color Labcorp">0.8</td>
    <td class="normal_color Labcorp">0.8</td>
    <td class="normal_color Labcorp">0.6</td>
@@ -531,7 +355,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 39-117"
-       onClick="hToggle(this,40);"><span>&#9664;</span>Alkaline Phosphatase&emsp;&emsp;</th>
+       onClick="hToggle(this,42);"><span>&#9664;</span>Alkaline Phosphatase&emsp;&emsp;</th>
    <td class="normal_color Labcorp">67</td>
    <td class="normal_color Labcorp">60</td>
    <td class="normal_color Labcorp">65</td>
@@ -539,7 +363,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 0-40"
-       onClick="hToggle(this,41);"><span>&#9664;</span>AST (SGOT)&emsp;&emsp;</th>
+       onClick="hToggle(this,43);"><span>&#9664;</span>AST (SGOT)&emsp;&emsp;</th>
    <td class="normal_color Labcorp">18</td>
    <td class="normal_color Labcorp">18</td>
    <td class="normal_color Labcorp">22</td>
@@ -547,7 +371,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg2">
    <th title="Normal range/value = 0-32"
-       onClick="hToggle(this,42);"><span>&#9664;</span>ALT (SGPT)&emsp;&emsp;</th>
+       onClick="hToggle(this,44);"><span>&#9664;</span>ALT (SGPT)&emsp;&emsp;</th>
    <td class="normal_color Labcorp">19</td>
    <td class="normal_color Labcorp">19</td>
    <td class="normal_color Labcorp">23</td>
@@ -560,7 +384,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg3">
    <th title="Normal range/value = 100-199"
-       onClick="hToggle(this,44);"><span>&#9664;</span>Cholesterol, Total&emsp;&emsp;</th>
+       onClick="hToggle(this,46);"><span>&#9664;</span>Cholesterol, Total&emsp;&emsp;</th>
    <td class="normal_color Labcorp">147</td>
    <td class="normal_color Labcorp">170</td>
    <td class="normal_color Labcorp">135</td>
@@ -568,7 +392,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg3">
    <th title="Normal range/value = 0-149"
-       onClick="hToggle(this,45);"><span>&#9664;</span>Triglycerides&emsp;&emsp;</th>
+       onClick="hToggle(this,47);"><span>&#9664;</span>Triglycerides&emsp;&emsp;</th>
    <td class="normal_color Labcorp">136</td>
    <td class="high_color Labcorp">186</td>
    <td class="normal_color Labcorp">132</td>
@@ -576,7 +400,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg3">
    <th title="Normal range/value = Reference Range:  >39 mg/dL"
-       onClick="hToggle(this,46);"><span>&#9664;</span>HDL Cholesterol&emsp;&emsp;</th>
+       onClick="hToggle(this,48);"><span>&#9664;</span>HDL Cholesterol&emsp;&emsp;</th>
    <td class="normal_color Labcorp">43</td>
    <td class="normal_color Labcorp">46</td>
    <td class="normal_color Labcorp">36</td>
@@ -584,7 +408,7 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg3">
    <th title="Normal range/value = 5-40"
-       onClick="hToggle(this,47);"><span>&#9664;</span>VLDL Cholesterol Cal&emsp;&emsp;</th>
+       onClick="hToggle(this,49);"><span>&#9664;</span>VLDL Cholesterol Cal&emsp;&emsp;</th>
    <td class="normal_color Labcorp">24</td>
    <td class="normal_color Labcorp">37</td>
    <td class="normal_color Labcorp">26</td>
@@ -592,46 +416,41 @@ table#labTable tbody tr th#panelName span {
   </tr>
   <tr id="pg3">
    <th title="Normal range/value = 0-99"
-       onClick="hToggle(this,48);"><span>&#9664;</span>LDL Chol Calc (NIH)&emsp;&emsp;</th>
+       onClick="hToggle(this,50);"><span>&#9664;</span>LDL Chol Calc (NIH)&emsp;&emsp;</th>
    <td class="normal_color Labcorp">80</td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+   <td class="normal_color Labcorp"></td>
+  </tr>
+  <tr id="pg3">
+   <th title="Normal range/value = 0-99"
+       onClick="hToggle(this,51);"><span>&#9664;</span>LDL Cholesterol Calc&emsp;&emsp;</th>
+   <td class="normal_color Labcorp"></td>
    <td class="normal_color Labcorp">87</td>
    <td class="normal_color Labcorp">73</td>
    <td class="normal_color Labcorp">87</td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,4);'>
-    <span>&#9650;</span>Hemoglobin A1c</th>
-  <td id="panelName" colspan=4>&nbsp;</td>
-  </tr>
-  <tr id="pg4">
-   <th title="Normal range/value = 4.8-5.6"
-       onClick="hToggle(this,50);"><span>&#9664;</span>Hemoglobin A1c&emsp;&emsp;</th>
-   <td class="high_color Labcorp">7.7</td>
-   <td class="high_color Labcorp">7.6</td>
-   <td class="high_color Labcorp">8.7</td>
-   <td class="high_color Labcorp">10.3</td>
-  </tr>
- <tr>
-  <th id="panelName" colspan=4 onClick='panelToggle(this,5);'>
     <span>&#9650;</span>TSH</th>
   <td id="panelName" colspan=4>&nbsp;</td>
   </tr>
-  <tr id="pg5">
+  <tr id="pg4">
    <th title="Normal range/value = 0.45-4.5"
-       onClick="hToggle(this,52);"><span>&#9664;</span>TSH&emsp;&emsp;</th>
+       onClick="hToggle(this,53);"><span>&#9664;</span>TSH&emsp;&emsp;</th>
    <td class="normal_color Labcorp">1.580</td>
    <td class="normal_color Labcorp">2.420</td>
    <td class="low_color Labcorp"></td>
    <td class="normal_color Labcorp">1.640</td>
   </tr>
  <tr>
-  <th id="panelName" colspan=4 onClick='panelToggle(this,6);'>
+  <th id="panelName" colspan=4 onClick='panelToggle(this,5);'>
     <span>&#9650;</span>Vitamins</th>
   <td id="panelName" colspan=4>&nbsp;</td>
   </tr>
-  <tr id="pg6">
+  <tr id="pg5">
    <th title="Normal range/value = 30-100"
-       onClick="hToggle(this,54);"><span>&#9664;</span>25-Hydroxy, Vitamin D&emsp;&emsp;</th>
+       onClick="hToggle(this,55);"><span>&#9664;</span>Vitamin D&emsp;&emsp;</th>
    <td class="low_color Labcorp">19.4</td>
    <td class="low_color Labcorp"></td>
    <td class="low_color Labcorp"></td>
@@ -694,6 +513,7 @@ table#labTable td:nth-child(51) {display:table-cell;}
 table#labTable td:nth-child(52) {display:table-cell;}
 table#labTable td:nth-child(53) {display:table-cell;}
 table#labTable td:nth-child(54) {display:table-cell;}
+table#labTable td:nth-child(55) {display:table-cell;}
 </style>
 </body>
 </html>
