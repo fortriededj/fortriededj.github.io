@@ -238,9 +238,10 @@ figure figcaption {
 .age::before {
  content:	"Age: ";
  min-width:	1px;
- adding-left:	1em;
+ padding-left:	1em;
 }
 .race::before {content: "Race: ";}
+.workstatus::before{content: "Status: "}
 .anesthesia::before{content: "Anesthesia: "}
 .dob::before {content: "DOB: ";}
 .sex::before {content: "Sex: ";}

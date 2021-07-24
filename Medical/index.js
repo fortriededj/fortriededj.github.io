@@ -16,21 +16,82 @@ function userLoaded(){
  }
  myIframe.style.height = parseInt(myBody.scrollHeight) + "px";
  fixPhones();
- ageDOB();
+ doAges();
 }
 
-function ageDOB(){
- var elements = document.querySelectorAll(".dob");
- for (var i=0; i<elements.length; i++){
-  var j = elements[i].innerHTML;
-  var a = j.split("/");
-  var x = new Date(a[2],a[0]-1,a[1]);
-  var y = new Date();
-  years = parseInt((y - x)/(1000*60*60*24*365.2425));
-  elements[i].innerHTML = elements[i].innerHTML + 
-	" <i>(" + years + ")</i>";
- }
+function getDOB(){
+ var x = document.querySelectorAll(".dob");
+ var y = convertStringToDate(x[0].innerHTML);
+ return y;
+} 
+
+function convertDateToString(x){
+ const Months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+ var y = Months[x.getMonth()] + " " + x.getDate() + ", " + x.getFullYear();
+ return y;
 }
+function convertStringToDate(x){
+ var i;
+ var y = x.split("/");
+ for(i=0; i<3; i++){y[i]=parseInt(y[i]);}
+ if(y[2]<100){y[2]+=2000;}
+ return new Date(y[2],y[0]-1,y[1]);
+}
+
+function doAges(){
+ var DOB = getDOB();
+ var today = new Date();
+ var elements = document.querySelectorAll(".dob");
+ // Calc how old patient is in yy/mm/dd
+ addYMDspan(elements[0],today);
+ var elements = document.querySelectorAll(".date");
+ // Calc how old patient was on date
+ for(i=0; i<elements.length; i++){ addYMDspan(elements[i],DOB); }
+}
+
+/* Add span class=age after element which has number of years/months/days
+   from the given date */
+function addYMDspan(e,fromDate){
+  var k = convertStringToDate(e.innerHTML);
+  e.innerHTML = convertDateToString(k);
+  var l = calcDateDiff(fromDate,k);
+  var node = document.createElement("span");
+  var textnode = document.createTextNode(l);
+  node.appendChild(textnode);
+  e.appendChild(node);
+  node.classList.add("age");
+}
+
+/* Calculate the difference between two dates. (Accurately!) */
+function calcDateDiff(fromDate,toDate){
+ if(fromDate > toDate){[toDate,fromDate]=[fromDate,toDate]}; //Order dates
+ const dd1 = [];
+ const dd2 = [];
+ dd1["year"] = parseInt(toDate.getFullYear());
+ dd1["month"] = parseInt(toDate.getMonth());
+ dd1["day"] = parseInt(toDate.getDate());
+
+ dd2["year"] = parseInt(fromDate.getFullYear());
+ dd2["month"] = parseInt(fromDate.getMonth());
+ dd2["day"] = parseInt(fromDate.getDate());
+
+ var diffYears = dd1["year"]-dd2["year"];
+ var diffMonths = dd1["month"]-dd2["month"];
+ var diffDays = dd1["day"]-dd2["day"];
+ if(diffMonths<0){ borrowYear();}	//If months < 0, borrow 12 months from year
+ var diffDate = dd1["day"]-dd2["day"];
+ if(diffDate<0){borrowMonth();}		//If days < 0, borrow last months days
+ var z=diffYears +"y/"+diffMonths+"m/"+diffDate+"d"; //Construct xxy/xxm/xxd
+ return z;				//Return
+
+ function borrowYear(){diffMonths+=12; diffYears--;}
+ function borrowMonth(){
+  diffMonths--; if(diffMonths<0){borrowYear();}
+  lastMonthDays = toDate-new Date(dd1["year"],dd1["month"]-1,dd1["day"]);
+  lastMonthDays = parseInt(lastMonthDays/24/3600000);
+  diffDate+=lastMonthDays;
+ }
+}  
 
 function fixPhones(){
  var elements = document.querySelectorAll(".phone, .phone2");
