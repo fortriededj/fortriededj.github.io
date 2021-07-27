@@ -1,6 +1,6 @@
 <style>
-@media only screen and (max-width: 360px) {
-* {font-size: 7px;color: blue;}
+@media only screen and (max-width: 480px) {
+* {font-size: 7px;}
 }
 </style>
 <link rel='stylesheet' href='index.css'>
@@ -115,10 +115,7 @@
  var f = document.getElementById('myFrame');
  if(window.screen.width > 360){
   f.style.width = '500px';
-  f.style.fontSize='12pt';
  } else {
-alert("Setting sizes");
   f.style.width = '310px';
-alert("Size Set color=" + f.style.color);
  }
 </script>
