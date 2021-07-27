@@ -3,7 +3,7 @@
 div#implants figure {float:left;width:30%;}
 
 @media only screen and (max-width: 360px) {
- * {font-size: 12pt;}
+ * {font-size: 10pt;}
  div#implants figure {
   float:left;
   width:80%;
