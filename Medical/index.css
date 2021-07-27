@@ -375,8 +375,8 @@ table#labTable tbody tr th#panelName span {
  background-color:green;
  text-align:    left;
 }
-.medFlexContainer > li:nth-child(5n+1){min-width: 35%;}
-.medFlexContainer > li:nth-child(5n+2){min-width: 23%;}
+.medFlexContainer > li:nth-child(5n+1){min-width: 38%;}
+.medFlexContainer > li:nth-child(5n+2){min-width: 19%;}
 .medFlexContainer > li:nth-child(5n+3){min-width: 11%;text-align:center;}
 .medFlexContainer > li:nth-child(5n+4){min-width: 21%;text-align:center;}
 .medFlexContainer > li:nth-child(5n+5){
