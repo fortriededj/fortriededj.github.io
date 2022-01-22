@@ -378,7 +378,7 @@ table#labTable tbody tr th#panelName span {
 .medFlexContainer > li:nth-child(5n+1){min-width: 40%;}
 .medFlexContainer > li:nth-child(5n+2){min-width: 21%;}
 .medFlexContainer > li:nth-child(5n+3){min-width: 18%;text-align:left;}
-.medFlexContainer > li:nth-child(5n+4){min-width: 20%;text-align:center;}
+.medFlexContainer > li:nth-child(5n+4){min-width: 18%;text-align:center;}
 .medFlexContainer > li:nth-child(5n+5){
  flex-basis:    100%;
  margin:    0px;
