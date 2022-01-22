@@ -367,7 +367,7 @@ table#labTable tbody tr th#panelName span {
 .medFlexContainer > li {
  list-style-type:none;
  margin:    0px;
- padding:   2px;
+ padding:   1px;
  color:     green;
 }
 .medFlexContainer > li:nth-child(-n+4){
