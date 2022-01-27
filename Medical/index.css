@@ -359,10 +359,7 @@ table#labTable tbody tr th#panelName span {
 .normal_color {color: inherit;}
 .highlight {
  background:
-  linear-gradient(to bottom right,
-	rgb(244,81,30) 15%,
-	white 15.1%)
-  	white;
+  linear-gradient(225deg, darkred 6px, transparent 6px);
  overflow: hidden;
 }
 
