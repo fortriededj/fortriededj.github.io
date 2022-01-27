@@ -351,15 +351,12 @@ table#labTable tbody tr th span {
 table#labTable tbody tr th#panelName span {
  float:		left;
 } 
-.IU {background-color: rgba(255,192,192,.25);}
-.Labcorp { background-color: rgba(192,192,255,.25);}
-.AHN {background-color: rgba(192,255,192,.25);}
 .low_color { color: blue;}
 .high_color { color: red;}
 .normal_color {color: inherit;}
 .highlight {
  background:
-  linear-gradient(225deg, darkred 6px, transparent 6px);
+  linear-gradient(225deg, firebrick 6px, transparent 6px);
  overflow: hidden;
 }
 
