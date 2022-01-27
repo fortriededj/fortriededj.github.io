@@ -357,6 +357,14 @@ table#labTable tbody tr th#panelName span {
 .low_color { color: blue;}
 .high_color { color: red;}
 .normal_color {color: inherit;}
+.highlight {
+ background:
+  linear-gradient(to bottom right,
+	rgb(244,81,30) 15%,
+	white 15.1%)
+  	white;
+ overflow: hidden;
+}
 
 .medFlexContainer{
  display:   flex;
