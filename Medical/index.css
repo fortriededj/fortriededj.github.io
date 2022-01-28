@@ -354,10 +354,9 @@ table#labTable tbody tr th#panelName span {
 .low_color { color: blue;}
 .high_color { color: red;}
 .normal_color {color: inherit;}
-.highlight {
- background:
-  linear-gradient(225deg, firebrick 6px, transparent 6px);
- overflow: hidden;
+.redCorner {
+ background: linear-gradient(225deg, firebrick 6px, transparent 6px);
+ overflow:	hidden;
 }
 
 .medFlexContainer{
