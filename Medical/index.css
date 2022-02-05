@@ -355,7 +355,7 @@ table#labTable tbody tr th#panelName span {
 .high_color { color: red;}
 .normal_color {color: inherit;}
 .redCorner {
- background: linear-gradient(225deg, firebrick 6px, transparent 6px);
+ background: linear-gradient(225deg, magenta 4px, transparent 4.1px);
  overflow:	hidden;
 }
 
