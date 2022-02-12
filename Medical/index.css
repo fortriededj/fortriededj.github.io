@@ -297,6 +297,11 @@ table#labTable thead th,table#labTable thead td {
 table#labTable thead th > div {
   font-size:	160%;
 }
+@media (pointer: coarse) {
+ table#labTable thead td:nth-child(n+2) > div {
+  color: red;
+ }
+}
 table#labTable thead td:nth-child(n+2) > div {
   cursor:	pointer;
   width:	4em;
