@@ -6,6 +6,10 @@ var LEFTARROW = "\u25C0";
 var last_h_Toggle = 0;
 var last_v_Toggle = 0;
 
+function showInfo(event){
+ alert("Here is the info I promised");
+ event.stopPropagation();
+}
 function userLoaded(){
  var myIframe = document.getElementById("medicineIframe");
  var myBody = myIframe.contentWindow.document.body;
