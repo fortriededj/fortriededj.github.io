@@ -118,6 +118,13 @@ function fixPhones(){
 
 /* hToggle(testname,counter)
    Toggle columns that are blank for a specific test */
+
+function hToggle2(myElement,which){
+ myEvent=this.event;
+ alert('Showing information');
+ myEvent.stopPropagation();
+}
+
 function hToggle(myElement,which){
  var whichOne = parseInt(which) - 1;
  var myStyle = document.styleSheets[1];	//Second style sheet

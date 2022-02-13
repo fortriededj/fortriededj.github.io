@@ -342,13 +342,13 @@ table#labTable tbody tr td#panelName {
  border-left-color: transparent;
  background-color: white;
 }
-table#labTable tbody tr th span {
+table#labTable tbody tr th span:nth-of-type(1){
  float:		right;
  padding:	0px 0.25em;
  font-weight:	bold;
  color:		black;
 } 
-table#labTable tbody tr th#panelName span {
+table#labTable tbody tr th#panelName span:nth-of-type(1) {
  float:		left;
 } 
 .low_color { color: blue;}
