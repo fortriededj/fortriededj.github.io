@@ -352,6 +352,11 @@ table#labTable tbody tr th span:nth-of-type(2){
  color:		blue;
  font-size:	120%;
 }
+@media (pointer:fine) {
+ table#labTable tbody tr th span:nth-of-type(2){
+ display:	none;
+ }
+}
 table#labTable tbody tr th#panelName span {
  float:		left;
 } 
