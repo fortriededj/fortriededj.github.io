@@ -6,9 +6,10 @@ var LEFTARROW = "\u25C0";
 var last_h_Toggle = 0;
 var last_v_Toggle = 0;
 
-function showInfo(event){
- alert("Here is the info I promised");
- event.stopPropagation();
+function showInfo(string){
+ myEvent=this.event;
+ alert(string);
+ myEvent.stopPropagation();
 }
 function userLoaded(){
  var myIframe = document.getElementById("medicineIframe");
@@ -118,12 +119,6 @@ function fixPhones(){
 
 /* hToggle(testname,counter)
    Toggle columns that are blank for a specific test */
-
-function hToggle2(myElement,which){
- myEvent=this.event;
- alert('Showing information');
- myEvent.stopPropagation();
-}
 
 function hToggle(myElement,which){
  var whichOne = parseInt(which) - 1;
