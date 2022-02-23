@@ -7,7 +7,7 @@
 <table id="labTable">
  <thead>
  <tr>
-  <th title='This sheet shows:&#013;&#010;	6,196 measurements on&#013;&#010;	175 days between&#013;&#010;	February 28, 2001 and&#013;&#010;	February 11, 2022 covering&#013;&#010;	7,653 days.'><div><span>Dan</span></div></th>
+  <th title='This sheet shows:&#013;&#010;	7,257 measurements on&#013;&#010;	179 days between&#013;&#010;	February 28, 2001 and&#013;&#010;	February 11, 2022 covering&#013;&#010;	7,653 days.'><div><span>Dan</span></div></th>
    <td><div onClick=vToggle(this,1)>
      <span style='color: black;'>&#9654;</span>
      <span>2/11/22</span>
@@ -670,215 +670,235 @@
    </td>
    <td><div onClick=vToggle(this,133)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/7/04</span>
+     <span>2/26/04</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,134)>
      <span style='color: black;'>&#9654;</span>
-     <span>12/18/03</span>
+     <span>1/9/04</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,135)>
      <span style='color: black;'>&#9654;</span>
-     <span>12/11/03</span>
+     <span>1/7/04</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,136)>
      <span style='color: black;'>&#9654;</span>
-     <span>11/8/03</span>
+     <span>12/18/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,137)>
      <span style='color: black;'>&#9654;</span>
-     <span>10/11/03</span>
+     <span>12/11/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,138)>
      <span style='color: black;'>&#9654;</span>
-     <span>9/2/03</span>
+     <span>11/8/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,139)>
      <span style='color: black;'>&#9654;</span>
-     <span>7/27/03</span>
+     <span>10/11/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,140)>
      <span style='color: black;'>&#9654;</span>
-     <span>6/30/03</span>
+     <span>9/2/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,141)>
      <span style='color: black;'>&#9654;</span>
-     <span>6/9/03</span>
+     <span>7/28/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,142)>
      <span style='color: black;'>&#9654;</span>
-     <span>6/2/03</span>
+     <span>7/27/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,143)>
      <span style='color: black;'>&#9654;</span>
-     <span>5/12/03</span>
+     <span>6/30/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,144)>
      <span style='color: black;'>&#9654;</span>
-     <span>4/28/03</span>
+     <span>6/9/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,145)>
      <span style='color: black;'>&#9654;</span>
-     <span>4/16/03</span>
+     <span>6/2/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,146)>
      <span style='color: black;'>&#9654;</span>
-     <span>4/14/03</span>
+     <span>5/12/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,147)>
      <span style='color: black;'>&#9654;</span>
-     <span>4/1/03</span>
+     <span>4/28/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,148)>
      <span style='color: black;'>&#9654;</span>
-     <span>3/19/03</span>
+     <span>4/20/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,149)>
      <span style='color: black;'>&#9654;</span>
-     <span>3/17/03</span>
+     <span>4/16/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,150)>
      <span style='color: black;'>&#9654;</span>
-     <span>3/3/03</span>
+     <span>4/14/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,151)>
      <span style='color: black;'>&#9654;</span>
-     <span>2/24/03</span>
+     <span>4/1/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,152)>
      <span style='color: black;'>&#9654;</span>
-     <span>2/18/03</span>
+     <span>3/19/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,153)>
      <span style='color: black;'>&#9654;</span>
-     <span>2/10/03</span>
+     <span>3/17/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,154)>
      <span style='color: black;'>&#9654;</span>
-     <span>2/3/03</span>
+     <span>3/3/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,155)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/30/03</span>
+     <span>2/24/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,156)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/27/03</span>
+     <span>2/18/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,157)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/23/03</span>
+     <span>2/10/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,158)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/20/03</span>
+     <span>2/3/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,159)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/16/03</span>
+     <span>1/30/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,160)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/13/03</span>
+     <span>1/27/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,161)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/9/03</span>
+     <span>1/23/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,162)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/6/03</span>
+     <span>1/20/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,163)>
      <span style='color: black;'>&#9654;</span>
-     <span>1/3/03</span>
+     <span>1/16/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,164)>
      <span style='color: black;'>&#9654;</span>
-     <span>12/30/02</span>
+     <span>1/13/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,165)>
      <span style='color: black;'>&#9654;</span>
-     <span>11/1/02</span>
+     <span>1/9/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,166)>
      <span style='color: black;'>&#9654;</span>
-     <span>9/16/02</span>
+     <span>1/6/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,167)>
      <span style='color: black;'>&#9654;</span>
-     <span>9/9/02</span>
+     <span>1/3/03</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,168)>
      <span style='color: black;'>&#9654;</span>
-     <span>7/20/02</span>
+     <span>12/30/02</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,169)>
      <span style='color: black;'>&#9654;</span>
-     <span>6/18/02</span>
+     <span>11/1/02</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,170)>
      <span style='color: black;'>&#9654;</span>
-     <span>3/4/02</span>
+     <span>9/16/02</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,171)>
      <span style='color: black;'>&#9654;</span>
-     <span>12/14/01</span>
+     <span>9/9/02</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,172)>
      <span style='color: black;'>&#9654;</span>
-     <span>9/7/01</span>
+     <span>7/20/02</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,173)>
      <span style='color: black;'>&#9654;</span>
-     <span>9/4/01</span>
+     <span>6/18/02</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,174)>
      <span style='color: black;'>&#9654;</span>
-     <span>6/12/01</span>
+     <span>3/4/02</span>
     </div>
    </td>
    <td><div onClick=vToggle(this,175)>
+     <span style='color: black;'>&#9654;</span>
+     <span>12/14/01</span>
+    </div>
+   </td>
+   <td><div onClick=vToggle(this,176)>
+     <span style='color: black;'>&#9654;</span>
+     <span>9/7/01</span>
+    </div>
+   </td>
+   <td><div onClick=vToggle(this,177)>
+     <span style='color: black;'>&#9654;</span>
+     <span>9/4/01</span>
+    </div>
+   </td>
+   <td><div onClick=vToggle(this,178)>
+     <span style='color: black;'>&#9654;</span>
+     <span>6/12/01</span>
+    </div>
+   </td>
+   <td><div onClick=vToggle(this,179)>
      <span style='color: black;'>&#9654;</span>
      <span>2/28/01</span>
     </div>
@@ -889,7 +909,7 @@
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,1);'>
     <span>&#9650;</span>CBC</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg1">
    <th title="White Blood Count&#013;&#010;Immune System&#013;&#010;Normal range/value:  3.6 - 10.6"
@@ -1025,15 +1045,18 @@ WBC&emsp;&emsp;</th>
    <td class="high_color">10.8</td>
    <td class="high_color">11.2</td>
    <td class="normal_color">9.8</td>
-   <td class="normal_color">9.4</td>
-   <td class="normal_color">10.5</td>
+   <td class="normal_color">10.4</td>
+   <td class="normal_color">10</td>
    <td class="high_color">11.8</td>
+   <td class="high_color">11.8</td>
+   <td class="low_color"></td>
    <td class="normal_color">9.3</td>
-   <td class="high_color">11</td>
+   <td class="high_color">11.0</td>
    <td class="high_color">12.4</td>
    <td class="high_color">10.8</td>
    <td class="high_color">11.4</td>
    <td class="high_color">10.8</td>
+   <td class="normal_color">9.5</td>
    <td class="normal_color">9.5</td>
    <td class="high_color">11.4</td>
    <td class="high_color">11.2</td>
@@ -1041,9 +1064,10 @@ WBC&emsp;&emsp;</th>
    <td class="high_color">11.7</td>
    <td class="normal_color">10.3</td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="high_color">11.5</td>
    <td class="high_color">10.9</td>
-   <td class="low_color"></td>
+   <td class="high_color">11.2</td>
    <td class="normal_color">10.6</td>
    <td class="high_color">12.4</td>
    <td class="high_color">12.9</td>
@@ -1204,26 +1228,30 @@ RBC&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">5.18</td>
    <td class="normal_color">5.10</td>
+   <td class="normal_color">5.03</td>
+   <td class="normal_color">5.20</td>
+   <td class="normal_color">5.0</td>
+   <td class="low_color"></td>
+   <td class="normal_color">5.16</td>
+   <td class="low_color"></td>
+   <td class="normal_color">4.95</td>
+   <td class="normal_color">5.02</td>
+   <td class="normal_color">5.08</td>
+   <td class="normal_color">4.92</td>
+   <td class="normal_color">5.11</td>
+   <td class="normal_color">5.09</td>
+   <td class="normal_color">4.88</td>
+   <td class="low_color"></td>
+   <td class="normal_color">4.87</td>
+   <td class="normal_color">4.69</td>
+   <td class="normal_color">4.93</td>
+   <td class="normal_color">4.90</td>
+   <td class="normal_color">4.64</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">4.60</td>
+   <td class="normal_color">4.64</td>
+   <td class="normal_color">4.58</td>
    <td class="normal_color">4.49</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -1386,24 +1414,28 @@ Hemoglobin&emsp;&emsp;</th>
    <td class="normal_color">16.1</td>
    <td class="normal_color">15.8</td>
    <td class="normal_color">16.2</td>
-   <td class="normal_color">15.5</td>
+   <td class="normal_color">15</td>
    <td class="normal_color">16</td>
+   <td class="normal_color">16.0</td>
+   <td class="low_color"></td>
    <td class="normal_color">15.6</td>
-   <td class="normal_color">16</td>
+   <td class="normal_color">16.0</td>
    <td class="normal_color">16.1</td>
    <td class="normal_color">15.7</td>
-   <td class="normal_color">16</td>
+   <td class="normal_color">16.0</td>
    <td class="normal_color">16.1</td>
    <td class="normal_color">15.4</td>
-   <td class="normal_color">16</td>
+   <td class="normal_color">15.4</td>
+   <td class="normal_color">16.0</td>
    <td class="normal_color">15.2</td>
    <td class="normal_color">15.7</td>
    <td class="normal_color">15.7</td>
    <td class="normal_color">15.6</td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="normal_color">15.5</td>
    <td class="normal_color">15.3</td>
-   <td class="low_color"></td>
+   <td class="normal_color">15.4</td>
    <td class="normal_color">14.6</td>
    <td class="normal_color">14.6</td>
    <td class="normal_color">13.6</td>
@@ -1564,16 +1596,19 @@ Hematocrit&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">48.6</td>
    <td class="normal_color">48.8</td>
-   <td class="normal_color">47</td>
+   <td class="normal_color">47.0</td>
    <td class="normal_color">49.1</td>
-   <td class="normal_color">46.7</td>
+   <td class="normal_color">46</td>
    <td class="normal_color">47.7</td>
-   <td class="normal_color">47</td>
+   <td class="normal_color">47.7</td>
+   <td class="low_color"></td>
+   <td class="normal_color">47.0</td>
    <td class="normal_color">47.7</td>
    <td class="normal_color">48.4</td>
    <td class="normal_color">46.8</td>
    <td class="normal_color">48.6</td>
    <td class="normal_color">48.1</td>
+   <td class="normal_color">46.8</td>
    <td class="normal_color">46.8</td>
    <td class="normal_color">47.1</td>
    <td class="normal_color">45.5</td>
@@ -1581,9 +1616,10 @@ Hematocrit&emsp;&emsp;</th>
    <td class="normal_color">48.3</td>
    <td class="normal_color">45.2</td>
    <td class="low_color"></td>
-   <td class="normal_color">45.3</td>
-   <td class="normal_color">46</td>
    <td class="low_color"></td>
+   <td class="normal_color">45.3</td>
+   <td class="normal_color">46.0</td>
+   <td class="normal_color">45.6</td>
    <td class="normal_color">45.1</td>
    <td class="normal_color">44</td>
    <td class="normal_color">40.9</td>
@@ -1744,26 +1780,30 @@ MCV&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">93.9</td>
    <td class="normal_color">95.7</td>
+   <td class="normal_color">93.4</td>
+   <td class="normal_color">94.4</td>
+   <td class="normal_color">93</td>
+   <td class="low_color"></td>
+   <td class="normal_color">92.5</td>
+   <td class="low_color"></td>
+   <td class="normal_color">94.9</td>
+   <td class="normal_color">94.9</td>
+   <td class="normal_color">95.3</td>
+   <td class="normal_color">95.3</td>
+   <td class="normal_color">95.3</td>
+   <td class="normal_color">94.6</td>
+   <td class="normal_color">96.0</td>
+   <td class="low_color"></td>
+   <td class="normal_color">96.7</td>
+   <td class="normal_color">97.0</td>
+   <td class="normal_color">96.2</td>
+   <td class="normal_color">98.7</td>
+   <td class="normal_color">97.4</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">98.5</td>
+   <td class="high_color">99.1</td>
+   <td class="high_color">99.5</td>
    <td class="high_color">100.0</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -1924,26 +1964,30 @@ MCH&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">30.8</td>
    <td class="normal_color">31.4</td>
+   <td class="normal_color">31.4</td>
+   <td class="normal_color">31.1</td>
+   <td class="normal_color">30.0</td>
+   <td class="low_color"></td>
+   <td class="normal_color">31.0</td>
+   <td class="low_color"></td>
+   <td class="normal_color">31.6</td>
+   <td class="normal_color">31.9</td>
+   <td class="normal_color">31.7</td>
+   <td class="normal_color">31.9</td>
+   <td class="normal_color">31.3</td>
+   <td class="normal_color">31.7</td>
+   <td class="normal_color">31.6</td>
+   <td class="low_color"></td>
+   <td class="normal_color">32.8</td>
+   <td class="normal_color">32.4</td>
+   <td class="normal_color">31.9</td>
+   <td class="normal_color">32.1</td>
+   <td class="normal_color">33.7</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">33.7</td>
+   <td class="normal_color">33.0</td>
+   <td class="normal_color">33.6</td>
    <td class="normal_color">32.6</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -2104,26 +2148,30 @@ MCHC&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">32.8</td>
    <td class="normal_color">32.9</td>
+   <td class="normal_color">33.6</td>
+   <td class="normal_color">33.0</td>
+   <td class="normal_color">33</td>
+   <td class="low_color"></td>
+   <td class="normal_color">33.5</td>
+   <td class="low_color"></td>
+   <td class="normal_color">33.3</td>
+   <td class="normal_color">33.6</td>
+   <td class="normal_color">33.3</td>
+   <td class="normal_color">33.5</td>
+   <td class="normal_color">32.9</td>
+   <td class="normal_color">33.5</td>
+   <td class="normal_color">32.9</td>
+   <td class="low_color"></td>
+   <td class="normal_color">33.9</td>
+   <td class="normal_color">33.4</td>
+   <td class="normal_color">33.2</td>
+   <td class="normal_color">32.5</td>
+   <td class="normal_color">34.6</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">34.2</td>
+   <td class="normal_color">33.3</td>
+   <td class="normal_color">33.8</td>
    <td class="normal_color">32.4</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -2266,7 +2314,7 @@ RDW&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="normal_color">13.1</td>
-   <td class="normal_color">13.2</td>
+   <td class="high_color">132</td>
    <td class="low_color"></td>
    <td class="normal_color">13.4</td>
    <td class="normal_color">13</td>
@@ -2284,26 +2332,30 @@ RDW&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">12.1</td>
    <td class="normal_color">12.4</td>
+   <td class="normal_color">12.4</td>
+   <td class="normal_color">12.6</td>
+   <td class="normal_color">12</td>
+   <td class="low_color"></td>
+   <td class="normal_color">12.5</td>
+   <td class="low_color"></td>
+   <td class="normal_color">12.3</td>
+   <td class="normal_color">12.3</td>
+   <td class="normal_color">12.5</td>
+   <td class="normal_color">12.6</td>
+   <td class="normal_color">12.3</td>
+   <td class="normal_color">12.0</td>
+   <td class="normal_color">12.4</td>
+   <td class="low_color"></td>
+   <td class="normal_color">12.2</td>
+   <td class="normal_color">12.2</td>
+   <td class="normal_color">12.4</td>
+   <td class="normal_color">13.0</td>
+   <td class="normal_color">12.8</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">12.7</td>
+   <td class="normal_color">12.6</td>
+   <td class="normal_color">12.6</td>
    <td class="normal_color">12.6</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -2464,26 +2516,30 @@ Platelets&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">247</td>
    <td class="normal_color">247</td>
+   <td class="normal_color">245</td>
+   <td class="normal_color">227</td>
+   <td class="normal_color">231</td>
+   <td class="low_color"></td>
+   <td class="normal_color">233</td>
+   <td class="low_color"></td>
+   <td class="normal_color">239</td>
+   <td class="normal_color">227</td>
+   <td class="normal_color">229</td>
+   <td class="normal_color">223</td>
+   <td class="normal_color">231</td>
+   <td class="normal_color">227</td>
+   <td class="normal_color">221</td>
+   <td class="low_color"></td>
+   <td class="normal_color">240</td>
+   <td class="normal_color">220</td>
+   <td class="normal_color">243</td>
+   <td class="normal_color">246</td>
+   <td class="normal_color">224</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">215</td>
+   <td class="normal_color">229</td>
+   <td class="normal_color">256</td>
    <td class="normal_color">226</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -2644,26 +2700,30 @@ MPV&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">7.4</td>
    <td class="normal_color">7.4</td>
+   <td class="normal_color">7.3</td>
+   <td class="normal_color">7.9</td>
+   <td class="normal_color">7.4</td>
+   <td class="low_color"></td>
+   <td class="normal_color">7.7</td>
+   <td class="low_color"></td>
+   <td class="normal_color">7.6</td>
+   <td class="normal_color">8.4</td>
+   <td class="normal_color">8.5</td>
+   <td class="normal_color">8.4</td>
+   <td class="normal_color">8.2</td>
+   <td class="normal_color">7.7</td>
+   <td class="normal_color">8.0</td>
+   <td class="low_color"></td>
+   <td class="normal_color">7.7</td>
+   <td class="normal_color">7.9</td>
+   <td class="normal_color">7.9</td>
+   <td class="normal_color">7.5</td>
+   <td class="normal_color">7.7</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">8.1</td>
+   <td class="normal_color">8.4</td>
+   <td class="normal_color">7.7</td>
    <td class="normal_color">7.5</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -2824,25 +2884,29 @@ Neutrophils&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="high_color">65.7</td>
    <td class="normal_color">55.3</td>
+   <td class="normal_color">61.2</td>
+   <td class="normal_color">64.7</td>
+   <td class="high_color">68.0</td>
+   <td class="low_color"></td>
+   <td class="normal_color">64.9</td>
+   <td class="low_color"></td>
+   <td class="high_color">65.5</td>
+   <td class="high_color">68.5</td>
+   <td class="high_color">69.9</td>
+   <td class="high_color">70.2</td>
+   <td class="high_color">69.0</td>
+   <td class="high_color">68.1</td>
+   <td class="normal_color">64.7</td>
+   <td class="low_color"></td>
+   <td class="high_color">65.2</td>
+   <td class="high_color">68.3</td>
+   <td class="high_color">66.6</td>
+   <td class="high_color">70.5</td>
+   <td class="high_color">66.9</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="high_color">66.5</td>
+   <td class="normal_color">60.0</td>
    <td class="high_color">69.0</td>
    <td class="normal_color">50.1</td>
    <td class="low_color"></td>
@@ -3004,25 +3068,29 @@ Lymphocytes&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">27.0</td>
    <td class="normal_color">36.4</td>
+   <td class="normal_color">30.2</td>
+   <td class="normal_color">28.6</td>
+   <td class="normal_color">24.2</td>
+   <td class="low_color"></td>
+   <td class="normal_color">27.5</td>
+   <td class="low_color"></td>
+   <td class="normal_color">26.9</td>
+   <td class="normal_color">22.2</td>
+   <td class="normal_color">22.0</td>
+   <td class="normal_color">23.3</td>
+   <td class="normal_color">24.6</td>
+   <td class="normal_color">25.6</td>
+   <td class="normal_color">28.1</td>
+   <td class="low_color"></td>
+   <td class="normal_color">27.9</td>
+   <td class="normal_color">26.2</td>
+   <td class="normal_color">27.0</td>
+   <td class="normal_color">23.6</td>
+   <td class="normal_color">26.1</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">27.1</td>
+   <td class="normal_color">33.2</td>
    <td class="normal_color">24.4</td>
    <td class="normal_color">41.8</td>
    <td class="low_color"></td>
@@ -3184,25 +3252,29 @@ Monocytes&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">6.4</td>
    <td class="normal_color">7.4</td>
+   <td class="normal_color">7.1</td>
+   <td class="normal_color">6.1</td>
+   <td class="normal_color">7.1</td>
+   <td class="low_color"></td>
+   <td class="normal_color">6.7</td>
+   <td class="low_color"></td>
+   <td class="normal_color">6.9</td>
+   <td class="normal_color">6.6</td>
+   <td class="normal_color">6.4</td>
+   <td class="normal_color">5.8</td>
+   <td class="normal_color">5.5</td>
+   <td class="normal_color">5.5</td>
+   <td class="normal_color">6.0</td>
+   <td class="low_color"></td>
+   <td class="normal_color">6.2</td>
+   <td class="low_color">5.2</td>
+   <td class="normal_color">5.9</td>
+   <td class="low_color">5.4</td>
+   <td class="normal_color">6.4</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">5.7</td>
+   <td class="normal_color">6.5</td>
    <td class="normal_color">6.1</td>
    <td class="normal_color">5.9</td>
    <td class="low_color"></td>
@@ -3364,25 +3436,29 @@ Eosinophils&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color">0.7</td>
    <td class="low_color">0.6</td>
+   <td class="low_color">0.6</td>
+   <td class="low_color">0.4</td>
+   <td class="low_color">0.6</td>
+   <td class="low_color"></td>
+   <td class="low_color">0.6</td>
+   <td class="low_color"></td>
+   <td class="low_color">0.5</td>
+   <td class="low_color">0.7</td>
+   <td class="low_color">0.6</td>
+   <td class="low_color">0.6</td>
+   <td class="low_color">0.6</td>
+   <td class="low_color">0.6</td>
+   <td class="low_color">0.4</td>
+   <td class="low_color"></td>
+   <td class="low_color">0.6</td>
+   <td class="low_color">0.3</td>
+   <td class="low_color">0.4</td>
+   <td class="low_color">0.4</td>
+   <td class="low_color">0.5</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="low_color">0.5</td>
+   <td class="low_color">0.3</td>
    <td class="low_color">0.5</td>
    <td class="normal_color">0.9</td>
    <td class="low_color"></td>
@@ -3544,25 +3620,29 @@ Basophils&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color">0.1</td>
    <td class="normal_color">0.3</td>
+   <td class="normal_color">1.0</td>
+   <td class="low_color">0.1</td>
+   <td class="low_color">0.1</td>
+   <td class="low_color"></td>
+   <td class="normal_color">0.4</td>
+   <td class="low_color"></td>
+   <td class="normal_color">0.2</td>
+   <td class="high_color">2.1</td>
+   <td class="high_color">1.1</td>
+   <td class="low_color">0.1</td>
+   <td class="normal_color">0.3</td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.8</td>
+   <td class="low_color"></td>
+   <td class="low_color">0.0</td>
+   <td class="low_color">0.0</td>
+   <td class="low_color">0.1</td>
+   <td class="low_color">0.0</td>
+   <td class="low_color">0.1</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">0.3</td>
+   <td class="low_color">0.0</td>
    <td class="low_color">0.0</td>
    <td class="high_color">1.3</td>
    <td class="low_color"></td>
@@ -3639,6 +3719,10 @@ Immature Granulocytes&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color">0</td>
    <td class="normal_color">0</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -3904,25 +3988,29 @@ Neutrophils (Absolute)&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">7.09</td>
    <td class="normal_color">6.22</td>
+   <td class="normal_color">5.98</td>
+   <td class="normal_color">6.75</td>
+   <td class="normal_color">7.17</td>
+   <td class="low_color"></td>
+   <td class="high_color">7.64</td>
+   <td class="low_color"></td>
+   <td class="normal_color">6.12</td>
+   <td class="high_color">7.55</td>
+   <td class="high_color">8.68</td>
+   <td class="high_color">7.59</td>
+   <td class="high_color">7.86</td>
+   <td class="normal_color">7.38</td>
+   <td class="normal_color">6.11</td>
+   <td class="low_color"></td>
+   <td class="normal_color">7.46</td>
+   <td class="high_color">7.66</td>
+   <td class="high_color">7.58</td>
+   <td class="high_color">8.25</td>
+   <td class="normal_color">6.91</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="high_color">7.68</td>
+   <td class="normal_color">6.54</td>
    <td class="high_color">7.73</td>
    <td class="normal_color">5.29</td>
    <td class="low_color"></td>
@@ -4084,25 +4172,29 @@ Lymphocytes (Absolute)&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="high_color">2.91</td>
    <td class="high_color">4.09</td>
+   <td class="high_color">2.95</td>
+   <td class="high_color">2.98</td>
+   <td class="normal_color">2.56</td>
+   <td class="low_color"></td>
+   <td class="high_color">3.24</td>
+   <td class="low_color"></td>
+   <td class="normal_color">2.51</td>
+   <td class="normal_color">2.44</td>
+   <td class="normal_color">2.73</td>
+   <td class="normal_color">2.52</td>
+   <td class="normal_color">2.81</td>
+   <td class="normal_color">2.77</td>
+   <td class="normal_color">2.66</td>
+   <td class="low_color"></td>
+   <td class="high_color">3.19</td>
+   <td class="high_color">2.93</td>
+   <td class="high_color">3.08</td>
+   <td class="normal_color">2.77</td>
+   <td class="normal_color">2.70</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="high_color">3.13</td>
+   <td class="high_color">3.62</td>
    <td class="normal_color">2.73</td>
    <td class="high_color">4.41</td>
    <td class="low_color"></td>
@@ -4264,25 +4356,29 @@ Monocytes (Absolute)&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">.69</td>
    <td class="normal_color">.83</td>
+   <td class="normal_color">.69</td>
+   <td class="normal_color">.64</td>
+   <td class="normal_color">.75</td>
+   <td class="low_color"></td>
+   <td class="normal_color">.79</td>
+   <td class="low_color"></td>
+   <td class="normal_color">.65</td>
+   <td class="normal_color">.73</td>
+   <td class="normal_color">.79</td>
+   <td class="normal_color">.62</td>
+   <td class="normal_color">.63</td>
+   <td class="normal_color">.60</td>
+   <td class="normal_color">.57</td>
+   <td class="low_color"></td>
+   <td class="normal_color">.71</td>
+   <td class="normal_color">.58</td>
+   <td class="normal_color">.67</td>
+   <td class="normal_color">.63</td>
+   <td class="normal_color">.66</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">.65</td>
+   <td class="normal_color">.71</td>
    <td class="normal_color">.68</td>
    <td class="normal_color">.62</td>
    <td class="low_color"></td>
@@ -4444,25 +4540,29 @@ Eosinophils (Absolute)&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color">.08</td>
    <td class="normal_color">.07</td>
+   <td class="normal_color">.06</td>
+   <td class="normal_color">.05</td>
+   <td class="normal_color">.07</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">.07</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">.04</td>
+   <td class="normal_color">.07</td>
+   <td class="normal_color">.07</td>
+   <td class="normal_color">.06</td>
+   <td class="normal_color">.07</td>
+   <td class="normal_color">.06</td>
+   <td class="normal_color">.03</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">.07</td>
+   <td class="normal_color">.04</td>
+   <td class="normal_color">.05</td>
+   <td class="normal_color">.05</td>
+   <td class="normal_color">.05</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">.05</td>
+   <td class="normal_color">.03</td>
    <td class="normal_color">.06</td>
    <td class="normal_color">.09</td>
    <td class="normal_color"></td>
@@ -4624,25 +4724,29 @@ Basophils (Absolute)&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color">.01</td>
    <td class="normal_color">.04</td>
+   <td class="normal_color">.10</td>
+   <td class="normal_color">.01</td>
+   <td class="normal_color">.01</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">.04</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">.02</td>
+   <td class="high_color">.23</td>
+   <td class="normal_color">.14</td>
+   <td class="normal_color">.01</td>
+   <td class="normal_color">.04</td>
+   <td class="normal_color">.03</td>
+   <td class="normal_color">.08</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">.01</td>
+   <td class="normal_color">.00</td>
+   <td class="normal_color">.01</td>
+   <td class="normal_color">.00</td>
+   <td class="normal_color">.01</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">.03</td>
+   <td class="normal_color">.00</td>
    <td class="normal_color">.00</td>
    <td class="normal_color">.14</td>
    <td class="normal_color"></td>
@@ -4851,11 +4955,15 @@ Immature Grans (Abs)&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,2);'>
     <span>&#9650;</span>CMP</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg2">
    <th title="Chemical waste of normal muscle function&#013;&#010;Kidney issues or muscle loss&#013;&#010;Normal range/value:  0.8 - 1.4"
@@ -4994,6 +5102,8 @@ Creatinine&emsp;&emsp;</th>
    <td class="normal_color">1.4</td>
    <td class="normal_color">1.4</td>
    <td class="normal_color">1.4</td>
+   <td class="normal_color">1.4</td>
+   <td class="low_color"></td>
    <td class="high_color">1.5</td>
    <td class="high_color">1.6</td>
    <td class="high_color">1.6</td>
@@ -5001,15 +5111,17 @@ Creatinine&emsp;&emsp;</th>
    <td class="normal_color">1.4</td>
    <td class="normal_color">1.4</td>
    <td class="normal_color">1.2</td>
+   <td class="normal_color">1.2</td>
    <td class="normal_color">1.4</td>
    <td class="normal_color">1.3</td>
    <td class="high_color">1.6</td>
    <td class="normal_color">1.2</td>
    <td class="normal_color">1.3</td>
+   <td class="normal_color">1.3</td>
    <td class="normal_color">1.1</td>
    <td class="high_color">1.6</td>
    <td class="normal_color">1.4</td>
-   <td class="low_color"></td>
+   <td class="normal_color">1.2</td>
    <td class="normal_color">1.4</td>
    <td class="normal_color">1.2</td>
    <td class="normal_color">1.2</td>
@@ -5174,6 +5286,8 @@ BUN&emsp;&emsp;</th>
    <td class="high_color">24</td>
    <td class="high_color">23</td>
    <td class="high_color">24</td>
+   <td class="high_color">24</td>
+   <td class="low_color"></td>
    <td class="high_color">21</td>
    <td class="high_color">24</td>
    <td class="normal_color">19</td>
@@ -5181,15 +5295,17 @@ BUN&emsp;&emsp;</th>
    <td class="high_color">24</td>
    <td class="high_color">23</td>
    <td class="high_color">22</td>
+   <td class="high_color">22</td>
    <td class="high_color">30</td>
    <td class="normal_color">18</td>
    <td class="normal_color">20</td>
    <td class="normal_color">20</td>
    <td class="high_color">27</td>
+   <td class="high_color">27</td>
    <td class="low_color"></td>
    <td class="high_color">27</td>
    <td class="high_color">25</td>
-   <td class="low_color"></td>
+   <td class="high_color">22</td>
    <td class="high_color">28</td>
    <td class="high_color">24</td>
    <td class="high_color">24</td>
@@ -5319,6 +5435,10 @@ BUN/Creatinine Ratio&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="normal_color">17</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -5577,6 +5697,10 @@ A1C&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg2">
    <th title="Glucose&#013;&#010;Current blood sugar level&#013;&#010;Normal range/value:  70 - 99"
        onClick="hToggle(this,29);"><span>&#9664;</span>
@@ -5714,6 +5838,8 @@ Glucose&emsp;&emsp;</th>
    <td class="normal_color">87</td>
    <td class="high_color">103</td>
    <td class="normal_color">95</td>
+   <td class="normal_color">95</td>
+   <td class="low_color"></td>
    <td class="high_color">101</td>
    <td class="high_color">107</td>
    <td class="high_color">112</td>
@@ -5721,15 +5847,17 @@ Glucose&emsp;&emsp;</th>
    <td class="high_color">109</td>
    <td class="high_color">100</td>
    <td class="high_color">103</td>
+   <td class="high_color">103</td>
    <td class="normal_color">90</td>
    <td class="normal_color">98</td>
    <td class="normal_color">98</td>
    <td class="high_color">110</td>
    <td class="normal_color">96</td>
+   <td class="normal_color">96</td>
    <td class="low_color"></td>
    <td class="normal_color">92</td>
    <td class="normal_color">86</td>
-   <td class="low_color"></td>
+   <td class="normal_color">97</td>
    <td class="normal_color">81</td>
    <td class="normal_color">88</td>
    <td class="normal_color">88</td>
@@ -5758,9 +5886,9 @@ Glucose&emsp;&emsp;</th>
    <td class="normal_color">88</td>
    <td class="low_color"></td>
   <tr id="pg2">
-   <th title="Estimate Glomerular Filtration Rate&#013;&#010;How well kidneys are filtering&#013;&#010;Normal range/value: >59"
+   <th title="Estimate Glomerular Filtration Rate&#013;&#010;How well kidneys are filtering&#013;&#010;Normal range/value: >=60"
        onClick="hToggle(this,30);"><span>&#9664;</span>
-<span onClick="showInfo('Estimate Glomerular Filtration Rate\nHow well kidneys are filtering\nNormal range/value: >59');">&#9432;</span>
+<span onClick="showInfo('Estimate Glomerular Filtration Rate\nHow well kidneys are filtering\nNormal range/value: >=60');">&#9432;</span>
 eGFR&emsp;&emsp;</th>
    <td class="low_color">48</td>
    <td class="low_color"></td>
@@ -5768,11 +5896,11 @@ eGFR&emsp;&emsp;</th>
    <td class="normal_color">65</td>
    <td class="low_color">38</td>
    <td class="low_color"></td>
-   <td class="low_color">50</td>
    <td class="low_color"></td>
-   <td class="normal_color">66</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color">48</td>
-   <td class="normal_color">59</td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color">48</td>
@@ -5791,20 +5919,20 @@ eGFR&emsp;&emsp;</th>
    <td class="low_color">57</td>
    <td class="low_color">58</td>
    <td class="low_color">44</td>
-   <td class="normal_color">64</td>
-   <td class="low_color"></td>
-   <td class="normal_color">62</td>
-   <td class="low_color"></td>
-   <td class="normal_color">59</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="normal_color">60</td>
-   <td class="low_color"></td>
-   <td class="normal_color">60</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="normal_color">68</td>
-   <td class="normal_color">93</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="normal_color">64</td>
    <td class="low_color">57</td>
    <td class="low_color">46</td>
@@ -5858,23 +5986,27 @@ eGFR&emsp;&emsp;</th>
    <td class="normal_color">85</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="normal_color">59</td>
+   <td class="low_color">>59</td>
    <td class="low_color"></td>
-   <td class="normal_color">69</td>
-   <td class="normal_color">63</td>
-   <td class="low_color">58</td>
-   <td class="normal_color">63</td>
+   <td class="normal_color">84</td>
+   <td class="normal_color">76</td>
+   <td class="normal_color">70</td>
+   <td class="normal_color">77</td>
    <td class="low_color"></td>
-   <td class="normal_color">63</td>
-   <td class="normal_color">67</td>
+   <td class="normal_color">77</td>
+   <td class="normal_color">81</td>
+   <td class="normal_color">82</td>
+   <td class="normal_color">82</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="normal_color">82</td>
    <td class="normal_color">68</td>
-   <td class="normal_color">68</td>
+   <td class="low_color"></td>
+   <td class="normal_color">75</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="normal_color">68</td>
-   <td class="low_color">57</td>
    <td class="low_color"></td>
-   <td class="normal_color">62</td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -5985,8 +6117,8 @@ Creatinine Clearance&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="normal_color">60</td>
-   <td class="normal_color">60</td>
+   <td class="low_color">> 60 mL/min</td>
+   <td class="low_color">> 60 mL/min</td>
    <td class="low_color">53</td>
    <td class="low_color">43</td>
    <td class="low_color"></td>
@@ -6008,7 +6140,11 @@ Creatinine Clearance&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="normal_color">60</td>
+   <td class="low_color">> 60 mL/min</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -6255,10 +6391,13 @@ Sodium&emsp;&emsp;</th>
    <td class="normal_color">140</td>
    <td class="normal_color">140</td>
    <td class="normal_color">140</td>
-   <td class="normal_color">141</td>
+   <td class="low_color"></td>
    <td class="normal_color">140</td>
    <td class="normal_color">141</td>
    <td class="normal_color">140</td>
+   <td class="normal_color">141</td>
+   <td class="normal_color">140</td>
+   <td class="normal_color">142</td>
    <td class="normal_color">142</td>
    <td class="normal_color">142</td>
    <td class="normal_color">142</td>
@@ -6266,10 +6405,11 @@ Sodium&emsp;&emsp;</th>
    <td class="normal_color">144</td>
    <td class="normal_color">142</td>
    <td class="normal_color">140</td>
+   <td class="normal_color">140</td>
    <td class="low_color"></td>
    <td class="normal_color">140</td>
    <td class="normal_color">142</td>
-   <td class="low_color"></td>
+   <td class="normal_color">142</td>
    <td class="normal_color">143</td>
    <td class="normal_color">141</td>
    <td class="normal_color">143</td>
@@ -6432,8 +6572,10 @@ Potassium&emsp;&emsp;</th>
    <td class="normal_color">4.6</td>
    <td class="normal_color">4.1</td>
    <td class="normal_color">4.8</td>
-   <td class="low_color">1.1</td>
    <td class="normal_color">4.4</td>
+   <td class="normal_color">4.4</td>
+   <td class="normal_color">4.4</td>
+   <td class="low_color"></td>
    <td class="normal_color">4.4</td>
    <td class="normal_color">4.6</td>
    <td class="normal_color">4.7</td>
@@ -6441,15 +6583,17 @@ Potassium&emsp;&emsp;</th>
    <td class="normal_color">4.6</td>
    <td class="normal_color">4.9</td>
    <td class="normal_color">4.2</td>
+   <td class="normal_color">4.2</td>
    <td class="normal_color">4.1</td>
    <td class="normal_color">4.4</td>
    <td class="normal_color">4.6</td>
    <td class="normal_color">4.7</td>
    <td class="normal_color">4.5</td>
+   <td class="normal_color">4.5</td>
    <td class="low_color"></td>
    <td class="normal_color">4.4</td>
    <td class="normal_color">4.6</td>
-   <td class="low_color"></td>
+   <td class="normal_color">4.4</td>
    <td class="normal_color">4.4</td>
    <td class="normal_color">4.5</td>
    <td class="normal_color">4.5</td>
@@ -6614,22 +6758,26 @@ Chloride&emsp;&emsp;</th>
    <td class="high_color">109</td>
    <td class="high_color">109</td>
    <td class="normal_color">105</td>
+   <td class="normal_color">105</td>
+   <td class="low_color"></td>
    <td class="normal_color">107</td>
    <td class="normal_color">108</td>
    <td class="normal_color">107</td>
    <td class="high_color">109</td>
    <td class="high_color">109</td>
    <td class="normal_color">108</td>
+   <td class="high_color">109</td>
    <td class="high_color">109</td>
    <td class="normal_color">107</td>
    <td class="normal_color">107</td>
    <td class="normal_color">108</td>
    <td class="normal_color">108</td>
    <td class="normal_color">105</td>
+   <td class="normal_color">105</td>
    <td class="low_color"></td>
    <td class="normal_color">108</td>
    <td class="high_color">109</td>
-   <td class="low_color"></td>
+   <td class="high_color">109</td>
    <td class="high_color">109</td>
    <td class="high_color">111</td>
    <td class="normal_color">108</td>
@@ -6790,26 +6938,30 @@ CO2&emsp;&emsp;</th>
    <td class="normal_color">23.0</td>
    <td class="normal_color">24.0</td>
    <td class="normal_color">23.0</td>
-   <td class="low_color">19</td>
+   <td class="low_color">19.0</td>
+   <td class="normal_color">23.0</td>
+   <td class="normal_color">22.0</td>
    <td class="normal_color">23</td>
-   <td class="normal_color">22</td>
-   <td class="normal_color">23</td>
+   <td class="normal_color">23.0</td>
+   <td class="low_color"></td>
+   <td class="low_color">21.0</td>
+   <td class="low_color">21.0</td>
+   <td class="normal_color">23.0</td>
+   <td class="low_color">21.0</td>
+   <td class="low_color">20.0</td>
+   <td class="normal_color">25.0</td>
+   <td class="low_color">21.0</td>
    <td class="low_color">21</td>
-   <td class="low_color">21</td>
-   <td class="normal_color">23</td>
-   <td class="low_color">21</td>
-   <td class="low_color">20</td>
-   <td class="normal_color">25</td>
-   <td class="low_color">21</td>
-   <td class="low_color">19</td>
-   <td class="normal_color">22</td>
-   <td class="normal_color">22</td>
-   <td class="normal_color">22</td>
+   <td class="low_color">19.0</td>
+   <td class="normal_color">22.0</td>
+   <td class="normal_color">22.0</td>
+   <td class="normal_color">22.0</td>
    <td class="normal_color">24</td>
+   <td class="normal_color">24.0</td>
    <td class="low_color"></td>
-   <td class="normal_color">25</td>
-   <td class="low_color">20</td>
-   <td class="low_color"></td>
+   <td class="normal_color">25.0</td>
+   <td class="low_color">20.0</td>
+   <td class="low_color">21.0</td>
    <td class="normal_color">23.0</td>
    <td class="normal_color">25</td>
    <td class="normal_color">23.0</td>
@@ -6977,19 +7129,23 @@ Anion Gap&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="high_color">17</td>
+   <td class="high_color">15</td>
+   <td class="high_color">15</td>
+   <td class="high_color">16</td>
+   <td class="high_color">14</td>
+   <td class="high_color">16</td>
    <td class="low_color"></td>
+   <td class="high_color">20</td>
+   <td class="high_color">17</td>
+   <td class="high_color">19</td>
+   <td class="high_color">17</td>
    <td class="low_color"></td>
+   <td class="high_color">16</td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">11</td>
+   <td class="high_color">18</td>
+   <td class="high_color">16</td>
    <td class="high_color">15</td>
    <td class="low_color"></td>
    <td class="high_color">17</td>
@@ -7018,9 +7174,9 @@ Anion Gap&emsp;&emsp;</th>
    <td class="high_color">18</td>
    <td class="low_color"></td>
   <tr id="pg2">
-   <th title="Calcium&#013;&#010;"Bone development, kidney stones, heart and brain function"&#013;&#010;Normal range/value:  8.5 - 10.5"
+   <th title="Calcium&#013;&#010;Bone development, kidney stones, heart and brain function&#013;&#010;Normal range/value:  8.5 - 10.5"
        onClick="hToggle(this,37);"><span>&#9664;</span>
-<span onClick="showInfo('Calcium\n"Bone development, kidney stones, heart and brain function"\nNormal range/value:  8.5 - 10.5');">&#9432;</span>
+<span onClick="showInfo('Calcium\nBone development, kidney stones, heart and brain function\nNormal range/value:  8.5 - 10.5');">&#9432;</span>
 Calcium&emsp;&emsp;</th>
    <td class="normal_color">9.2</td>
    <td class="low_color"></td>
@@ -7150,26 +7306,30 @@ Calcium&emsp;&emsp;</th>
    <td class="normal_color">10.4</td>
    <td class="normal_color">10.0</td>
    <td class="normal_color">10.4</td>
-   <td class="normal_color">10</td>
+   <td class="normal_color">10.0</td>
    <td class="normal_color">10.3</td>
    <td class="normal_color">9.9</td>
    <td class="normal_color">10.4</td>
    <td class="normal_color">10.4</td>
+   <td class="low_color"></td>
+   <td class="normal_color">10.4</td>
    <td class="normal_color">10.1</td>
-   <td class="normal_color">10</td>
+   <td class="normal_color">10.0</td>
    <td class="normal_color">9.8</td>
    <td class="normal_color">9.7</td>
    <td class="normal_color">10.2</td>
+   <td class="normal_color">10.0</td>
    <td class="normal_color">10</td>
    <td class="normal_color">10.2</td>
    <td class="normal_color">10.2</td>
    <td class="normal_color">10.3</td>
    <td class="normal_color">10.1</td>
    <td class="normal_color">10</td>
+   <td class="normal_color">10.0</td>
    <td class="low_color"></td>
    <td class="normal_color">10.5</td>
    <td class="normal_color">10.3</td>
-   <td class="low_color"></td>
+   <td class="normal_color">10.3</td>
    <td class="normal_color">9.7</td>
    <td class="normal_color">9.5</td>
    <td class="normal_color">9.9</td>
@@ -7330,26 +7490,30 @@ Phosphorus&emsp;&emsp;</th>
    <td class="normal_color">3.3</td>
    <td class="normal_color">2.9</td>
    <td class="normal_color">3.8</td>
-   <td class="normal_color">2.7</td>
+   <td class="low_color">2.3</td>
    <td class="normal_color">2.5</td>
    <td class="normal_color">2.9</td>
    <td class="low_color">2.4</td>
+   <td class="low_color">2.4</td>
+   <td class="low_color"></td>
    <td class="normal_color">2.7</td>
    <td class="normal_color">2.6</td>
    <td class="normal_color">2.6</td>
-   <td class="normal_color">3</td>
+   <td class="normal_color">3.0</td>
    <td class="normal_color">2.8</td>
    <td class="normal_color">2.6</td>
    <td class="normal_color">2.5</td>
+   <td class="normal_color">2.5</td>
    <td class="normal_color">2.9</td>
    <td class="normal_color">2.8</td>
    <td class="normal_color">2.9</td>
    <td class="normal_color">2.8</td>
    <td class="normal_color">3</td>
+   <td class="normal_color">3.0</td>
    <td class="low_color"></td>
    <td class="normal_color">2.5</td>
    <td class="low_color">2.1</td>
-   <td class="low_color"></td>
+   <td class="normal_color">2.5</td>
    <td class="low_color">2.4</td>
    <td class="low_color">2.2</td>
    <td class="low_color">2.2</td>
@@ -7514,6 +7678,8 @@ ALP&emsp;&emsp;</th>
    <td class="normal_color">66</td>
    <td class="normal_color">67</td>
    <td class="normal_color">69</td>
+   <td class="normal_color">69</td>
+   <td class="low_color"></td>
    <td class="normal_color">67</td>
    <td class="normal_color">73</td>
    <td class="normal_color">70</td>
@@ -7521,15 +7687,17 @@ ALP&emsp;&emsp;</th>
    <td class="normal_color">73</td>
    <td class="normal_color">73</td>
    <td class="normal_color">70</td>
+   <td class="normal_color">70</td>
    <td class="normal_color">72</td>
    <td class="normal_color">74</td>
    <td class="normal_color">82</td>
    <td class="normal_color">76</td>
    <td class="normal_color">84</td>
+   <td class="normal_color">84</td>
    <td class="low_color"></td>
    <td class="normal_color">83</td>
    <td class="normal_color">86</td>
-   <td class="low_color"></td>
+   <td class="normal_color">94</td>
    <td class="normal_color">83</td>
    <td class="normal_color">71</td>
    <td class="normal_color">75</td>
@@ -7694,6 +7862,8 @@ ALT&emsp;&emsp;</th>
    <td class="normal_color">30</td>
    <td class="normal_color">29</td>
    <td class="normal_color">28</td>
+   <td class="normal_color">28</td>
+   <td class="low_color"></td>
    <td class="normal_color">26</td>
    <td class="normal_color">27</td>
    <td class="normal_color">29</td>
@@ -7701,15 +7871,17 @@ ALT&emsp;&emsp;</th>
    <td class="normal_color">22</td>
    <td class="normal_color">24</td>
    <td class="normal_color">30</td>
+   <td class="normal_color">30</td>
    <td class="normal_color">21</td>
    <td class="normal_color">20</td>
    <td class="normal_color">25</td>
    <td class="normal_color">22</td>
    <td class="normal_color">21</td>
+   <td class="normal_color">21</td>
    <td class="low_color"></td>
    <td class="normal_color">19</td>
    <td class="normal_color">20</td>
-   <td class="low_color"></td>
+   <td class="normal_color">18</td>
    <td class="normal_color">15</td>
    <td class="normal_color">17</td>
    <td class="normal_color">17</td>
@@ -7870,26 +8042,30 @@ AST&emsp;&emsp;</th>
    <td class="normal_color">16</td>
    <td class="normal_color">17</td>
    <td class="normal_color">21</td>
+   <td class="normal_color">20</td>
+   <td class="normal_color">19</td>
+   <td class="normal_color">16</td>
    <td class="low_color"></td>
+   <td class="normal_color">18</td>
    <td class="low_color"></td>
+   <td class="normal_color">17</td>
+   <td class="normal_color">20</td>
+   <td class="normal_color">18</td>
+   <td class="normal_color">15</td>
+   <td class="normal_color">14</td>
+   <td class="normal_color">14</td>
+   <td class="normal_color">24</td>
    <td class="low_color"></td>
+   <td class="normal_color">16</td>
+   <td class="normal_color">14</td>
+   <td class="normal_color">19</td>
+   <td class="normal_color">14</td>
    <td class="low_color"></td>
+   <td class="normal_color">16</td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">13</td>
+   <td class="normal_color">17</td>
+   <td class="normal_color">16</td>
    <td class="normal_color">17</td>
    <td class="low_color"></td>
    <td class="low_color">11</td>
@@ -7918,9 +8094,9 @@ AST&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
   <tr id="pg2">
-   <th title="Bilirubin&#013;&#010;"Used to help find jaundice, anemia and liver disease"&#013;&#010;Normal range/value:  0.3 - 1"
+   <th title="Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value:  0.3 - 1"
        onClick="hToggle(this,42);"><span>&#9664;</span>
-<span onClick="showInfo('Bilirubin\n"Used to help find jaundice, anemia and liver disease"\nNormal range/value:  0.3 - 1');">&#9432;</span>
+<span onClick="showInfo('Bilirubin\nUsed to help find jaundice, anemia and liver disease\nNormal range/value:  0.3 - 1');">&#9432;</span>
 Bilirubin&emsp;&emsp;</th>
    <td class="normal_color">0.7</td>
    <td class="low_color"></td>
@@ -8054,6 +8230,8 @@ Bilirubin&emsp;&emsp;</th>
    <td class="normal_color">0.6</td>
    <td class="normal_color">0.5</td>
    <td class="normal_color">0.6</td>
+   <td class="normal_color">0.6</td>
+   <td class="low_color"></td>
    <td class="normal_color">0.7</td>
    <td class="normal_color">0.7</td>
    <td class="normal_color">0.6</td>
@@ -8062,14 +8240,16 @@ Bilirubin&emsp;&emsp;</th>
    <td class="normal_color">0.6</td>
    <td class="normal_color">0.6</td>
    <td class="normal_color">0.6</td>
+   <td class="normal_color">0.6</td>
    <td class="normal_color">0.5</td>
    <td class="normal_color">0.6</td>
+   <td class="normal_color">0.5</td>
    <td class="normal_color">0.5</td>
    <td class="normal_color">0.5</td>
    <td class="low_color"></td>
    <td class="normal_color">0.6</td>
    <td class="normal_color">0.7</td>
-   <td class="low_color"></td>
+   <td class="normal_color">0.6</td>
    <td class="normal_color">0.6</td>
    <td class="normal_color">0.5</td>
    <td class="normal_color">0.6</td>
@@ -8098,9 +8278,9 @@ Bilirubin&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
   <tr id="pg2">
-   <th title="Bilirubin&#013;&#010;"Used to help find jaundice, anemia and liver disease"&#013;&#010;Normal range/value: Not Established"
+   <th title="Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value: Not Established"
        onClick="hToggle(this,43);"><span>&#9664;</span>
-<span onClick="showInfo('Bilirubin\n"Used to help find jaundice, anemia and liver disease"\nNormal range/value: Not Established');">&#9432;</span>
+<span onClick="showInfo('Bilirubin\nUsed to help find jaundice, anemia and liver disease\nNormal range/value: Not Established');">&#9432;</span>
 Bilirubin Direct&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -8237,19 +8417,23 @@ Bilirubin Direct&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.2</td>
    <td class="normal_color"></td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.1</td>
    <td class="normal_color"></td>
+   <td class="normal_color">0.2</td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.2</td>
+   <td class="normal_color">0.2</td>
    <td class="normal_color">0.2</td>
    <td class="normal_color"></td>
    <td class="normal_color">0.1</td>
@@ -8278,9 +8462,9 @@ Bilirubin Direct&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
   <tr id="pg2">
-   <th title="Bilirubin&#013;&#010;"Used to help find jaundice, anemia and liver disease"&#013;&#010;Normal range/value: Not Established"
+   <th title="Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value: Not Established"
        onClick="hToggle(this,44);"><span>&#9664;</span>
-<span onClick="showInfo('Bilirubin\n"Used to help find jaundice, anemia and liver disease"\nNormal range/value: Not Established');">&#9432;</span>
+<span onClick="showInfo('Bilirubin\nUsed to help find jaundice, anemia and liver disease\nNormal range/value: Not Established');">&#9432;</span>
 Bilirubin Indirect&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -8417,19 +8601,23 @@ Bilirubin Indirect&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color">0.5</td>
+   <td class="normal_color">0.4</td>
+   <td class="normal_color">0.3</td>
+   <td class="normal_color">0.4</td>
+   <td class="normal_color">0.4</td>
+   <td class="normal_color">0.4</td>
    <td class="normal_color"></td>
+   <td class="normal_color">0.4</td>
+   <td class="normal_color">0.3</td>
+   <td class="normal_color">0.4</td>
+   <td class="normal_color">0.4</td>
    <td class="normal_color"></td>
+   <td class="normal_color">0.3</td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">0.4</td>
+   <td class="normal_color">0.5</td>
+   <td class="normal_color">0.4</td>
    <td class="normal_color">0.4</td>
    <td class="normal_color"></td>
    <td class="normal_color">0.5</td>
@@ -8594,6 +8782,8 @@ Protein&emsp;&emsp;</th>
    <td class="normal_color">6.6</td>
    <td class="normal_color">6.4</td>
    <td class="normal_color">6.5</td>
+   <td class="normal_color">6.5</td>
+   <td class="low_color"></td>
    <td class="low_color">6.3</td>
    <td class="normal_color">6.4</td>
    <td class="low_color">6.1</td>
@@ -8602,14 +8792,16 @@ Protein&emsp;&emsp;</th>
    <td class="low_color">6.2</td>
    <td class="low_color">6.1</td>
    <td class="low_color">6.1</td>
+   <td class="low_color">6.1</td>
    <td class="low_color">5.7</td>
    <td class="low_color">6.1</td>
    <td class="low_color">6.2</td>
    <td class="low_color">6</td>
+   <td class="low_color">6.0</td>
    <td class="low_color"></td>
    <td class="low_color">6.2</td>
    <td class="normal_color">6.6</td>
-   <td class="low_color"></td>
+   <td class="normal_color">6.8</td>
    <td class="normal_color">6.4</td>
    <td class="normal_color">7</td>
    <td class="low_color">6.1</td>
@@ -8775,21 +8967,25 @@ Albumin&emsp;&emsp;</th>
    <td class="normal_color">4.3</td>
    <td class="normal_color">4.2</td>
    <td class="normal_color">4.2</td>
+   <td class="low_color"></td>
+   <td class="normal_color">4.2</td>
    <td class="normal_color">4.1</td>
-   <td class="normal_color">4</td>
+   <td class="normal_color">4.0</td>
    <td class="normal_color">3.8</td>
    <td class="normal_color">4.1</td>
    <td class="normal_color">4.1</td>
    <td class="normal_color">4.2</td>
+   <td class="normal_color">4.2</td>
    <td class="normal_color">4.3</td>
-   <td class="normal_color">4</td>
+   <td class="normal_color">4.0</td>
    <td class="normal_color">4.2</td>
    <td class="normal_color">4.1</td>
+   <td class="normal_color">4.4</td>
    <td class="normal_color">4.4</td>
    <td class="low_color"></td>
    <td class="normal_color">4.5</td>
    <td class="normal_color">4.4</td>
-   <td class="low_color"></td>
+   <td class="normal_color">4.9</td>
    <td class="normal_color">4.4</td>
    <td class="normal_color">3.8</td>
    <td class="normal_color">4.1</td>
@@ -8921,6 +9117,10 @@ Magnesium&emsp;&emsp;</th>
    <td class="low_color">1.5</td>
    <td class="low_color"></td>
    <td class="normal_color">1.6</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -9134,6 +9334,8 @@ CK&emsp;&emsp;</th>
    <td class="normal_color">58</td>
    <td class="normal_color">68</td>
    <td class="normal_color">54</td>
+   <td class="normal_color">54</td>
+   <td class="low_color"></td>
    <td class="normal_color">63</td>
    <td class="normal_color">64</td>
    <td class="normal_color">47</td>
@@ -9141,15 +9343,17 @@ CK&emsp;&emsp;</th>
    <td class="normal_color">75</td>
    <td class="normal_color">54</td>
    <td class="normal_color">151</td>
+   <td class="normal_color">151</td>
    <td class="normal_color">79</td>
    <td class="normal_color">67</td>
    <td class="normal_color">90</td>
    <td class="normal_color">49</td>
    <td class="normal_color">82</td>
+   <td class="normal_color">82</td>
    <td class="low_color"></td>
    <td class="normal_color">62</td>
    <td class="normal_color">69</td>
-   <td class="low_color"></td>
+   <td class="normal_color">69</td>
    <td class="normal_color">61</td>
    <td class="normal_color">36</td>
    <td class="normal_color">49</td>
@@ -9357,11 +9561,19 @@ CK MB&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   <tr id="pg2">
    <th title="Normal range/value:  15 - 55"
        onClick="hToggle(this,50);"><span>&#9664;</span>
 <span onClick="showInfo('Normal range/value:  15 - 55');">&#9432;</span>
 Saturation&emsp;&emsp;</th>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -9717,6 +9929,10 @@ LD&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg2">
    <th title="Torponin-I proteins&#013;&#010;Indicates heart muscle damage&#013;&#010;Normal range/value: <=0.03"
        onClick="hToggle(this,52);"><span>&#9664;</span>
@@ -9788,7 +10004,11 @@ Troponin-I Pl QN&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"><0.03</td>
+   <td class="normal_color">< 0.03</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -10077,6 +10297,10 @@ Calcium Ionized pH&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg2">
    <th title="Ionized Calcium&#013;&#010;Normal range/value:  1.12 - 1.33"
        onClick="hToggle(this,54);"><span>&#9664;</span>
@@ -10098,6 +10322,10 @@ Ionized Calcium&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="normal_color">1.13</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -10437,6 +10665,10 @@ BNP&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   <tr id="pg2">
    <th title="Normal range/value: >59"
        onClick="hToggle(this,56);"><span>&#9664;</span>
@@ -10485,6 +10717,10 @@ eGFR If NonAfricn Am&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">59</td>
    <td class="normal_color">80</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -10797,10 +11033,14 @@ Globulin&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg2">
-   <th title="Albumin to Globulin Ratio&#013;&#010;"Used to detect kidney, liver disease or nutritional problems"&#013;&#010;Normal range/value:  1.2 - 2.2"
+   <th title="Albumin to Globulin Ratio&#013;&#010;Used to detect kidney, liver disease or nutritional problems&#013;&#010;Normal range/value:  1.2 - 2.2"
        onClick="hToggle(this,58);"><span>&#9664;</span>
-<span onClick="showInfo('Albumin to Globulin Ratio\n"Used to detect kidney, liver disease or nutritional problems"\nNormal range/value:  1.2 - 2.2');">&#9432;</span>
+<span onClick="showInfo('Albumin to Globulin Ratio\nUsed to detect kidney, liver disease or nutritional problems\nNormal range/value:  1.2 - 2.2');">&#9432;</span>
 A/G Ratio&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -10899,6 +11139,10 @@ A/G Ratio&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="normal_color">2.0</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -11157,11 +11401,15 @@ Lipase&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,3);'>
     <span>&#9650;</span>Lipid</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg3">
    <th title="Cholesterol&#013;&#010;Fat-like substance used by the body&#013;&#010;Normal range/value:  0 - 200"
@@ -11300,6 +11548,8 @@ Cholesterol&emsp;&emsp;</th>
    <td class="normal_color">163</td>
    <td class="normal_color">158</td>
    <td class="normal_color">153</td>
+   <td class="normal_color">153</td>
+   <td class="normal_color"></td>
    <td class="normal_color">167</td>
    <td class="normal_color">164</td>
    <td class="normal_color">148</td>
@@ -11307,15 +11557,17 @@ Cholesterol&emsp;&emsp;</th>
    <td class="normal_color">159</td>
    <td class="normal_color">150</td>
    <td class="normal_color">154</td>
+   <td class="normal_color">154</td>
    <td class="normal_color">158</td>
    <td class="normal_color">148</td>
    <td class="normal_color">144</td>
    <td class="normal_color">160</td>
    <td class="normal_color">157</td>
+   <td class="normal_color">157</td>
    <td class="normal_color"></td>
    <td class="normal_color">161</td>
    <td class="normal_color">152</td>
-   <td class="normal_color"></td>
+   <td class="normal_color">169</td>
    <td class="normal_color">164</td>
    <td class="normal_color">159</td>
    <td class="normal_color">153</td>
@@ -11480,22 +11732,26 @@ Triglycerides&emsp;&emsp;</th>
    <td class="normal_color">73</td>
    <td class="normal_color">67</td>
    <td class="normal_color">71</td>
+   <td class="normal_color">71</td>
+   <td class="normal_color"></td>
    <td class="normal_color">70</td>
    <td class="normal_color">74</td>
    <td class="normal_color">69</td>
    <td class="normal_color">68</td>
    <td class="normal_color">77</td>
    <td class="normal_color">65</td>
+   <td class="normal_color">70</td>
    <td class="high_color">154</td>
    <td class="normal_color">84</td>
    <td class="normal_color">60</td>
    <td class="normal_color">77</td>
    <td class="normal_color">81</td>
    <td class="normal_color">70</td>
+   <td class="normal_color">70</td>
    <td class="normal_color"></td>
    <td class="normal_color">67</td>
    <td class="normal_color">79</td>
-   <td class="normal_color"></td>
+   <td class="normal_color">132</td>
    <td class="normal_color">93</td>
    <td class="normal_color">74</td>
    <td class="normal_color">93</td>
@@ -11660,6 +11916,8 @@ HDL&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">45</td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="normal_color">41</td>
    <td class="low_color">39</td>
    <td class="normal_color">42</td>
@@ -11667,15 +11925,17 @@ HDL&emsp;&emsp;</th>
    <td class="normal_color">44</td>
    <td class="normal_color">43</td>
    <td class="normal_color">40</td>
+   <td class="normal_color">40</td>
    <td class="normal_color">48</td>
    <td class="normal_color">47</td>
    <td class="normal_color">47</td>
    <td class="normal_color">54</td>
    <td class="normal_color">49</td>
+   <td class="normal_color">49</td>
    <td class="low_color"></td>
    <td class="normal_color">47</td>
    <td class="normal_color">47</td>
-   <td class="low_color"></td>
+   <td class="normal_color">48</td>
    <td class="normal_color">47</td>
    <td class="normal_color">47</td>
    <td class="normal_color">48</td>
@@ -11840,6 +12100,8 @@ LDL&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="high_color">102</td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="high_color">115</td>
    <td class="high_color">113</td>
    <td class="normal_color">95</td>
@@ -11847,15 +12109,17 @@ LDL&emsp;&emsp;</th>
    <td class="high_color">103</td>
    <td class="normal_color">97</td>
    <td class="high_color">103</td>
+   <td class="high_color">103</td>
    <td class="normal_color">97</td>
    <td class="normal_color">91</td>
    <td class="normal_color">85</td>
    <td class="normal_color">93</td>
    <td class="normal_color">97</td>
+   <td class="normal_color">97</td>
    <td class="normal_color"></td>
    <td class="high_color">103</td>
    <td class="normal_color">92</td>
-   <td class="normal_color"></td>
+   <td class="normal_color">100</td>
    <td class="high_color">102</td>
    <td class="normal_color"></td>
    <td class="normal_color">90</td>
@@ -12020,18 +12284,22 @@ TG/HDL&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="high_color">3.51</td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="high_color">4.07</td>
    <td class="high_color">4.21</td>
    <td class="high_color">3.52</td>
    <td class="normal_color">3.48</td>
    <td class="high_color">3.61</td>
    <td class="normal_color">3.49</td>
+   <td class="normal_color"></td>
    <td class="high_color">3.85</td>
    <td class="normal_color">3.29</td>
    <td class="normal_color">3.15</td>
    <td class="normal_color">3.06</td>
    <td class="normal_color">2.96</td>
    <td class="normal_color">3.2</td>
+   <td class="normal_color"></td>
    <td class="normal_color">3.43</td>
    <td class="normal_color"></td>
    <td class="normal_color">3.23</td>
@@ -12243,6 +12511,10 @@ VLDL&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg3">
    <th title="Total Cholesterol to HDL Ratio&#013;&#010;Yet another ratio&#013;&#010;Normal range/value:  2.5 - 5"
        onClick="hToggle(this,67);"><span>&#9664;</span>
@@ -12378,24 +12650,28 @@ CHOL/HDL&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="normal_color">3.51</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="normal_color">4.07</td>
+   <td class="normal_color">4.21</td>
+   <td class="normal_color">3.52</td>
+   <td class="normal_color">3.48</td>
+   <td class="normal_color">3.61</td>
+   <td class="normal_color">3.49</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="normal_color">3.29</td>
+   <td class="normal_color">3.15</td>
+   <td class="normal_color">3.06</td>
+   <td class="normal_color">2.96</td>
    <td class="low_color"></td>
+   <td class="normal_color">3.20</td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">3.43</td>
+   <td class="normal_color">3.23</td>
+   <td class="normal_color">3.52</td>
    <td class="normal_color">3.49</td>
    <td class="low_color"></td>
    <td class="normal_color">3.19</td>
@@ -12427,7 +12703,7 @@ CHOL/HDL&emsp;&emsp;</th>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,4);'>
     <span>&#9650;</span>Urinalysis</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg4">
    <th title="Normal range/value: Yellow "
@@ -12562,25 +12838,29 @@ Urine-Color&emsp;&emsp;</th>
    <td class="normal_color">Yellow</td>
    <td class="normal_color">Yellow</td>
    <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Yellow</td>
+   <td class="normal_color">Yellow</td>
    <td class="normal_color">Yellow</td>
    <td class="normal_color">Yellow</td>
    <td class="normal_color"></td>
@@ -12742,25 +13022,29 @@ Appearance&emsp;&emsp;</th>
    <td class="normal_color">Clear</td>
    <td class="normal_color">Clear</td>
    <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Clear</td>
+   <td class="normal_color">Clear</td>
    <td class="normal_color">Clear</td>
    <td class="normal_color">Clear</td>
    <td class="normal_color"></td>
@@ -12922,25 +13206,29 @@ Specific Gravity&emsp;&emsp;</th>
    <td class="normal_color">1.015</td>
    <td class="normal_color">1.015</td>
    <td class="normal_color">1.020</td>
-   <td class="normal_color">1.02</td>
+   <td class="normal_color">1.020</td>
    <td class="normal_color">1.015</td>
-   <td class="normal_color">1.015</td>
-   <td class="normal_color">1.015</td>
-   <td class="normal_color">1.02</td>
-   <td class="normal_color">1.01</td>
-   <td class="normal_color">1.02</td>
-   <td class="normal_color">1.02</td>
-   <td class="normal_color">1.02</td>
-   <td class="normal_color">1.015</td>
-   <td class="normal_color">1.015</td>
-   <td class="normal_color">1.015</td>
-   <td class="normal_color">1.01</td>
-   <td class="normal_color">1.01</td>
    <td class="normal_color">1.015</td>
    <td class="normal_color">1.015</td>
    <td class="normal_color">1.015</td>
    <td class="low_color"></td>
-   <td class="normal_color">1.02</td>
+   <td class="normal_color">1.020</td>
+   <td class="normal_color">1.010</td>
+   <td class="normal_color">1.020</td>
+   <td class="normal_color">1.020</td>
+   <td class="normal_color">1.020</td>
+   <td class="normal_color">1.015</td>
+   <td class="normal_color">1.015</td>
+   <td class="normal_color">1.015</td>
+   <td class="normal_color">1.015</td>
+   <td class="normal_color">1.010</td>
+   <td class="normal_color">1.010</td>
+   <td class="normal_color">1.015</td>
+   <td class="normal_color">1.015</td>
+   <td class="low_color"></td>
+   <td class="normal_color">1.015</td>
+   <td class="normal_color">1.015</td>
+   <td class="normal_color">1.020</td>
    <td class="normal_color">1.020</td>
    <td class="normal_color">1.020</td>
    <td class="low_color"></td>
@@ -13102,25 +13390,29 @@ pH&emsp;&emsp;</th>
    <td class="normal_color">5.0</td>
    <td class="normal_color">6.0</td>
    <td class="normal_color">6.0</td>
+   <td class="normal_color">6.0</td>
+   <td class="normal_color">5.0</td>
+   <td class="normal_color">6.0</td>
    <td class="normal_color">6</td>
-   <td class="normal_color">5</td>
-   <td class="normal_color">6</td>
-   <td class="normal_color">6</td>
-   <td class="normal_color">6</td>
+   <td class="normal_color">6.0</td>
+   <td class="low_color"></td>
+   <td class="normal_color">6.0</td>
    <td class="normal_color">6.5</td>
-   <td class="normal_color">6</td>
-   <td class="normal_color">6</td>
+   <td class="normal_color">6.0</td>
+   <td class="normal_color">6.0</td>
+   <td class="normal_color">6.0</td>
+   <td class="normal_color">5.0</td>
+   <td class="normal_color">6.0</td>
+   <td class="low_color"></td>
+   <td class="normal_color">6.0</td>
+   <td class="normal_color">6.5</td>
+   <td class="normal_color">6.0</td>
+   <td class="normal_color">6.0</td>
+   <td class="normal_color">5.0</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
-   <td class="low_color"></td>
+   <td class="normal_color">6.0</td>
+   <td class="normal_color">6.0</td>
    <td class="normal_color">5.0</td>
    <td class="normal_color">6.0</td>
    <td class="normal_color">8</td>
@@ -13282,25 +13574,29 @@ Protein&emsp;&emsp;</th>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
@@ -13462,25 +13758,29 @@ Glucose&emsp;&emsp;</th>
    <td class="normal_color">Norm</td>
    <td class="normal_color">Norm</td>
    <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
    <td class="normal_color">Norm</td>
    <td class="normal_color">Norm</td>
    <td class="normal_color"></td>
@@ -13642,25 +13942,29 @@ Ketones&emsp;&emsp;</th>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
@@ -13690,9 +13994,9 @@ Ketones&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
   <tr id="pg4">
-   <th title="Bilirubin&#013;&#010;"Used to help find jaundice, anemia and liver disease"&#013;&#010;Normal range/value: Negative "
+   <th title="Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value: Negative "
        onClick="hToggle(this,76);"><span>&#9664;</span>
-<span onClick="showInfo('Bilirubin\n"Used to help find jaundice, anemia and liver disease"\nNormal range/value: Negative ');">&#9432;</span>
+<span onClick="showInfo('Bilirubin\nUsed to help find jaundice, anemia and liver disease\nNormal range/value: Negative ');">&#9432;</span>
 Bilirubin&emsp;&emsp;</th>
    <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
@@ -13822,25 +14126,29 @@ Bilirubin&emsp;&emsp;</th>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
@@ -14002,25 +14310,29 @@ Occult Blood&emsp;&emsp;</th>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
@@ -14182,25 +14494,29 @@ Nitrite, Urine&emsp;&emsp;</th>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
@@ -14362,25 +14678,29 @@ Urobilinogen&emsp;&emsp;</th>
    <td class="normal_color">Norm</td>
    <td class="normal_color">Norm</td>
    <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Norm</td>
+   <td class="normal_color">Norm</td>
    <td class="normal_color">Norm</td>
    <td class="normal_color">Norm</td>
    <td class="normal_color"></td>
@@ -14542,25 +14862,29 @@ Leukocyte Esterase Ur&emsp;&emsp;</th>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
-   <td class="normal_color"></td>
+   <td class="normal_color">Neg</td>
+   <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color">Neg</td>
    <td class="normal_color"></td>
@@ -14769,6 +15093,10 @@ WBC&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   <tr id="pg4">
    <th title="Red Blood Count&#013;&#010;O2 and Platelet dispersal cells&#013;&#010;Normal range/value:  0 - 2"
        onClick="hToggle(this,82);"><span>&#9664;</span>
@@ -14846,6 +15174,10 @@ RBC&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color">0</td>
    <td class="normal_color">0</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -15129,6 +15461,10 @@ Bacteria&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   <tr id="pg4">
    <th title="Normal range/value:  0 - 5"
        onClick="hToggle(this,84);"><span>&#9664;</span>
@@ -15205,6 +15541,10 @@ Squamous Epithelial&emsp;&emsp;</th>
    <td class="normal_color">0</td>
    <td class="normal_color"></td>
    <td class="normal_color">0</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -15489,6 +15829,10 @@ Mucous&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   <tr id="pg4">
    <th title="Normal range/value: Negative "
        onClick="hToggle(this,86);"><span>&#9664;</span>
@@ -15561,6 +15905,10 @@ WBC Esterase&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color">Neg</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -15849,6 +16197,10 @@ Epithelial Cells (non renal)&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   <tr id="pg4">
    <th title="Normal range/value: None seen /lpf"
        onClick="hToggle(this,88);"><span>&#9664;</span>
@@ -15884,6 +16236,10 @@ Casts&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color">Present</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -16209,6 +16565,10 @@ Cast Type&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   <tr id="pg4">
    <th title="Normal range/value: Not Estab. "
        onClick="hToggle(this,90);"><span>&#9664;</span>
@@ -16257,6 +16617,10 @@ Mucus Threads&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color">Present</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -16569,6 +16933,10 @@ Hemoglobin&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   <tr id="pg4">
    <th title="Normal range/value: Not Established"
        onClick="hToggle(this,92);"><span>&#9664;</span>
@@ -16749,11 +17117,15 @@ Cryst Type&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,5);'>
     <span>&#9650;</span>Urine Chemistry</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg5">
    <th title="Normal range/value:  22 - 328"
@@ -16874,6 +17246,10 @@ Creatinine, Urine&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="normal_color">61</td>
    <td class="normal_color">28</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -17056,6 +17432,10 @@ Protein Urine&emsp;&emsp;</th>
    <td class="low_color"><2</td>
    <td class="low_color"></td>
    <td class="high_color">109</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -17295,11 +17675,15 @@ Protein/Creat Ratio&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,6);'>
     <span>&#9650;</span>Iron</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg6">
    <th title="Iron&#013;&#010;Essential for blood production&#013;&#010;Normal range/value:  50 - 160"
@@ -17355,6 +17739,10 @@ Iron&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="normal_color">128</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -17634,6 +18022,10 @@ UIBC&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="normal_color">237</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -17715,6 +18107,10 @@ TIBC&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color">247</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -18021,6 +18417,10 @@ Ferritin&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg6">
    <th title="Iron Saturation&#013;&#010;Amount of iron in blood&#013;&#010;Normal range/value:  20 - 50"
        onClick="hToggle(this,102);"><span>&#9664;</span>
@@ -18201,11 +18601,15 @@ Iron Saturation&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,7);'>
     <span>&#9650;</span>TSH</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg7">
    <th title="Thyroid Stimulating Hormone&#013;&#010;Thyroid test&#013;&#010;Normal range/value:  0.4 - 4.5"
@@ -18344,7 +18748,11 @@ TSH&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="normal_color">2.19</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -18567,11 +18975,19 @@ TSH 3rd Gen&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg7">
    <th title="Triodothyronine&#013;&#010;One of two major hormones made by thyroid&#013;&#010;Normal range/value: Not Established"
        onClick="hToggle(this,106);"><span>&#9664;</span>
 <span onClick="showInfo('Triodothyronine\nOne of two major hormones made by thyroid\nNormal range/value: Not Established');">&#9432;</span>
 T3&emsp;&emsp;</th>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -18926,12 +19342,20 @@ T4&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="high_color">9.0</td>
   <tr id="pg7">
    <th title="Free Thyroine Index&#013;&#010;Calculated from T3 and T4&#013;&#010;Normal range/value: Not Established"
        onClick="hToggle(this,108);"><span>&#9664;</span>
 <span onClick="showInfo('Free Thyroine Index\nCalculated from T3 and T4\nNormal range/value: Not Established');">&#9432;</span>
 T7&emsp;&emsp;</th>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -19287,11 +19711,15 @@ PTH&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,8);'>
     <span>&#9650;</span>Tacrolimus</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg8">
    <th title="Tacrolimus&#013;&#010;Transplant rejection medicine&#013;&#010;Normal range/value:  2 - 20"
@@ -19437,11 +19865,15 @@ Tacrolimus&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="normal_color">7.6</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="normal_color">7.8</td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="normal_color">5.6</td>
    <td class="normal_color">9.9</td>
@@ -19477,7 +19909,7 @@ Tacrolimus&emsp;&emsp;</th>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,9);'>
     <span>&#9650;</span>Patient Measurements</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg9">
    <th title="Normal range/value: Not Established"
@@ -19599,6 +20031,10 @@ Weight&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color">289</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -19839,16 +20275,20 @@ BMI&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,10);'>
     <span>&#9650;</span>Uric Acid</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg10">
-   <th title="Uric Acid&#013;&#010;"High levels indicate gout. May cause kidney and heart disease, joint and tissue damage"&#013;&#010;Normal range/value:  2.6 - 7.2"
+   <th title="Uric Acid&#013;&#010;High levels indicate gout. May cause kidney and heart disease, joint and tissue damage&#013;&#010;Normal range/value:  2.6 - 7.2"
        onClick="hToggle(this,116);"><span>&#9664;</span>
-<span onClick="showInfo('Uric Acid\n"High levels indicate gout. May cause kidney and heart disease, joint and tissue damage"\nNormal range/value:  2.6 - 7.2');">&#9432;</span>
+<span onClick="showInfo('Uric Acid\nHigh levels indicate gout. May cause kidney and heart disease, joint and tissue damage\nNormal range/value:  2.6 - 7.2');">&#9432;</span>
 Uric Acid&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -20017,6 +20457,10 @@ Uric Acid&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="high_color">8.0</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -20029,7 +20473,7 @@ Uric Acid&emsp;&emsp;</th>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,11);'>
     <span>&#9650;</span>PSA</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg11">
    <th title="Prostate Specific Antigen&#013;&#010;Detects cancerous and noncancerous tissue in the prostate&#013;&#010;Normal range/value:  0 - 4"
@@ -20211,11 +20655,15 @@ PSA&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,12);'>
     <span>&#9650;</span>Immunology</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg12">
    <th title="Haptoglobin&#013;&#010;Protein made by liver.&#013;&#010;Normal range/value:  30 - 200"
@@ -20224,7 +20672,7 @@ PSA&emsp;&emsp;</th>
 Haptoglobin&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"><6</td>
+   <td class="low_color">< 6</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -20236,7 +20684,11 @@ Haptoglobin&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
-   <td class="low_color"><6</td>
+   <td class="low_color">< 6</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -20430,7 +20882,11 @@ CRP&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
-   <td class="normal_color"><0.5</td>
+   <td class="normal_color">< 0.5</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -20757,6 +21213,10 @@ IgG Ser QN&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg12">
    <th title="Normal range/value:  382 - 929"
        onClick="hToggle(this,123);"><span>&#9664;</span>
@@ -20791,6 +21251,10 @@ IgG Subclass 1 Ser QN&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color">363</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -21117,6 +21581,10 @@ IgG Subclass 2 Ser QN&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg12">
    <th title="Normal range/value:  22 - 176"
        onClick="hToggle(this,125);"><span>&#9664;</span>
@@ -21151,6 +21619,10 @@ IgG Subclass 3 Ser QN&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="normal_color">55</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -21477,11 +21949,15 @@ IgG Subclass 4 Ser QN&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,13);'>
     <span>&#9650;</span>Routine Coagulation Studies</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg13">
    <th title="Prothrombin Time&#013;&#010;Clotting measurement&#013;&#010;Normal range/value:  9.3 - 13.5"
@@ -21618,6 +22094,10 @@ PT&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="normal_color">11.4</td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -21843,11 +22323,15 @@ INR&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,14);'>
     <span>&#9650;</span>Blood Bank Testing</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg14">
    <th title="Normal range/value: Not Established"
@@ -21871,6 +22355,10 @@ ABO Rh&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color">A Pos</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -22209,16 +22697,20 @@ Indirect Coombs&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,15);'>
     <span>&#9650;</span>Fecal Studies</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg15">
-   <th title="Pancreatic Elastase&#013;&#010;"Made in the pancrease - used to breakdown fats, proteins and carbohydrates"&#013;&#010;Normal range/value: >=100"
+   <th title="Pancreatic Elastase&#013;&#010;Made in the pancrease - used to breakdown fats, proteins and carbohydrates&#013;&#010;Normal range/value: >=100"
        onClick="hToggle(this,134);"><span>&#9664;</span>
-<span onClick="showInfo('Pancreatic Elastase\n"Made in the pancrease - used to breakdown fats, proteins and carbohydrates"\nNormal range/value: >=100');">&#9432;</span>
+<span onClick="showInfo('Pancreatic Elastase\nMade in the pancrease - used to breakdown fats, proteins and carbohydrates\nNormal range/value: >=100');">&#9432;</span>
 Pancreatic Elastase/Fecal&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -22395,11 +22887,15 @@ Pancreatic Elastase/Fecal&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,16);'>
     <span>&#9650;</span>Vitamins</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg16">
    <th title="Vitiamin B12&#013;&#010;Needed to form red blood cells&#013;&#010;Normal range/value:  200 - 1000"
@@ -22435,6 +22931,10 @@ Vitamin B12&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color">147</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -22761,6 +23261,10 @@ Vitamin D&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
   <tr id="pg16">
    <th title="Vitamin D2&#013;&#010;Essential for absorption of calcium&#013;&#010;Normal range/value: Not Established"
        onClick="hToggle(this,138);"><span>&#9664;</span>
@@ -22835,6 +23339,10 @@ Vitamin D-2&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"><1.0</td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
@@ -23121,11 +23629,15 @@ Vitamin D-3&emsp;&emsp;</th>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
    <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
+   <td class="normal_color"></td>
   </tr>
  <tr>
   <th id="panelName" colspan=4 onClick='panelToggle(this,17);'>
     <span>&#9650;</span>Zinc</th>
-  <td id="panelName" colspan=175>&nbsp;</td>
+  <td id="panelName" colspan=179>&nbsp;</td>
   </tr>
   <tr id="pg17">
    <th title="Zinc&#013;&#010;Required for chemical reactions in body&#013;&#010;Normal range/value:  60 - 120"
@@ -23161,6 +23673,10 @@ Zinc&emsp;&emsp;</th>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color">43.6</td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
+   <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
    <td class="low_color"></td>
@@ -23487,6 +24003,10 @@ table#labTable td:nth-child(173) {display:table-cell;}
 table#labTable td:nth-child(174) {display:table-cell;}
 table#labTable td:nth-child(175) {display:table-cell;}
 table#labTable td:nth-child(176) {display:table-cell;}
+table#labTable td:nth-child(177) {display:table-cell;}
+table#labTable td:nth-child(178) {display:table-cell;}
+table#labTable td:nth-child(179) {display:table-cell;}
+table#labTable td:nth-child(180) {display:table-cell;}
 </style>
 </body>
 </html>

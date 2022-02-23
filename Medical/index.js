@@ -2,7 +2,7 @@
 var UPARROW = "\u25B2";
 var DOWNARROW = "\u25BC";
 var RIGHTARROW = "\u25B6";
-var LEFTARROW = "\u25C0";
+var LEFTARROW = "\u25C0"; 
 var last_h_Toggle = 0;
 var last_v_Toggle = 0;
 
