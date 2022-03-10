@@ -1,4 +1,4 @@
-* {font-size: 16pt;}
+* {font-family: "Verdana", serif; font-size: 11pt;}
 div#implants figure {float:left;width:30%;}
 
 @media only screen and (max-width: 360px) {
@@ -130,6 +130,7 @@ div#criticalInfo {
  background-color:yellow;
  color:		FireBrick;
  float:		left;
+ font-weight:	bold;
 }
 div#criticalInfo ul {
  padding:	0px;
@@ -137,7 +138,6 @@ div#criticalInfo ul {
 }
 div#criticalInfo li {
  font-weight:	normal;
- font-size:	75%;
  list-style-type:disc;
  margin-left:	20px;
 }
@@ -255,9 +255,11 @@ figure figcaption {
 .relation::before {content: "Relation: ";}
 
 body {padding: 0;margin: 0;}
-table#labTable {
+table#labTable * {
   font-family: "Verdana", serif;
   font-size:	8pt;
+}
+table#labTable {
   white-space:	nowrap;
   margin:	0;
   border:	1px solid black;
