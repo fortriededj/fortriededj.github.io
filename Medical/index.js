@@ -4,15 +4,8 @@ var thead;
 var tbody;
 var numberOfPanels;
 var rowToggle=0;
-var rowToggleFlag=false;
 var columnToggle=0;
-var columnToggleFlag=false;
 
-function showInfo(string){
- myEvent=this.event;
- alert(string);
- myEvent.stopPropagation();
-}
 function userLoaded(){
  var myIframe = document.getElementById("medicineIframe");
  var myBody = myIframe.contentWindow.document.body;
@@ -26,18 +19,18 @@ function userLoaded(){
  doAges();
 }
 
-function getDOB(){
+function getDOB(){				//Get the Date of Birth
  var x = document.querySelectorAll(".dob");
  var y = convertStringToDate(x[0].innerHTML);
  return y;
 } 
 
-function convertDateToString(x){
+function convertDateToString(x){		//Convert date value to string
  const Months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
  var y = Months[x.getMonth()] + " " + x.getDate() + ", " + x.getFullYear();
  return y;
 }
-function convertStringToDate(x){
+function convertStringToDate(x){		//Convert string date to date value
  var i;
  var y = x.split("/");
  for(i=0; i<3; i++){y[i]=parseInt(y[i]);}
@@ -45,8 +38,8 @@ function convertStringToDate(x){
  return new Date(y[2],y[0]-1,y[1]);
 }
 
-function doAges(){
- var DOB = getDOB();
+function doAges(){				//Append yy/mm/dd string to all
+ var DOB = getDOB();				//Date of Birth and Date values
  var today = new Date();
  var elements = document.querySelectorAll(".dob");
  // Calc how old patient is in yy/mm/dd
@@ -56,8 +49,8 @@ function doAges(){
  for(i=0; i<elements.length; i++){ addYMDspan(elements[i],DOB); }
 }
 
-/* Add span class=age after element which has number of years/months/days
-   from the given date */
+/* Add span class=age after element which has number of
+   years/months/days from the given date */
 function addYMDspan(e,fromDate){
   var k = convertStringToDate(e.innerHTML);
   e.innerHTML = convertDateToString(k);
@@ -100,30 +93,31 @@ function calcDateDiff(fromDate,toDate){
  }
 }  
 
-function fixPhones(){
+function fixPhones(){			//Update all phone and phone2 values
+					//To fixed format
  var elements = document.querySelectorAll(".phone, .phone2");
  for (var i=0; i<elements.length; i++) {
   j=(elements[i].innerHTML).trim();
-  if(j.indexOf("-") == -1) {	//Dont change if hypen already there
-   if(j.length == 7) {		//No area code
+  if(j.indexOf("-") == -1) {		//Dont change if hypen already there
+   if(j.length == 7) {			//No area code
     elements[i].innerHTML = j.slice(0,3) + "-" + j.slice(3,7);
    }
-   if(j.length == 10) {		//Area code and number
+   if(j.length == 10) {			//Area code and number
     elements[i].innerHTML = "(" + j.slice(0,3) + ")-" + j.slice(3,6) + "-" + j.slice(6,10);
    }
   }
-  if(j.indexOf("tel") == -1) {	//Dont change if tel link already there
+  if(j.indexOf("tel") == -1) {		//Dont change if tel link already there
    elements[i].innerHTML = "<a href='tel:" + elements[i].innerHTML +
 			"'>" + elements[i].innerHTML + "</a>";
   }
  }
 }
 
-function loaded(){				//Get items we'll use
+function loaded(){				//Used only for lab work page
  table = document.getElementById('labTable');	//after page loads
- thead = document.getElementsByTagName('thead');
- tbody = document.getElementsByTagName('tbody');
- numberOfPanels = tbody.length;
+ thead = document.getElementsByTagName('thead');//The thead section
+ tbody = document.getElementsByTagName('tbody');//One tbody for each PanelName
+ numberOfPanels = tbody.length;			//Remember the count
 }
 
 function togglePanel(x){			//Toggle the tbody this
@@ -131,41 +125,38 @@ function togglePanel(x){			//Toggle the tbody this
 }
 
 function toggleRow(x){				//Show only those columns that
- if(rowToggleFlag && rowToggle != x){		//If lastone is closed and not this one
+ if(rowToggle && rowToggle != x){		//If lastone is closed and not this one
   toggleRow(rowToggle);				//Then open last one first
  }
  var j = x.children.length - 1;
  for(i=1; i<j; i++){				//have a value in this row
-  if(! x.children[i].innerHTML){		//This column is empty
-   table.getElementsByTagName('col')[i].classList.toggle("narrow"); //Get this column
+  if(! x.children[i].innerHTML){		//This column cell is empty
+   table.getElementsByTagName('col')[i].classList.toggle("narrow"); //Toggle column
   }
  }
- rowToggleFlag = x.children[0].classList.toggle("narrow");//Update test name field
- rowToggle = x;
+ rowToggle = x.children[0].classList.toggle("narrow") && x;//Update test name field and
+						//remember if we closed or opened it
 }
 
 function toggleColumn(x){			//Show only those rows that have a
-						//value in this column
- if(columnToggleFlag && columnToggle != x){
+ if(columnToggle && columnToggle != x){		//value in this column
   toggleColumn(columnToggle);
  }
  for(i=0; i<numberOfPanels; i++){		//Start with first tbody
   var rows = tbody[i].children.length;		//Get number of rows in each tbody
   for(j=1; j<rows; j++){			//Start with first data row
-   value = tbody[i].children[j].children[x].innerHTML; //Get value
-   if(!value){
-    tbody[i].children[j].classList.toggle("hide");
+   if(! tbody[i].children[j].children[x].innerHTML){;//If this row cell empty
+    tbody[i].children[j].classList.toggle("hide");//Toggle row
    }
   }
  }
- columnToggleFlag = thead[0].children[0].children[x].classList.toggle("hide");	//Update column header
- columnToggle = x;
-}
-function showInfo(x){				//For phones
- var e = this.event;				//If user clicks on icon
- var elem = x.parentNode.parentNode.children[0];//Fetch the title string
- var titleString = elem.getAttribute("title");	//and display it for the
- alert(titleString);				//User
- e.stopPropagation();
+ columnToggle = thead[0].children[0].children[x].classList.toggle("hide") && x;	//Update column header
+						//remember if we closed or opened it
 }
 
+function showInfo(x){				//For those without mouse
+ var e = this.event;				//If user clicks on icon
+						//Alert this elements title string
+ e.stopPropagation();
+ alert(x.parentNode.parentNode.children[0].getAttribute("title"));
+}

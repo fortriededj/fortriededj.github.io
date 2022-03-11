@@ -265,7 +265,6 @@ figure figcaption {
 .relation::before {content: "Relation: ";}
 
 body {padding: 0;margin: 0;}
-/* border-collapse doesn't work with visibility:collapse, so we make our own collapsed border */
 table#labTable {
  white-space:	nowrap;
  padding:	0;
@@ -316,6 +315,10 @@ table#labTable tbody tr:nth-child(n+2) th span{
  color:		red;
 }
 
+/* border-collapse doesn't work with visibility:collapse
+   so we make our own collapsed border
+   Put outside (table) border on top and left,
+   and inside (th and td) border on bottom and right. */
 table#labTable, table#labTable th, table#labTable td {
  border-style:	solid;
  border-color:	black;
@@ -337,7 +340,8 @@ table#labTable *::before {
  cursor:	pointer;
 }
 
-/* Set the rotated column headers */
+/* Column Headings */
+/* Rotate Dates*/
 table#labTable thead th:nth-child(n+2) div{
  height:	6em;
  cursor:	pointer;
@@ -348,12 +352,11 @@ table#labTable thead th:nth-child(n+2) div{
   translate(2.5em, 2em)
   rotate(270deg);
 }
-
-/* Column Headings */
+/* Add pointer under date */
 table#labTable thead th:nth-child(n+2) div::before{ content: var(--right);}
 table#labTable thead th.hide:nth-child(n+2) div::before { 
- content:	var(--left);
- color:		red;
+ content:	var(--left);	/* When filtered, change arrow */
+ color:		red;		/* and colorize to pop */
 }
 
 /* Panel Name */
@@ -363,40 +366,58 @@ table#labTable tbody tr:nth-of-type(1) th {
  font-style:		italic;
  border-right-width:	0px;
 }
-table#labTable tbody tr:nth-of-type(1) th {border-left-width: 0px;}
+table#labTable tbody tr:nth-of-type(1) th {
+ border-left-width:	0px;	/* Turn off border between spans */
+}
+/* Add an arrow */
 table#labTable tbody tr:nth-of-type(1) th::before { content: var(--up);}
 table#labTable tbody.hide tr:nth-of-type(1) th::before {
- color:		red;
- content:	var(--down);
+ content:	var(--down);	/* When hidden, switch arrow */
+ color:		red;		/* and colorize to pop */
 }
 
-
 /* Test Name */
-table#labTable tbody tr:nth-child(n+2) th:first-child{min-width: var(--firstColumnWidth);}
+table#labTable tbody tr:nth-child(n+2) th:first-child{
+ min-width:	var(--firstColumnWidth);/* Set column width */
+}
 table#labTable tbody tr:nth-child(n+2) th:first-child::before{
- content:	var(--smLeft);
+ content:	var(--smLeft);	/* Add an arrow */
  float:		right;
  margin-right:	0;
 }
 table#labTable tbody tr:nth-child(n+2) th.narrow:first-child::before {
- content:	var(--smRight);
- float:		right;
+ content:	var(--smRight);	/* When hidden, switch arrow */
+ float:		right;		
  margin-right:	0;
- color:		red;
+ color:		red;		/* and colorize to pop */
 }
 
 /* Collapsing business */
-table#labTable col.narrow {visibility: collapse;}		/* Hide a column */
-table#labTable tbody tr.hide {display:none;}			/* Hide a row */
-table#labTable tbody.hide tr:nth-child(n+2) {display: none;}	/* Hide an entire panel */
+table#labTable col.narrow {
+ visibility: collapse;		/* Hide a column */
+}
+table#labTable tbody tr.hide {
+ display:none;			/* Hide a row */
+}
+table#labTable tbody.hide tr:nth-child(n+2) {
+ display: none;			/* Hide an entire panel */
+}
 
+/* Devices with a coarse pointer need to be able to click
+   something to show title strings, so they are on by default
+   and we hide the icon if we have true title mouseover option */
 @media (pointer:fine) {
  table#labTable tbody tr th span{display: none;}
 }
 
-.low { color: blue;}
-.high { color: red;}
-.normal {color: inherit;}
+table#labTable td.low {
+ color:			blue;
+ background-color:	rgb(240,240,255);
+}
+table#labTable td.high {
+ color:			red;
+ background-color:	rgb(255,240,240);
+}
 
 .medFlexContainer{
  display:   flex;
