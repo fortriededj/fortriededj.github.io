@@ -1,3 +1,13 @@
+:root {
+ --right:	"\25B6";
+ --left:	"\25C0";
+ --up:		"\25B2";
+ --down:	"\25BC";
+ --smLeft:	"\2BC7";
+ --smRight:	"\2BC8";
+ --firstColumnWidth: 16em;
+}
+
 * {font-family: "Verdana", serif; font-size: 11pt;}
 div#implants figure {float:left;width:30%;}
 
@@ -224,7 +234,7 @@ figure figcaption {
  border-collapse: collapse;
 }
 
-::before {
+:not(table#labTable *)::before {
  display:	inline-block;
  min-width:	5.7em;
  color:		green;
@@ -255,119 +265,138 @@ figure figcaption {
 .relation::before {content: "Relation: ";}
 
 body {padding: 0;margin: 0;}
-table#labTable * {
-  font-family: "Verdana", serif;
-  font-size:	8pt;
-}
+/* border-collapse doesn't work with visibility:collapse, so we make our own collapsed border */
 table#labTable {
-  white-space:	nowrap;
-  margin:	0;
-  border:	1px solid black;
-  border-spacing: 0;
-  table-layout: fixed;
-  padding:	0;
+ white-space:	nowrap;
+ padding:	0;
+ margin:	0;
+ table-layout:	fixed;
 }
-table#labTable thead tr p {
-  display:	inline-block;
-  padding:	5px 0.4em 0px 0px;
-  margin:	0px;
-  float:	left;
-  text-align:	center;
+table#labTable * {
+ font-family:	"Verdana", serif;
+ font-size:	9pt;
 }
-table#labTable td,
-table#labTable th {
-  border:	1px solid black;
-  padding:	0.1em 0.2em;
-}
-table#labTable td {
+
+table#labTable tbody td:nth-child(n+2) {
  min-width:	3.4em;
  max-width:	3.4em;
  text-align:	right;
- white-space:	nowrap;
  overflow:	hidden;
 }
+table#labTable tbody th{
+ text-align:	left;
+ position:	relative;
+}
 table#labTable thead th,table#labTable thead td {
-  padding:	2px;
-  position:	sticky;
-  top:		0;
-  z-index:	2;
-  background-color: lightgray;
-  height:	8em;
-  white-space:	nowrap;
-}
-table#labTable thead th > div {
-  font-size:	160%;
-}
-table#labTable thead td:nth-child(n+2) > div {
-  cursor:	pointer;
-  width:	4em;
-  font-weight:	bold;
-  text-align:	center;
-  transform:
-    translate(-0.7em, 2em) 
-    rotate(270deg);
-}
-table#labTable tbody td {
-  padding:	2px 3px;
-  text-align:	center;
-}
-table#labTable tbody th {
-  text-align:	left;
-  position:	relative;
-  border:	1px solid black;
+ padding:	2px;
+ position:	sticky;
+ top:		0;
+ z-index:	3;
+ background-color: lightblue;
+ height:	8em;
+ white-space:	nowrap;
 }
 table#labTable thead th:first-child{
  position:	sticky;
  left:		0;
- z-index:	3;
+ z-index:	4;
 }
+table#labTable thead th:first-child div{font-size: 120%;}
 
 table#labTable tbody th {
  position:	sticky;
  left:		0;
- background-color: white;
+ background-color:white;
  z-index:	2;
-  cursor: pointer;
+ cursor:	pointer;
 }
 
-table#labTable tbody tr th#panelName {
- border-right-color: transparent;
- font-weight:	bold;
- font-size:	150%;
- font-style:	italic;
- z-index:	1;
- cursor:	pointer;
- color:		blue;
-}
-table#labTable tbody tr td#panelName {
- border-left-color: transparent;
- background-color: white;
-}
-table#labTable tbody tr th span{
+table#labTable tbody tr:nth-child(n+2) th span{
  float:		right;
- padding:	0px 0.25em;
- font-weight:	bold;
+ color:		red;
+}
+
+table#labTable, table#labTable th, table#labTable td {
+ border-style:	solid;
+ border-color:	black;
+ border-spacing:0px;
+ margin:	0px;
+ padding:	0px;
+ border-width:	1px 0px 0px 1px;
+}
+table#labTable th, table#labTable td {
+ padding:	2px;
+ border-width:	0px 1px 1px 0px;
+}
+
+/* Set default before style */
+table#labTable *::before {
  color:		black;
-} 
-table#labTable tbody tr th span:nth-of-type(2){
- color:		blue;
- font-size:	120%;
+ font-style:	normal;
+ margin-right:	0.4em;
+ cursor:	pointer;
 }
+
+/* Set the rotated column headers */
+table#labTable thead th:nth-child(n+2) div{
+ height:	6em;
+ cursor:	pointer;
+ width:		3em;
+ font-weight:	bold;
+ border-width:	0px;
+ transform:
+  translate(2.5em, 2em)
+  rotate(270deg);
+}
+
+/* Column Headings */
+table#labTable thead th:nth-child(n+2) div::before{ content: var(--right);}
+table#labTable thead th.hide:nth-child(n+2) div::before { 
+ content:	var(--left);
+ color:		red;
+}
+
+/* Panel Name */
+table#labTable tbody tr:nth-of-type(1) th {
+ text-align:		left;
+ color:			blue;
+ font-style:		italic;
+ border-right-width:	0px;
+}
+table#labTable tbody tr:nth-of-type(1) th {border-left-width: 0px;}
+table#labTable tbody tr:nth-of-type(1) th::before { content: var(--up);}
+table#labTable tbody.hide tr:nth-of-type(1) th::before {
+ color:		red;
+ content:	var(--down);
+}
+
+
+/* Test Name */
+table#labTable tbody tr:nth-child(n+2) th:first-child{min-width: var(--firstColumnWidth);}
+table#labTable tbody tr:nth-child(n+2) th:first-child::before{
+ content:	var(--smLeft);
+ float:		right;
+ margin-right:	0;
+}
+table#labTable tbody tr:nth-child(n+2) th.narrow:first-child::before {
+ content:	var(--smRight);
+ float:		right;
+ margin-right:	0;
+ color:		red;
+}
+
+/* Collapsing business */
+table#labTable col.narrow {visibility: collapse;}		/* Hide a column */
+table#labTable tbody tr.hide {display:none;}			/* Hide a row */
+table#labTable tbody.hide tr:nth-child(n+2) {display: none;}	/* Hide an entire panel */
+
 @media (pointer:fine) {
- table#labTable tbody tr th span:nth-of-type(2){
- display:	none;
- }
+ table#labTable tbody tr th span{display: none;}
 }
-table#labTable tbody tr th#panelName span {
- float:		left;
-} 
-.low_color { color: blue;}
-.high_color { color: red;}
-.normal_color {color: inherit;}
-.redCorner {
- background: linear-gradient(225deg, magenta 4px, transparent 4.1px);
- overflow:	hidden;
-}
+
+.low { color: blue;}
+.high { color: red;}
+.normal {color: inherit;}
 
 .medFlexContainer{
  display:   flex;

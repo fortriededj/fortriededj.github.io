@@ -1,10 +1,12 @@
 // Global Values
-var UPARROW = "\u25B2";
-var DOWNARROW = "\u25BC";
-var RIGHTARROW = "\u25B6";
-var LEFTARROW = "\u25C0"; 
-var last_h_Toggle = 0;
-var last_v_Toggle = 0;
+var table;
+var thead;
+var tbody;
+var numberOfPanels;
+var rowToggle=0;
+var rowToggleFlag=false;
+var columnToggle=0;
+var columnToggleFlag=false;
 
 function showInfo(string){
  myEvent=this.event;
@@ -117,86 +119,53 @@ function fixPhones(){
  }
 }
 
-/* hToggle(testname,counter)
-   Toggle columns that are blank for a specific test */
-
-function hToggle(myElement,which){
- var whichOne = parseInt(which) - 1;
- var myStyle = document.styleSheets[1];	//Second style sheet
- var myRow= document.getElementById('labTable').
-	children[1].children[whichOne].children;//Get testname
-
- /* If setting a different one, reset old one first */
- if(last_h_Toggle && last_h_Toggle != myElement){	//If last different than this
-  for(var i=1; i<myRow.length; i++){		//Loop through labtable style
-   myStyle.cssRules[i].style.display="table-cell";//turn back on
-  }
-  last_h_Toggle.children[0].innerHTML = LEFTARROW;	//Reset icon
-  last_h_Toggle.children[0].style.color = 'black';	//and color
- }
-
- /* Now toggle this one. On or off */
- var n = myElement.children[0].innerHTML;	//Find this row of values
- if(n == RIGHTARROW){				//If off
-  for(var i=1; i<myRow.length; i++){
-   myStyle.cssRules[i].style.display="table-cell";//Turn on
-  }
-  myElement.children[0].innerHTML = LEFTARROW;//Set icon
-  myElement.children[0].style.color = 'black';	//and color
- } else {
-  for(var i=1; i<myRow.length; i++){		//Check each row value
-   if(myRow[i].innerHTML == ""){		//If blank
-    myStyle.cssRules[i].style.display="none";	//Change cooresponding class
-   } else {					//to None
-    myStyle.cssRules[i].style.display="table-cell";//or turn on
-   }
-  }
-  myElement.children[0].innerHTML = RIGHTARROW;//Set icon
-  myElement.children[0].style.color = 'blue';	//and color
- }  
- last_h_Toggle = myElement;			//Remember the one we just did
+function loaded(){				//Get items we'll use
+ table = document.getElementById('labTable');	//after page loads
+ thead = document.getElementsByTagName('thead');
+ tbody = document.getElementsByTagName('tbody');
+ numberOfPanels = tbody.length;
 }
 
-function vToggle(myElement,which){
- var whichOne = parseInt(which);
- var myRows = document.getElementById('labTable').
-	children[1].children;
- if(last_v_Toggle && last_v_Toggle != myElement){
-  last_v_Toggle.children[0].innerHTML = RIGHTARROW;
-  last_v_Toggle.children[0].style.color = "black";
-  for(i=0; i<myRows.length; i++){
-   myRows[i].parentElement.children[i].style.display='table-row';
-  }
- } 
+function togglePanel(x){			//Toggle the tbody this
+ x.parentElement.classList.toggle("hide");	//header row is a part of
+}
 
- if(myElement.children[0].innerHTML == RIGHTARROW){
-  newstyle = "none";
-  myElement.children[0].innerHTML = LEFTARROW;
-  myElement.children[0].style.color = "blue";
- } else {
-  newstyle = "table-row";
-  myElement.children[0].innerHTML = RIGHTARROW;
-  myElement.children[0].style.color = "black";
+function toggleRow(x){				//Show only those columns that
+ if(rowToggleFlag && rowToggle != x){		//If lastone is closed and not this one
+  toggleRow(rowToggle);				//Then open last one first
  }
- for(i=0; i<myRows.length; i++){
-  if(myRows[i].innerHTML.indexOf('panelName') == -1){
-   if(myRows[i].children[whichOne].innerHTML){
-    myRows[i].parentElement.children[i].style.display='table-row';
-   } else {
-    myRows[i].parentElement.children[i].style.display=newstyle;
+ var j = x.children.length - 1;
+ for(i=1; i<j; i++){				//have a value in this row
+  if(! x.children[i].innerHTML){		//This column is empty
+   table.getElementsByTagName('col')[i].classList.toggle("narrow"); //Get this column
+  }
+ }
+ rowToggleFlag = x.children[0].classList.toggle("narrow");//Update test name field
+ rowToggle = x;
+}
+
+function toggleColumn(x){			//Show only those rows that have a
+						//value in this column
+ if(columnToggleFlag && columnToggle != x){
+  toggleColumn(columnToggle);
+ }
+ for(i=0; i<numberOfPanels; i++){		//Start with first tbody
+  var rows = tbody[i].children.length;		//Get number of rows in each tbody
+  for(j=1; j<rows; j++){			//Start with first data row
+   value = tbody[i].children[j].children[x].innerHTML; //Get value
+   if(!value){
+    tbody[i].children[j].classList.toggle("hide");
    }
   }
  }
- last_v_Toggle = myElement;
-} 
-function panelToggle(myElement,which){
- if(myElement.children[0].innerHTML == UPARROW){
-  d="none";
-  myElement.children[0].innerHTML = DOWNARROW;
- } else {
-  d="table-row";
-  myElement.children[0].innerHTML = UPARROW;
- }
- var myRows = document.querySelectorAll("#pg"+which);
- for(i=0; i<myRows.length; i++){ myRows[i].style.display=d;}
-} 
+ columnToggleFlag = thead[0].children[0].children[x].classList.toggle("hide");	//Update column header
+ columnToggle = x;
+}
+function showInfo(x){				//For phones
+ var e = this.event;				//If user clicks on icon
+ var elem = x.parentNode.parentNode.children[0];//Fetch the title string
+ var titleString = elem.getAttribute("title");	//and display it for the
+ alert(titleString);				//User
+ e.stopPropagation();
+}
+
