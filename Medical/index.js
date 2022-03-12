@@ -128,13 +128,13 @@ function toggleRow(x){				//Show only those columns that
  if(rowToggle && rowToggle != x){		//If lastone is closed and not this one
   toggleRow(rowToggle);				//Then open last one first
  }
- var j = x.children.length - 1;
+ var j = x.parentNode.children.length;		//Use parent because we clicked on TD not TR
  for(i=1; i<j; i++){				//have a value in this row
-  if(! x.children[i].innerHTML){		//This column cell is empty
+  if(! x.parentNode.children[i].innerHTML){		//This column cell is empty
    table.getElementsByTagName('col')[i].classList.toggle("narrow"); //Toggle column
   }
  }
- rowToggle = x.children[0].classList.toggle("narrow") && x;//Update test name field and
+ rowToggle = x.parentNode.children[0].classList.toggle("narrow") && x;//Update test name field and
 						//remember if we closed or opened it
 }
 

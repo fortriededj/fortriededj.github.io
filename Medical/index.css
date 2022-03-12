@@ -410,14 +410,20 @@ table#labTable tbody.hide tr:nth-child(n+2) {
  table#labTable tbody tr th span{display: none;}
 }
 
-table#labTable td.low {
+td.low {
  color:			blue;
  background-color:	rgb(240,240,255);
 }
-table#labTable td.high {
+td.high {
  color:			red;
  background-color:	rgb(255,240,240);
 }
+td.UC_Pale_Yellow {background-color: rgb(237,238,204);}
+td.UC_Yellow {background-color: rgb(234,233,144);}
+td.UC_Amber {background-color: rgb(229,201,4);}
+td.UC_Brown {background-color: rgb(149,120,88);}
+td.UC_Red {background-color: rgb(188,78,0);}
+
 
 .medFlexContainer{
  display:   flex;

@@ -6,7 +6,7 @@
 </head>
 <body onload="loaded();">
 <table id="labTable">
- <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+ <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
  <thead>
   <tr><th title='This sheet shows:&#013;&#010;	6,225 measurements on&#013;&#010;	176 days between&#013;&#010;	February 28, 2001 and&#013;&#010;	March 2, 2022 covering&#013;&#010;	7,672 days.'><div>Daniel K. Fortriede</div></th>
    <th onClick="toggleColumn(1);"><div>3/2/22</div></th>
@@ -189,9 +189,10 @@
  </thead>
  <tbody>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>CBC</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Platelets&#013;&#010;Blood clotting factor&#013;&#010;Normal range/value:  150 - 450'><span onClick='showInfo(this);'>&#9432;</span>Platelets
+  <tr onClick="togglePanel(this);"><th colspan=4>CBC</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Platelets&#013;&#010;Blood clotting factor&#013;&#010;Normal range/value:  150 - 450'>
+     <span onClick='showInfo(this);'>&#9432;</span>Platelets
    <td class="">224</td>
    <td class="">202</td>
    <td class=""></td>
@@ -369,8 +370,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Mean Platelet Volume&#013;&#010;Average platelet size&#013;&#010;Normal range/value:  7 - 12'><span onClick='showInfo(this);'>&#9432;</span>MPV
+  <tr>
+   <th onClick="toggleRow(this);" title='Mean Platelet Volume&#013;&#010;Average platelet size&#013;&#010;Normal range/value:  7 - 12'>
+     <span onClick='showInfo(this);'>&#9432;</span>MPV
    <td class="">7.2</td>
    <td class="">7.9</td>
    <td class=""></td>
@@ -548,8 +550,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='White Blood Count&#013;&#010;Immune System&#013;&#010;Normal range/value:  3.6 - 10.6'><span onClick='showInfo(this);'>&#9432;</span>WBC
+  <tr>
+   <th onClick="toggleRow(this);" title='White Blood Count&#013;&#010;Immune System&#013;&#010;Normal range/value:  3.6 - 10.6'>
+     <span onClick='showInfo(this);'>&#9432;</span>WBC
    <td class=""></td>
    <td class="">5.5</td>
    <td class=""></td>
@@ -727,8 +730,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Red Blood Count&#013;&#010;O2 and Platelet dispersal cells&#013;&#010;Normal range/value:  4.18 - 5.51'><span onClick='showInfo(this);'>&#9432;</span>RBC
+  <tr>
+   <th onClick="toggleRow(this);" title='Red Blood Count&#013;&#010;O2 and Platelet dispersal cells&#013;&#010;Normal range/value:  4.18 - 5.51'>
+     <span onClick='showInfo(this);'>&#9432;</span>RBC
    <td class=""></td>
    <td class="low">2.71</td>
    <td class=""></td>
@@ -906,8 +910,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Hemoglobin&#013;&#010;Carries O2 to body and CO2 to lungs&#013;&#010;Normal range/value:  13.4 - 17'><span onClick='showInfo(this);'>&#9432;</span>Hemoglobin
+  <tr>
+   <th onClick="toggleRow(this);" title='Hemoglobin&#013;&#010;Carries O2 to body and CO2 to lungs&#013;&#010;Normal range/value:  13.4 - 17'>
+     <span onClick='showInfo(this);'>&#9432;</span>Hemoglobin
    <td class="low">10.9</td>
    <td class="low">8.8</td>
    <td class=""></td>
@@ -1085,8 +1090,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Hematocrit&#013;&#010;% of Hemoglobin in blood&#013;&#010;Normal range/value:  40 - 54'><span onClick='showInfo(this);'>&#9432;</span>Hematocrit
+  <tr>
+   <th onClick="toggleRow(this);" title='Hematocrit&#013;&#010;% of Hemoglobin in blood&#013;&#010;Normal range/value:  40 - 54'>
+     <span onClick='showInfo(this);'>&#9432;</span>Hematocrit
    <td class="low">32.0</td>
    <td class="low">27.4</td>
    <td class=""></td>
@@ -1264,8 +1270,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Mean Corpuscular Volume&#013;&#010;Diagnoses Anemia&#013;&#010;Normal range/value:  81 - 99'><span onClick='showInfo(this);'>&#9432;</span>MCV
+  <tr>
+   <th onClick="toggleRow(this);" title='Mean Corpuscular Volume&#013;&#010;Diagnoses Anemia&#013;&#010;Normal range/value:  81 - 99'>
+     <span onClick='showInfo(this);'>&#9432;</span>MCV
    <td class=""></td>
    <td class="high">101</td>
    <td class=""></td>
@@ -1443,8 +1450,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Mean Corpuscular Hemoglobin&#013;&#010;Average count of hemoglobin in each red blood cell&#013;&#010;Normal range/value:  27 - 34'><span onClick='showInfo(this);'>&#9432;</span>MCH
+  <tr>
+   <th onClick="toggleRow(this);" title='Mean Corpuscular Hemoglobin&#013;&#010;Average count of hemoglobin in each red blood cell&#013;&#010;Normal range/value:  27 - 34'>
+     <span onClick='showInfo(this);'>&#9432;</span>MCH
    <td class=""></td>
    <td class="">32.3</td>
    <td class=""></td>
@@ -1622,8 +1630,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Mean Corpuscular Hemoglobin Concentration&#013;&#010;Average count of hemoglobin in random group of red blood cells&#013;&#010;Normal range/value:  32 - 36'><span onClick='showInfo(this);'>&#9432;</span>MCHC
+  <tr>
+   <th onClick="toggleRow(this);" title='Mean Corpuscular Hemoglobin Concentration&#013;&#010;Average count of hemoglobin in random group of red blood cells&#013;&#010;Normal range/value:  32 - 36'>
+     <span onClick='showInfo(this);'>&#9432;</span>MCHC
    <td class=""></td>
    <td class="">32.0</td>
    <td class=""></td>
@@ -1801,8 +1810,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Red cell Distribution Width&#013;&#010;Variation of red blood cell size&#013;&#010;Normal range/value:  11.5 - 14.5'><span onClick='showInfo(this);'>&#9432;</span>RDW
+  <tr>
+   <th onClick="toggleRow(this);" title='Red cell Distribution Width&#013;&#010;Variation of red blood cell size&#013;&#010;Normal range/value:  11.5 - 14.5'>
+     <span onClick='showInfo(this);'>&#9432;</span>RDW
    <td class=""></td>
    <td class="high">15.4</td>
    <td class=""></td>
@@ -1980,8 +1990,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Neutrophils&#013;&#010;Immune system - First responders&#013;&#010;Normal range/value:  43 - 65'><span onClick='showInfo(this);'>&#9432;</span>Neutrophils
+  <tr>
+   <th onClick="toggleRow(this);" title='Neutrophils&#013;&#010;Immune system - First responders&#013;&#010;Normal range/value:  43 - 65'>
+     <span onClick='showInfo(this);'>&#9432;</span>Neutrophils
    <td class=""></td>
    <td class="">64</td>
    <td class=""></td>
@@ -2159,8 +2170,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Lymphocytes&#013;&#010;Immune system - Antibodies and T-cells to fight cancer&#013;&#010;Normal range/value:  20.5 - 45.5'><span onClick='showInfo(this);'>&#9432;</span>Lymphocytes
+  <tr>
+   <th onClick="toggleRow(this);" title='Lymphocytes&#013;&#010;Immune system - Antibodies and T-cells to fight cancer&#013;&#010;Normal range/value:  20.5 - 45.5'>
+     <span onClick='showInfo(this);'>&#9432;</span>Lymphocytes
    <td class=""></td>
    <td class="">26</td>
    <td class=""></td>
@@ -2338,8 +2350,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Monocytes&#013;&#010;Immune system - fights germs and bacteria&#013;&#010;Normal range/value:  5.5 - 11.7'><span onClick='showInfo(this);'>&#9432;</span>Monocytes
+  <tr>
+   <th onClick="toggleRow(this);" title='Monocytes&#013;&#010;Immune system - fights germs and bacteria&#013;&#010;Normal range/value:  5.5 - 11.7'>
+     <span onClick='showInfo(this);'>&#9432;</span>Monocytes
    <td class=""></td>
    <td class="low">5</td>
    <td class=""></td>
@@ -2517,8 +2530,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Eosinophils&#013;&#010;Immune system - fights parasites&#013;&#010;Normal range/value:  0.9 - 2.9'><span onClick='showInfo(this);'>&#9432;</span>Eosinophils
+  <tr>
+   <th onClick="toggleRow(this);" title='Eosinophils&#013;&#010;Immune system - fights parasites&#013;&#010;Normal range/value:  0.9 - 2.9'>
+     <span onClick='showInfo(this);'>&#9432;</span>Eosinophils
    <td class=""></td>
    <td class="high">4</td>
    <td class=""></td>
@@ -2696,8 +2710,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Basophils&#013;&#010;Immune system - fights allergic reactions&#013;&#010;Normal range/value:  0.2 - 1'><span onClick='showInfo(this);'>&#9432;</span>Basophils
+  <tr>
+   <th onClick="toggleRow(this);" title='Basophils&#013;&#010;Immune system - fights allergic reactions&#013;&#010;Normal range/value:  0.2 - 1'>
+     <span onClick='showInfo(this);'>&#9432;</span>Basophils
    <td class=""></td>
    <td class="">1</td>
    <td class=""></td>
@@ -2875,8 +2890,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Immature Granulocytes&#013;&#010;Early immune response or issue with bone marrow&#013;&#010;Normal range/value: Not Estab. %'><span onClick='showInfo(this);'>&#9432;</span>Immature Granulocytes
+  <tr>
+   <th onClick="toggleRow(this);" title='Immature Granulocytes&#013;&#010;Early immune response or issue with bone marrow&#013;&#010;Normal range/value: Not Estab. %'>
+     <span onClick='showInfo(this);'>&#9432;</span>Immature Granulocytes
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -3054,8 +3070,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Neutrophils&#013;&#010;Immune system - First responders&#013;&#010;Normal range/value:  1.7 - 7.5'><span onClick='showInfo(this);'>&#9432;</span>Neutrophils (Absolute)
+  <tr>
+   <th onClick="toggleRow(this);" title='Neutrophils&#013;&#010;Immune system - First responders&#013;&#010;Normal range/value:  1.7 - 7.5'>
+     <span onClick='showInfo(this);'>&#9432;</span>Neutrophils (Absolute)
    <td class=""></td>
    <td class="">3.5</td>
    <td class=""></td>
@@ -3233,8 +3250,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Lymphocytes&#013;&#010;Immune system - Antibodies and T-cells to fight cancer&#013;&#010;Normal range/value:  1.3 - 2.9'><span onClick='showInfo(this);'>&#9432;</span>Lymphocytes (Absolute)
+  <tr>
+   <th onClick="toggleRow(this);" title='Lymphocytes&#013;&#010;Immune system - Antibodies and T-cells to fight cancer&#013;&#010;Normal range/value:  1.3 - 2.9'>
+     <span onClick='showInfo(this);'>&#9432;</span>Lymphocytes (Absolute)
    <td class=""></td>
    <td class="">1.4</td>
    <td class=""></td>
@@ -3412,8 +3430,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Monocytes&#013;&#010;Immune system - fights germs and bacteria&#013;&#010;Normal range/value:  0.1 - 1.3'><span onClick='showInfo(this);'>&#9432;</span>Monocytes (Absolute)
+  <tr>
+   <th onClick="toggleRow(this);" title='Monocytes&#013;&#010;Immune system - fights germs and bacteria&#013;&#010;Normal range/value:  0.1 - 1.3'>
+     <span onClick='showInfo(this);'>&#9432;</span>Monocytes (Absolute)
    <td class=""></td>
    <td class="">0.3</td>
    <td class=""></td>
@@ -3591,8 +3610,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Eosinophils&#013;&#010;Immune system - fights parasites&#013;&#010;Normal range/value:  0 - 0.3'><span onClick='showInfo(this);'>&#9432;</span>Eosinophils (Absolute)
+  <tr>
+   <th onClick="toggleRow(this);" title='Eosinophils&#013;&#010;Immune system - fights parasites&#013;&#010;Normal range/value:  0 - 0.3'>
+     <span onClick='showInfo(this);'>&#9432;</span>Eosinophils (Absolute)
    <td class=""></td>
    <td class="">0.2</td>
    <td class=""></td>
@@ -3770,8 +3790,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Basophils&#013;&#010;Immune system - fights allergic reactions&#013;&#010;Normal range/value:  0 - 0.2'><span onClick='showInfo(this);'>&#9432;</span>Basophils (Absolute)
+  <tr>
+   <th onClick="toggleRow(this);" title='Basophils&#013;&#010;Immune system - fights allergic reactions&#013;&#010;Normal range/value:  0 - 0.2'>
+     <span onClick='showInfo(this);'>&#9432;</span>Basophils (Absolute)
    <td class=""></td>
    <td class="">0.1</td>
    <td class=""></td>
@@ -3949,8 +3970,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Immature Granulocytes&#013;&#010;Early immune response or issue with bone marrow&#013;&#010;Normal range/value:  0 - 0.1'><span onClick='showInfo(this);'>&#9432;</span>Immature Grans (Abs)
+  <tr>
+   <th onClick="toggleRow(this);" title='Immature Granulocytes&#013;&#010;Early immune response or issue with bone marrow&#013;&#010;Normal range/value:  0 - 0.1'>
+     <span onClick='showInfo(this);'>&#9432;</span>Immature Grans (Abs)
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -4129,9 +4151,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>CMP</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Chemical waste of normal muscle function&#013;&#010;Kidney issues or muscle loss&#013;&#010;Normal range/value:  0.8 - 1.4'><span onClick='showInfo(this);'>&#9432;</span>Creatinine
+  <tr onClick="togglePanel(this);"><th colspan=4>CMP</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Chemical waste of normal muscle function&#013;&#010;Kidney issues or muscle loss&#013;&#010;Normal range/value:  0.8 - 1.4'>
+     <span onClick='showInfo(this);'>&#9432;</span>Creatinine
    <td class="">1.4</td>
    <td class="high">1.48</td>
    <td class=""></td>
@@ -4309,8 +4332,9 @@
    <td class="high">4.3</td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Blood Urea Nitrogen&#013;&#010;Kidney issues or high urea&#013;&#010;Normal range/value:  5 - 20'><span onClick='showInfo(this);'>&#9432;</span>BUN
+  <tr>
+   <th onClick="toggleRow(this);" title='Blood Urea Nitrogen&#013;&#010;Kidney issues or high urea&#013;&#010;Normal range/value:  5 - 20'>
+     <span onClick='showInfo(this);'>&#9432;</span>BUN
    <td class="high">52</td>
    <td class="high">60</td>
    <td class=""></td>
@@ -4488,8 +4512,9 @@
    <td class="high">59</td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Ratio of BUN to Creatinine&#013;&#010;Dehydration or congestive heart disease&#013;&#010;Normal range/value:  10 - 24'><span onClick='showInfo(this);'>&#9432;</span>BUN/Creatinine Ratio
+  <tr>
+   <th onClick="toggleRow(this);" title='Ratio of BUN to Creatinine&#013;&#010;Dehydration or congestive heart disease&#013;&#010;Normal range/value:  10 - 24'>
+     <span onClick='showInfo(this);'>&#9432;</span>BUN/Creatinine Ratio
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -4667,8 +4692,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='A1C&#013;&#010;3 month average blood sugar level&#013;&#010;Normal range/value:  4 - 5.6'><span onClick='showInfo(this);'>&#9432;</span>A1C
+  <tr>
+   <th onClick="toggleRow(this);" title='A1C&#013;&#010;3 month average blood sugar level&#013;&#010;Normal range/value:  4 - 5.6'>
+     <span onClick='showInfo(this);'>&#9432;</span>A1C
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -4846,8 +4872,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Glucose&#013;&#010;Current blood sugar level&#013;&#010;Normal range/value:  70 - 99'><span onClick='showInfo(this);'>&#9432;</span>Glucose
+  <tr>
+   <th onClick="toggleRow(this);" title='Glucose&#013;&#010;Current blood sugar level&#013;&#010;Normal range/value:  70 - 99'>
+     <span onClick='showInfo(this);'>&#9432;</span>Glucose
    <td class="high">104</td>
    <td class="">73</td>
    <td class=""></td>
@@ -5025,8 +5052,9 @@
    <td class="">88</td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Estimate Glomerular Filtration Rate&#013;&#010;How well kidneys are filtering&#013;&#010;Normal range/value: >59'><span onClick='showInfo(this);'>&#9432;</span>eGFR
+  <tr>
+   <th onClick="toggleRow(this);" title='Estimate Glomerular Filtration Rate&#013;&#010;How well kidneys are filtering&#013;&#010;Normal range/value: >59'>
+     <span onClick='showInfo(this);'>&#9432;</span>eGFR
    <td class="low">52</td>
    <td class="low">48</td>
    <td class=""></td>
@@ -5204,8 +5232,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Creatinine Clearance (Estimated)&#013;&#010;How well kidneys are filtering creatinine&#013;&#010;Normal range/value: >=59'><span onClick='showInfo(this);'>&#9432;</span>Creatinine Clearance
+  <tr>
+   <th onClick="toggleRow(this);" title='Creatinine Clearance (Estimated)&#013;&#010;How well kidneys are filtering creatinine&#013;&#010;Normal range/value: >=59'>
+     <span onClick='showInfo(this);'>&#9432;</span>Creatinine Clearance
    <td class="low">58</td>
    <td class="low">55</td>
    <td class=""></td>
@@ -5383,8 +5412,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Sodium - an Electrolyte&#013;&#010;Normal range/value:  135 - 145'><span onClick='showInfo(this);'>&#9432;</span>Sodium
+  <tr>
+   <th onClick="toggleRow(this);" title='Sodium - an Electrolyte&#013;&#010;Normal range/value:  135 - 145'>
+     <span onClick='showInfo(this);'>&#9432;</span>Sodium
    <td class="">142</td>
    <td class="">140</td>
    <td class=""></td>
@@ -5562,8 +5592,9 @@
    <td class="high">146</td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Potassium - an Electrolyte&#013;&#010;Normal range/value:  3.5 - 5.5'><span onClick='showInfo(this);'>&#9432;</span>Potassium
+  <tr>
+   <th onClick="toggleRow(this);" title='Potassium - an Electrolyte&#013;&#010;Normal range/value:  3.5 - 5.5'>
+     <span onClick='showInfo(this);'>&#9432;</span>Potassium
    <td class="">4.9</td>
    <td class="">4.6</td>
    <td class=""></td>
@@ -5741,8 +5772,9 @@
    <td class="">4.6</td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Chloride - an Electrolyte&#013;&#010;Normal range/value:  98 - 108'><span onClick='showInfo(this);'>&#9432;</span>Chloride
+  <tr>
+   <th onClick="toggleRow(this);" title='Chloride - an Electrolyte&#013;&#010;Normal range/value:  98 - 108'>
+     <span onClick='showInfo(this);'>&#9432;</span>Chloride
    <td class="high">109</td>
    <td class="high">109</td>
    <td class=""></td>
@@ -5920,8 +5952,8 @@
    <td class="high">110</td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Carbon Dioxide (CO2)&#013;&#010;Waste products producted made by the body&#013;&#010;Normal range/value:  22 - 29'><span onClick='showInfo(this);'>&#9432;</span>CO2
+  <tr>
+   <th onClick="toggleRow(this;">CO&#8322;</th>
    <td class="">22</td>
    <td class="">25</td>
    <td class=""></td>
@@ -6099,8 +6131,9 @@
    <td class="">23.0</td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Anion Gap&#013;&#010;Acid level&#013;&#010;Normal range/value:  3 - 11'><span onClick='showInfo(this);'>&#9432;</span>Anion Gap
+  <tr>
+   <th onClick="toggleRow(this);" title='Anion Gap&#013;&#010;Acid level&#013;&#010;Normal range/value:  3 - 11'>
+     <span onClick='showInfo(this);'>&#9432;</span>Anion Gap
    <td class="high">19</td>
    <td class="">6</td>
    <td class=""></td>
@@ -6278,8 +6311,9 @@
    <td class="high">18</td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Calcium&#013;&#010;Bone development, kidney stones, heart and brain function&#013;&#010;Normal range/value:  8.5 - 10.5'><span onClick='showInfo(this);'>&#9432;</span>Calcium
+  <tr>
+   <th onClick="toggleRow(this);" title='Calcium&#013;&#010;Bone development, kidney stones, heart and brain function&#013;&#010;Normal range/value:  8.5 - 10.5'>
+     <span onClick='showInfo(this);'>&#9432;</span>Calcium
    <td class=""></td>
    <td class="">9.2</td>
    <td class=""></td>
@@ -6457,8 +6491,9 @@
    <td class="">10.1</td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Phosphorus - a mineral&#013;&#010;Needed for bone and teeth. Also for nerve signaling and muscle contraction.&#013;&#010;Normal range/value:  2.5 - 4.9'><span onClick='showInfo(this);'>&#9432;</span>Phosphorus
+  <tr>
+   <th onClick="toggleRow(this);" title='Phosphorus - a mineral&#013;&#010;Needed for bone and teeth. Also for nerve signaling and muscle contraction.&#013;&#010;Normal range/value:  2.5 - 4.9'>
+     <span onClick='showInfo(this);'>&#9432;</span>Phosphorus
    <td class=""></td>
    <td class="">4.4</td>
    <td class=""></td>
@@ -6636,8 +6671,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='ALP - an enzyme&#013;&#010;Detects liver issues&#013;&#010;Normal range/value:  25 - 125'><span onClick='showInfo(this);'>&#9432;</span>ALP
+  <tr>
+   <th onClick="toggleRow(this);" title='ALP - an enzyme&#013;&#010;Detects liver issues&#013;&#010;Normal range/value:  25 - 125'>
+     <span onClick='showInfo(this);'>&#9432;</span>ALP
    <td class=""></td>
    <td class="">74</td>
    <td class=""></td>
@@ -6815,8 +6851,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Alanine Aminotransferase - an enzyme&#013;&#010;Used by liver to convert food to energy&#013;&#010;Normal range/value:  7 - 52'><span onClick='showInfo(this);'>&#9432;</span>ALT
+  <tr>
+   <th onClick="toggleRow(this);" title='Alanine Aminotransferase - an enzyme&#013;&#010;Used by liver to convert food to energy&#013;&#010;Normal range/value:  7 - 52'>
+     <span onClick='showInfo(this);'>&#9432;</span>ALT
    <td class=""></td>
    <td class="">24</td>
    <td class=""></td>
@@ -6994,8 +7031,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Aspartate Amniotransferase - an enzyme&#013;&#010;Used by liver to convert food to energy&#013;&#010;Normal range/value:  13 - 39'><span onClick='showInfo(this);'>&#9432;</span>AST
+  <tr>
+   <th onClick="toggleRow(this);" title='Aspartate Amniotransferase - an enzyme&#013;&#010;Used by liver to convert food to energy&#013;&#010;Normal range/value:  13 - 39'>
+     <span onClick='showInfo(this);'>&#9432;</span>AST
    <td class=""></td>
    <td class="">26</td>
    <td class=""></td>
@@ -7173,8 +7211,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value:  0.3 - 1'><span onClick='showInfo(this);'>&#9432;</span>Bilirubin
+  <tr>
+   <th onClick="toggleRow(this);" title='Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value:  0.3 - 1'>
+     <span onClick='showInfo(this);'>&#9432;</span>Bilirubin
    <td class=""></td>
    <td class="">0.7</td>
    <td class=""></td>
@@ -7352,8 +7391,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>Bilirubin Direct
+  <tr>
+   <th onClick="toggleRow(this);" title='Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>Bilirubin Direct
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -7531,8 +7571,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>Bilirubin Indirect
+  <tr>
+   <th onClick="toggleRow(this);" title='Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>Bilirubin Indirect
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -7710,8 +7751,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Total protein&#013;&#010;Help detect kidney or liver disease&#013;&#010;Normal range/value:  6.4 - 8'><span onClick='showInfo(this);'>&#9432;</span>Protein
+  <tr>
+   <th onClick="toggleRow(this);" title='Total protein&#013;&#010;Help detect kidney or liver disease&#013;&#010;Normal range/value:  6.4 - 8'>
+     <span onClick='showInfo(this);'>&#9432;</span>Protein
    <td class=""></td>
    <td class="low">5.8</td>
    <td class=""></td>
@@ -7889,8 +7931,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Albumin&#013;&#010;Helps to keep fluid in your blood stream&#013;&#010;Normal range/value:  3.5 - 5'><span onClick='showInfo(this);'>&#9432;</span>Albumin
+  <tr>
+   <th onClick="toggleRow(this);" title='Albumin&#013;&#010;Helps to keep fluid in your blood stream&#013;&#010;Normal range/value:  3.5 - 5'>
+     <span onClick='showInfo(this);'>&#9432;</span>Albumin
    <td class=""></td>
    <td class="">3.6</td>
    <td class=""></td>
@@ -8068,8 +8111,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Magnesium&#013;&#010;Helps control blood sugar and blood pressure&#013;&#010;Normal range/value:  1.6 - 2.9'><span onClick='showInfo(this);'>&#9432;</span>Magnesium
+  <tr>
+   <th onClick="toggleRow(this);" title='Magnesium&#013;&#010;Helps control blood sugar and blood pressure&#013;&#010;Normal range/value:  1.6 - 2.9'>
+     <span onClick='showInfo(this);'>&#9432;</span>Magnesium
    <td class=""></td>
    <td class="">1.6</td>
    <td class=""></td>
@@ -8247,8 +8291,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Creatine Kinase&#013;&#010;Gives your body power and strength&#013;&#010;Normal range/value:  30 - 223'><span onClick='showInfo(this);'>&#9432;</span>CK
+  <tr>
+   <th onClick="toggleRow(this);" title='Creatine Kinase&#013;&#010;Gives your body power and strength&#013;&#010;Normal range/value:  30 - 223'>
+     <span onClick='showInfo(this);'>&#9432;</span>CK
    <td class=""></td>
    <td class="">100</td>
    <td class=""></td>
@@ -8426,8 +8471,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='An isoenzyme of CK&#013;&#010;Used to detect heart attack&#013;&#010;Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>CK MB
+  <tr>
+   <th onClick="toggleRow(this);" title='An isoenzyme of CK&#013;&#010;Used to detect heart attack&#013;&#010;Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>CK MB
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -8605,8 +8651,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Lactate Dehydrogenase (Lactic Acid)&#013;&#010;High levels indicate certain body tissues have been destroyed&#013;&#010;Normal range/value:  0.5 - 2.2'><span onClick='showInfo(this);'>&#9432;</span>LD
+  <tr>
+   <th onClick="toggleRow(this);" title='Lactate Dehydrogenase (Lactic Acid)&#013;&#010;High levels indicate certain body tissues have been destroyed&#013;&#010;Normal range/value:  0.5 - 2.2'>
+     <span onClick='showInfo(this);'>&#9432;</span>LD
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -8784,8 +8831,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Torponin-I proteins&#013;&#010;Indicates heart muscle damage&#013;&#010;Normal range/value: <=0.03'><span onClick='showInfo(this);'>&#9432;</span>Troponin-I Pl QN
+  <tr>
+   <th onClick="toggleRow(this);" title='Torponin-I proteins&#013;&#010;Indicates heart muscle damage&#013;&#010;Normal range/value: <=0.03'>
+     <span onClick='showInfo(this);'>&#9432;</span>Troponin-I Pl QN
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -8963,8 +9011,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Ionized Calcium&#013;&#010;Normal range/value:  7.35 - 7.45'><span onClick='showInfo(this);'>&#9432;</span>Calcium Ionized pH
+  <tr>
+   <th onClick="toggleRow(this);" title='Ionized Calcium&#013;&#010;Normal range/value:  7.35 - 7.45'>
+     <span onClick='showInfo(this);'>&#9432;</span>Calcium Ionized pH
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -9142,8 +9191,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Ionized Calcium&#013;&#010;Normal range/value:  1.12 - 1.33'><span onClick='showInfo(this);'>&#9432;</span>Ionized Calcium
+  <tr>
+   <th onClick="toggleRow(this);" title='Ionized Calcium&#013;&#010;Normal range/value:  1.12 - 1.33'>
+     <span onClick='showInfo(this);'>&#9432;</span>Ionized Calcium
    <td class="">1.29</td>
    <td class=""></td>
    <td class=""></td>
@@ -9321,8 +9371,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Brain Natriuretic Peptide&#013;&#010;Used to quickly detect heart failure&#013;&#010;Normal range/value:  0 - 100'><span onClick='showInfo(this);'>&#9432;</span>BNP
+  <tr>
+   <th onClick="toggleRow(this);" title='Brain Natriuretic Peptide&#013;&#010;Used to quickly detect heart failure&#013;&#010;Normal range/value:  0 - 100'>
+     <span onClick='showInfo(this);'>&#9432;</span>BNP
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -9500,8 +9551,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>eGFR If NonAfricn Am</th>
+  <tr>
+   <th onClick="toggleRow(this;">eGFR If NonAfricn Am</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -9679,8 +9730,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Globulin</th>
+  <tr>
+   <th onClick="toggleRow(this;">Globulin</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -9858,8 +9909,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Albumin to Globulin Ratio&#013;&#010;Used to detect kidney, liver disease or nutritional problems&#013;&#010;Normal range/value:  1.2 - 2.2'><span onClick='showInfo(this);'>&#9432;</span>A/G Ratio
+  <tr>
+   <th onClick="toggleRow(this);" title='Albumin to Globulin Ratio&#013;&#010;Used to detect kidney, liver disease or nutritional problems&#013;&#010;Normal range/value:  1.2 - 2.2'>
+     <span onClick='showInfo(this);'>&#9432;</span>A/G Ratio
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -10037,8 +10089,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Lipase&#013;&#010;Used to detect pancreatitis&#013;&#010;Normal range/value:  7 - 59'><span onClick='showInfo(this);'>&#9432;</span>Lipase
+  <tr>
+   <th onClick="toggleRow(this);" title='Lipase&#013;&#010;Used to detect pancreatitis&#013;&#010;Normal range/value:  7 - 59'>
+     <span onClick='showInfo(this);'>&#9432;</span>Lipase
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -10217,9 +10270,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Lipid</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Cholesterol&#013;&#010;Fat-like substance used by the body&#013;&#010;Normal range/value:  0 - 200'><span onClick='showInfo(this);'>&#9432;</span>Cholesterol
+  <tr onClick="togglePanel(this);"><th colspan=4>Lipid</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Cholesterol&#013;&#010;Fat-like substance used by the body&#013;&#010;Normal range/value:  0 - 200'>
+     <span onClick='showInfo(this);'>&#9432;</span>Cholesterol
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -10397,8 +10451,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Triglycerides&#013;&#010;Used to store calories between meals&#013;&#010;Normal range/value:  0 - 150'><span onClick='showInfo(this);'>&#9432;</span>Triglycerides
+  <tr>
+   <th onClick="toggleRow(this);" title='Triglycerides&#013;&#010;Used to store calories between meals&#013;&#010;Normal range/value:  0 - 150'>
+     <span onClick='showInfo(this);'>&#9432;</span>Triglycerides
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -10576,8 +10631,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>HDL</th>
+  <tr>
+   <th onClick="toggleRow(this;">HDL</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -10755,8 +10810,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>LDL</th>
+  <tr>
+   <th onClick="toggleRow(this;">LDL</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -10934,8 +10989,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Triglyceride/HDL Ratio&#013;&#010;Predicts heart attacks and diabetes&#013;&#010;Normal range/value:  0 - 3.5'><span onClick='showInfo(this);'>&#9432;</span>TG/HDL
+  <tr>
+   <th onClick="toggleRow(this);" title='Triglyceride/HDL Ratio&#013;&#010;Predicts heart attacks and diabetes&#013;&#010;Normal range/value:  0 - 3.5'>
+     <span onClick='showInfo(this);'>&#9432;</span>TG/HDL
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -11113,8 +11169,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>VLDL</th>
+  <tr>
+   <th onClick="toggleRow(this;">VLDL</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -11292,8 +11348,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Total Cholesterol to HDL Ratio&#013;&#010;Yet another ratio&#013;&#010;Normal range/value:  2.5 - 5'><span onClick='showInfo(this);'>&#9432;</span>CHOL/HDL
+  <tr>
+   <th onClick="toggleRow(this);" title='Total Cholesterol to HDL Ratio&#013;&#010;Yet another ratio&#013;&#010;Normal range/value:  2.5 - 5'>
+     <span onClick='showInfo(this);'>&#9432;</span>CHOL/HDL
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -11472,21 +11529,21 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Urinalysis</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th>Urine-Color</th>
+  <tr onClick="togglePanel(this);"><th colspan=4>Urinalysis</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this;">Urine-Color</th>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -11505,105 +11562,105 @@
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Pale Yellow</td>
-   <td class="">Pale Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Pale_Yellow">Pale Yellow</td>
+   <td class="UC_Pale_Yellow">Pale Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Pale Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Pale_Yellow">Pale Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">PALE YEL</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Pale_Yellow">Pale Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -11623,18 +11680,18 @@
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
-   <td class="">Yellow</td>
+   <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -11644,7 +11701,7 @@
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
-   <td class="">PALE YEL</td>
+   <td class="UC_Pale_Yellow">Pale Yellow</td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -11652,8 +11709,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Appearance</th>
+  <tr>
+   <th onClick="toggleRow(this;">Appearance</th>
    <td class=""></td>
    <td class="">Clear</td>
    <td class=""></td>
@@ -11831,8 +11888,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Specific Gravity</th>
+  <tr>
+   <th onClick="toggleRow(this;">Specific Gravity</th>
    <td class=""></td>
    <td class="">1.015</td>
    <td class=""></td>
@@ -12010,8 +12067,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>pH</th>
+  <tr>
+   <th onClick="toggleRow(this;">pH</th>
    <td class=""></td>
    <td class="">6.0</td>
    <td class=""></td>
@@ -12189,8 +12246,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Total protein&#013;&#010;Help detect kidney or liver disease&#013;&#010;Normal range/value: Negative/Trace '><span onClick='showInfo(this);'>&#9432;</span>Protein
+  <tr>
+   <th onClick="toggleRow(this);" title='Total protein&#013;&#010;Help detect kidney or liver disease&#013;&#010;Normal range/value: Negative/Trace '>
+     <span onClick='showInfo(this);'>&#9432;</span>Protein
    <td class=""></td>
    <td class="">30</td>
    <td class=""></td>
@@ -12368,8 +12426,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Glucose&#013;&#010;Current blood sugar level&#013;&#010;Normal range/value: Negative '><span onClick='showInfo(this);'>&#9432;</span>Glucose
+  <tr>
+   <th onClick="toggleRow(this);" title='Glucose&#013;&#010;Current blood sugar level&#013;&#010;Normal range/value: Negative '>
+     <span onClick='showInfo(this);'>&#9432;</span>Glucose
    <td class=""></td>
    <td class="">Neg</td>
    <td class=""></td>
@@ -12547,8 +12606,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Ketones</th>
+  <tr>
+   <th onClick="toggleRow(this;">Ketones</th>
    <td class=""></td>
    <td class="">Neg</td>
    <td class=""></td>
@@ -12726,8 +12785,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value: Negative '><span onClick='showInfo(this);'>&#9432;</span>Bilirubin
+  <tr>
+   <th onClick="toggleRow(this);" title='Bilirubin&#013;&#010;Used to help find jaundice, anemia and liver disease&#013;&#010;Normal range/value: Negative '>
+     <span onClick='showInfo(this);'>&#9432;</span>Bilirubin
    <td class=""></td>
    <td class="">Neg</td>
    <td class=""></td>
@@ -12905,8 +12965,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Occult Blood</th>
+  <tr>
+   <th onClick="toggleRow(this;">Occult Blood</th>
    <td class=""></td>
    <td class="">Neg</td>
    <td class=""></td>
@@ -13084,8 +13144,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Nitrite, Urine</th>
+  <tr>
+   <th onClick="toggleRow(this;">Nitrite, Urine</th>
    <td class=""></td>
    <td class="">Neg</td>
    <td class=""></td>
@@ -13263,8 +13323,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Urobilinogen</th>
+  <tr>
+   <th onClick="toggleRow(this;">Urobilinogen</th>
    <td class=""></td>
    <td class="">Norm</td>
    <td class=""></td>
@@ -13442,8 +13502,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Leukocyte Esterase Ur</th>
+  <tr>
+   <th onClick="toggleRow(this;">Leukocyte Esterase Ur</th>
    <td class=""></td>
    <td class="">Neg</td>
    <td class=""></td>
@@ -13621,8 +13681,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='White Blood Count&#013;&#010;Immune System&#013;&#010;Normal range/value:  0 - 5'><span onClick='showInfo(this);'>&#9432;</span>WBC
+  <tr>
+   <th onClick="toggleRow(this);" title='White Blood Count&#013;&#010;Immune System&#013;&#010;Normal range/value:  0 - 5'>
+     <span onClick='showInfo(this);'>&#9432;</span>WBC
    <td class=""></td>
    <td class="">0-5</td>
    <td class=""></td>
@@ -13800,8 +13861,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Red Blood Count&#013;&#010;O2 and Platelet dispersal cells&#013;&#010;Normal range/value:  0 - 2'><span onClick='showInfo(this);'>&#9432;</span>RBC
+  <tr>
+   <th onClick="toggleRow(this);" title='Red Blood Count&#013;&#010;O2 and Platelet dispersal cells&#013;&#010;Normal range/value:  0 - 2'>
+     <span onClick='showInfo(this);'>&#9432;</span>RBC
    <td class=""></td>
    <td class="">0-2</td>
    <td class=""></td>
@@ -13979,8 +14041,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Bacteria</th>
+  <tr>
+   <th onClick="toggleRow(this;">Bacteria</th>
    <td class=""></td>
    <td class="">None</td>
    <td class=""></td>
@@ -14158,8 +14220,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Squamous Epithelial</th>
+  <tr>
+   <th onClick="toggleRow(this;">Squamous Epithelial</th>
    <td class=""></td>
    <td class="">None</td>
    <td class=""></td>
@@ -14337,8 +14399,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Mucous</th>
+  <tr>
+   <th onClick="toggleRow(this;">Mucous</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -14516,8 +14578,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>WBC Esterase</th>
+  <tr>
+   <th onClick="toggleRow(this;">WBC Esterase</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -14695,8 +14757,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Epithelial Cells (non renal)</th>
+  <tr>
+   <th onClick="toggleRow(this;">Epithelial Cells (non renal)</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -14874,8 +14936,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Casts</th>
+  <tr>
+   <th onClick="toggleRow(this;">Casts</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -15053,8 +15115,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Cast Type</th>
+  <tr>
+   <th onClick="toggleRow(this;">Cast Type</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -15232,8 +15294,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Mucus Threads</th>
+  <tr>
+   <th onClick="toggleRow(this;">Mucus Threads</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -15411,8 +15473,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Hemoglobin&#013;&#010;Carries O2 to body and CO2 to lungs&#013;&#010;Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>Hemoglobin
+  <tr>
+   <th onClick="toggleRow(this);" title='Hemoglobin&#013;&#010;Carries O2 to body and CO2 to lungs&#013;&#010;Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>Hemoglobin
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -15590,8 +15653,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>Cryst Type
+  <tr>
+   <th onClick="toggleRow(this);" title='Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>Cryst Type
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -15770,9 +15834,9 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Urine Chemistry</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th>Creatinine, Urine</th>
+  <tr onClick="togglePanel(this);"><th colspan=4>Urine Chemistry</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this;">Creatinine, Urine</th>
    <td class=""></td>
    <td class="">45</td>
    <td class=""></td>
@@ -15950,8 +16014,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Protein Urine</th>
+  <tr>
+   <th onClick="toggleRow(this;">Protein Urine</th>
    <td class=""></td>
    <td class="high">44</td>
    <td class=""></td>
@@ -16129,8 +16193,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>Protein/Creat Ratio</th>
+  <tr>
+   <th onClick="toggleRow(this;">Protein/Creat Ratio</th>
    <td class=""></td>
    <td class="">0.98</td>
    <td class=""></td>
@@ -16309,9 +16373,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Patient Measurements</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>Weight
+  <tr onClick="togglePanel(this);"><th colspan=4>Patient Measurements</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>Weight
    <td class="">179</td>
    <td class=""></td>
    <td class="">176</td>
@@ -16489,8 +16554,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>BMI
+  <tr>
+   <th onClick="toggleRow(this);" title='Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>BMI
    <td class=""></td>
    <td class=""></td>
    <td class="">22.6</td>
@@ -16669,9 +16735,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Iron</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Iron&#013;&#010;Essential for blood production&#013;&#010;Normal range/value:  50 - 160'><span onClick='showInfo(this);'>&#9432;</span>Iron
+  <tr onClick="togglePanel(this);"><th colspan=4>Iron</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Iron&#013;&#010;Essential for blood production&#013;&#010;Normal range/value:  50 - 160'>
+     <span onClick='showInfo(this);'>&#9432;</span>Iron
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -16849,8 +16916,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Unsaturated Iron-Binding Capacity&#013;&#010;Discontinued test&#013;&#010;Normal range/value:  110 - 370'><span onClick='showInfo(this);'>&#9432;</span>UIBC
+  <tr>
+   <th onClick="toggleRow(this);" title='Unsaturated Iron-Binding Capacity&#013;&#010;Discontinued test&#013;&#010;Normal range/value:  110 - 370'>
+     <span onClick='showInfo(this);'>&#9432;</span>UIBC
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -17028,8 +17096,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Total Iron Binding Capacity&#013;&#010;Tests bloods ability to bind to iron&#013;&#010;Normal range/value:  255 - 450'><span onClick='showInfo(this);'>&#9432;</span>TIBC
+  <tr>
+   <th onClick="toggleRow(this);" title='Total Iron Binding Capacity&#013;&#010;Tests bloods ability to bind to iron&#013;&#010;Normal range/value:  255 - 450'>
+     <span onClick='showInfo(this);'>&#9432;</span>TIBC
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -17207,8 +17276,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Ferritin&#013;&#010;Measures Ferritin - a blood protein that contains iron&#013;&#010;Normal range/value:  10 - 322'><span onClick='showInfo(this);'>&#9432;</span>Ferritin
+  <tr>
+   <th onClick="toggleRow(this);" title='Ferritin&#013;&#010;Measures Ferritin - a blood protein that contains iron&#013;&#010;Normal range/value:  10 - 322'>
+     <span onClick='showInfo(this);'>&#9432;</span>Ferritin
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -17386,8 +17456,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Iron Saturation&#013;&#010;Amount of iron in blood&#013;&#010;Normal range/value:  20 - 50'><span onClick='showInfo(this);'>&#9432;</span>Iron Saturation
+  <tr>
+   <th onClick="toggleRow(this);" title='Iron Saturation&#013;&#010;Amount of iron in blood&#013;&#010;Normal range/value:  20 - 50'>
+     <span onClick='showInfo(this);'>&#9432;</span>Iron Saturation
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -17566,9 +17637,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>TSH</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Thyroid Stimulating Hormone&#013;&#010;Thyroid test&#013;&#010;Normal range/value:  0.4 - 4.5'><span onClick='showInfo(this);'>&#9432;</span>TSH
+  <tr onClick="togglePanel(this);"><th colspan=4>TSH</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Thyroid Stimulating Hormone&#013;&#010;Thyroid test&#013;&#010;Normal range/value:  0.4 - 4.5'>
+     <span onClick='showInfo(this);'>&#9432;</span>TSH
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -17746,8 +17818,9 @@
    <td class="high">4.52</td>
    <td class="high">5.14</td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='3rd Generation of TSH&#013;&#010;More sensitive TSH test&#013;&#010;Normal range/value:  0.4 - 4.2'><span onClick='showInfo(this);'>&#9432;</span>TSH 3rd Gen
+  <tr>
+   <th onClick="toggleRow(this);" title='3rd Generation of TSH&#013;&#010;More sensitive TSH test&#013;&#010;Normal range/value:  0.4 - 4.2'>
+     <span onClick='showInfo(this);'>&#9432;</span>TSH 3rd Gen
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -17925,8 +17998,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Triodothyronine&#013;&#010;One of two major hormones made by thyroid&#013;&#010;Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>T3
+  <tr>
+   <th onClick="toggleRow(this);" title='Triodothyronine&#013;&#010;One of two major hormones made by thyroid&#013;&#010;Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>T3
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -18104,8 +18178,9 @@
    <td class=""></td>
    <td class="">37.0</td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Thyroxine&#013;&#010;Help control metabolism&#013;&#010;Normal range/value:  0.82 - 1.77'><span onClick='showInfo(this);'>&#9432;</span>T4
+  <tr>
+   <th onClick="toggleRow(this);" title='Thyroxine&#013;&#010;Help control metabolism&#013;&#010;Normal range/value:  0.82 - 1.77'>
+     <span onClick='showInfo(this);'>&#9432;</span>T4
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -18283,8 +18358,9 @@
    <td class=""></td>
    <td class="high">9.0</td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Free Thyroine Index&#013;&#010;Calculated from T3 and T4&#013;&#010;Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>T7
+  <tr>
+   <th onClick="toggleRow(this);" title='Free Thyroine Index&#013;&#010;Calculated from T3 and T4&#013;&#010;Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>T7
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -18462,8 +18538,9 @@
    <td class=""></td>
    <td class="">3.33</td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Parathyroid Hormone&#013;&#010;Helps detect reason for abnormal calcium levels&#013;&#010;Normal range/value:  14 - 72'><span onClick='showInfo(this);'>&#9432;</span>PTH
+  <tr>
+   <th onClick="toggleRow(this);" title='Parathyroid Hormone&#013;&#010;Helps detect reason for abnormal calcium levels&#013;&#010;Normal range/value:  14 - 72'>
+     <span onClick='showInfo(this);'>&#9432;</span>PTH
    <td class=""></td>
    <td class="high">222</td>
    <td class=""></td>
@@ -18642,9 +18719,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Tacrolimus</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Tacrolimus&#013;&#010;Transplant rejection medicine&#013;&#010;Normal range/value:  2 - 20'><span onClick='showInfo(this);'>&#9432;</span>Tacrolimus
+  <tr onClick="togglePanel(this);"><th colspan=4>Tacrolimus</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Tacrolimus&#013;&#010;Transplant rejection medicine&#013;&#010;Normal range/value:  2 - 20'>
+     <span onClick='showInfo(this);'>&#9432;</span>Tacrolimus
    <td class=""></td>
    <td class="">6.3</td>
    <td class=""></td>
@@ -18823,9 +18901,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Uric Acid</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Uric Acid&#013;&#010;High levels indicate gout. May cause kidney and heart disease, joint and tissue damage&#013;&#010;Normal range/value:  2.6 - 7.2'><span onClick='showInfo(this);'>&#9432;</span>Uric Acid
+  <tr onClick="togglePanel(this);"><th colspan=4>Uric Acid</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Uric Acid&#013;&#010;High levels indicate gout. May cause kidney and heart disease, joint and tissue damage&#013;&#010;Normal range/value:  2.6 - 7.2'>
+     <span onClick='showInfo(this);'>&#9432;</span>Uric Acid
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -19004,9 +19083,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>PSA</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Prostate Specific Antigen&#013;&#010;Detects cancerous and noncancerous tissue in the prostate&#013;&#010;Normal range/value:  0 - 4'><span onClick='showInfo(this);'>&#9432;</span>PSA
+  <tr onClick="togglePanel(this);"><th colspan=4>PSA</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Prostate Specific Antigen&#013;&#010;Detects cancerous and noncancerous tissue in the prostate&#013;&#010;Normal range/value:  0 - 4'>
+     <span onClick='showInfo(this);'>&#9432;</span>PSA
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -19185,9 +19265,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Immunology</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Haptoglobin&#013;&#010;Protein made by liver.&#013;&#010;Normal range/value:  30 - 200'><span onClick='showInfo(this);'>&#9432;</span>Haptoglobin
+  <tr onClick="togglePanel(this);"><th colspan=4>Immunology</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Haptoglobin&#013;&#010;Protein made by liver.&#013;&#010;Normal range/value:  30 - 200'>
+     <span onClick='showInfo(this);'>&#9432;</span>Haptoglobin
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -19365,8 +19446,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='C-Reactive Protein&#013;&#010;Shows inflammation somewhere in the body&#013;&#010;Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>CRP
+  <tr>
+   <th onClick="toggleRow(this);" title='C-Reactive Protein&#013;&#010;Shows inflammation somewhere in the body&#013;&#010;Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>CRP
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -19544,8 +19626,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>IgG Ser QN</th>
+  <tr>
+   <th onClick="toggleRow(this;">IgG Ser QN</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -19723,8 +19805,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>IgG Subclass 1 Ser QN</th>
+  <tr>
+   <th onClick="toggleRow(this;">IgG Subclass 1 Ser QN</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -19902,8 +19984,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>IgG Subclass 2 Ser QN</th>
+  <tr>
+   <th onClick="toggleRow(this;">IgG Subclass 2 Ser QN</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -20081,8 +20163,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>IgG Subclass 3 Ser QN</th>
+  <tr>
+   <th onClick="toggleRow(this;">IgG Subclass 3 Ser QN</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -20260,8 +20342,8 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th>IgG Subclass 4 Ser QN</th>
+  <tr>
+   <th onClick="toggleRow(this;">IgG Subclass 4 Ser QN</th>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -20440,9 +20522,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Routine Coagulation Studies</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Prothrombin Time&#013;&#010;Clotting measurement&#013;&#010;Normal range/value:  9.3 - 13.5'><span onClick='showInfo(this);'>&#9432;</span>PT
+  <tr onClick="togglePanel(this);"><th colspan=4>Routine Coagulation Studies</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Prothrombin Time&#013;&#010;Clotting measurement&#013;&#010;Normal range/value:  9.3 - 13.5'>
+     <span onClick='showInfo(this);'>&#9432;</span>PT
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -20620,8 +20703,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='International Normalised Ratio&#013;&#010;Clotting measurement&#013;&#010;Normal range/value:  0.74 - 1.21'><span onClick='showInfo(this);'>&#9432;</span>INR
+  <tr>
+   <th onClick="toggleRow(this);" title='International Normalised Ratio&#013;&#010;Clotting measurement&#013;&#010;Normal range/value:  0.74 - 1.21'>
+     <span onClick='showInfo(this);'>&#9432;</span>INR
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -20800,9 +20884,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Blood Bank Testing</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>ABO Rh
+  <tr onClick="togglePanel(this);"><th colspan=4>Blood Bank Testing</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>ABO Rh
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -20980,8 +21065,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>Indirect Coombs
+  <tr>
+   <th onClick="toggleRow(this);" title='Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>Indirect Coombs
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -21160,9 +21246,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Fecal Studies</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Pancreatic Elastase&#013;&#010;Made in the pancrease - used to breakdown fats, proteins and carbohydrates&#013;&#010;Normal range/value: >=100'><span onClick='showInfo(this);'>&#9432;</span>Pancreatic Elastase/Fecal
+  <tr onClick="togglePanel(this);"><th colspan=4>Fecal Studies</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Pancreatic Elastase&#013;&#010;Made in the pancrease - used to breakdown fats, proteins and carbohydrates&#013;&#010;Normal range/value: >=100'>
+     <span onClick='showInfo(this);'>&#9432;</span>Pancreatic Elastase/Fecal
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -21341,9 +21428,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Vitamins</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Vitiamin B12&#013;&#010;Needed to form red blood cells&#013;&#010;Normal range/value:  200 - 1000'><span onClick='showInfo(this);'>&#9432;</span>Vitamin B12
+  <tr onClick="togglePanel(this);"><th colspan=4>Vitamins</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Vitiamin B12&#013;&#010;Needed to form red blood cells&#013;&#010;Normal range/value:  200 - 1000'>
+     <span onClick='showInfo(this);'>&#9432;</span>Vitamin B12
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -21521,8 +21609,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Vitamin D&#013;&#010;Essential for absorption of calcium&#013;&#010;Normal range/value:  30 - 100'><span onClick='showInfo(this);'>&#9432;</span>Vitamin D
+  <tr>
+   <th onClick="toggleRow(this);" title='Vitamin D&#013;&#010;Essential for absorption of calcium&#013;&#010;Normal range/value:  30 - 100'>
+     <span onClick='showInfo(this);'>&#9432;</span>Vitamin D
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -21700,8 +21789,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Vitamin D2&#013;&#010;Essential for absorption of calcium&#013;&#010;Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>Vitamin D-2
+  <tr>
+   <th onClick="toggleRow(this);" title='Vitamin D2&#013;&#010;Essential for absorption of calcium&#013;&#010;Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>Vitamin D-2
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -21879,8 +21969,9 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Vitamin D3&#013;&#010;Essential for absorption of calcium&#013;&#010;Normal range/value: Not Established'><span onClick='showInfo(this);'>&#9432;</span>Vitamin D-3
+  <tr>
+   <th onClick="toggleRow(this);" title='Vitamin D3&#013;&#010;Essential for absorption of calcium&#013;&#010;Normal range/value: Not Established'>
+     <span onClick='showInfo(this);'>&#9432;</span>Vitamin D-3
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -22059,9 +22150,10 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);"><th colspan=3>Zinc</th><td colspan=173></td></tr>
-  <tr onClick="toggleRow(this);">
-   <th title='Zinc&#013;&#010;Required for chemical reactions in body&#013;&#010;Normal range/value:  60 - 120'><span onClick='showInfo(this);'>&#9432;</span>Zinc
+  <tr onClick="togglePanel(this);"><th colspan=4>Zinc</th><td colspan=173></td></tr>
+  <tr>
+   <th onClick="toggleRow(this);" title='Zinc&#013;&#010;Required for chemical reactions in body&#013;&#010;Normal range/value:  60 - 120'>
+     <span onClick='showInfo(this);'>&#9432;</span>Zinc
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
