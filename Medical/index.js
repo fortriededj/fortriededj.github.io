@@ -1,10 +1,21 @@
 // Global Values
+var maxDataSetSize = 30;
 var table;
 var thead;
 var tbody;
 var numberOfPanels;
 var rowToggle=0;
 var columnToggle=0;
+var myDataSet=[];
+var chartDiv;
+var margin;
+var width;
+var height;
+var xScale;
+var yScale;
+var mouseX;
+var mouseY;
+var svg;
 
 function userLoaded(){
  var myIframe = document.getElementById("medicineIframe");
@@ -115,9 +126,27 @@ function fixPhones(){			//Update all phone and phone2 values
 
 function loaded(){				//Used only for lab work page
  table = document.getElementById('labTable');	//after page loads
+ chartDiv = document.getElementById('chartDiv');
+ margin = {top: 50, right: 20, bottom: 50, left: 50};
+ width  = chartDiv.offsetWidth - margin.left - margin.right;
+ height = chartDiv.offsetHeight - margin.top - margin.bottom;
+ xScale = d3.scaleBand().range([0, width]);
+ yScale = d3.scaleLinear().range([height, 0]);
+ correctXScale = d => { return xScale(d.xValues) + width / n / 2; } 
+
  thead = document.getElementsByTagName('thead');//The thead section
  tbody = document.getElementsByTagName('tbody');//One tbody for each PanelName
  numberOfPanels = tbody.length;			//Remember the count
+
+ graphElems = document.querySelectorAll("[Chart]");
+ for(i=0; i<graphElems.length; i++){
+  graphElems[i].innerHTML = "<span class='graph' onClick='showGraph(this);'>&#x1F4C8;</span>" + graphElems[i].innerHTML;
+ }
+
+ titleElems = document.querySelectorAll("[title]");
+ for(i=0; i<titleElems.length; i++){
+  titleElems[i].innerHTML = "<span class='showInfo' onClick='showInfo(this);'>&#x2754;</span>" + titleElems[i].innerHTML;
+ }
 }
 
 function togglePanel(x){			//Toggle the tbody this
@@ -156,7 +185,124 @@ function toggleColumn(x){			//Show only those rows that have a
 
 function showInfo(x){				//For those without mouse
  var e = this.event;				//If user clicks on icon
-						//Alert this elements title string
  e.stopPropagation();
- alert(x.parentNode.parentNode.children[0].getAttribute("title"));
+ alert(x.parentNode.getAttribute("title"));	//Alert this element's title string
+}
+
+function showGraph(x){				//Show graph of this item
+ var e= this.event;
+ e.stopPropagation();				//Stop any other functions
+ mouseX = e.pageX-e.clientX + 200;
+ mouseY = e.pageY-e.clientY + 100;
+ var dates = thead[0].children[0].children;	//Get thead line with date values
+ var values = x.parentNode.parentNode.children;	//Get this lines values
+ myDataSet=[];					//Clear the dataSet
+ for(i=1; i<values.length; i++){		//Loop through until we reach list length
+  if(isNumeric(values[i].innerText)){		//Only use numbers
+   myDataSet.unshift({"xValues": dates[i].innerText, "yValues": values[i].innerText});
+   if(myDataSet.length === maxDataSetSize){break;}//Stop processing if limit reached
+  }
+ } 
+ if(myDataSet.length === 0){
+  alert("Nothing to Graph");
+  return;
+ }
+ //Call with title, minus the 2 character graph icon at the beginning of the string
+ createChart(values[0].innerText.substring(2),myDataSet);
+}
+function isNumeric(value){			//See if string is a number
+ return /^-?\d*\.*\d+$/.test(value);		//And only a number
+}
+
+function createChart(myTitle,data){		//Create chart
+ d3.selectAll('svg').remove();
+ chartDiv.style.display="block";
+ chartDiv.style.left=mouseX + 20 + "px";
+ chartDiv.style.top=mouseY + 20 + "px";
+ n = data.length;			//Get length of the data
+
+ data.forEach(function(d) {		//Massage the data
+  d.xValues = d.xValues;
+  d.yValues = +d.yValues;
+ });
+
+ var valueline1 = d3.line()		//Build the line 
+  .x(function(d) { return correctXScale(d); })
+  .y(function(d) { return yScale(d.yValues); })
+  .defined(function(d) { return (typeof d.yValues !== 'string'); });
+
+ svg = d3.select("div#chartDiv").append("svg")	//Build the SVG container
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+ xScale.domain(data.map(function(d) { return d.xValues;}));//Build x-axis values
+ yScale.domain([d3.min(data, function(d) {		//Build the y-axis values
+	return Math.max(Math.min(d.yValues)-5,0);}),//Bottom end
+	d3.max(data, function(d) {
+	return Math.max(d.yValues);})]);	//Top end of y-axis
+
+ var lines = svg.attr('transform', function(d) {	//Offset by margins
+   return 'translate(' + margin.left + ', ' + margin.top + ')'; });
+
+ var tool_tip = d3.tip()				//Routine to build
+  .attr("class", "d3-tip")				//tool-tip contents
+  .offset([-8, 0])
+  .html(function(d) {return d.yValues + "<br>" + d.xValues; });
+
+ svg.call(tool_tip);					//Call it as necessary
+
+ lines.append("path")					//Build the lines we
+  .data([data])						//will be plotting
+  .attr("class", "line")
+  .attr("d",valueline1);
+
+ d3.line()
+  .x(function(d) { return correctXScale(d); })
+  .y(function(d) { return yScale(d.yValues); })
+  //.curve(d3.curveMonotoneX)				//apply smoothing to the line
+
+ svg.append("g")					//Add x-axis
+  .attr("class", "x axis")
+  .attr("transform", "translate(0," + height + ")")
+  .call(d3.axisBottom(xScale))
+  .selectAll("text")
+    .attr("transform", "translate(-10,0)rotate(-45)")
+    .style("text-anchor", "end")
+
+ svg.append("g")					//Add y-axis
+  .attr("class", "y axis")
+  .call(d3.axisLeft(yScale).ticks(6).tickSize([-width]));
+
+ svg.append("path")
+  .datum(data)						//Bind data to the line 
+  .attr("class", "line")				//Assign a class for styling 
+  .attr("d", valueline1);				//Call the line generator 
+
+ svg.selectAll(".dot")
+  .data(data)
+  .enter().append("circle") // Uses the enter().append() method
+  .attr("class", "dot") // Assign a class for styling
+  .attr("cx", function(d) { return correctXScale(d); })
+  .attr("cy", function(d) { return yScale(d.yValues); })
+  .attr("r", 5)
+  .on('mouseover', function(a,b,c){
+	c[b].classList.toggle('focus');
+	tool_tip.show(a);})
+  .on('mouseout', function(a,b,c){
+	c[b].classList.toggle('focus');
+	tool_tip.hide(a);})
+
+ svg.append("text")	//Add title
+  .attr("x", (width / 2))             
+  .attr("y", 8 - (margin.top / 2))
+  .attr("text-anchor", "middle")  
+  .style("font-size", "16px") 
+  .style("fill", "ivory")
+  .text(myTitle);
+}
+function closeIt(){
+ d3.selectAll('svg').remove();
+ chartDiv.style.display='none';
 }

@@ -5,7 +5,8 @@
  --down:	"\25BC";
  --smLeft:	"\2BC7";
  --smRight:	"\2BC8";
- --firstColumnWidth: 16em;
+ --star:	"\FF0A";
+ --firstColumnWidth: 18em;
 }
 
 * {font-family: "Verdana", serif; font-size: 11pt;}
@@ -310,11 +311,6 @@ table#labTable tbody th {
  cursor:	pointer;
 }
 
-table#labTable tbody tr:nth-child(n+2) th span{
- float:		right;
- color:		red;
-}
-
 /* border-collapse doesn't work with visibility:collapse
    so we make our own collapsed border
    Put outside (table) border on top and left,
@@ -342,16 +338,33 @@ table#labTable *::before {
 
 /* Column Headings */
 /* Rotate Dates*/
-table#labTable thead th:nth-child(n+2) div{
- height:	6em;
+table#labTable thead th:nth-child(n+2){
  cursor:	pointer;
- width:		3em;
- font-weight:	bold;
- border-width:	0px;
- transform:
-  translate(2.5em, 2em)
-  rotate(270deg);
+ vertical-align:bottom;
 }
+table#labTable thead th:nth-child(n+2) div{
+ margin:	0px;
+ padding:	0px;
+ width:		0px;
+ transform:
+  translate(0em, 0.75em)
+  rotate(-90deg);
+}
+table#labTable thead th:nth-child(n+2) div[title]{
+ color:		blue;
+}
+table#labTable thead tr th span{
+ padding-right:	3px;
+ color:		red;
+ font-size:	120%;
+}
+table#labTable tbody tr:nth-child(n+2) th span{
+ padding-right:	3px;
+ float:		right;
+ color:		red;
+ font-size:	120%;
+}
+
 /* Add pointer under date */
 table#labTable thead th:nth-child(n+2) div::before{ content: var(--right);}
 table#labTable thead th.hide:nth-child(n+2) div::before { 
@@ -406,8 +419,14 @@ table#labTable tbody.hide tr:nth-child(n+2) {
 /* Devices with a coarse pointer need to be able to click
    something to show title strings, so they are on by default
    and we hide the icon if we have true title mouseover option */
+table#labTable span {
+ line-height:		1.1em;
+}
 @media (pointer:fine) {
- table#labTable tbody tr th span{display: none;}
+ table#labTable span.showInfo{display: none;}
+}
+@media (pointer:coarse) {
+ table#labTable span.graph{display: none;}
 }
 
 td.low {
@@ -453,4 +472,78 @@ td.UC_Red {background-color: rgb(188,78,0);}
  height:    0px;
  max-width: 100%;
 }
+div#chartDiv * {
+ font-family:	Verdana, Serif;
+ font-size:	9pt;
+}
+div#chartDiv {
+ width:		700px;
+ height:	400px;
+ position:	absolute;
+ left:		-800px;
+ top:		30px;
+ float:		left;
+ background-color: darkblue;
+ color:		ivory;
+ padding:	0px;
+ margin:	0px;
+ box-shadow:	15px 15px 12px #8888cc;
+ z-index:	10;
+}
+div#chartDiv div{
+ position:	absolute;
+ top:		0px;
+ right:		0px;
+ border:	1px solid white;
+ color:		white;
+ cursor:	pointer;
+}
+
+.d3-tip {
+  padding:	6px;
+  background:	skyblue;
+  max-width:	10em;
+  color:	darkblue;
+  border-radius: 6px;
+  font-size:	9pt;
+  font-weight:	bold;
+  text-align:	center;
+  line-height:	1.1em;
+  z-index:	15;
+}
+ 
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing:	border-box;
+  display:	inline;
+  font-size:	9px;
+  width:	100%;
+  line-height:	1;
+  color:	skyblue;
+  content:	"\25BC";
+  position:	absolute;
+  text-align:	center;
+  z-index:	15;
+}
+ 
+/* Style northward tooltips specifically */
+.d3-tip.n:after {
+  margin:	-2px 0 0 0;
+  top:		100%;
+  left:		0;
+  z-index:	15;
+}
+
+.line {
+  fill:		none;
+  stroke:	skyblue;
+  stroke-width:	1;
+}
+.dot {
+  fill:		skyblue;
+  stroke:	transparent;
+  stroke-width:	20;
+  cursor:	pointer;
+}
+.focus { fill:	ivory; }
 
