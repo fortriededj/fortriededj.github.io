@@ -479,7 +479,7 @@ div#chartDiv * {
 div#chartDiv {
  width:		700px;
  height:	400px;
- position:	absolute;
+ position:	fixed;
  left:		-800px;
  top:		30px;
  float:		left;
@@ -501,8 +501,8 @@ div#chartDiv div{
 .d3-tip {
   line-height:	1;
   padding:	6px;
-  background:	ivory;
-  color:	darkblue;
+  background:	darkblue;
+  color:	ivory;
   border-radius: 4px;
   z-index:	15;
   width:	6em;
@@ -513,11 +513,13 @@ div#chartDiv div{
 .d3-tip:after {
   box-sizing:	border-box;
   display:	inline;
+  top:		10px;
   width:	100%;
-  line-height:	1;
-  color:	ivory;
+  line-height:	.7;
+  color:	darkblue;
   content:	"\25BC";
   position:	absolute;
+  font-size:	120%;
   text-align:	center;
   z-index:	16;
 }
@@ -532,19 +534,13 @@ div#chartDiv div{
 
 .line {
   fill:		none;
-  stroke:	white;
-  stroke-width:	1;
+  stroke:	black;
+  stroke-width:	2;
 }
 .dot {
   stroke:	transparent;
-  stroke-width:	8;
+  stroke-width:	2;
   cursor:	pointer;
 }
-.focus { fill:	ivory; }
-.plotArea {
- fill:		#eee;
- z-index:	11;
-}
-.yaxis {
- fill:		black;
-}
+.focus { stroke:black; }
+.yaxis line { stroke: rgba(0,0,0,0.5); }

@@ -13,8 +13,6 @@ var width;
 var height;
 var xScale;
 var yScale;
-var mouseX;
-var mouseY;
 var svg;
 
 function userLoaded(){
@@ -171,13 +169,25 @@ function toggleColumn(x){			//Show only those rows that have a
  if(columnToggle && columnToggle != x){		//value in this column
   toggleColumn(columnToggle);
  }
+ var toggleFlag = false;
  for(i=0; i<numberOfPanels; i++){		//Start with first tbody
   var rows = tbody[i].children.length;		//Get number of rows in each tbody
   for(j=1; j<rows; j++){			//Start with first data row
    if(! tbody[i].children[j].children[x].innerHTML){;//If this row cell empty
     tbody[i].children[j].classList.toggle("hide");//Toggle row
-   }
+   } else {toggleFlag = true;}			//Did we find any that we didn't toggle
   }
+ }
+ if(! toggleFlag){				//Didn't find anything in this column
+  for(i=0; i<numberOfPanels; i++){		//Toggle back
+   var rows = tbody[i].children.length;
+   for(j=1; j<rows; j++){tbody[i].children[j].classList.toggle("hide");}
+  }
+  confirm("This column only indicates that event\n\t'" +
+	thead[0].children[0].children[x].children[0].getAttribute('title') +
+	"'\noccured on this date.\n\n" +
+	"There was no blood test on this date.")
+  return;
  }
  columnToggle = thead[0].children[0].children[x].classList.toggle("hide") && x;	//Update column header
 						//remember if we closed or opened it
@@ -192,8 +202,6 @@ function showInfo(x){				//For those without mouse
 function showGraph(x){				//Show graph of this item
  var e= this.event;
  e.stopPropagation();				//Stop any other functions
- mouseX = e.pageX-e.clientX + 200;
- mouseY = e.pageY-e.clientY + 100;
  var dates = thead[0].children[0].children;	//Get thead line with date values
  var values = x.parentNode.parentNode.children;	//Get this lines values
  myDataSet=[];					//Clear the dataSet
@@ -224,27 +232,35 @@ function isNumeric(value){			//See if string is a number
 }
 
 function createChart(myTitle,data,lowValue,highValue){	//Create chart
- d3.selectAll('svg').remove();
- chartDiv.style.display="block";
- chartDiv.style.left=mouseX + 20 + "px";
- chartDiv.style.top=mouseY + 20 + "px";
- n = data.length;			//Get length of the data
+ d3.selectAll('svg').remove();		//Remove existing svg
+ chartDiv.style.display="block";	//See the chart div
+ chartDiv.style.left=240 + "px";
+ chartDiv.style.top=120 + "px";
+ n = data.length;			//Get length of the dataset
 
- yValues = [];
+ yValues = [];				//Place to store so we can massage later
  data.forEach(function(d) {		//Massage the data
   d.xValues = d.xValues;
   d.yValues = +d.yValues;
   yValues.push(d.yValues);
  });
- if(lowValue === null){lowValue = Math.min(...yValues);}
- if(highValue === null){highValue = Math.max(...yValues);}
- minY = Math.min(...yValues,lowValue);
- maxY = Math.max(...yValues,highValue);
- spread = maxY - minY + 1;
- minY = Math.max(0,minY-spread * 0.10);
- maxY = maxY + spread * 0.10;
 
- var valueline1 = d3.line()		//Build the line 
+ /*  [low|high]Value = bottom and top of the defined range
+     [min|max]Y = bottom and top of the y-axis */
+ if(lowValue === null){lowValue = Math.min(...yValues);}	//If now lowvalue, use lowest we see
+ if(highValue === null){highValue = Math.max(...yValues);}	//Same for high
+ minY = Math.min(...yValues,lowValue);				//Get yaxis min value
+ maxY = Math.max(...yValues,highValue);				//Get yaxis max value
+ spread = maxY - minY;
+ minY = Math.max(0,minY-spread * 0.10);				//Make yaxis slightly larger than needed
+ maxY = maxY + spread * 0.10;
+ spread = maxY - minY;						//Recalc yaxis spread
+ stop2 = Math.round((maxY-highValue)/spread*100);
+ stop4 = Math.round((maxY-lowValue)/spread*100);
+ stop3 = Math.round((stop4 - stop2)/2 + stop2);
+ stop2 += '%';stop3 += '%';stop4 += '%';
+
+ var valueline1 = d3.line()					//Build the line 
   .x(function(d) { return correctXScale(d); })
   .y(function(d) { return yScale(d.yValues); })
   .defined(function(d) { return (typeof d.yValues !== 'string'); });
@@ -255,79 +271,117 @@ function createChart(myTitle,data,lowValue,highValue){	//Create chart
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
- /*svg.append("rect")
-  .attr("width", width)
+ var defs = svg.append('defs');		//Build the gradient
+ plotAreaTop = defs.append('linearGradient')
+  .attr('id','gradTop')
+  .attr('x1', '0')
+  .attr('y1', '0')
+  .attr('x2', '0')
+  .attr('y2', '1')
+ plotAreaTop.append('stop')
+  .attr('offset', '0%')
+  .attr('stop-color', 'red')
+  .attr('stop-opacity','0.6');
+ plotAreaTop.append('stop','stop')
+  .attr('offset', stop2)
+  .attr('stop-color', 'red')
+  .attr('stop-opacity','0.1');
+ plotAreaTop.append('stop','stop','stop')
+  .attr('offset',stop2)
+  .attr('stop-color', 'white')
+  .attr('stop-opacity','0');
+ plotAreaTop.append('stop','stop','stop','stop')
+  .attr('offset',stop4)
+  .attr('stop-color','white')
+ plotAreaTop.append('stop','stop','stop','stop','stop')
+  .attr('offset',stop4)
+  .attr('stop-color', 'blue')
+  .attr('stop-opacity','0.1');
+ plotAreaTop.append('stop','stop','stop','stop','stop','stop')
+  .attr('offset','100%')
+  .attr('stop-color', 'blue')
+  .attr('stop-opacity','0.6');
+
+ svg.append("rect")			//Build a white backdrop box
+  .attr("width", width)			//to cover the plot area
   .attr("height", height)
-  .attr("class", "plotArea")*/
+  .attr("x",0)
+  .attr("y",0)
+  .attr("fill", "white")
+ svg.append("rect")			//Now build box that gets
+  .attr("width", width)			//the gradient we defined above
+  .attr("height", height)
+  .attr("x",0)
+  .attr("y",0)
+  .attr("fill", "url(#gradTop)")
 
  xScale.domain(data.map(function(d) { return d.xValues;}));//Build x-axis values
- /*yScale.domain([d3.min(data, function(d) {		//Build the y-axis values
-	return Math.max(Math.min(d.yValues)-5,0);}),//Bottom end
-	d3.max(data, function(d) {
-	return Math.max(d.yValues);})]);	//Top end of y-axis */
- yScale.domain([minY, maxY]);
+ yScale.domain([minY, maxY]);		//And y-axis
 
  var lines = svg.attr('transform', function(d) {	//Offset by margins
    return 'translate(' + margin.left + ', ' + margin.top + ')'; });
 
- var tool_tip = d3.tip()				//Routine to build
-  .attr("class", "d3-tip")				//tool-tip contents
+ var tool_tip = d3.tip()		//Routine to build
+  .attr("class", "d3-tip")		//tool-tip contents
   .offset([-16, 0])
   .html(function(d) {return d.yValues + "<br>" + d.xValues; });
 
- svg.call(tool_tip);					//Call it as necessary
+ svg.call(tool_tip);			//Call it as necessary
 
- lines.append("path")					//Build the lines we
-  .data([data])						//will be plotting
+ lines.append("path")			//Build the lines we
+  .data([data])				//will be plotting
   .attr("class", "line")
   .attr("d",valueline1);
 
  d3.line()
   .x(function(d) { return correctXScale(d); })
   .y(function(d) { return yScale(d.yValues); })
-  //.curve(d3.curveMonotoneX)				//apply smoothing to the line
+  //.curve(d3.curveMonotoneX)		//apply smoothing to the line
 
- svg.append("g")					//Add x-axis
-  .attr("class", "x axis")
+ svg.append("g")			//Add x-axis
+  .attr("class", "xaxis")
   .attr("transform", "translate(0," + height + ")")
   .call(d3.axisBottom(xScale))
   .selectAll("text")
     .attr("transform", "translate(-10,0)rotate(-45)")
     .style("text-anchor", "end")
 
- svg.append("g")					//Add y-axis
+ svg.append("g")			//Add y-axis
   .attr("class", "yaxis")
-  .call(d3.axisLeft(yScale).ticks(6).tickSize([-width]));
+  .call(d3
+	.axisLeft(yScale)
+	.ticks(5)
+	.tickSize([-width]));
 
  svg.append("path")
-  .datum(data)						//Bind data to the line 
-  .attr("class", "line")				//Assign a class for styling 
-  .attr("d", valueline1);				//Call the line generator 
+  .datum(data)				//Bind data to the line 
+  .attr("class", "line")		//Assign a class for styling 
+  .attr("d", valueline1);		//Call the line generator 
 
  svg.selectAll(".dot")
   .data(data)
-  .enter().append("circle") // Uses the enter().append() method
-  .attr("class", "dot") // Assign a class for styling
+  .enter().append("circle")		//Uses the enter().append() method
+  .attr("class", "dot")			//Assign a class for styling
   .attr("cx", function(d) { return correctXScale(d); })
   .attr("cy", function(d) { return yScale(d.yValues); })
-  .attr("r", 5)
-  .style('fill',function(d,i){
+  .attr("r", 5)				//Dot radius is 5
+  .style('fill',function(d,i){		//Set color depending on value
 	if(d.yValues < lowValue){ 
-			return 'blue';
-		} else if(d.yValues <= highValue) {
-			return 'white';
-		} else {
-			return 'red';
-		}
-	})
-  .on('mouseover', function(a,b,c){
+		return 'blue';
+	} else if(d.yValues <= highValue) {
+		return '#898';
+	} else {
+		return 'red';
+	}
+  })
+  .on('mouseover', function(a,b,c){	//On mouseover show tool tip
 	c[b].classList.toggle('focus');
 	tool_tip.show(a);})
-  .on('mouseout', function(a,b,c){
+  .on('mouseout', function(a,b,c){	//On mouseout hide tool tip
 	c[b].classList.toggle('focus');
 	tool_tip.hide(a);})
 
- svg.append("text")	//Add title
+ svg.append("text")			//Add title
   .attr("x", (width / 2))             
   .attr("y", 8 - (margin.top / 2))
   .attr("text-anchor", "middle")  
