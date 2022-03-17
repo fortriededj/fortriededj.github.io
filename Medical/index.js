@@ -127,7 +127,7 @@ function fixPhones(){			//Update all phone and phone2 values
 function loaded(){				//Used only for lab work page
  table = document.getElementById('labTable');	//after page loads
  chartDiv = document.getElementById('chartDiv');
- margin = {top: 50, right: 20, bottom: 50, left: 50};
+ margin = {top: 50, right: 20, bottom: 55, left: 50};
  width  = chartDiv.offsetWidth - margin.left - margin.right;
  height = chartDiv.offsetHeight - margin.top - margin.bottom;
  xScale = d3.scaleBand().range([0, width]);
@@ -207,24 +207,42 @@ function showGraph(x){				//Show graph of this item
   alert("Nothing to Graph");
   return;
  }
+ ChartTitle = values[0].innerText.substring(2);
+ myTitleString = values[0].getAttribute('title');
+ ranges = [ null, null];
+ if(myTitleString){
+  rangeString = myTitleString.match(/-*\d*\.*\d+ - -*\d*\.*\d+/);
+  if(rangeString){
+   ranges = rangeString[0].split(" - ");
+  }
+ }
  //Call with title, minus the 2 character graph icon at the beginning of the string
- createChart(values[0].innerText.substring(2),myDataSet);
+ createChart(ChartTitle,myDataSet,ranges[0],ranges[1]);
 }
 function isNumeric(value){			//See if string is a number
  return /^-?\d*\.*\d+$/.test(value);		//And only a number
 }
 
-function createChart(myTitle,data){		//Create chart
+function createChart(myTitle,data,lowValue,highValue){	//Create chart
  d3.selectAll('svg').remove();
  chartDiv.style.display="block";
  chartDiv.style.left=mouseX + 20 + "px";
  chartDiv.style.top=mouseY + 20 + "px";
  n = data.length;			//Get length of the data
 
+ yValues = [];
  data.forEach(function(d) {		//Massage the data
   d.xValues = d.xValues;
   d.yValues = +d.yValues;
+  yValues.push(d.yValues);
  });
+ if(lowValue === null){lowValue = Math.min(...yValues);}
+ if(highValue === null){highValue = Math.max(...yValues);}
+ minY = Math.min(...yValues,lowValue);
+ maxY = Math.max(...yValues,highValue);
+ spread = maxY - minY + 1;
+ minY = Math.max(0,minY-spread * 0.10);
+ maxY = maxY + spread * 0.10;
 
  var valueline1 = d3.line()		//Build the line 
   .x(function(d) { return correctXScale(d); })
@@ -237,18 +255,24 @@ function createChart(myTitle,data){		//Create chart
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+ /*svg.append("rect")
+  .attr("width", width)
+  .attr("height", height)
+  .attr("class", "plotArea")*/
+
  xScale.domain(data.map(function(d) { return d.xValues;}));//Build x-axis values
- yScale.domain([d3.min(data, function(d) {		//Build the y-axis values
+ /*yScale.domain([d3.min(data, function(d) {		//Build the y-axis values
 	return Math.max(Math.min(d.yValues)-5,0);}),//Bottom end
 	d3.max(data, function(d) {
-	return Math.max(d.yValues);})]);	//Top end of y-axis
+	return Math.max(d.yValues);})]);	//Top end of y-axis */
+ yScale.domain([minY, maxY]);
 
  var lines = svg.attr('transform', function(d) {	//Offset by margins
    return 'translate(' + margin.left + ', ' + margin.top + ')'; });
 
  var tool_tip = d3.tip()				//Routine to build
   .attr("class", "d3-tip")				//tool-tip contents
-  .offset([-8, 0])
+  .offset([-16, 0])
   .html(function(d) {return d.yValues + "<br>" + d.xValues; });
 
  svg.call(tool_tip);					//Call it as necessary
@@ -272,7 +296,7 @@ function createChart(myTitle,data){		//Create chart
     .style("text-anchor", "end")
 
  svg.append("g")					//Add y-axis
-  .attr("class", "y axis")
+  .attr("class", "yaxis")
   .call(d3.axisLeft(yScale).ticks(6).tickSize([-width]));
 
  svg.append("path")
@@ -287,6 +311,15 @@ function createChart(myTitle,data){		//Create chart
   .attr("cx", function(d) { return correctXScale(d); })
   .attr("cy", function(d) { return yScale(d.yValues); })
   .attr("r", 5)
+  .style('fill',function(d,i){
+	if(d.yValues < lowValue){ 
+			return 'blue';
+		} else if(d.yValues <= highValue) {
+			return 'white';
+		} else {
+			return 'red';
+		}
+	})
   .on('mouseover', function(a,b,c){
 	c[b].classList.toggle('focus');
 	tool_tip.show(a);})
