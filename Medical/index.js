@@ -234,7 +234,7 @@ function isNumeric(value){			//See if string is a number
 function createChart(myTitle,data,lowValue,highValue){	//Create chart
  d3.selectAll('svg').remove();		//Remove existing svg
  chartDiv.style.display="block";	//See the chart div
- chartDiv.style.left=240 + "px";
+ chartDiv.style.left=240 + "px";	//Where to put it
  chartDiv.style.top=120 + "px";
  n = data.length;			//Get length of the dataset
 
@@ -274,39 +274,26 @@ function createChart(myTitle,data,lowValue,highValue){	//Create chart
  var defs = svg.append('defs');		//Build the gradient
  plotAreaTop = defs.append('linearGradient')
   .attr('id','gradTop')
-  .attr('x1', '0')
-  .attr('y1', '0')
-  .attr('x2', '0')
-  .attr('y2', '1')
+  .attr('x1', '0') .attr('y1', '0') .attr('x2', '0') .attr('y2', '1')
+
  plotAreaTop.append('stop')
-  .attr('offset', '0%')
-  .attr('stop-color', 'red')
-  .attr('stop-opacity','0.6');
+  .attr('offset', '0%' ) .attr('stop-color', '#ff0000') .attr('stop-opacity', '0.6');
  plotAreaTop.append('stop','stop')
-  .attr('offset', stop2)
-  .attr('stop-color', 'red')
-  .attr('stop-opacity','0.1');
+  .attr('offset', stop2) .attr('stop-color', '#ff0000') .attr('stop-opacity', '0.05');
  plotAreaTop.append('stop','stop','stop')
-  .attr('offset',stop2)
-  .attr('stop-color', 'white')
-  .attr('stop-opacity','0');
+  .attr('offset', stop2) .attr('stop-color', '#ffffff') .attr('stop-opacity', '0');
  plotAreaTop.append('stop','stop','stop','stop')
-  .attr('offset',stop4)
-  .attr('stop-color','white')
+  .attr('offset', stop4) .attr('stop-color', '#ffffff') .attr('stop-opacity', '0');
  plotAreaTop.append('stop','stop','stop','stop','stop')
-  .attr('offset',stop4)
-  .attr('stop-color', 'blue')
-  .attr('stop-opacity','0.1');
+  .attr('offset', stop4) .attr('stop-color', '#0000ff') .attr('stop-opacity', '0.05');
  plotAreaTop.append('stop','stop','stop','stop','stop','stop')
-  .attr('offset','100%')
-  .attr('stop-color', 'blue')
-  .attr('stop-opacity','0.6');
+  .attr('offset','100%') .attr('stop-color', '#0000ff') .attr('stop-opacity', '0.6');
 
  svg.append("rect")			//Build a white backdrop box
   .attr("width", width)			//to cover the plot area
-  .attr("height", height)
-  .attr("x",0)
-  .attr("y",0)
+  .attr("height", height)		//This way the transparency goes
+  .attr("x",0)				//against white instead of
+  .attr("y",0)				//black
   .attr("fill", "white")
  svg.append("rect")			//Now build box that gets
   .attr("width", width)			//the gradient we defined above
@@ -318,7 +305,7 @@ function createChart(myTitle,data,lowValue,highValue){	//Create chart
  xScale.domain(data.map(function(d) { return d.xValues;}));//Build x-axis values
  yScale.domain([minY, maxY]);		//And y-axis
 
- var lines = svg.attr('transform', function(d) {	//Offset by margins
+ var lines = svg.attr('transform', function(d) {//Offset by margins
    return 'translate(' + margin.left + ', ' + margin.top + ')'; });
 
  var tool_tip = d3.tip()		//Routine to build
@@ -328,7 +315,7 @@ function createChart(myTitle,data,lowValue,highValue){	//Create chart
 
  svg.call(tool_tip);			//Call it as necessary
 
- lines.append("path")			//Build the lines we
+ lines.append("path")			//Build the line we
   .data([data])				//will be plotting
   .attr("class", "line")
   .attr("d",valueline1);
