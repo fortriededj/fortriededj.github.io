@@ -1,20 +1,3 @@
-// Global Values
-var maxDataSetSize = 30;
-var table;
-var thead;
-var tbody;
-var numberOfPanels;
-var rowToggle=0;
-var columnToggle=0;
-var myDataSet=[];
-var chartDiv;
-var margin;
-var width;
-var height;
-var xScale;
-var yScale;
-var svg;
-
 function userLoaded(){
  var myIframe = document.getElementById("medicineIframe");
  var myBody = myIframe.contentWindow.document.body;
@@ -122,8 +105,24 @@ function fixPhones(){			//Update all phone and phone2 values
  }
 }
 
+//From here on is the chart stuff
+//Global Values
+var table, thead, tbody, numberOfPanels, svg, chartDiv;
+var rowToggle=0, columnToggle=0;
+var myDataSet=[];
+var margin, width, height, xScale, yScale;
+var ChartTitle, startPoint, MINY, MAXY;
+
+// Calculate cutoff day -- we initially look back 2 years (ish)
+var CutOffYears = 2; var CutOff = Date.now() - CutOffYears * 365*24*60*60*1000;
+
+//Here when we deal with the labTable stuff
 function loaded(){				//Used only for lab work page
  table = document.getElementById('labTable');	//after page loads
+ thead = document.getElementsByTagName('thead');//The thead section
+ tbody = document.getElementsByTagName('tbody');//One tbody for each PanelName
+ numberOfPanels = tbody.length;			//Remember the count
+
  chartDiv = document.getElementById('chartDiv');
  margin = {top: 50, right: 20, bottom: 55, left: 50};
  width  = chartDiv.offsetWidth - margin.left - margin.right;
@@ -132,16 +131,12 @@ function loaded(){				//Used only for lab work page
  yScale = d3.scaleLinear().range([height, 0]);
  correctXScale = d => { return xScale(d.xValues) + width / n / 2; } 
 
- thead = document.getElementsByTagName('thead');//The thead section
- tbody = document.getElementsByTagName('tbody');//One tbody for each PanelName
- numberOfPanels = tbody.length;			//Remember the count
-
- graphElems = document.querySelectorAll("[Chart]");
+ graphElems = document.querySelectorAll("[Chart]");//Build clickable span for each Chart attribute
  for(i=0; i<graphElems.length; i++){
   graphElems[i].innerHTML = "<span class='graph' onClick='showGraph(this);'>&#x1F4C8;</span>" + graphElems[i].innerHTML;
  }
 
- titleElems = document.querySelectorAll("[title]");
+ titleElems = document.querySelectorAll("[title]");//Same thing for any title
  for(i=0; i<titleElems.length; i++){
   titleElems[i].innerHTML = "<span class='showInfo' onClick='showInfo(this);'>&#x2754;</span>" + titleElems[i].innerHTML;
  }
@@ -157,7 +152,7 @@ function toggleRow(x){				//Show only those columns that
  }
  var j = x.parentNode.children.length;		//Use parent because we clicked on TD not TR
  for(i=1; i<j; i++){				//have a value in this row
-  if(! x.parentNode.children[i].innerHTML){		//This column cell is empty
+  if(! x.parentNode.children[i].innerHTML){	//This column cell is empty
    table.getElementsByTagName('col')[i].classList.toggle("narrow"); //Toggle column
   }
  }
@@ -202,19 +197,31 @@ function showInfo(x){				//For those without mouse
 function showGraph(x){				//Show graph of this item
  var e= this.event;
  e.stopPropagation();				//Stop any other functions
+ document.getElementById('showMore').classList.remove('toggled');
  var dates = thead[0].children[0].children;	//Get thead line with date values
  var values = x.parentNode.parentNode.children;	//Get this lines values
+ /*d = new Date();
+ var CutOffYear = d.getFullYear()%100 - CutOffYears;//Go back x years from here */
+ startPoint = 0;
  myDataSet=[];					//Clear the dataSet
  for(i=1; i<values.length; i++){		//Loop through until we reach list length
   if(isNumeric(values[i].innerText)){		//Only use numbers
+						//shift onto stack
    myDataSet.unshift({"xValues": dates[i].innerText, "yValues": values[i].innerText});
-   if(myDataSet.length === maxDataSetSize){break;}//Stop processing if limit reached
+   if(!startPoint){				//Have we found a starting point yet
+    x = Date.parse(dates[i].innerText);
+    if(x<CutOff){ startPoint = myDataSet.length - 1;}//Found starting point
+   }
   }
  } 
  if(myDataSet.length === 0){
   alert("Nothing to Graph");
   return;
  }
+ if(startPoint){
+  startPoint=myDataSet.length-startPoint;
+ }
+
  ChartTitle = values[0].innerText.substring(2);
  myTitleString = values[0].getAttribute('title');
  ranges = [ null, null];
@@ -222,21 +229,28 @@ function showGraph(x){				//Show graph of this item
   rangeString = myTitleString.match(/-*\d*\.*\d+ - -*\d*\.*\d+/);
   if(rangeString){
    ranges = rangeString[0].split(" - ");
+   MINY = ranges[0];
+   MAXY = ranges[1];
   }
  }
  //Call with title, minus the 2 character graph icon at the beginning of the string
- createChart(ChartTitle,myDataSet,ranges[0],ranges[1]);
+ createChart(ChartTitle,startPoint,MINY,MAXY);
 }
 function isNumeric(value){			//See if string is a number
  return /^-?\d*\.*\d+$/.test(value);		//And only a number
 }
 
-function createChart(myTitle,data,lowValue,highValue){	//Create chart
- d3.selectAll('svg').remove();		//Remove existing svg
+function createChart(myTitle,startAt,MINY,MAXY){//Create chart
+ d3.selectAll('svg').remove();		//Remove existing svg, if any
  chartDiv.style.display="block";	//See the chart div
  chartDiv.style.left=240 + "px";	//Where to put it
  chartDiv.style.top=120 + "px";
+
+ data = myDataSet.slice(startAt);	//Pull off only part we want
  n = data.length;			//Get length of the dataset
+ x = parseInt((29+n)/30);
+ tickFrequency = Math.max(1,x);
+ dotSize = Math.max(3,6-x);
 
  yValues = [];				//Place to store so we can massage later
  data.forEach(function(d) {		//Massage the data
@@ -247,23 +261,23 @@ function createChart(myTitle,data,lowValue,highValue){	//Create chart
 
  /*  [low|high]Value = bottom and top of the defined range
      [min|max]Y = bottom and top of the y-axis */
- if(lowValue === null){lowValue = Math.min(...yValues);}	//If now lowvalue, use lowest we see
- if(highValue === null){highValue = Math.max(...yValues);}	//Same for high
- minY = Math.min(...yValues,lowValue);				//Get yaxis min value
- maxY = Math.max(...yValues,highValue);				//Get yaxis max value
+ if(MINY === null){MINY = Math.min(...yValues);}	//If now lowvalue, use lowest we see
+ if(MAXY === null){MAXY = Math.max(...yValues);}	//Same for high
+ minY = Math.min(...yValues,MINY);				//Get yaxis min value
+ maxY = Math.max(...yValues,MAXY);				//Get yaxis max value
  spread = maxY - minY;
  minY = Math.max(0,minY-spread * 0.10);				//Make yaxis slightly larger than needed
  maxY = maxY + spread * 0.10;
- spread = maxY - minY;						//Recalc yaxis spread
- stop2 = Math.round((maxY-highValue)/spread*100);
- stop4 = Math.round((maxY-lowValue)/spread*100);
+ spread = Math.max(1,(maxY - minY));				//Recalc yaxis spread
+ stop2 = Math.round((maxY-MAXY)/spread*100);		//Must be at least 1 or
+ stop4 = Math.round((maxY-MINY)/spread*100);		//you can't divide by zero
  stop3 = Math.round((stop4 - stop2)/2 + stop2);
  stop2 += '%';stop3 += '%';stop4 += '%';
 
  var valueline1 = d3.line()					//Build the line 
   .x(function(d) { return correctXScale(d); })
   .y(function(d) { return yScale(d.yValues); })
-  .defined(function(d) { return (typeof d.yValues !== 'string'); });
+  .defined(function(d) {return (typeof d.yValues !== 'string'); });
 
  svg = d3.select("div#chartDiv").append("svg")	//Build the SVG container
   .attr("width", width + margin.left + margin.right)
@@ -320,15 +334,14 @@ function createChart(myTitle,data,lowValue,highValue){	//Create chart
   .attr("class", "line")
   .attr("d",valueline1);
 
- d3.line()
-  .x(function(d) { return correctXScale(d); })
-  .y(function(d) { return yScale(d.yValues); })
-  //.curve(d3.curveMonotoneX)		//apply smoothing to the line
-
  svg.append("g")			//Add x-axis
   .attr("class", "xaxis")
   .attr("transform", "translate(0," + height + ")")
-  .call(d3.axisBottom(xScale))
+  .call(d3.
+	axisBottom(xScale)
+	.tickFormat((interval,i) => {
+		return i%tickFrequency !== 0 ? " ": interval;
+	}))
   .selectAll("text")
     .attr("transform", "translate(-10,0)rotate(-45)")
     .style("text-anchor", "end")
@@ -351,11 +364,11 @@ function createChart(myTitle,data,lowValue,highValue){	//Create chart
   .attr("class", "dot")			//Assign a class for styling
   .attr("cx", function(d) { return correctXScale(d); })
   .attr("cy", function(d) { return yScale(d.yValues); })
-  .attr("r", 5)				//Dot radius is 5
+  .attr("r", dotSize)			//Dot radius is 5
   .style('fill',function(d,i){		//Set color depending on value
-	if(d.yValues < lowValue){ 
+	if(d.yValues < MINY){ 
 		return 'blue';
-	} else if(d.yValues <= highValue) {
+	} else if(d.yValues <= MAXY) {
 		return '#898';
 	} else {
 		return 'red';
@@ -375,6 +388,13 @@ function createChart(myTitle,data,lowValue,highValue){	//Create chart
   .style("font-size", "16px") 
   .style("fill", "ivory")
   .text(myTitle);
+}
+function toggleMore(){
+ if(document.getElementById('showMore').classList.toggle('toggled')){
+  createChart(ChartTitle,0,MINY,MAXY);
+ } else {
+  createChart(ChartTitle,startPoint,MINY,MAXY);
+ }
 }
 function closeIt(){
  d3.selectAll('svg').remove();

@@ -5,7 +5,7 @@
  --down:	"\25BC";
  --smLeft:	"\2BC7";
  --smRight:	"\2BC8";
- --star:	"\FF0A";
+ --closeX:	"\ff38";
  --firstColumnWidth: 18em;
 }
 
@@ -493,10 +493,21 @@ div#chartDiv {
 div#chartDiv div{
  position:	absolute;
  top:		0px;
- right:		0px;
- border:	1px solid white;
+ border:	2px solid white;
+ background:	lightBlue;
+ color:		darkblue;
  cursor:	pointer;
 }
+div#showMore {	
+ left:		0px;
+ margin:	0.25em;
+ padding:	0.25em 0.5em;
+ border-radius:	1em;
+}
+div#showMore::after {content:"Show All"; padding:0px 2px;}
+div#showMore.toggled::after {content:"Show Less"}
+div#closer {	right:0px;}
+div#closer::after { content:var(--closeX);}
 
 .d3-tip {
   line-height:	1;
@@ -517,7 +528,7 @@ div#chartDiv div{
   width:	100%;
   line-height:	.7;
   color:	darkblue;
-  content:	"\25BC";
+  content:	var(--down);
   position:	absolute;
   font-size:	120%;
   text-align:	center;
@@ -539,8 +550,8 @@ div#chartDiv div{
 }
 .dot {
   stroke:	transparent;
-  stroke-width:	2;
+  stroke-width:	4;
   cursor:	pointer;
 }
-.focus { stroke:black; }
+.focus { stroke:black; stroke-width:2}
 .yaxis line { stroke: rgba(0,0,0,0.5); }
