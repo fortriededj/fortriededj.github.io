@@ -490,68 +490,57 @@ div#chartDiv {
  box-shadow:	15px 15px 12px #8888cc;
  z-index:	10;
 }
-div#chartDiv div{
+span#tooltip{
+ display:	none;
  position:	absolute;
  top:		0px;
+ left:		0px;
+ margin:	0px;
+ padding:	2px 3px;
+ background:	lightBlue;
+ color:		black;
+ text-align:	center;
+ border:	1px solid darkBlue;
+ border-radius:	4px;
+ z-index:	11;
+}
+span#tooltip i {
+ color:		black;
+ background:	chartreuse;
+}
+div#showMore {	
+ position:	absolute;
+ top:		0px;
+ left:		0px;
+ margin:	0.25em;
+ padding:	0.25em 0.5em;
  border:	2px solid white;
+ border-radius:	1em;
  background:	lightBlue;
  color:		darkblue;
  cursor:	pointer;
 }
-div#showMore {	
- left:		0px;
- margin:	0.25em;
- padding:	0.25em 0.5em;
- border-radius:	1em;
-}
 div#showMore::after {content:"Show All"; padding:0px 2px;}
 div#showMore.toggled::after {content:"Show Less"}
-div#closer {	right:0px;}
+div#closer {	
+ position:	absolute;
+ top:		0px;
+ right:		0px;
+ margin:	0px;
+ border:	1px solid darkblue;
+ background:	white;
+ color:		black;
+ cursor:	pointer;
+}
 div#closer::after { content:var(--closeX);}
-
-.d3-tip {
-  line-height:	1;
-  padding:	6px;
-  background:	darkblue;
-  color:	ivory;
-  border-radius: 4px;
-  z-index:	15;
-  width:	6em;
-  text-align:	center;
-}
- 
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-  box-sizing:	border-box;
-  display:	inline;
-  top:		10px;
-  width:	100%;
-  line-height:	.7;
-  color:	darkblue;
-  content:	var(--down);
-  position:	absolute;
-  font-size:	120%;
-  text-align:	center;
-  z-index:	16;
-}
- 
-/* Style northward tooltips specifically */
-.d3-tip.n:after {
-  margin:	-2px 0 0 0;
-  top:		100%;
-  left:		0;
-  z-index:	15;
-}
 
 .line {
   fill:		none;
   stroke:	black;
   stroke-width:	2;
 }
-.dot {
-  stroke:	transparent;
-  stroke-width:	4;
-  cursor:	pointer;
-}
-.focus { stroke:black; stroke-width:2}
+.dot_low {fill:	blue;}
+.dot_high {fill:red;}
+.dot_norm {fill:#898;}
+.dot_note {fill:Chartreuse;}
 .yaxis line { stroke: rgba(0,0,0,0.5); }
