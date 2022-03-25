@@ -7,10 +7,18 @@
 <link rel="stylesheet" href="index.css">
 </head>
 <body onload="loaded();">
-<table id="labTable">
+<table id="labTable" class="Default">
  <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
  <thead>
-  <tr><th title='This sheet shows:&#013;&#010;	6,281 measurements on&#013;&#010;	177 days between&#013;&#010;	February 28, 2001 and&#013;&#010;	March 24, 2022 covering&#013;&#010;	7,694 days.'><div>Daniel K. Fortriede</div></th>
+  <tr><th title='This sheet shows:&#013;&#010;	6,280 measurements on&#013;&#010;	177 days between&#013;&#010;	February 28, 2001 and&#013;&#010;	March 24, 2022 covering&#013;&#010;	7,694 days.'><div>Daniel K. Fortriede</div>
+<br>
+<div>Show:
+<select id="FILTER" onChange="doFilter();">
+ <option value="ALLNODES">All</option>
+<option value="Default" selected>Default</option>
+<option value="Kidney_Function">Kidney Function</option>
+<option value="Red_Blood_Counts">Red Blood Counts</option>
+</select></div>
    <th onClick="toggleColumn(1);"><div>3/24/22</div></th>
    <th onClick="toggleColumn(2);"><div>3/2/22</div></th>
    <th onClick="toggleColumn(3);"><div title="Plavix 1/20/22">2/11/22</div></th>
@@ -372,7 +380,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default Red_Blood_Counts'>
    <th onClick="toggleRow(this);" title="Red Blood Count&#013;&#010;O2 and Platelet dispersal cells&#013;&#010;Normal range/value:  4.18 - 5.51" Chart>RBC</th>
    <td class="low">2.89</td>
    <td class=""></td>
@@ -552,7 +560,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default Red_Blood_Counts'>
    <th onClick="toggleRow(this);" title="Hemoglobin&#013;&#010;Carries O2 to body and CO2 to lungs&#013;&#010;Normal range/value:  13.4 - 17" Chart>Hemoglobin</th>
    <td class="low">9.4</td>
    <td class="low">10.9</td>
@@ -732,7 +740,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default Red_Blood_Counts'>
    <th onClick="toggleRow(this);" title="Hematocrit&#013;&#010;% of Hemoglobin in blood&#013;&#010;Normal range/value:  40 - 54" Chart>Hematocrit</th>
    <td class="low">28.6</td>
    <td class="low">32.0</td>
@@ -4154,7 +4162,7 @@
   </tr>
  <tbody>
   <tr onClick="togglePanel(this);"><th colspan=2>CMP</th><td colspan=176></td></tr>
-  <tr>
+  <tr class='Default Kidney_Function'>
    <th onClick="toggleRow(this);" title="Chemical waste of normal muscle function&#013;&#010;Kidney issues or muscle loss&#013;&#010;Normal range/value:  0.8 - 1.4" Chart>Creatinine</th>
    <td class="">1.40</td>
    <td class="">1.4</td>
@@ -4334,7 +4342,7 @@
    <td class="high">4.3</td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default Kidney_Function'>
    <th onClick="toggleRow(this);" title="Blood Urea Nitrogen&#013;&#010;Kidney issues or high urea&#013;&#010;Normal range/value:  5 - 20" Chart>BUN</th>
    <td class="high">48</td>
    <td class="high">52</td>
@@ -4694,7 +4702,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" title="A1C&#013;&#010;3 month average blood sugar level&#013;&#010;Normal range/value:  4 - 5.6" Chart>A1C</th>
    <td class=""></td>
    <td class=""></td>
@@ -5054,7 +5062,7 @@
    <td class="">88</td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" title="Estimate Glomerular Filtration Rate&#013;&#010;How well kidneys are filtering&#013;&#010;Normal range/value: >=60" Chart>eGFR</th>
    <td class="low">52</td>
    <td class="low">52</td>
@@ -5064,11 +5072,11 @@
    <td class="">65</td>
    <td class="low">38</td>
    <td class=""></td>
-   <td class="low">50</td>
+   <td class="low">43</td>
    <td class=""></td>
-   <td class="">66</td>
+   <td class="low">57</td>
    <td class="low">48</td>
-   <td class="low">59</td>
+   <td class="low">51</td>
    <td class=""></td>
    <td class=""></td>
    <td class="low">48</td>
@@ -5087,20 +5095,20 @@
    <td class="low">57</td>
    <td class="low">58</td>
    <td class="low">44</td>
-   <td class="">64</td>
+   <td class="low">55</td>
    <td class=""></td>
-   <td class="">62</td>
+   <td class="low">53</td>
+   <td class=""></td>
+   <td class="low">51</td>
+   <td class=""></td>
+   <td class=""></td>
+   <td class="low">52</td>
+   <td class=""></td>
+   <td class="low">52</td>
+   <td class=""></td>
    <td class=""></td>
    <td class="low">59</td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class="">60</td>
-   <td class=""></td>
-   <td class="">60</td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class="">68</td>
-   <td class="">93</td>
+   <td class="">80</td>
    <td class="">64</td>
    <td class="low">57</td>
    <td class="low">46</td>
@@ -5156,21 +5164,21 @@
    <td class=""></td>
    <td class="low">59</td>
    <td class=""></td>
-   <td class="">69</td>
-   <td class="">63</td>
-   <td class="low">58</td>
-   <td class="">63</td>
+   <td class="">84</td>
+   <td class="">76</td>
+   <td class="">70</td>
+   <td class="">77</td>
    <td class=""></td>
-   <td class="">63</td>
-   <td class="">67</td>
+   <td class="">77</td>
+   <td class="">81</td>
+   <td class="">82</td>
+   <td class="">82</td>
+   <td class=""></td>
+   <td class=""></td>
+   <td class="">82</td>
    <td class="">68</td>
-   <td class="">68</td>
    <td class=""></td>
-   <td class=""></td>
-   <td class="">68</td>
-   <td class="low">57</td>
-   <td class=""></td>
-   <td class="">62</td>
+   <td class="">75</td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -5774,7 +5782,7 @@
    <td class="">4.6</td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default Kidney_Function'>
    <th onClick="toggleRow(this);" title="Chloride - an Electrolyte&#013;&#010;Normal range/value:  98 - 108" Chart>Chloride</th>
    <td class="high">110</td>
    <td class="high">109</td>
@@ -5954,7 +5962,7 @@
    <td class="high">110</td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default Kidney_Function'>
    <th onClick="toggleRow(this);" title="Carbon Dioxide (CO2)&#013;&#010;Waste products producted made by the body&#013;&#010;Normal range/value:  22 - 29" Chart>CO2</th>
    <td class="">24</td>
    <td class="">22</td>
@@ -7754,7 +7762,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default Kidney_Function'>
    <th onClick="toggleRow(this);" title="Total protein&#013;&#010;Help detect kidney or liver disease&#013;&#010;Normal range/value:  6.4 - 8" Chart>Protein</th>
    <td class="low">6.1</td>
    <td class=""></td>
@@ -9445,186 +9453,6 @@
    <td class=""></td>
    <td class=""></td>
    <td class="">99</td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-  </tr>
-  <tr>
-   <th onClick="toggleRow(this);" Chart>eGFR If NonAfricn Am</th>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class="low">43</td>
-   <td class=""></td>
-   <td class="low">57</td>
-   <td class=""></td>
-   <td class="low">51</td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class="low">55</td>
-   <td class=""></td>
-   <td class="low">53</td>
-   <td class=""></td>
-   <td class="low">51</td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class="low">52</td>
-   <td class=""></td>
-   <td class="low">52</td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class="">59</td>
-   <td class="">80</td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
    <td class=""></td>
    <td class=""></td>
    <td class=""></td>
@@ -11538,7 +11366,7 @@
   </tr>
  <tbody>
   <tr onClick="togglePanel(this);"><th colspan=2>Urinalysis</th><td colspan=176></td></tr>
-  <tr>
+  <tr class='Default Kidney_Function'>
    <th onClick="toggleRow(this);">Urine-Color</th>
    <td class="UC_Yellow">Yellow</td>
    <td class=""></td>
@@ -11718,7 +11546,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default Kidney_Function'>
    <th onClick="toggleRow(this);">Appearance</th>
    <td class="">Clear</td>
    <td class=""></td>
@@ -11898,7 +11726,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default Kidney_Function'>
    <th onClick="toggleRow(this);" Chart>Specific Gravity</th>
    <td class="">1.010</td>
    <td class=""></td>
@@ -15499,186 +15327,6 @@
    <td class=""></td>
   </tr>
   <tr>
-   <th onClick="toggleRow(this);" title="Hemoglobin&#013;&#010;Carries O2 to body and CO2 to lungs&#013;&#010;Normal range/value: Not Established" Chart>Hemoglobin</th>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class="">70</td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-   <td class=""></td>
-  </tr>
-  <tr>
    <th onClick="toggleRow(this);" title="Normal range/value: Not Established">Cryst Type</th>
    <td class=""></td>
    <td class=""></td>
@@ -16402,7 +16050,7 @@
   </tr>
  <tbody>
   <tr onClick="togglePanel(this);"><th colspan=2>Patient Measurements</th><td colspan=176></td></tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" title="Normal range/value: Not Established" Chart>Weight</th>
    <td class=""></td>
    <td class="">179</td>
@@ -18748,7 +18396,7 @@
   </tr>
  <tbody>
   <tr onClick="togglePanel(this);"><th colspan=2>Tacrolimus</th><td colspan=176></td></tr>
-  <tr>
+  <tr class='Default Kidney_Function'>
    <th onClick="toggleRow(this);" title="Tacrolimus&#013;&#010;Transplant rejection medicine&#013;&#010;Normal range/value:  2 - 20" Chart>Tacrolimus</th>
    <td class=""></td>
    <td class=""></td>
@@ -22366,4 +22014,9 @@
   </tr>
  </tbody>
 </table>
+<style>
+table#labTable.Default tbody tr:not(.Default){display:none;}
+table#labTable.Kidney_Function tbody tr:not(.Kidney_Function){display:none;}
+table#labTable.Red_Blood_Counts tbody tr:not(.Red_Blood_Counts){display:none;}
+</style>
 </body>

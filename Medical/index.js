@@ -427,3 +427,8 @@ function closeIt(){
  d3.select('svg').remove();
  chartDiv.style.display='none';
 }
+function doFilter(){
+ var d = document.getElementById('labTable');
+ var f = document.getElementById('FILTER');
+ d.setAttribute('class',f.value);
+}
