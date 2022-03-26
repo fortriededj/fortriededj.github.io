@@ -11,6 +11,12 @@
  <colgroup><col><col><col><col><col><col><col></colgroup>
  <thead>
   <tr><th title='This sheet shows:&#013;&#010;	197 measurements on&#013;&#010;	6 days between&#013;&#010;	April 11, 2011 and&#013;&#010;	May 10, 2021 covering&#013;&#010;	3,682 days.'><div>Jeanne M. Fortriede</div>
+<br>
+<div>Show:
+<select id="FILTER" onChange="doFilter();">
+ <option value="ALLNODES">All</option>
+<option value="Default" selected>Default</option>
+</select></div>
    <th onClick="toggleColumn(1);"><div>5/10/21</div></th>
    <th onClick="toggleColumn(2);"><div>3/4/20</div></th>
    <th onClick="toggleColumn(3);"><div>9/16/19</div></th>
@@ -221,7 +227,7 @@
   </tr>
  <tbody>
   <tr onClick="togglePanel(this);"><th colspan=2>CMP</th><td colspan=5></td></tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" title="Chemical waste of normal muscle function&#013;&#010;Kidney issues or muscle loss&#013;&#010;Normal range/value:  0.57 - 1" Chart>Creatinine</th>
    <td class="">0.78</td>
    <td class="">0.70</td>
@@ -248,7 +254,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" title="A1C&#013;&#010;3 month average blood sugar level&#013;&#010;Normal range/value:  4.8 - 5.6" Chart>A1C</th>
    <td class="high">7.7</td>
    <td class="high">7.6</td>
@@ -257,7 +263,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" title="Glucose&#013;&#010;Current blood sugar level&#013;&#010;Normal range/value:  65 - 99" Chart>Glucose</th>
    <td class="high">103</td>
    <td class="">74</td>
@@ -439,7 +445,7 @@
   </tr>
  <tbody>
   <tr onClick="togglePanel(this);"><th colspan=2>Lipid</th><td colspan=5></td></tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" title="Cholesterol&#013;&#010;Fat-like substance used by the body&#013;&#010;Normal range/value:  100 - 199" Chart>Cholesterol</th>
    <td class="">147</td>
    <td class="">170</td>
@@ -448,7 +454,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" title="Triglycerides&#013;&#010;Used to store calories between meals&#013;&#010;Normal range/value:  0 - 149" Chart>Triglycerides</th>
    <td class="">136</td>
    <td class="high">186</td>
@@ -457,7 +463,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" Chart>HDL</th>
    <td class="">43</td>
    <td class="">46</td>
@@ -475,7 +481,7 @@
    <td class=""></td>
    <td class=""></td>
   </tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" Chart>LDL</th>
    <td class="">80</td>
    <td class="">87</td>
@@ -596,7 +602,7 @@
   </tr>
  <tbody>
   <tr onClick="togglePanel(this);"><th colspan=2>TSH</th><td colspan=5></td></tr>
-  <tr>
+  <tr class='Default'>
    <th onClick="toggleRow(this);" title="Thyroid Stimulating Hormone&#013;&#010;Thyroid test&#013;&#010;Normal range/value:  0.45 - 4.5" Chart>TSH</th>
    <td class="">1.580</td>
    <td class="">2.420</td>
@@ -619,5 +625,6 @@
  </tbody>
 </table>
 <style>
+table#labTable.Default tbody tr:not(.Default){display:none;}
 </style>
 </body>
