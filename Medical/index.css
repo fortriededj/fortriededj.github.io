@@ -235,7 +235,7 @@ figure figcaption {
  border-collapse: collapse;
 }
 
-:not(table#labTable *)::before {
+li::before {
  display:	inline-block;
  min-width:	5.7em;
  color:		green;
@@ -251,7 +251,7 @@ figure figcaption {
 [class^="specialty"]::before {content: "Specialty: "}
 [class^="title"]::before{content: "Procedure: "}
 [class$="2"]::before {content: " ";}
-.age::before {
+span.age::before {
  content:	"Age: ";
  min-width:	1px;
  padding-left:	1em;
