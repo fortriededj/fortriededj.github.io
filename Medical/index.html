@@ -4,6 +4,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <script>
+ function updateAges(){
+  ages = document.getElementsByTagName('span');
+  for(i=0; i<ages.length; i++){
+   d = new Date(ages[i].innerText);
+   t = new Date();
+   y = parseInt((t - d) / 365.2425/24/60/60/1000);
+   ages[i].innerHTML = y;
+  }
+ }
  function doPerson(A){
   j = "./" + A + ".html";
   window.location.assign(j);
@@ -11,18 +20,18 @@
 </script>
 <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body>
+<body onload='updateAges();'>
  <h1>Fortriede Medical Information</h1>
  <div class="flexContainer">
   <div class="PERSON" onClick="doPerson('DKF');">
    <img src='../images/DKF.png' alt=''>
    <p>Dan Fortriede</p>
-   <p>67 year old, white, male 6' 2"</p>
+   <p><span>10/4/1954</span> year old, white, male 6' 2"</p>
   </div>
   <div class="PERSON" onClick="doPerson('JMF');">
    <img src='../images/JMF.png' alt=''>
    <p>Jeanne Fortriede</p>
-   <p>65 year old, white, female 4' 11"</p>
+   <p><span>4/27/1956</span> year old, white, female 4' 11"</p>
   </div>
  </div>
 </body>
