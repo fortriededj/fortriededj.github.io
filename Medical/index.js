@@ -114,6 +114,7 @@ var margin, width, height, xScale, yScale;
 var ChartTitle, startPoint, MINY, MAXY;
 var toolTip;
 var lastToolTip;
+var chartDivLeft=300, chartDivTop=50;
 
 // Calculate cutoff day -- we initially look back 2 years (ish)
 var CutOffYears = 2; var CutOff = Date.now() - CutOffYears * 365*24*60*60*1000;
@@ -258,8 +259,8 @@ function isNumeric(value){		//See if string is a number
 function createChart(myTitle,startAt,MINY,MAXY){//Create chart
  d3.select('svg').remove();		//Remove existing svg, if any
  chartDiv.style.display="block";	//See the chart div
- chartDiv.style.left=240 + "px";	//Where to put it
- chartDiv.style.top=120 + "px";
+ chartDiv.style.left=chartDivLeft + "px";	//Where to put it
+ chartDiv.style.top=chartDivTop + "px";
 
  data = myDataSet.slice(startAt);	//Pull off only part we want
  n = data.length;			//Get length of the dataset
