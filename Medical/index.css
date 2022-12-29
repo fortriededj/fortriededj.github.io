@@ -189,10 +189,6 @@ div#conditions div {
  background-color: #eeffee;
  color:		green;
 }
-div#prescriptions object {
- width:		520px;
- height:	450px;
-}
 div#immunization div {
  border:	1px solid darkblue;
  background-color: rgba(192,192,255,0.25);
@@ -209,6 +205,13 @@ div#conditions li,div#immunization li{
 div#conditions li:first-child,div#immunization li:first-child{
  padding-left:	3px;
  font-weight:	bold;
+}
+div#medicine iframe {
+ margin:	2px;
+ padding:	0px;
+ border:	1px solid green;
+ background-color: ivory;
+ width:		7000px;
 }
 figure {
  float:		left;
