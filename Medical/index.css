@@ -189,6 +189,10 @@ div#conditions div {
  background-color: #eeffee;
  color:		green;
 }
+div#prescriptions object {
+ width:		500px;
+ height:	800px;
+}
 div#immunization div {
  border:	1px solid darkblue;
  background-color: rgba(192,192,255,0.25);
