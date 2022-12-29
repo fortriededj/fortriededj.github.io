@@ -1,12 +1,12 @@
 function userLoaded(){
- //var myIframe = document.getElementById("medicineIframe");
- //var myBody = myIframe.contentWindow.document.body;
- //if(parseInt(window.screen.width) > 360){ 
-	//myIframe.style.width = "520px"; 
- //} else {
-	//myIframe.style.width = "330px";
- //}
- //myIframe.style.height = parseInt(myBody.scrollHeight) + "px";
+ var myIframe = document.getElementById("medicineIframe");
+ var myBody = myIframe.contentWindow.document.body;
+ if(parseInt(window.screen.width) > 360){ 
+	myIframe.style.width = "520px"; 
+ } else {
+	myIframe.style.width = "330px";
+ }
+ myIframe.style.height = parseInt(myBody.scrollHeight) + "px";
  fixPhones();
  doAges();
 }
