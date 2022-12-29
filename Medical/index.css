@@ -210,13 +210,6 @@ div#conditions li:first-child,div#immunization li:first-child{
  padding-left:	3px;
  font-weight:	bold;
 }
-div#medicine iframe {
- margin:	2px;
- padding:	0px;
- border:	1px solid green;
- background-color: ivory;
- width:		7000px;
-}
 figure {
  float:		left;
  display:	inline-block;
