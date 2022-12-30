@@ -543,3 +543,10 @@ div#closer::after { content:var(--closeX);}
 .dot_norm {fill:#898;}
 .dot_note {fill:Chartreuse;}
 .yaxis line { stroke: rgba(0,0,0,0.5); }
+
+a.xINFO {
+ background-color: lightyellow;
+ color:		darkred;
+ font-weight:	normal;
+}
+
