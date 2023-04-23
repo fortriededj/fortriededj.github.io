@@ -1,0 +1,47 @@
+.tableFixedHeader {
+	overflow-y:	auto;
+	height:		600px;
+}
+div.tableFixedHeader {
+	border:		1px solid black;
+	border-width:	0px 0px 1px 1px;
+}
+.tableFixedHeader thead th {
+	position:	sticky;
+	top:		0px;
+}
+table {
+	border-collapse:	collapse;
+	width:		100%;
+}
+td {
+	border:		1px solid black;
+	padding:	0px 4px;
+}
+thead th {
+	color:		white;
+	background:	black;
+	text-align:	left;
+}
+tbody td:nth-child(5){
+	text-align:	right;
+}
+tbody td:nth-child(4),
+tbody td:nth-child(6){
+	text-align:	center;
+}
+img {
+	max-width:	150px;
+	max-height:	75px;
+	width:		auto;
+	height:		auto;
+	display:	block;
+	transition:	transform 0.3s,box-shadow 0.2s;
+}
+img:hover {
+	transform:	scale(3);
+	box-shadow:	6px 6px 6px rgba(0,0,0,0.25);
+}
+a {
+	text-decoration: none;
+}

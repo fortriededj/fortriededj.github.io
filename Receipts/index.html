@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<head>
+ <link rel="stylesheet" href="Receipts.css">
+ <script>
+  async function populate(){
+   const requestURL = 'Receipts.json';
+   const request = new Request(requestURL);
+   const response = await fetch(request);
+   const db = await response.json();
+   SortField = 'brand';
+   var keys = Object.keys(db);
+   keys.sort(function(a,b){ return db[a][SortField].localeCompare(db[b][SortField]); })
+
+   const tableBody = document.getElementById('body1');
+   for(x in keys){
+    UPC=keys[x];
+    newrow=document.createElement("tr");
+    addUPCLink(newrow,UPC);
+    if(db[UPC].imageURL === 'undefined'){
+		     //alert('here');
+	addCell(newrow,'')
+    } else {
+		     //alert(db[UPC].image);
+    	addImage(newrow,db[UPC].imageURL);
+    }
+    addCell(newrow,db[UPC].store);
+    addCell(newrow,timeString(db[UPC].date));
+    addCell(newrow,'$' + db[UPC].price);
+    prices = Object.keys(db[UPC].prices);
+    prices.sort(function(a,b){return a - b});
+    addCell(newrow,prices[0] + ' - ' + prices.pop());
+    addCell(newrow,db[UPC].brand);
+    addCell(newrow,db[UPC].shortDescription);
+    addCell(newrow,db[UPC].title);
+    tableBody.appendChild(newrow);
+   }
+  }
+  populate();
+ function addUPCLink(myParent,upc){
+  const newNode = document.createElement("td");
+  const newHref = document.createElement("a");
+  newHref.target='_blank';
+  newHref.href='https://www.upcitemdb.com/upc/' + upc;
+  newHref.text=upc;
+  newNode.appendChild(newHref);
+  myParent.appendChild(newNode);
+ }
+ 
+ function addImage(myParent,mySrc){
+  const newNode = document.createElement("td");
+  const newImage = document.createElement("img");
+  newImage.src = mySrc;
+  newNode.appendChild(newImage);
+  myParent.appendChild(newNode);
+ }
+ function addCell(myParent,value){
+  const newNode = document.createElement("td");
+  const cellText = document.createTextNode(value);
+  newNode.appendChild(cellText);
+  myParent.appendChild(newNode);
+ }
+ function timeString(x){
+  var date = new Date(x*1000);
+  var day = date.getDate();
+  var month = date.getMonth();
+  var year = date.getYear();
+  return (month + 1) + "/" + day + "/" + (year - 100);
+ }
+ </script>
+</head>
+<body>
+<div class="tableFixedHeader">
+<table>
+	<thead>
+		<tr>
+			<th>UPC</th>
+			<th></th>
+			<th>Store</th>
+			<th>Date</th>
+			<th>Price</th>
+			<th>Range</th>
+			<th>Brand</th>
+			<th>Short Description</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody id='body1'></tbody>
+</table>
+</div>
+</body>
+</html>
