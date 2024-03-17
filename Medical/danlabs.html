@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="cache-control" content="max-age=0">
-<meta http-equiv="cache-control" content="no-cache">
-<meta http-equiv="expires" content="-1">
-<meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT">
-<meta http-equiv="pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT">
+    <meta http-equiv="pragma" content="no-cache">
+
 <title>Lab Results Page</title>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="index.js"></script>
 <script src="d3-tip.js"></script>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="index.css?" + Math.random()>
 </head>
 <body onload="loaded();">
 <table id="labTable" class="Default">
@@ -218,7 +219,7 @@
   </tr>
  </thead>
  <tbody>
-  <tr onClick="togglePanel(this);" class='Default Mishler'><th colspan=2>CBC</th><td colspan=190></td></tr>
+  <tr onClick="togglePanel(this);" class='Mishler Default'><th colspan=2>CBC</th><td colspan=190></td></tr>
   <tr class='Mishler'>
    <th onClick="toggleRow(this);" title="White Blood Count&#013;&#010;Immune System&#013;&#010;Normal range/value:  3.6 - 10.6" Chart>WBC</th>
    <td class="high">12.2</td>
@@ -12640,7 +12641,7 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);" class='Mishler Default'><th colspan=2>Urinalysis</th><td colspan=190></td></tr>
+  <tr onClick="togglePanel(this);" class='Default Mishler'><th colspan=2>Urinalysis</th><td colspan=190></td></tr>
   <tr class='Default Mishler'>
    <th onClick="toggleRow(this);">Urine-Color</th>
    <td class="UC_Yellow">Yellow</td>
@@ -18660,7 +18661,7 @@
    <td class=""></td>
   </tr>
  <tbody>
-  <tr onClick="togglePanel(this);" class='Default Mishler'><th colspan=2>Tacrolimus</th><td colspan=190></td></tr>
+  <tr onClick="togglePanel(this);" class='Mishler Default'><th colspan=2>Tacrolimus</th><td colspan=190></td></tr>
   <tr class='Default Mishler'>
    <th onClick="toggleRow(this);" title="Tacrolimus&#013;&#010;Transplant rejection medicine&#013;&#010;Normal range/value:  2 - 20" Chart>Tacrolimus</th>
    <td class="">6.8</td>

@@ -1,0 +1,115 @@
+* {font-family: "Verdana", serif; font-size: 10pt;}
+
+/*@media only screen and (max-width: 360px){
+	* {font-size: 9pt; color: red;}
+}*/
+
+img.icon{
+	float:		right;
+	width:		40px;
+	height:		40px;
+	margin:		0.2em 0.2em 0px 0px;
+	border:		1px solid blue;
+	transition:	transform .2s;
+}
+img.icon:hover{
+	transform: 	scale(2.5);
+}
+h1 {
+	margin: 	1em 0em .5em 0em;
+	letter-spacing:	0.1em;
+}
+div {
+	max-width:	360px;
+	min-width:	360px;
+	border:		1px solid black;
+	border-radius:	8px;
+	margin:		6px 2px;
+}
+div.patient{
+	background-color: linen;
+}
+div.ice{
+	background-color: lightyellow;
+}
+div.Conditions{
+	background-color: lightgreen;
+	color:		darkgreen;
+}
+div.Immunizations {
+	background-color: lightblue;
+	color:		darkblue;
+}
+div.Hospitalizations {
+	background-color: lavender;
+	color:		purple;
+}
+
+p {
+	margin:		2px 4px;
+	padding:	0px;
+	background-color: transparent;
+}
+
+ul {
+	margin:		2px 4px;
+	padding:	0px;
+	background-color: transparent;
+}
+li {
+	list-style-type:none;
+	font-weight:	bold;
+}
+li span {
+	display:	inline-block;
+	vertical-align:	text-top;
+	font-weight:	normal;
+}
+li span:first-child {
+	min-width:	5em;
+	margin-right:	0.6em;
+	text-align:	right;
+	font-style:	italic;
+}
+
+::before {
+	display:	inline-block;
+	width:		8em;
+	color:		green;
+	font-style:	italic;
+	font-size:	85%;
+	font-weight:	bold;
+}
+.name,.procedure {
+	font-size:	130%;
+}
+
+[class^="address"]::before {content: "Address: ";}
+[class^="condition"]::before {content: "Condition: ";}
+[class^="date"]::before{content: "Date: "}
+[class^="age"]::before{content: "Age: "}
+[class^="location"]::before{content: "Location: "}
+[class^="phone"]::before {content: "Phone: ";}
+[class^="surgeon"]::before {content: "Surgeon: ";}
+[class^="specialty"]::before {content: "Specialty: "}
+[class^="title"]::before{content: "Procedure: "}
+[class^="race"]::before {content: "Race: ";}
+[class^="status"]::before{content: "Status: "}
+[class^="anesthesia"]::before{content: "Anesthesia: "}
+[class^="dob"]::before {content: "DOB: ";}
+[class^="sex"]::before {content: "Sex: ";}
+[class^="phonetic"]::before {content: "Phonetic: ";}
+[class^="preferred"]::before {content: "Preferred: ";}
+[class^="relation"]::before {content: "Relationship: ";}
+[class^="critical"]::before {content: "Critical Information: ";}
+[class$="2"]::before {content: " ";}
+[class^="critical"]{
+	color:		red;
+	font-style:	italic;
+	font-weight:	bold;
+}
+[class^="age"]{
+	font-style:	italic;
+	font-weight:	bold;
+	color:		green;
+}

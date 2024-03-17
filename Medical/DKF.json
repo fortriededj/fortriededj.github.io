@@ -1,0 +1,290 @@
+{	
+	"BIRTH":	"10/4/1954",
+	"ME":	[
+		{
+			"name":		"Daniel K. Fortriede",
+			"phone":	"7657290388",
+			"note":		"<img src='/IMAGES/PDF Icon.png' style='height:40px;width:40px;vertical-align:middle;'><a href='/IMAGES/DKF Health Care Representative.pdf' type='application/pdf' target='_blank'>Health Care Representative Form</a>",
+			"address":	["1910 W Country Road 1000 N",
+					"Muncie, IN 47303-9745"],
+			"status":	"Retired 2016 from BSU",
+			"dob":		"10/4/1954",
+			"preferred":	"Dan",
+			"phonetic":	"Fort'-reed",
+			"picture":	"DKF2.png",
+			"critical":	["Blood Thinner",
+					"Pacemaker/Defibulator",
+					"Kidney Transplant",
+					"Blood Type: A+",
+					"No Known Allergies"]
+		}
+	],
+	"ICE": [
+		{
+			"name":		"Jeanne M. Fortriede",
+			"phone":	"7657306606",
+			"address":	[ "1910 W Country Road 1000 N",
+					"Muncie, IN 47303-9745"],
+			"relation":	"Wife"
+		},
+		{
+			"phone":	"7657295767",
+			"relation":	"Son",
+			"name":		"Joshua D. Fortriede",
+			"address":	["5921 Monticello Ave",
+					"Cincinnati, OH 45224-2319"]
+		}
+	],
+	"IMMUNIZATIONS": [
+		{	"title":	"Covid",
+			"picture":	"Covid Dan.png",
+			"when":		"11/2/23",
+			"what":		["Pfizer lot #HG4589 11/2/23",
+					"Pfizer lot #GL0446 1/14/23",
+					"Pfizer lot #FP7139 7/22/22",
+					"Pfizer lot #FJ1614 1/25/22",
+					"Pfizer lot #EW0217 8/19/21",
+					"Pfizer lot #EN6208 3/16/21",
+					"Pfizer lot #EN6201 2/23/21"]
+		},
+		{	"title":	"Flu",
+			"when":		"10/24/23",
+			"what":		["Fluzone high-dose quad 10/24/23",
+					"Fluzone high-does quad 10/23/22",
+					"Fluzone high-does quad 10/19/21",
+					"Fluzone high-does quad 10/20/20"]
+		},
+		{	"title":	"Pneumonia",
+			"when":		"1/12/21",
+			"what":		["Pneumovax 23 on 1/12/21",
+					"Prevnar 13 on 1/10/20"]
+		},
+		{	"title":	"Shingles",
+			"when":		"12/2/20",
+			"what":		["Shingrix 12/2/20","Shingrix 9/5/20"]
+		},
+		{	"title":	"Tdap",
+			"when":		"3/13/23"
+		}
+	],
+	"CONDITIONS": [
+		{	"title":	"CAD",
+			"when":		"5/6/21",
+			"what":		"3 Abbott Stents",
+			"picture":	"Dan Heart Stents.png"
+		},
+		{	"title":	"ESRD",
+			"when":		"12/5/2002",
+			"what":		["Living donor transplant 12/5/02",
+					"Nephrectomy 1972"]
+		},
+		{	"title":	"EPI",
+			"when":		"5/1/2021",
+			"what":		["Pancreatic duct stones","Treating with Creon"]
+		},
+		{	"title":	"Diabetes Mellitis type 2",
+			"when":		"6/1/2007",
+			"what":		"Well controlled with Tresiba"
+		},
+		{	"title":	"Aortic Stenosis",
+			"what":		["TAVR","Pacemaker/Defibulator"],
+			"when":		"6/1/21",
+			"picture":	["Dan Pacemaker.png",
+					"Dan Heart Valve Back.png",
+					"Dan Heart Valve Front.png"]
+		},
+		{	"title":	"Hypertension",
+			"when":		"1/1/1984",
+			"what":		"Generally controlled"
+		},
+		{	"title":	"Hypothyroidism",
+			"when":		"1/1/2014",
+			"what":		"Controlled"
+		},
+		{	"title":	"Skin Cancer",
+			"when":		"1/1/2001",
+			"what":		["Generally Basal and Squamous Cell",
+					"Post transplant"]
+		},
+		{	"title":	"Mitral Valve Regurgitation",
+			"when":		"5/19/2023",
+			"what":		"Monitoring for now"
+		},
+		{	"title":	"Pharyngeal dysphagia",
+			"when":		"9/9/2021",
+			"what":		"Monitoring"
+		}
+	],
+	"HOSPITALIZATIONS": [
+		{	"procedure":	"Edema Hospitalization",
+			"date":		"12/15/2022",
+			"surgeon":	"Peterson / Anzari",
+			"location":	"IU BMH Muncie",
+			"anesthesia":	"No",
+			"note":		"Echocardiogram showed significant plurel edema along with edema in legs from ankles to mid-thigh. Admitted to IUBMH, treated with IV Lasix."
+			},{
+			"procedure":	"Heart Catherization",
+			"date":		"3/2/2022",
+			"surgeon":	"Mohammed Eid Madmani",
+			"location":	"IU BMH Muncie",
+			"anesthesia":	"No",
+			"note":		"Echo on 2/2/22 suggested a possible fistula between the Aorta and right ventricle. Cath was done to visualize the fistula and check the rest of the heart in preparation for possible SAVR / bypass. <i>Fistula <b>NOT</b> present</i>. However, a 50% blockage was found in one arterial artery slightly past one of the existing stents. "
+		},{
+			"procedure":	"TEE",
+			"date":		"7/23/2021",
+			"surgeon":	"Mohammed Eid Madmani",
+			"location":	"IU BMH Muncie",
+			"anesthesia":	"Yes",
+			"picture":	["Dan Heart Valve Back.png",
+					"Dan Heart Valve Front.png"],
+			"note":		"TEE to check if TAVR leakage was causing anemia. Found minimal leakage. Heart function after TAVR and stents back to normal."
+			},{
+			"procedure":	"Blood Transfusion",
+			"date":		"6/2/2021",
+			"surgeon":	"Michael J. Moran",
+			"location":	"IU BMH Muncie",
+			"anesthesia":	"No",
+			"note":		"Transfusion after TAVR and before pacemaker."
+			},{
+			"picture":	"Dan Pacemaker.png",
+			"procedure":	"Pacemaker/Defibulator",
+			"date":		"6/2/2021",
+			"surgeon":	"Michael J. Moran",
+			"location":	"IU BMH Muncie",
+			"anesthesia":	"No",
+			"note":		"TAVR precipitated need for pacemaker / defibulator"
+			},{
+			"picture":	["Dan Heart Valve Back.png",
+					"Dan Heart Valve Front.png"],
+			"procedure":	"TAVR",
+			"date":		"6/1/2021",
+			"surgeon":	"John F. Kuhn",
+			"surgeon2":	"Mohammed Eid Madmani",
+			"location":	"IU BMH Muncie",
+			"anesthesia":	"Yes",
+			"note":		"TAVR over SAVR in deferrence to current medical condition following weight loss due to pancreas issues and 18 year post renal transplant."
+			},{
+			"picture":	"Dan Heart Stents.png",
+			"procedure":	"Cardiac Stents",
+			"date":		"5/6/2021",
+			"surgeon":	"Bruce M. Graham",
+			"location":	"IU BMH Muncie",
+			"anesthesia":	"No",
+			"note":		"Three (3) stents implanted"
+			},{
+			"procedure":	"ER Visit &dash; Pleural Effusion",
+			"date":		"4/29/21",
+			"surgeon":	"Dr. Jeffery Easler",
+			"anesthesia":	"No",
+			"note":		"Blood work in anticipation of first meeting with Dr. Easler for pancrease issues showed reduced kidney function - sent to ER. Found plural effusion, was treated, and sent to ICU for further treatment. Stents and TAVR (see above) were results."
+			},{
+			"procedure":	"CTA &dash; Address weight loss",
+			"date":		"4/1/21",
+			"note":		"29mm Pancreatic duct stone discovered on CT w/contrast while diagnosing recent weight loss. Referred to Dr. Easler."
+			},{
+			"picture":	"Spider Bite.jpg",
+			"procedure":	"Spider Bite",
+			"date":		"12/16/19",
+			"note":		"Hospitalized due to complications from severe spider bite reaction and dehydration due to upset stomach from antibiotics."
+			},{
+			"picture":	["Left Eye Back.png","Right Eye Back.png"],
+			"procedure":	"Cataract Surgeries",
+			"surgeon":	"Michael Hodkin",
+			"date":		"10/19/19",
+			"date2":	"10/26/19",
+			"anesthesia":	"Yes",
+			"note":		"Left eye on 10/19, right eye on 10/26"
+			},{
+			"procedure":	"Dizziness and Vomiting.",
+			"date":		"2/26/16",
+			"note":		"At retirement party dizzy and uncontrollable vomitting. EMT to ER. Very high blood pressure. CTA and brain scans showed no cause. Issues self resolved."
+			},{
+			"procedure":	"Living Donor Kidney Transplant",
+			"date":		"12/5/2002",
+			"surgeon":	"Jonathan A. Fridell",
+			"location":	"IU Hospital, Indianapolis, IN",
+			"anesthesia":	"Yes",
+			"note":		"Idiopathic diagnosis. Creatinine declined from 1.3 to 11 over 20 years. Son was donor. Never on dialysis. Implanted in lower right abdomen."
+			},{
+			"procedure":	"Tonsillectomy",
+			"date":		"3/15/1982",
+			"surgeon":	"Seagraves",
+			"location":	"Ball Memorial Hospital, Muncie, IN",
+			"anesthesia":	"Yes"
+			},{
+			"procedure":	"Nephrectomy",
+			"date":		"9/15/1972",
+			"location":	"Luthern Hospital, Fort Wayne, IN",
+			"anesthesia":	"Yes",
+			"note":		"Physical showed high blood pressure which was traced to non-functional left kidney which was removed. Surgeon said kidney looked like it had never developed."
+			}
+		 ],
+	"DOCTORS": [
+		{
+			"name":		"John C. Peterson MD",
+			"specialty":	"Primary Care Physician",
+			"phone":	["7652827475",
+					"7652827438"],
+			"address":	["2423 West Jackson",
+					"Muncie, IN"]
+		},{
+			"name":		"Mohammed Eid Madmani, MD",
+			"specialty":	"Cardiology",
+			"phone":	"7652895420",
+			"address":	["IU Health Ball Memorial",
+					"2424 W University Ave",
+					"Muncie, IN 47303"]
+		},{
+			"name":		"Priya Yenebere, MD",
+			"specialty":	"Kidney - Post Transplant",
+			"condition":	["Live Donor Transplant",
+					"December 5, 2002"],
+			"phone":	["8003824602",
+					"3172744370"],
+			"address":	["IU Kidney Transplant",
+					"550 University Blvd",
+					"Indianapolis, IN 46202"]
+		},{
+			"name":		"Michael J. Moran, MD",
+			"specialty":	"Cardiology",
+			"condition":	["TAVR, Pacemaker",
+					"June 1, 2021"],
+			"phone":	"7652895420",
+			"address":	["IU Health Ball Memorial",
+					"2424 W University Ave",
+					"Muncie, IN 47303"]
+		},{
+			"name":		"Jeffery Easler, MD",
+			"specialty":	"Gastroenterology",
+			"condition":	["Pancreatitis",
+					"May 2021"],
+			"phone":	"3179440980",
+			"address":	["IU Health University",
+					"550 University Blvd",
+					"Indianapolis, IN 46202"]
+		},{
+			"name":		"Elizabeth Peacock, MD",
+			"specialty":	"Dermatology",
+			"condition":	"Skin Cancers",
+			"phone":	"7652884131",
+			"address":	["Lifetime Skin Care Centers",
+					"401 W McGalliard Rd",
+					"Muncie, IN 47303"]
+		},{
+			"name":		"Michael J. Hodkin, MD",
+			"specialty":	"Ophthamology",
+			"condition":	"Cataracts",
+			"phone":	"7652868888",
+			"address":	["The Eye Center Group",
+					"200 N Tillotson Ave",
+					"Muncie, IN 47304"]
+		},{
+			"name":		"Garrett Zgunda, OD",
+			"specialty":	"Optometry",
+			"phone":	"7652887744",
+			"address":	["Family Vision Care",
+					"4801 W Bethel Ave",
+					"Muncie, IN 47304"]
+		}
+	]
+}
