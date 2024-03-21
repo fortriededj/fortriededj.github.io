@@ -4,6 +4,10 @@ body {
 	columns:	360px;
 }
 
+div#main section {
+	font-style:	italic;
+	break-inside:	avoid;
+}
 div#main h1 {
 	margin: 	1em 0em .5em 0em;
 	letter-spacing:	0.1em;
@@ -13,7 +17,6 @@ div#main div {
 	border:		1px solid black;
 	border-radius:	8px;
 	margin:		6px 2px;
-	break-inside:	avoid;
 }
 /* Div Colors */
 div.patient{		background-color: linen; 	color:	inherit;}

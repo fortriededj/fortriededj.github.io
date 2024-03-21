@@ -13,6 +13,7 @@ var lastDate;
 var filestoread=0;
 var filecontents = new Array();
 var QuickLinks = [];
+var previousSection = false;
 
 function readfile(path, rindex) {				//File and counter
   var xhr = new XMLHttpRequest();				//to store it in
@@ -98,7 +99,7 @@ function loadPage() {
 	addContacts(HASH.DOCTORS,"Doctors");
 	//All Done - show off our work
 
-	str = str + "</div>\n<div id='menu'>\n";
+	str = str + "</div>\n</section>\n<div id='menu'>\n";
 	addQuickLinks();
 	str = str + "</div>\n";
 
@@ -135,7 +136,12 @@ function addMedicine(x){
 }
 function addSectionHeader(x){
 	QuickLinks.push(x);
-	str = str + "<h1 id='" + x + "'>" + x + "</h1>\n";
+	if(previousSection){
+		str = str + "</section>\n";
+	} else {
+		previousSection = true;
+	}
+	str = str + "<section id='" + x + "'><h1>" + x + "</h1>\n";
 }
 
 function addContacts(myObj,classid){			//Adds a contacts entry
