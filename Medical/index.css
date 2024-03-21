@@ -1,552 +1,183 @@
-:root {
- --right:	"\25B6";
- --left:	"\25C0";
- --up:		"\25B2";
- --down:	"\25BC";
- --smLeft:	"\25C0";
- --smRight:	"\25B6";
- --closeX:	"\ff38";
- --firstColumnWidth: 18em;
+* {font-family: "Verdana", serif; font-size: 10pt;}
+
+body {
+	columns:	360px;
 }
 
-* {font-family: "Verdana", serif; font-size: 11pt;}
-div#implants figure {float:left;width:30%;}
-
-@media only screen and (max-width: 360px) {
- * {font-size: 10pt;}
- div#implants figure {
-  float:left;
-  width:80%;
- }
- div#hcr img {height:32px;width:auto;}
+div#main h1 {
+	margin: 	1em 0em .5em 0em;
+	letter-spacing:	0.1em;
 }
-h1 {
- color:		darkBlue;
- margin:	0px 0px 5px 0px;
- padding:	4px;
- border-bottom:	1px solid darkBlue;
+div#main div {
+	max-width:	360px;
+	border:		1px solid black;
+	border-radius:	8px;
+	margin:		6px 2px;
+	break-inside:	avoid;
 }
+/* Div Colors */
+div.patient{		background-color: linen; 	color:	inherit;}
+div.ice{		background-color: lightyellow; 	color:	inherit;}
+div.Conditions{		background-color: honeydew; 	color:	darkgreen; }
+div.Immunizations {	background-color: lightcyan; 	color:	darkblue; }
+div.Hospitalizations {	background-color: lavenderblush;color:	darkorchid; }
+div.Doctors {		background-color: aliceblue; 	color:	darkblue; }
+div.Pharm{		background-color: bisque;	color:	sienna;}
 
-h3 {
- padding:	3px;
- margin:	2px;
- color:		darkgreen;
- font-size:	120%;
+img.portrait,img.image{
+	float:		right;
+	max-width:	100px;
+	height:		auto;
+	margin:		0.2em 0.2em 0px 0px;
+	border:		1px solid blue;
 }
-
-body > div {
- width:		100%;
- display:	table;
- float:		left;
- clear:		both;
- margin:	2px;
+img.image{
+	max-width:	40px;
+	transition:	transform .2s;
 }
-
-div {
- display:	inline-block;
- margin:	2px;
+img.image:hover{
+	transform: 	scale(2.5);
 }
-
-ul {padding: 0px 3px; margin: 2px 0px;}
-
-ul#person {
- padding:	3px; 
- margin:	2px;
- border:	1px solid darkgreen;
- display:	inline-block;
- float:		left;
+img.bloodtest{
+	max-width:	360px;
+	border:		1px solid black;
+	border-radius:	8px;
+	margin:		6px 2px;
 }
 
+div#main div p {
+	margin:		2px 4px;
+	padding:	0px 0px 0px 6.8em;
+	text-indent:	-6.8em;
+	background-color: transparent;
+}
+
+ul {
+	margin:		2px 4px;
+	padding:	0px;
+	background-color: transparent;
+}
 li {
- list-style-type:none;
- font-weight:	normal;
+	list-style-type:none;
+	font-weight:	bold;
+}
+li span {
+	display:	inline-block;
+	vertical-align:	text-top;
+	font-weight:	normal;
+}
+li span:first-child {
+	min-width:	5em;
+	margin-right:	0.6em;
+	text-align:	right;
+	font-style:	italic;
 }
 
-div.flexContainer{
- display:	flex;
- padding:	0px;
- flex-wrap:	wrap;
+::before {
+	display:	inline-block;
+	text-indent:	0em;
+	width:		8em;
+	font-size:	85%;
+	font-weight:	bold;
+	font-style:	italic;
+	color:		green;
 }
-div#ice div.flexContainer>ul{
- width:		21.5em;
- background-color: cornsilk;
-}
-div#providers div.flexContainer>ul{
- width:		18em;
- background-color: aliceblue;
- border: 1px solid darkblue;
-}
-div#surgeries div.flexContainer>ul{
- color:		rgb(128,64,64);
- width:		24.5em;
- border:	1px solid darkred;
- background-color: rgba(255,230,230,0.10);
- margin-right:	4px;
-}
-div#patient>ul#person {
- font-size:	130%;
- background-color:ivory;
+.name,.procedure {
+	font-size:	130%;
 }
 
-div.PERSON{
- font-size:	125%;
- width:		20em;
- text-align:	center;
- background-color:#eeeeee;
- color:		#333333;
- padding:	2px;
- border-width:	2px;
- border-style:	solid;
- border-radius: 10px;
- border-top-color:	#CCCCCC;
- border-right-color:	#333333;
- border-bottom-color:	#333333;
- border-left-color:	#CCCCCC;
- cursor:	pointer;
-}
-div.PERSON:active{
- border-top-color:	#333333;
- border-right-color:	#cccccc;
- border-bottom-color:	#cccccc;
- border-left-color:	#333333;
-}
-div.PERSON img{
- padding:	4px;
- width:		100px;
- vertical-align:middle;
- float:		left;
-}
-div.PERSON p{
- margin:	0px;
-}
-div.PERSON p:first-of-type{
- font-size:	150%;
- color:		blue;
-}
-
-div#ice {
- display:	block;
- clear:		left;
- padding:	0px;
-}
-
-div#patient li.name {font-size: 170%;color:blue;}
-div#ice li.name{font-size: 130%;color: red;}
-div#providers li.name{font-size: 120%;color: blue;}
-
-div#criticalInfo {
- padding:	3px;
- border:	2px solid firebrick;
- font-size:	160%;
- background-color:yellow;
- color:		FireBrick;
- float:		left;
- font-weight:	bold;
-}
-div#criticalInfo ul {
- padding:	0px;
- margin:	0px
-}
-div#criticalInfo li {
- font-weight:	normal;
- list-style-type:disc;
- margin-left:	20px;
-}
-div#hcr {
- padding:	3px;
- float:		left;
- width:		12em;
-}
-div#hcr img {
- float:		left;
- vertical-align:text-top;
-}
-
-div#links {
- color:		blue;
- position:	fixed;
- top:		2%;
- right:		2%;
- width:		9.5em;
- background-color: #d0d0f0;
- box-shadow:	5px 5px #b0b080;
-}
-div#links a {display: none;}
-div#links:hover a {display: block;}
-div#links a:link,
-div#links a:visited,
-div#links a:hover,
-div#links a:active {
- color:		green;
- float:		left;
- clear:		left;
- padding-left:	0.5em;
- text-decoration: none; 
-}
-
-div#conditions div {
- border:	1px solid darkgreen;
- background-color: #eeffee;
- color:		green;
-}
-div#immunization div {
- border:	1px solid darkblue;
- background-color: rgba(192,192,255,0.25);
- color:		darkblue;
-}
-div#conditions div,div#immunization div{
- min-width:	20em;
- max-width:	20em;
-}
-div#conditions li,div#immunization li{
- padding:	1px 2px 1px 15px;
- margin:	0px;
-}
-div#conditions li:first-child,div#immunization li:first-child{
- padding-left:	3px;
- font-weight:	bold;
-}
-div#medicine iframe {
- margin:	2px;
- padding:	0px;
- border:	1px solid green;
- background-color: ivory;
- width:		7000px;
-}
-figure {
- float:		left;
- display:	inline-block;
- margin:	3px;
- padding:	0px;
- border:	1px solid blue;
- height:	auto;
- max-width:	400px;
- border-collapse: collapse;
-}
-figure img {width: 100%;}
-figure figcaption {
- color:		white;
- background-color: darkgreen;
- clear:		left;
- font-size:	130%;
- text-align:	center;
- vertical-align:bottom;
- border-bottom:	1px solid blue;
- border-collapse: collapse;
-}
-
-li::before {
- display:	inline-block;
- min-width:	5.7em;
- color:		green;
- font-style:	italic;
- font-size:	85%;
-}
 [class^="address"]::before {content: "Address: ";}
 [class^="condition"]::before {content: "Condition: ";}
 [class^="date"]::before{content: "Date: "}
+[class^="age"]::before{content: "Age: "}
+[class^="weight"]::before{content: "Weight: "}
+[class^="height"]::before{content: "Height: "}
+[class^="insurance"]::before{content: "Insurance: "}
 [class^="location"]::before{content: "Location: "}
 [class^="phone"]::before {content: "Phone: ";}
 [class^="surgeon"]::before {content: "Surgeon: ";}
 [class^="specialty"]::before {content: "Specialty: "}
 [class^="title"]::before{content: "Procedure: "}
+[class^="race"]::before {content: "Race: ";}
+[class^="status"]::before{content: "Status: "}
+[class^="anesthesia"]::before{content: "Anesthesia: "}
+[class^="dob"]::before {content: "DOB: ";}
+[class^="sex"]::before {content: "Sex: ";}
+[class^="note"]::before {content: "Note: ";}
+[class^="phonetic"]::before {content: "Phonetic: ";}
+[class^="preferred"]::before {content: "Preferred: ";}
+[class^="relation"]::before {content: "Relationship: ";}
+[class^="critical"]::before {content: "Critical Information: ";}
 [class$="2"]::before {content: " ";}
-span.age::before {
- content:	"Age: ";
- min-width:	1px;
- padding-left:	1em;
+[class^="critical"]{
+	color:		red;
+	font-style:	italic;
+	font-weight:	bold;
 }
-.race::before {content: "Race: ";}
-.workstatus::before{content: "Status: "}
-.anesthesia::before{content: "Anesthesia: "}
-.dob::before {content: "DOB: ";}
-.sex::before {content: "Sex: ";}
-.phonetic::before {content: "Phonetic: ";}
-.preferredName::before {content: "Preferred: ";}
-.relation::before {content: "Relation: ";}
-
-body {padding: 0;margin: 0;}
-table#labTable {
- white-space:	nowrap;
- padding:	0;
- margin:	0;
- table-layout:	fixed;
+[class^="age"]{
+	font-style:	italic;
+	font-weight:	bold;
+	color:		green;
 }
-table#labTable * {
- font-family:	"Verdana", serif;
- font-size:	9pt;
+caption{
+	font-size:	70%;
+	font-stretch:	condensed;
+	text-align:	left;
+	padding-left:	2em;
 }
-
-table#labTable tbody td:nth-child(n+2) {
- min-width:	3.4em;
- max-width:	3.4em;
- text-align:	right;
- overflow:	hidden;
+table {
+	max-width:	360px;
+	border-collapse: collapse;
+	border:		1px solid  blue;
+	caption-side:	bottom;
 }
-table#labTable tbody th{
- text-align:	left;
- position:	relative;
+td{	font-size:	90%;}
+tr:first-child{
+	background-color: royalblue;
+	color:		white;
 }
-table#labTable thead th,table#labTable thead td {
- padding:	2px;
- position:	sticky;
- top:		0;
- z-index:	3;
- background-color: lightblue;
- height:	8em;
- white-space:	nowrap;
+tr:nth-child(2n){
+	background-color: rgb(200,200,255);
 }
-table#labTable thead th:first-child{
- position:	sticky;
- left:		0;
- z-index:	4;
+td:nth-child(n+3){
+	text-align:	center;
 }
-table#labTable thead th:first-child div{font-size: 120%;}
-
-table#labTable tbody th {
- position:	sticky;
- left:		0;
- background-color:white;
- z-index:	2;
- cursor:	pointer;
+div#menu{
+	font-family:	verdana;
+	font-size:	10pt;
+	line-height:	12pt;
+	display:	inline-block;
+	left:		30px;
+	position:	fixed;
+	top:		0px;
+	transition:	top .7s;
 }
-
-/* border-collapse doesn't work with visibility:collapse
-   so we make our own collapsed border
-   Put outside (table) border on top and left,
-   and inside (th and td) border on bottom and right. */
-table#labTable, table#labTable th, table#labTable td {
- border-style:	solid;
- border-color:	black;
- border-spacing:0px;
- margin:	0px;
- padding:	0px;
- border-width:	1px 0px 0px 1px;
+div#menu:hover{
+	top:		0pt;
 }
-table#labTable th, table#labTable td {
- padding:	2px;
- border-width:	0px 1px 1px 0px;
+div#menu div:first-child{
+	border:		1px solid black;
 }
-
-/* Set default before style */
-table#labTable *::before {
- color:		black;
- font-style:	normal;
- margin-right:	0.4em;
- cursor:	pointer;
+div#menu p {
+	padding:	1pt 3pt;
+	border-width:	0px;
+	margin:		0px;
+	background-color:lightskyblue;
+	color:		darkslateblue;
 }
-
-/* Column Headings */
-/* Rotate Dates*/
-table#labTable thead th:nth-child(n+2){
- cursor:	pointer;
- vertical-align:bottom;
+div#menu a{
+	color:		inherit;
+	text-decoration:none;
 }
-table#labTable thead th:nth-child(n+2) div{
- margin:	0px;
- padding:	0px;
- width:		0px;
- transform:
-  translate(0em, 0.75em)
-  rotate(-90deg);
+div#menu div:last-child{
+	text-align:	center;
 }
-table#labTable thead th:nth-child(n+2) div[title]{
- color:		blue;
+div#menu div:last-child p{
+	background-color: lightskyblue;
+	border:		1px solid black;
+	border-width:	0px 1px 1px 1px;
+	translate:	0px -1pt;
+	display:	inline-block;
+	padding:	3px;
+	border-radius:	0 0 7px 7px;
 }
-table#labTable thead tr th span{
- padding-right:	3px;
- color:		red;
- font-size:	120%;
-}
-table#labTable tbody tr:nth-child(n+2) th span{
- padding-right:	3px;
- float:		right;
- color:		red;
- font-size:	120%;
-}
-
-/* Add pointer under date */
-table#labTable thead th:nth-child(n+2) div::before{ content: var(--right);}
-table#labTable thead th.hide:nth-child(n+2) div::before { 
- content:	var(--left);	/* When filtered, change arrow */
- color:		red;		/* and colorize to pop */
-}
-
-/* Panel Name */
-table#labTable tbody tr:nth-of-type(1) th {
- text-align:		left;
- color:			blue;
- font-style:		italic;
- border-right-width:	0px;
-}
-table#labTable tbody tr:nth-of-type(1) th {
- border-left-width:	0px;	/* Turn off border between spans */
-}
-/* Add an arrow */
-table#labTable tbody tr:nth-of-type(1) th::before { content: var(--up);}
-table#labTable tbody.hide tr:nth-of-type(1) th::before {
- content:	var(--down);	/* When hidden, switch arrow */
- color:		red;		/* and colorize to pop */
-}
-
-/* Test Name */
-table#labTable tbody tr:nth-child(n+2) th:first-child{
- min-width:	var(--firstColumnWidth);/* Set column width */
-}
-table#labTable tbody tr:nth-child(n+2) th:first-child::before{
- content:	var(--smLeft);	/* Add an arrow */
- float:		right;
- margin-right:	0;
-}
-table#labTable tbody tr:nth-child(n+2) th.narrow:first-child::before {
- content:	var(--smRight);	/* When hidden, switch arrow */
- float:		right;		
- margin-right:	0;
- color:		red;		/* and colorize to pop */
-}
-
-/* Collapsing business */
-table#labTable col.narrow {
- visibility: collapse;		/* Hide a column */
-}
-table#labTable tbody tr.hide {
- display:none;			/* Hide a row */
-}
-table#labTable tbody.hide tr:nth-child(n+2) {
- display: none;			/* Hide an entire panel */
-}
-
-/* Devices with a coarse pointer need to be able to click
-   something to show title strings, so they are on by default
-   and we hide the icon if we have true title mouseover option */
-table#labTable span {
- line-height:		1.1em;
-}
-@media (pointer:fine) {
- table#labTable span.showInfo{display: none;}
-}
-@media (pointer:coarse) {
- table#labTable span.graph{display: none;}
-}
-
-td.low {
- color:			blue;
- background-color:	rgb(240,240,255);
-}
-td.high {
- color:			red;
- background-color:	rgb(255,240,240);
-}
-td.UC_Pale_Yellow {background-color: rgb(237,238,204);}
-td.UC_Yellow {background-color: rgb(234,233,144);}
-td.UC_Amber {background-color: rgb(229,201,4);}
-td.UC_Brown {background-color: rgb(149,120,88);}
-td.UC_Red {background-color: rgb(188,78,0);}
-
-.medFlexContainer{
- display:   flex;
- flex-wrap: wrap;
- justify-content: space-between;
- background-color:transparent;
-}
-.medFlexContainer > li {
- list-style-type:none;
- margin:    0px;
- padding:   1px;
- color:     green;
-}
-.medFlexContainer > li:nth-child(-n+4){
- color:     white;
- background-color:green;
- text-align:    left;
-}
-.medFlexContainer > li:nth-child(5n+1){min-width: 39%;}
-.medFlexContainer > li:nth-child(5n+2){min-width: 21%;}
-.medFlexContainer > li:nth-child(5n+3){min-width: 18%;text-align:center;}
-.medFlexContainer > li:nth-child(5n+4){min-width: 18%;text-align:center;}
-.medFlexContainer > li:nth-child(5n+5){
- flex-basis:    100%;
- margin:    0px;
- padding:   0px;
- height:    0px;
- max-width: 100%;
-}
-div#chartDiv * {
- font-family:	Verdana, Serif;
- font-size:	9pt;
-}
-div#chartDiv {
- width:		700px;
- height:	400px;
- position:	fixed;
- left:		-800px;
- top:		30px;
- float:		left;
- background-color: darkblue;
- color:		ivory;
- padding:	0px;
- margin:	0px;
- box-shadow:	15px 15px 12px #8888cc;
- z-index:	10;
-}
-span#tooltip{
- display:	none;
- position:	absolute;
- top:		0px;
- left:		0px;
- margin:	0px;
- padding:	2px 3px;
- background:	lightBlue;
- color:		black;
- text-align:	center;
- border:	1px solid darkBlue;
- border-radius:	4px;
- z-index:	11;
-}
-span#tooltip i {
- color:		black;
- background:	chartreuse;
-}
-div#showMore {	
- position:	absolute;
- top:		0px;
- left:		0px;
- margin:	0.25em;
- padding:	0.25em 0.5em;
- border:	2px solid white;
- border-radius:	1em;
- background:	lightBlue;
- color:		darkblue;
- cursor:	pointer;
-}
-div#showMore::after {content:"Show All"; padding:0px 2px;}
-div#showMore.toggled::after {content:"Show Less"}
-div#closer {	
- position:	absolute;
- top:		0px;
- right:		0px;
- margin:	0px;
- border:	1px solid darkblue;
- background:	white;
- color:		black;
- cursor:	pointer;
-}
-div#closer::after { content:var(--closeX);}
-
-.line {
-  fill:		none;
-  stroke:	black;
-  stroke-width:	2;
-}
-.dot_low {fill:	blue;}
-.dot_high {fill:red;}
-.dot_norm {fill:#898;}
-.dot_note {fill:Chartreuse;}
-.yaxis line { stroke: rgba(0,0,0,0.5); }
-
-a.xINFO {
- background-color: lightyellow;
- color:		darkred;
- font-weight:	normal;
-}
-

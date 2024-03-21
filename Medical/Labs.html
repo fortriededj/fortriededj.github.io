@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT">
+<meta http-equiv="pragma" content="no-cache">
+<title>Lab Results Page</title>
+<script>
+    var resizeTimer;
+    function setSize(){
+	W = parseInt(window.innerWidth);
+	H = parseInt(window.innerHeight);
+	x = document.getElementById('myFrame');
+	x.style.width = (W-20) + "px";
+	x.style.height = (H-20) + "px";
+	}
+    function resized(){
+	    if(resizeTimer){clearTimeout(resizeTimer);}
+	    resizeTimer=setTimeout(setSize,'150');
+    }
+    function loaded(){
+    	whatToLoad = window.location.search.substring(1);
+    	document.getElementById("mybody").innerHTML = '<iframe id="myFrame" src="' + whatToLoad + 
+		'" style="width: 300px; height:200px; border:none;"></iframe>';
+	setSize();
+    }
+</script>
+</head>
+<body id="mybody" onresize="resized();" onload="loaded();">
+</body>
+</html>
