@@ -1,44 +1,79 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<style>
-img {
-    width:	128px;
-    height:	128px;
-    border-radius: 62px;
-}
-figure {
-    margin:	4px;
-    float:	left;
-    padding:	1em;
-    border:	1px solid blue;
-    border-radius: 32px;
-    background-color: rgb(140,140,140);
-    color:	white;
-}
-figcaption {
-    font-family: Arial;
-    font-size:	16pt;
-    width:	128px;
-    text-align:	center;
-}
-a {
-    color:	inherit;
-    text-decoration: none;
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+	a {
+		color:		inherit;
+		text-decoration:none;
+		text-align:	center;
+	}
+	img {
+		width:		128px;
+		height:		128px;
+		border-radius:	64px;
+	}
+	figure {
+		display:	table;
+		float:		none;
+		border:		1px solid blue;
+		border-radius:	32px;
+		box-shadow:	7px 7px 3px lightgrey;
+		padding:	10px;
+		margin:		0px;
+		background-color:lavender;
+	}
+	figcaption:nth-of-type(1){
+		font-family:	"Brush Script MT", cursive, Verdana;
+		font-size:	180%;
+		color:		darkviolet;
+	}
+	body {
+		margin:		0px;
+		padding:	10px;
+		column-gap:	0px;
+		column-width:	158px;
+	}
+    </style>
+    <script src="ReadFiles.js?"+Math.random()></script>
+    <script>
+	var USERIDs = [];
+	function loaded(){
+	    __ReadFiles('Master.json',MasterRead);
+	}
+	function MasterRead(MASTER){
+	    MasterArray = JSON.parse(MASTER[0]);
+	    mContactOrder = MasterArray.ContactOrder;
+	    mUSERS = MasterArray.USERS;
+	    jsonFiles = [];			// Make list of all person.json files
+	    for(i=0; i<mUSERS.length; i++){
+		USERIDs.push(mUSERS[i].USERID);
+		jsonFiles.push(mUSERS[i].jsonFile);
+	    }
+	    __ReadFiles(...jsonFiles,getJson);
+	}
+	function getJson(x){
+	    str = "";
+	    for(i=0; i<x.length; i++){		// For each file, create button
+		z = JSON.parse(x[i]);
+		me = z.ME[0];
+			// section
+		str = str + '<a href="Person.html?' + USERIDs[i] + '"> \
+<figure> \
+<img src="' + me.portrait + '">\
+<figcaption>' + me.preferred + '</figcaption>\
+<figcaption>' + (me.height.split(','))[0] + '</figcaption>\
+<figcaption>' + (me.weight.split(','))[0] + '</figcaption>\
+<figcaption>' + me.race + ' ' + me.sex + '</figcaption>\
+</figure>\n';
+			//section
+	    }
+	    document.getElementById('myspace').innerHTML = str;
+	}
+    </script>
+    <title>Medical Info</title>
 </head>
-<body>
-    <figure>
-	<a href="./DKF.html"><img src="/images/DKF2.png">
-	    <figcaption>Daniel Fortriede</figcaption></a>
-    </figure>
-    <figure>
-	<a href="./JMF.html"><img src="/images/JMF.png">
-	    <figcaption>Jeanne Fortriede</figcaption></a>
-    </figure>
-</body>
+<body id="myspace" onLoad="loaded();"></body>
 </html>

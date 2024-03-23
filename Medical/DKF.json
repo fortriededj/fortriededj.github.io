@@ -7,6 +7,8 @@
 			"weight":	"157lb, 71.2kg",
 			"insurance":	"Medicare and Anthem",
 			"phone":	"7657290388",
+			"sex":		"Male",
+			"race":		"White",
 			"note":		"<img src='/images/PDF Icon.png' style='height:40px;width:40px;vertical-align:middle;'><a href='/images/DKF Health Care Representative.pdf' type='application/pdf'>Health Care Representative Form</a>",
 			"address":	["1910 W Country Road 1000 N",
 					"Muncie, IN 47303-9745"],
@@ -14,7 +16,7 @@
 			"dob":		"10/4/1954",
 			"preferred":	"Dan",
 			"phonetic":	"Fort'-reed",
-			"portrait":	"DKF2.png",
+			"portrait":	"/images/DKF2.png",
 			"critical":	["Blood Thinner",
 					"Pacemaker/Defibulator",
 					"Kidney Transplant",
@@ -57,7 +59,7 @@
 	],
 	"IMMUNIZATIONS": [
 		{	"title":	"Covid",
-			"image":	"Covid Dan.png",
+			"image":	"/images/Covid Dan.png",
 			"when":		"11/2/23",
 			"what":		["Pfizer lot #HG4589 11/2/23",
 					"Pfizer lot #GL0446 1/14/23",
@@ -91,7 +93,7 @@
 		{	"title":	"CAD",
 			"when":		"5/6/21",
 			"what":		"3 Abbott Stents",
-			"image":	"Dan Heart Stents.png"
+			"image":	"/images/Dan Heart Stents.png"
 		},
 		{	"title":	"ESRD",
 			"when":		"12/5/2002",
@@ -109,9 +111,9 @@
 		{	"title":	"Aortic Stenosis",
 			"what":		["TAVR","Pacemaker/Defibulator"],
 			"when":		"6/1/21",
-			"image":	["Dan Pacemaker.png",
-					"Dan Heart Valve Back.png",
-					"Dan Heart Valve Front.png"]
+			"image":	["/images/Dan Pacemaker.png",
+					"/images/Dan Heart Valve Back.png",
+					"/images/Dan Heart Valve Front.png"]
 		},
 		{	"title":	"Hypertension",
 			"when":		"1/1/1984",
@@ -164,7 +166,7 @@
 			"anesthesia":	"No",
 			"note":		"Transfusion after TAVR and before pacemaker."
 			},{
-			"image":	"Dan Pacemaker.png",
+			"image":	"/images/Dan Pacemaker.png",
 			"procedure":	"Pacemaker/Defibulator",
 			"date":		"6/2/2021",
 			"surgeon":	"Michael J. Moran",
@@ -172,8 +174,8 @@
 			"anesthesia":	"No",
 			"note":		"TAVR precipitated need for pacemaker / defibulator"
 			},{
-			"image":	["Dan Heart Valve Back.png",
-					"Dan Heart Valve Front.png"],
+			"image":	["/images/Dan Heart Valve Back.png",
+					"/images/Dan Heart Valve Front.png"],
 			"procedure":	"TAVR",
 			"date":		"6/1/2021",
 			"surgeon":	"John F. Kuhn",
@@ -182,7 +184,7 @@
 			"anesthesia":	"Yes",
 			"note":		"TAVR over SAVR in deferrence to current medical condition following weight loss due to pancreas issues and 18 year post renal transplant."
 			},{
-			"image":	"Dan Heart Stents.png",
+			"image":	"/images/Dan Heart Stents.png",
 			"procedure":	"Cardiac Stents",
 			"date":		"5/6/2021",
 			"surgeon":	"Bruce M. Graham",
@@ -200,12 +202,12 @@
 			"date":		"4/1/21",
 			"note":		"29mm Pancreatic duct stone discovered on CT w/contrast while diagnosing recent weight loss. Referred to Dr. Easler."
 			},{
-			"image":	"Spider Bite.jpg",
+			"image":	"/images/Spider Bite.jpg",
 			"procedure":	"Spider Bite",
 			"date":		"12/16/19",
 			"note":		"Hospitalized due to complications from severe spider bite reaction and dehydration due to upset stomach from antibiotics."
 			},{
-			"image":	["Left Eye Back.png","Right Eye Back.png"],
+			"image":	["/images/Left Eye Back.png","/images/Right Eye Back.png"],
 			"procedure":	"Cataract Surgeries",
 			"surgeon":	"Michael Hodkin",
 			"date":		"10/19/19",
@@ -239,7 +241,7 @@
 		 ],
 	"DOCTORS": [
 		{
-			"portrait":	"JohnPeterson.jpg",
+			"portrait":	"/images/JohnPeterson.jpg",
 			"name":		"John C. Peterson MD",
 			"specialty":	"Primary Care Physician",
 			"phone":	["7652827475",
@@ -248,14 +250,14 @@
 					"Muncie, IN"]
 		},{
 			"name":		"Mohammed Eid Madmani, MD",
-			"portrait":	"MohammedMadmani.jpg",
+			"portrait":	"/images/MohammedMadmani.jpg",
 			"specialty":	"Cardiology",
 			"phone":	"7652895420",
 			"address":	["IU Health Ball Memorial",
 					"2424 W University Ave",
 					"Muncie, IN 47303"]
 		},{
-			"portrait":	"PriyaYenebere.jpg",
+			"portrait":	"/images/PriyaYenebere.jpg",
 			"name":		"Priya Yenebere, MD",
 			"specialty":	"Kidney - Post Transplant",
 			"condition":	["Live Donor Transplant",
@@ -267,7 +269,7 @@
 					"Indianapolis, IN 46202"]
 		},{
 			"name":		"Michael J. Moran, MD",
-			"portrait":	"MichaelMoran.jpg",
+			"portrait":	"/images/MichaelMoran.jpg",
 			"specialty":	"Cardiology",
 			"condition":	["TAVR, Pacemaker",
 					"June 1, 2021"],
@@ -277,7 +279,7 @@
 					"Muncie, IN 47303"]
 		},{
 			"name":		"Jeffery Easler, MD",
-			"portrait":	"JefferyEasler.jpg",
+			"portrait":	"/images/JefferyEasler.jpg",
 			"specialty":	"Gastroenterology",
 			"condition":	["Pancreatitis",
 					"May 2021"],
@@ -287,7 +289,7 @@
 					"Indianapolis, IN 46202"]
 		},{
 			"name":		"Elizabeth Peacock, MD",
-			"portrait":	"ElizabethPeacock.png",
+			"portrait":	"/images/ElizabethPeacock.png",
 			"specialty":	"Dermatology",
 			"condition":	"Skin Cancers",
 			"phone":	"7652884131",
@@ -296,7 +298,7 @@
 					"Muncie, IN 47303"]
 		},{
 			"name":		"Garrett Zgunda, OD",
-			"portrait":	"GarrettZgunda.jpg",
+			"portrait":	"/images/GarrettZgunda.jpg",
 			"specialty":	"Optometry",
 			"phone":	"7652887744",
 			"address":	["Family Vision Care",

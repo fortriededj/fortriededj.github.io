@@ -1,0 +1,26 @@
+{
+	"ContactOrder": ["image","portrait",
+		"name", "procedure", 
+		"dob", "date", 
+		"age", "height", "weight",
+		"surgeon", "specialty", "condition",
+		"phone", "address", "location",
+		"anesthesia",
+		"sex", "race", "status", "preferred", "phonetic",
+		"relation", "critical", "insurance", "note"],
+	"USERS": [
+		{
+			"USERID": 	"DKF",
+			"jsonFile":	"DKF.json",
+			"labsURL":	"DKF_Labs.html",
+			"medicineFile":	"Daniel_Medicine_List.tsv",
+			"medicineType":	"tsv"
+		},{
+			"USERID": 	"JMF",
+			"jsonFile":	"JMF.json",
+			"labsURL":	"JMF_Labs.html",
+			"medicineFile":	"Jeanne_Medicine_List.tsv",
+			"medicineType":	"tsv"
+		}
+	]
+}

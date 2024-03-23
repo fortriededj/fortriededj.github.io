@@ -14,7 +14,9 @@
 			"dob":		"4/27/1956",
 			"preferred":	"Jeanne",
 			"phonetic":	"G-knee Fort'-reed",
-			"portrait":	"JMF.png",
+			"sex":		"Female",
+			"race":		"White",
+			"portrait":	"/images/JMF.png",
 			"critical":	["Type II Diabetes",
 					"Blood Type: AB+",
 					"No Known Allergies"]
@@ -55,7 +57,7 @@
 	],
 	"IMMUNIZATIONS": [
 		{	"title":	"Covid",
-			"image":	"Covid Jeanne.png",
+			"image":	"/images/Covid Jeanne.png",
 			"when":		"11/2/23",
 			"what":		["Pfizer lot #HG4589 11/2/23",
 					"Pfizer lot #GL0446 1/14/23",
@@ -115,7 +117,7 @@
 	],
 	"DOCTORS": [
 		{
-			"portrait":	"JohnPeterson.jpg",
+			"portrait":	"/images/JohnPeterson.jpg",
 			"name":		"John C. Peterson MD",
 			"specialty":	"Primary Care Physician",
 			"phone":	["7652827475",
@@ -124,7 +126,7 @@
 					"Muncie, IN"]
 		},{
 			"name":		"Garrett Zgunda, OD",
-			"portrait":	"GarrettZgunda.jpg",
+			"portrait":	"/images/GarrettZgunda.jpg",
 			"specialty":	"Optometry",
 			"phone":	"7652887744",
 			"address":	["Family Vision Care",

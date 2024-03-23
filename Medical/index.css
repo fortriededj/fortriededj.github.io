@@ -5,7 +5,6 @@ body {
 }
 
 div#main section {
-	font-style:	italic;
 	break-inside:	avoid;
 }
 div#main h1 {

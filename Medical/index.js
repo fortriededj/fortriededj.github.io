@@ -10,49 +10,17 @@ var str;
 var birthday;
 var today;
 var lastDate;
-var filestoread=0;
-var filecontents = new Array();
 var QuickLinks = [];
+
 var previousSection = false;
 
-function readfile(path, rindex) {				//File and counter
-  var xhr = new XMLHttpRequest();				//to store it in
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-	filestoread--;						//Mark that we read another one
-	filecontents[rindex]=xhr.responseText;			//Store the results
-      }
-      else {
-        alert(xhr);						//OOPS
-      }
-    }
-  }
-  xhr.open('GET', path, true);					//Async get
-  xhr.send();
-}
-
-async function windowLoaded(paths){	//After window is loaded
-	filestoread=paths.length;	//Called with array of files to fetch
-	for(i=0; i<filestoread; i++){	//For each, log and then
-		paths[i] = paths[i] + "?" + Math.random();
-		readfile(paths[i],i);	//asynchronously read file
-	}
-	let maxtime=Date.now();		//Get current time
-	maxtime = maxtime + 5000;	//5 Seconds from now
-	do {
-		await new Promise(resolve => setTimeout(resolve, 100)) .then(() => {});
-	} while(filestoread > 0 && Date.now() < maxtime);
-	if(filestoread > 0){		//Didn't get all the files
-		alert("Unable to retrieve all files in timeframe > " + filestoread);
-		return;
-	}
-	loadPage();			//call the loadPage file;
-}
+function windowLoaded(...paths){	//After window is loaded
+	__ReadFiles(...paths,loadPage);	//Read list of files
+}					//Then go to loadPage
 
 /* This is the MAIN function to populate the page
  * We get here when all files have been loaded */
-function loadPage() {
+function loadPage(filecontents) {
 	// File 0 is our json file
 	// File 1 is our medicine tsv file
 
@@ -107,16 +75,17 @@ function loadPage() {
 }
 
 function addQuickLinks(){
-	str = str + "<div>\n";
+	str = str + "<p><a href='#top'>Top of Page</a></p>\n";
 	for(i = 0; i< QuickLinks.length; i++){
 		str = str + '<p><a href="#' + QuickLinks[i] + '">'+ 
 				QuickLinks[i] + '</a></p>\n';
 	}
-	str = str + "</div>\n<div><p>Menu</p></div>\n</div>\n";
+	str = str + "<p><a href='index.html'>\nAnother Patient</a></p>\n" +
+		"<div><p>Menu</p></div>\n</div>\n";
 	/* Initial menu offset = (line height in pt + top margin thickness in pt +
 	 * bottom margin thickness in pt) times (*) number of menu items +
 	 * 2 (for "Menu" entry) */
-	offsetValue = (12 + 1 + 1)*QuickLinks.length+2;
+	offsetValue = (12 + 1 + 1)*(2 + QuickLinks.length)+2;
 	str = str + "<style>div#menu{top: -" + offsetValue + "pt;}</style>\n";
 }
 
@@ -242,9 +211,9 @@ function addListEntry(myObj,classid){			//Add Entry - Here everything fits in ou
 }
 
 function doPicture(imgname,classid){
-	var img = '<img class="' + classid + '" src="/images/' + imgname + '">';
+	var img = '<img class="' + classid + '" src="' + imgname + '">';
 	if(classid === "image"){
-		return '<a class="' + classid + '" href="/images/' + imgname + 
+		return '<a class="' + classid + '" href="' + imgname + 
 			'">' + img + '</a>';
 	} else {
 		return img;
