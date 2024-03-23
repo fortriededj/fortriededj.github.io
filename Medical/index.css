@@ -149,7 +149,7 @@ div#menu{
 	font-size:	10pt;
 	line-height:	12pt;
 	display:	inline-block;
-	left:		30px;
+	right:		30px;
 	position:	fixed;
 	top:		0px;
 	transition:	top .7s;
@@ -162,10 +162,21 @@ div#menu div:first-child{
 }
 div#menu p {
 	padding:	1pt 3pt;
-	border-width:	0px;
 	margin:		0px;
 	background-color:lightskyblue;
 	color:		darkslateblue;
+	border-width:	0px;
+	border-color:	darkblue;
+	border-style:	solid;
+}
+div#menu p:first-of-type{
+	border-width:	1px 1px 0px 1px;
+}
+div#menu p:nth-of-type(n+1){
+	border-width:	0px 1px;
+}
+div#menu p:last-of-type{
+	border-width:	0px 1px 1px 1px;
 }
 div#menu a{
 	color:		inherit;
