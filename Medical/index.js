@@ -49,7 +49,7 @@ function loadPage(filecontents) {
 	addSectionHeader("Medical Conditions");
 	addListEntry(HASH.CONDITIONS,'Conditions');	//Add each list
 
-	addSectionHeader("Blood Test Results");
+	addSectionHeader("Labs");
 	str = str + "<a href='/Medical/" + 
 		BLOODTESTFILE + 
 		"'><img class='bloodtest' src='/images/BloodTest.png'></a>";

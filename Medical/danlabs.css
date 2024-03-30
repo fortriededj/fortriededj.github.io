@@ -1,0 +1,150 @@
+:root {
+	--bg_headers:	darkviolet;
+	--bg_table:	black;
+	--fg_table:	white;
+	--bg_filtered:	rgb(32,160,32);
+	--bg_highlight: rgba(0,80,0,1.0);
+	--bg_highlight_opaque:	rgba(0,80,0,1.0);
+	--contract_icon:'\1F50D- ';
+	--expand_icon:	'\1F50E+ ';
+}
+* {font-family: Verdana, serif;font-size: 10pt;}
+body{
+	padding:	0px;
+	margin:		0px;
+}
+table{
+	border-collapse:collapse;
+	border-width:	0pt;
+	margin:		0px;
+	color:		var(--fg_table);
+	background:	var(--bg_table);
+}
+/* Any Panel or Test row OR Date column when filter is on */
+.filtered {	color:	var(--bg_filtered); }
+thead:first-of-type th.filtered{
+	color:		var(--bg_filtered);
+	/*background:	var(--bg_table);*/
+	background-image: radial-gradient(var(--bg_table) 40%,
+				var(--bg_headers) 80%);
+}
+.High {		color:	red; }
+.Low {		color:	blue; }
+.xNorm {	color:	inherit; } /* Not really used */
+
+/* Background Colors */
+/* Column */
+col.highlighted{
+	background:	var(--bg_highlight_opaque);
+}
+/* Date when on column mouseover */
+thead:first-of-type th.highlighted{
+	background:	var(--bg_highlight);
+}
+/* Panel row on mouseover */
+thead:nth-of-type(n+2) tr:hover th:first-of-type,
+thead:nth-of-type(n+2) tr:hover{
+	background:	var(--bg_highlight_opaque);
+}
+/* Test name ONLY on mouseover */
+tbody tr:hover th:first-of-type{
+	background:	var(--bg_highlight);
+}
+/* Test Data on mouseover */
+tbody tr:hover {
+	background:	var(--bg_highlight_opaque);
+}
+
+.collapsed{
+	visibility:	collapse;
+}
+th,td{
+	min-width:	3em;
+}
+th{
+	font-weight:	normal;
+	text-align:	left;
+}
+td{
+	text-align:	center;
+}
+td.highlighted {
+	border-radius:	7px;
+	outline:	var(--fg_table) solid 1px;
+	cursor:		none;
+}
+thead th:first-of-type{
+	padding-left:	1em;
+}
+tbody th {
+	padding-left:	2em;
+}
+tbody {
+	visibility:	visible;
+}
+/* First column */
+thead th:first-of-type,tbody th:first-of-type{
+	position:	sticky;
+	left:		0pt;
+	z-index:	2;
+	background:	var(--bg_table);
+	white-space:	nowrap;
+}
+/* Header Row */
+thead:first-of-type th{
+	position:	sticky;
+	top:		0pt;
+	z-index:	3;
+	background:	var(--bg_headers);
+	line-height:	10pt;
+	text-align:	center;
+}
+/* Cell A1 */
+thead:first-of-type th:first-of-type{
+	top:		0pt;
+	left:		0pt;
+	z-index:	4;
+	font-size:	90%;
+	white-space:	wrap;
+	text-align:	left;
+	font-style:	italic;
+}
+/* Panel Names */
+thead th:first-of-type {
+	overflow:	visible;
+}
+thead:nth-of-type(n+2) th:first-of-type {
+	max-width:	1em;
+}
+thead:nth-of-type(n+2) th:first-of-type:before{
+	content:	var(--contract_icon);
+}
+thead:nth-of-type(n+2) th:first-of-type.filtered:before{
+	content:	var(--expand_icon);
+}
+/* Test Names */
+tbody th:first-of-type {
+	min-width:	16em;
+}
+
+col{
+	visibility:	visible;
+}
+tbody tr {
+	visibility:	visible;
+}
+tbody th span{
+	float:		right;
+}
+th span.graphable::before {
+	content:	"\1f4c8";
+	float:		left;
+}
+th span.titleinfo::after {
+	content:	"\2047";
+	padding-left:	.5em;
+	float:		left;
+}
+thead:first-of-type th {
+	visibility:	visible;
+}

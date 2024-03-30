@@ -181,11 +181,11 @@ table#labTable tbody.hide tr:nth-child(n+2) {
 table#labTable span {
  line-height:		1.1em;
 }
-/*@media (pointer:fine) {*/
+@media (pointer:fine) {
  table#labTable span.showInfo{display: none;}
-/*}*/
+}
 @media (pointer:coarse) {
- /*table#labTable span.graph{display: none;}*/
+ table#labTable span.graph{display: none;}
 }
 
 td.low {
