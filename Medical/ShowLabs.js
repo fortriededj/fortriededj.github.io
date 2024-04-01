@@ -9,10 +9,13 @@ var lastFilteredCol=-1;
 var lastFilteredRow=-1;
 var rows = 0;
 var cols = 0;
+var Dates;
+var xchartDiv;
 
 function loaded(){				//After window is loaded
 	//alert(window.innerWidth + " X " + window.innerHeight);
-	__ReadFiles('./DKF_Labs.json',pageLoaded);	//Read list of files
+	whichOne = window.location.search.substring(1);
+	__ReadFiles(whichOne,pageLoaded);	//Read file
 }						//Then go to loadPage
 
 function pageLoaded(fileContentsArray) {
@@ -32,7 +35,8 @@ function pageLoaded(fileContentsArray) {
 		str = str + "\t<col id='Col_" + i + "'>\n";
 	}
 	// Add user and dates
-	str = str + "</colgroup>\n<thead>\n\t<tr>\n\t\t<th>Daniel Fortriede</th>\n";
+	str = str + "</colgroup>\n<thead>\n\t<tr>\n\t\t" +
+		"<th>Click <u>Row</u> or <u>Column</u> heading to filter, <u>Panel</u> name to collapse.</th>\n";
 	for(let i = 0; i<cols; i++){
 		str = str + "\t\t<th id='Date_" +
 			i + "' onclick='toggleColumn(" +
@@ -61,16 +65,25 @@ function pageLoaded(fileContentsArray) {
 		TestNames = Data["PanelOrder_" + P];
 		for(t=0; t<TestNames.length; t++){
 			T = TestNames[t];
+			Graphable = Data[P][T].Graphable;
+			Info = Data[P][T].Info;
+			Low = Data[P][T].Low;
+			High = Data[P][T].High;
+			Range = Data[P][T].Range;
 			str = str + "\t<tr id='row_" +
 				rows + "'><th onclick='toggleRow(" +
-				rows + ")'>" + T +
-				"<span><i class='fa fa-filter'></i></span></th>\n";
-			/*console.log("\t"+T);
-			console.log("\t\t"+Data[P][T].Graphable);
-			console.log("\t\t"+Data[P][T].Info);
-			console.log("\t\t"+Data[P][T].Range);
-			console.log("\t\t"+Data[P][T].Low);
-			console.log("\t\t"+Data[P][T].High);*/
+				rows + ")'" + 
+				createTitle(Info,Range) + '>' + T;
+			if(Info || Range){
+				str = str + '<span class="titleinfo" ' + 
+					'onclick="showTitle(this);"> </span>';
+			}
+			if(Graphable == 'True'){
+				str = str + '<span class="graphable" ' +
+					'onclick="showGraph(this,' +
+					Low + ',' + High + ');"> </span>';
+			}
+			str = str + "</th>\n";
 			for(d=0; d<Dates.length; d++){
 				D=Dates[d];
 				if(Data[P][T][D] == null){
@@ -83,7 +96,8 @@ function pageLoaded(fileContentsArray) {
 					"onMouseover='toggleHighlight(" + 
 					rows + "," + d + ")' " + 
 					"onMouseout='toggleHighlight(" + 
-					rows + "," + d + ")'>" + 
+					rows + "," + d + ")' class='" +
+					classify(Graphable,Low,High,V) + "'>" + 
 					V + "</td>\n";
 			}
 			str = str + "\t</tr>\n";
@@ -92,8 +106,8 @@ function pageLoaded(fileContentsArray) {
 		str = str + "</tbody>\n";
 	}
 
-	str = str + "</table></html>";
-	myDoc.innerHTML = str;
+	str = str + "</table><div id='chartDiv'></div></html>";
+	document.body.innerHTML = str;
 
 	/* Now build arrays of things we'll need later
 	   Columns 		Array of Col_x		<col>
@@ -120,15 +134,35 @@ function pageLoaded(fileContentsArray) {
 			CELLS[row][col]=document.getElementById(b);
 		}
 	}
+	addChartDiv();
+}
+function createTitle(info,range){
+	tArr = [];
+	tStr = "";
+	if(info !== undefined){ tArr.push(info);}
+	if(range !== undefined){ tArr.push('Range: ' + range);}
+	if(tArr.length >0){
+		tStr = " title='" + tArr.join('&#013;&#010;') + "'";
+	}
+	return tStr;
+}
+function classify(Test,Low,High,V){
+	if(Test){
+		if(V<Low){return 'Low';}
+		if(V>High){return 'High';}
+	}
+	return 'Norm';
 }
 function formatDate(x){
 	y = new Date(x*1000);
 	a = y.getFullYear().toString();
 	z = y.getDate() + '<br>' + 
 		Months[y.getMonth()] + '<br>' +
-		a.substring(2,4) + '<br>' +
-		'<span><li class="fa fa-filter"></li></span>';
+		a.substring(2,4);
 	return z;
+}
+function dateNumberToString(x){
+	return (x.getMonth()+1) + '/' + x.getDate() + '/' + x.getFullYear().toString().substring(2,4);
 }
 
 function togglePanel(x){
@@ -178,4 +212,21 @@ function toggleHighlight(row,col){
 	COLUMNS[col].classList.toggle('highlighted');
 	CELLS[row][col].classList.toggle('highlighted');
 	DATES[col].classList.toggle('highlighted');
+}
+
+function showTitle(x){
+	this.event.stopPropagation();
+	alert(x.parentNode.parentNode.children[0].getAttribute('title'));
+}
+function MinMax(mArr){
+	let minValue = Infinity;
+	let maxValue = -Infinity;
+	for (let item of mArr){
+		x = parseFloat(item.innerText);
+		if(x !== ""){
+			if(x < minValue){minValue = item.innerText;}
+			if(x > maxValue){maxValue = item.innerText;}
+		}
+	}
+	return [minValue,maxValue];
 }

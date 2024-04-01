@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--This routine used to show individual lab results pages
+    in an iframe so mobile devices understand to scroll the
+    window correctly. What a pain! -->
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="cache-control" content="max-age=0">
@@ -7,6 +10,13 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT">
 <meta http-equiv="pragma" content="no-cache">
 <title>Lab Results Page</title>
+<style>
+body {
+    margin:	0px;
+    padding:	0px;
+    background:	black;
+}
+</style>
 <script>
     /* Comment */
     var resizeTimer;
@@ -14,8 +24,8 @@
 	W = parseInt(window.innerWidth);
 	H = parseInt(window.innerHeight);
 	x = document.getElementById('myFrame');
-	x.style.width = (W-20) + "px";
-	x.style.height = (H-20) + "px";
+	x.style.width = (W) + "px";
+	x.style.height = (H) + "px";
 	}
     function resized(){
 	    if(resizeTimer){clearTimeout(resizeTimer);}

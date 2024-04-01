@@ -1,0 +1,105 @@
+:root {
+	--closeX:	"\26DD";
+}
+div {
+ display:	inline-block;
+ margin:	2px;
+}
+
+@media (pointer:fine) {
+ table#labTable span.showInfo{display: none;}
+}
+@media (pointer:coarse) {
+ table#labTable span.graph{display: none;}
+}
+
+div#chartDiv * {
+ font-family:	Verdana, Serif;
+ font-size:	9pt;
+}
+
+div#chartDiv {
+ width:		500px;
+ height:	350px;
+ right:		20px;
+ top:		75px;
+ position:	fixed;
+ background:	darkblue;
+ color:		ivory;
+ padding:	0px;
+ margin:	0px;
+ border:	1px solid white;
+ z-index:	10;
+ visibility:	hidden;
+}
+
+@media (max-width: 415px) or (max-height: 327px){
+ div#chartDiv{
+  width:	380px;
+  height:	280px;
+  top:		5px;
+  right:	5px;
+ }
+}
+
+span#tooltip{
+ display:	none;
+ position:	absolute;
+ top:		0px;
+ left:		0px;
+ margin:	0px;
+ padding:	2px 3px;
+ background:	lightBlue;
+ color:		black;
+ text-align:	center;
+ border:	1px solid darkBlue;
+ border-radius:	4px;
+ z-index:	11;
+}
+span#tooltip i {
+ color:		black;
+ background:	chartreuse;
+}
+div#showMore {	
+ position:	absolute;
+ top:		0px;
+ left:		0px;
+ margin:	0.25em;
+ padding:	0.25em 0.5em;
+ border:	2px solid white;
+ border-radius:	1em;
+ background:	lightBlue;
+ color:		darkblue;
+ cursor:	pointer;
+}
+div#showMore::after {content:"Show All"; padding:0px 2px;}
+div#showMore.toggled::after {content:"Show Less"}
+div#closer {	
+ position:	absolute;
+ top:		0px;
+ right:		0px;
+ margin:	0px;
+ border:	1px solid darkblue;
+ background:	white;
+ color:		black;
+ cursor:	pointer;
+}
+div#closer::after { content:var(--closeX);}
+
+.line {
+  fill:		none;
+  stroke:	black;
+  stroke-width:	2;
+}
+.dot_low {fill:	blue;}
+.dot_high {fill:red;}
+.dot_norm {fill:green;}
+.dot_note {fill:Chartreuse;}
+.yaxis line { stroke: rgba(0,0,0,0.5); }
+
+a.xINFO {
+ background-color: lightyellow;
+ color:		darkred;
+ font-weight:	normal;
+}
+

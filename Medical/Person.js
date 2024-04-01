@@ -15,7 +15,7 @@ function MasterRead(MASTER){
 	/* Find entry for this user id */
 	for(i=0; i<mUSERS.length; i++){
 		if(userid == mUSERS[i].USERID){
-			BLOODTESTFILE = "Labs.html?" + mUSERS[i].labsURL;
+			BLOODTESTFILE = "Labs.html?ShowLabs.html?" + mUSERS[i].labsURL;
 			windowLoaded(mUSERS[i].jsonFile,mUSERS[i].medicineFile);
 			return;
 		}

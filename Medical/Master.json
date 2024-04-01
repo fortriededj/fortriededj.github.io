@@ -12,13 +12,13 @@
 		{
 			"USERID": 	"DKF",
 			"jsonFile":	"DKF.json",
-			"labsURL":	"DKF_Labs.html",
+			"labsURL":	"DKF_Labs.json",
 			"medicineFile":	"Daniel_Medicine_List.tsv",
 			"medicineType":	"tsv"
 		},{
 			"USERID": 	"JMF",
 			"jsonFile":	"JMF.json",
-			"labsURL":	"JMF_Labs.html",
+			"labsURL":	"JMF_Labs.json",
 			"medicineFile":	"Jeanne_Medicine_List.tsv",
 			"medicineType":	"tsv"
 		}

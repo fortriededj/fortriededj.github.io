@@ -5,8 +5,8 @@
 	--bg_filtered:	rgb(32,160,32);
 	--bg_highlight: rgba(0,80,0,1.0);
 	--bg_highlight_opaque:	rgba(0,80,0,1.0);
-	--contract_icon:'\1F50D- ';
-	--expand_icon:	'\1F50E+ ';
+	--contract_icon: "\1F50D- ";
+	--expand_icon:	"\1F50E+ ";
 }
 * {font-family: Verdana, serif;font-size: 10pt;}
 body{
@@ -144,6 +144,9 @@ th span.titleinfo::after {
 	content:	"\2047";
 	padding-left:	.5em;
 	float:		left;
+}
+@media (hover: hover){
+ th span.titleinfo{display:none;}
 }
 thead:first-of-type th {
 	visibility:	visible;
