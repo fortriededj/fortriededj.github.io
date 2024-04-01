@@ -145,7 +145,7 @@ th span.titleinfo::after {
 	padding-left:	.5em;
 	float:		left;
 }
-@media (hover: hover){
+@media (pointer: fine){
  th span.titleinfo{display:none;}
 }
 thead:first-of-type th {
