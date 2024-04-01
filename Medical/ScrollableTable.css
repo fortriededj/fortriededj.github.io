@@ -2,9 +2,9 @@
 	--bg_headers:	darkviolet;
 	--bg_table:	black;
 	--fg_table:	white;
-	--bg_filtered:	rgb(32,160,32);
-	--bg_highlight: rgba(0,80,0,1.0);
-	--bg_highlight_opaque:	rgba(0,80,0,1.0);
+	--bg_filtered:	rgb(255,255,0);
+	--bg_highlight: rgb(160,160,0,.50);
+	--bg_highlight_opaque: rgb(160,160,0,.50);
 	--contract_icon: "\1F50D- ";
 	--expand_icon:	"\1F50E+ ";
 }
@@ -25,8 +25,8 @@ table{
 thead:first-of-type th.filtered{
 	color:		var(--bg_filtered);
 	/*background:	var(--bg_table);*/
-	background-image: radial-gradient(var(--bg_table) 40%,
-				var(--bg_headers) 80%);
+	/*background-image: radial-gradient(var(--bg_table) 40%,
+				var(--bg_headers) 80%);*/
 }
 .High {		color:	red; }
 .Low {		color:	blue; }
