@@ -165,35 +165,22 @@ function addContacts(myObj,classid){			//Adds a contacts entry
 			arr = objSub[x];		            //Easier Reference
 			if(x.picture !== undefined){
 				myarr = x.picture;
-				if(Array.isArray(myarr)){
-					addPictureIcon(myarr[0]);
-					for(let j=1; j<myarr.length; j++){
-						addPictureIcon(myarr[j]);
-					}
-				} else {
-					addPictureIcon(myarr);
-				}
+                if(!Array.isArray(myarr)){myarr = [myarr];} //If not array, make it one
+                for(let j=0; j<myarr.length; j++){
+                    addPictureIcon(myarr[j]);
+                }
 			}
-			if(Array.isArray(arr)) {	        //Is this parm an array
-				if(x === "portrait" || x === "image"){arr[0]=doPicture(arr[0],x);}
-				if(x === "date" || x === "dob"){arr[0]=doDate(arr[0]); };
-				if(x === "phone"){arr[0]=addPhoneLink(arr[0]);}
-				if(x === "age"){arr[0]=doAge(arr[0]);}
-				str = str + "  <p class='" + x + "'>" + arr[0] + "</p>\n";
-				for(let i=1; i<arr.length; i++){
-					if(x === "portrait" || x === "image"){arr[i]=doPicture(arr[i],x);}
-					if(x === "date" || x === "dob"){arr[i]=doDate(arr[i])};
-					if(x === "age"){arr[i]=doAge(arr[i]);}
-					if(x === "phone"){arr[i]=addPhoneLink(arr[i]);}
-					str = str + "  <p class='" + x + "2'>" + arr[i] + "</p>\n";
-				}
-			} else {			                //No
-				if(x === "portrait" || x === "image"){arr=doPicture(arr,x);}
-				if(x === "date" || x === "dob"){arr=doDate(arr)};
-				if(x === "age"){arr=doAge(arr);}
-				if(x === "phone"){arr=addPhoneLink(arr);}
-				str = str + "  <p class='" + x + "'>" + arr + "</p>\n";
-			}
+            if(!Array.isArray(arr)){arr = [arr];}           //If not array, make it one
+            classValue="";
+            for(let i=0; i<arr.length; i++){
+                if(x === "portrait" || x === "image"){arr[i]=doPicture(arr[i],x);}
+                if(x === "date" || x === "dob"){arr[i]=doDate(arr[i])};
+                if(x === "age"){arr[i]=doAge(arr[i]);}
+                if(x === "phone"){arr[i]=addPhoneLink(arr[i]);}
+                str = str + "  <p class='" + x + classValue + "'>" + arr[i] + "</p>\n";
+                classValue = "2";
+            }
+
 		}
 	}
 }
