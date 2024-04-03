@@ -1,21 +1,16 @@
 const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 // Ordered list of Contact fields to be displayed
 // Any (theoritically) can have multiple entries
-const ContactOrder = [
-	"image","portrait","name", "procedure", "dob", "date", "age", "height", "weight",
-	"surgeon", "specialty", "condition", "phone", "address", "location", "anesthesia",
-	"sex", "race", "status", "preferred", "phonetic", "relation", "critical", 
-	"insurance","note"];
+var MasterArray;
 var str;
 var birthday;
 var today;
 var lastDate;
 var QuickLinks = [];
 var previousSection = false;
-
-/* Added new here */
+var thisUSER;
 var userid;
-var BLOODTESTFILE;
+var fileContents;
 function personLoad(){
 	x = location.search;
 	if(location.search === ""){
@@ -26,71 +21,53 @@ function personLoad(){
 	__ReadFiles('Master.json',MasterRead);
 }
 function MasterRead(MASTER){
-	MasterArray = JSON.parse(MASTER[0]);
+	MasterArray = JSON.parse(MASTER["Master.json"]);
 	mUSERS = MasterArray.USERS;
 	/* Find entry for this user id */
 	for(i=0; i<mUSERS.length; i++){
 		if(userid == mUSERS[i].USERID){
-			BLOODTESTFILE = "Labs.html?ShowLabs.html?" + mUSERS[i].labsURL;
-			windowLoaded(mUSERS[i].jsonFile,mUSERS[i].medicineFile);
+            thisUSER = mUSERS[i];
+            mFilesToLoad=[];
+            mFilesToLoad.push(mUSERS[i].jsonFile);      // Always load jsonFile
+            if(thisUSER.Tables !== undefined){          // Any files listed in tables
+                for (j=0; j<thisUSER.Tables.length; j++){
+                    mFilesToLoad.push(thisUSER.Tables[j].file);
+                }
+            }
+			windowLoaded(mFilesToLoad);
 			return;
 		}
 	}
 	alert("Unable to find " + userid);
 	window.location.replace("index.html");
 }
-/* End of new here */
 function windowLoaded(...paths){	//After window is loaded
-	__ReadFiles(...paths,loadPage);	//Read list of files
+	__ReadFiles(...paths[0],loadPage);	//Read list of files
 }					//Then go to loadPage
 
 /* This is the MAIN function to populate the page
  * We get here when all files have been loaded */
 function loadPage(filecontents) {
-	// File 0 is our json file
-	// File 1 is our medicine tsv file
+    fileContents = filecontents;                // Make returned object global in scope
 
 	//A few preliminaries
-	HASH = JSON.parse(filecontents[0]);
+	HASH = JSON.parse(filecontents[thisUSER.jsonFile]);
 	DOC = document.getElementById('myspace');
 	today = new Date();
 	birthday = new Date(HASH.BIRTH);
 
 	str = "<div id='main'>";
-	//Patient = HASH.ME;
-	addSectionHeader("Patient");
-	addContacts(HASH.ME,"patient");
 
-	//Now ready for Emergency Contact
-	addSectionHeader("Emergency Contacts");
-	addContacts(HASH.ICE,"ice");			//Add each contact in ICE
-							//Call with array and class value
-	addSectionHeader("Prescriptions");
-	addMedicine(filecontents[1]);
-
-	addSectionHeader("Pharmacies");
-	addContacts(HASH.PHARMACY,"Pharm");
-
-	//Now list Current Medical Conditions
-	addSectionHeader("Medical Conditions");
-	addListEntry(HASH.CONDITIONS,'Conditions');	//Add each list
-
-	addSectionHeader("Labs");
-	str = str + "<a href='/Medical/" + 
-		BLOODTESTFILE + 
-		"'><img class='bloodtest' src='/images/BloodTest.png'></a>";
-
-	//Immunizations
-	addSectionHeader("Immunizations");
-	addListEntry(HASH.IMMUNIZATIONS,'Immunizations');
-
-	//Hospitalizations
-	addSectionHeader("Hospitalizations");
-	addContacts(HASH.HOSPITALIZATIONS,"Hospitalizations");
-
-	//Doctors
-	addSectionHeader("Health Care Team");
-	addContacts(HASH.DOCTORS,"Doctors");
+    //addSection(Section_Type,title,parm1[,parm2])
+    addSection('Contact','Patient',HASH.ME);
+    addSection('Contact','Emergency Contacts',HASH.ICE);
+    addSection('Table','Prescriptions','Medicine');
+    addSection('Contact','Phramacies',HASH.PHARMACY);
+    addSection('List','Conditions',HASH.CONDITIONS);
+    addSection('Lab','Labs',thisUSER);
+    addSection('List','Immunizations',HASH.IMMUNIZATIONS);
+    addSection('Contact','Hospitalizations',HASH.HOSPITALIZATIONS);
+    addSection('Contact','Health Care Team',HASH.DOCTORS);
 	//All Done - show off our work
 
 	str = str + "</div>\n</section>\n<div id='menu'>\n";
@@ -115,34 +92,57 @@ function addQuickLinks(){
 	str = str + "<style>div#menu{top: -" + offsetValue + "pt;}</style>\n";
 }
 
-function addMedicine(x){
-	str = str + "<table class='medicine'>\n \
-		<caption>ES = Express-Scripts<br>CVS = CVS in Target on Barr street</caption>\n";
-	mArr = x.split("\n");
-	const hArr = mArr.shift();
-	mArr = mArr.sort(drugSort);
-	str=str + " <tr><td>" + hArr.split("\t").join("</td><td>") + "</td></tr>\n";
-	for(i=0; i<mArr.length-2; i++){
-		str = str + " <tr><td>" + 
-			mArr[i].split("\t").join("</td><td>") + 
-		"</td></tr>\n";
+function addSection(type,title,obj){
+    /* First add the section */
+	QuickLinks.push(title);                     // Store for menu
+	if(previousSection){                    // Had we previously opened a section
+		str = str + "</section>\n";         // Yes, close it
 	}
-	str = str + "</table>";
-}
-function addSectionHeader(x){
-	QuickLinks.push(x);
-	if(previousSection){
-		str = str + "</section>\n";
-	} else {
-		previousSection = true;
-	}
-	str = str + "<section id='" + x + "'><h1>" + x + "</h1>\n";
+    previousSection = true;                 // We have now
+	str = str + "<section id='" + title + "'><h1>" + title + "</h1>\n";
+
+    /* Now handle various types of sections */
+    switch(type){
+        case 'Contact':                     // Contact cards
+            addContacts(obj,title);
+            break;
+        case 'List':                        // List format
+            addListEntry(obj,title);
+            break;
+        case 'Lab':                         // Labs = BloodTests
+            str = str + "<a href='Labs.html?" + obj.labsURL + 
+                    "'><img class='bloodtest' src='/images/BloodTest.png'></a>";
+            break;
+        case 'Table':                       // Read file and convert to table
+            str = str + "<table class='medicine'>\n";
+            tArr = thisUSER.Tables;
+            for(t=0; t<tArr.length; t++){
+                if(tArr[t].title == obj){
+                    if(tArr[t].caption){
+                        str = str + "\t<caption>" + tArr[t].caption + "</caption>\n";
+                    }
+                    switch(tArr[t].type){
+                        case 'tsv':
+                            mArr = fileContents[tArr[t].file].split("\r");
+                            for(i=0; i<mArr.length-2; i++){
+                                str = str + '<tr><td>' + mArr[i].split("\t").join("</td><td>") + "</td></tr>\n";
+                            }
+                            str = str + '</table>\n';
+                            break;
+                        default:
+                            alert("Unknown format " + obj.medicineType);
+                    }
+                }
+            }
+            str = str + "</table>\n";
+            break;
+    }
 }
 
 function addContacts(myObj,classid){			//Adds a contacts entry
-	for(let i=0; i<myObj.length; i++){		//Do for each contact in array
+	for(let i=0; i<myObj.length; i++){		    //Do for each contact in array
 		str = str + "<div class='" + classid+ "'>\n";
-		objSub = myObj[i];			//For each contact entry
+		objSub = myObj[i];			            //For each contact entry
 		if(objSub.picture !== undefined){
 			myarr = objSub.picture;
 			if(Array.isArray(myarr)){
@@ -157,12 +157,12 @@ function addContacts(myObj,classid){			//Adds a contacts entry
 		if(objSub.dob !== undefined){ objSub.age = "today"; }
 		if(objSub.date !== undefined){ objSub.age = "birthday"; }
 
-		ContactOrder.forEach(addContactElement);//Add ordered list of contact parms
+		MasterArray.ContactOrder.forEach(addContactElement);//Add ordered list of contact parms
 		str = str + "</div>\n";
 	}
-	function addContactElement(x){			//Add this particular parm
-		if(objSub[x] !== undefined){		//Only if defined (of course)
-			arr = objSub[x];		//Easier Reference
+	function addContactElement(x){			    //Add this particular parm
+		if(objSub[x] !== undefined){		    //Only if defined (of course)
+			arr = objSub[x];		            //Easier Reference
 			if(x.picture !== undefined){
 				myarr = x.picture;
 				if(Array.isArray(myarr)){
@@ -174,7 +174,7 @@ function addContacts(myObj,classid){			//Adds a contacts entry
 					addPictureIcon(myarr);
 				}
 			}
-			if(Array.isArray(arr)) {	//Is this parm an array
+			if(Array.isArray(arr)) {	        //Is this parm an array
 				if(x === "portrait" || x === "image"){arr[0]=doPicture(arr[0],x);}
 				if(x === "date" || x === "dob"){arr[0]=doDate(arr[0]); };
 				if(x === "phone"){arr[0]=addPhoneLink(arr[0]);}
@@ -187,7 +187,7 @@ function addContacts(myObj,classid){			//Adds a contacts entry
 					if(x === "phone"){arr[i]=addPhoneLink(arr[i]);}
 					str = str + "  <p class='" + x + "2'>" + arr[i] + "</p>\n";
 				}
-			} else {			//No
+			} else {			                //No
 				if(x === "portrait" || x === "image"){arr=doPicture(arr,x);}
 				if(x === "date" || x === "dob"){arr=doDate(arr)};
 				if(x === "age"){arr=doAge(arr);}
@@ -199,11 +199,11 @@ function addContacts(myObj,classid){			//Adds a contacts entry
 }
 
 function addListEntry(myObj,classid){			//Add Entry - Here everything fits in outer div
-							//title and when all have to be defined in JSON
-							//for each entry
+							                    //title and when all have to be defined in JSON
+							                    //for each entry
 	str = str + "<div class='"+classid+"'>\n";
-	let obj = myObj.sort(titleSort);		//Re-sort the data by title
-	for(let i=0; i<obj.length; i++){		//For each Event
+	let obj = myObj.sort(titleSort);		    //Re-sort the data by title
+	for(let i=0; i<obj.length; i++){		    //For each Event
 		x = obj[i];
 		if(x.picture !== undefined){
 			arr = x.picture;
@@ -217,21 +217,21 @@ function addListEntry(myObj,classid){			//Add Entry - Here everything fits in ou
 			}
 		}
 		str = str + "<ul>\n <li>" + x.title + "\n";
-		mydate = new Date(x.when);		//Convert date to mmm yy string
+		mydate = new Date(x.when);		    //Convert date to mmm yy string
 		if(x.what !== undefined){
 		  arr = x.what;
-		  if(Array.isArray(arr)) {		//Is this an array, then show each element
+		  if(Array.isArray(arr)) {		    //Is this an array, then show each element
 			str = str + "  <li><span>" + dateMonthYear(mydate) + "</span><span>" + arr[0] + "</span>\n";
 			for(let j=1; j<arr.length; j++){
 				str = str + "  <li><span></span><span>" + arr[j] + "</span>\n";
 			}
-		  } else {				//Just show the first one
+		  } else {				            //Just show the first one
 			str = str + "  <li><span>" + dateMonthYear(mydate) + "</span><span>" + arr + "</span>\n";
 		  }
 		} else {
 			str = str + "  <li><span>" + dateMonthYear(mydate) + "</span><span></span>\n";
 		}
-		str = str + "</ul>\n";			//Finish up
+		str = str + "</ul>\n";			    //Finish up
 	}
 	str = str + "</div>";
 }
@@ -245,10 +245,7 @@ function doPicture(imgname,classid){
 		return img;
 	}
 }
-function drugSort(a,b){
-	if(a[0] > b[0]) {return 1;} else {return -1;}
-}
-function titleSort(a,b){				//Sort by title string
+function titleSort(a,b){				    //Sort by title string
 	const c1 = a.title.toUpperCase();
 	const c2 = b.title.toUpperCase();
 	let retval = 0;
@@ -304,9 +301,9 @@ function calcDateDiff(fromDate,toDate){
  var diffYears = dd1["year"]-dd2["year"];
  var diffMonths = dd1["month"]-dd2["month"];
  var diffDays = dd1["day"]-dd2["day"];
- if(diffMonths<0){ borrowYear();}	//If months < 0, borrow 12 months from year
+ if(diffMonths<0){ borrowYear();}	                //If months < 0, borrow 12 months from year
  var diffDate = dd1["day"]-dd2["day"];
- if(diffDate<0){borrowMonth();}		//If days < 0, borrow last months days
+ if(diffDate<0){borrowMonth();}		                //If days < 0, borrow last months days
  const z = [];
  if(diffYears){z.push(diffYears + "y");}
  if(diffMonths){z.push(diffMonths + "m");}

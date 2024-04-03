@@ -17,14 +17,13 @@ div#main div {
 	border-radius:	8px;
 	margin:		6px 2px;
 }
-/* Div Colors */
-div.patient{		background-color: linen; 	color:	inherit;}
-div.ice{		background-color: lightyellow; 	color:	inherit;}
-div.Conditions{		background-color: honeydew; 	color:	darkgreen; }
-div.Immunizations {	background-color: lightcyan; 	color:	darkblue; }
-div.Hospitalizations {	background-color: lavenderblush;color:	darkorchid; }
-div.Doctors {		background-color: aliceblue; 	color:	darkblue; }
-div.Pharm{		background-color: bisque;	color:	sienna;}
+div#main section:nth-of-type(7n+0) div{	background-color: linen;}
+div#main section:nth-of-type(7n+1) div{	background-color: lightyellow;}
+div#main section:nth-of-type(7n+2) div{	background-color: honeydew;}
+div#main section:nth-of-type(7n+3) div{	background-color: lightcyan;}
+div#main section:nth-of-type(7n+4) div{	background-color: lavenderblush;}
+div#main section:nth-of-type(7n+5) div{	background-color: aliceblue;}
+div#main section:nth-of-type(7n+6) div{	background-color: bisque;}
 
 img.portrait,img.image{
 	float:		right;
@@ -141,7 +140,7 @@ tr:first-child{
 tr:nth-child(2n){
 	background-color: rgb(200,200,255);
 }
-td:nth-child(n+3){
+td:nth-of-type(n+3){
 	text-align:	center;
 }
 div#menu{

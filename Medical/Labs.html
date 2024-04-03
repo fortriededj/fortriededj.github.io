@@ -18,7 +18,6 @@ body {
 }
 </style>
 <script>
-    /* Comment */
     var resizeTimer;
     function setSize(){
 	W = parseInt(window.innerWidth);
@@ -32,8 +31,8 @@ body {
 	    resizeTimer=setTimeout(setSize,'150');
     }
     function loaded(){
-    	whatToLoad = window.location.search.substring(1);
-    	document.getElementById("mybody").innerHTML = '<iframe id="myFrame" src="' + whatToLoad + 
+    	document.getElementById("mybody").innerHTML = '<iframe id="myFrame" src="ShowLabs.html?' +
+		window.location.search.substring(1) + 
 		'" style="width: 300px; height:200px; border:none;"></iframe>';
 	setSize();
     }

@@ -45,28 +45,29 @@
     </style>
     <script src="ReadFiles.js?"+Math.random()></script>
     <script>
-	var USERIDs = [];
+	var USERIDs = new Object();
 	function loaded(){
 	    __ReadFiles('Master.json',MasterRead);
 	}
 	function MasterRead(MASTER){
-	    MasterArray = JSON.parse(MASTER[0]);
+	    MasterArray = JSON.parse(MASTER['Master.json']);
 	    mContactOrder = MasterArray.ContactOrder;
 	    mUSERS = MasterArray.USERS;
 	    jsonFiles = [];			// Make list of all person.json files
 	    for(i=0; i<mUSERS.length; i++){
-		USERIDs.push(mUSERS[i].USERID);
+		Object.assign(USERIDs, {[mUSERS[i].jsonFile]: mUSERS[i].USERID});
 		jsonFiles.push(mUSERS[i].jsonFile);
 	    }
 	    __ReadFiles(...jsonFiles,getJson);
 	}
 	function getJson(x){
 	    str = "";
-	    for(i=0; i<x.length; i++){		// For each file, create button
-		z = JSON.parse(x[i]);
+	    keys = Object.keys(x);
+	    for(i=0; i<keys.length; i++){	// For each file, create button
+		z = JSON.parse(x[keys[i]]);
 		me = z.ME[0];
-			// section
-		str = str + '<a href="Person.html?' + USERIDs[i] + '"> \
+		// section
+		str = str + '<a href="Person.html?' + USERIDs[keys[i]] + '"> \
 <figure> \
 <img src="' + me.portrait + '">\
 <figcaption>' + me.preferred + '</figcaption>\
@@ -74,7 +75,7 @@
 <figcaption>' + (me.weight.split(','))[0] + '</figcaption>\
 <figcaption>' + me.race + ' ' + me.sex + '</figcaption>\
 </figure>\n';
-			//section
+		//section
 	    }
 	    document.getElementById('myspace').innerHTML = str;
 	}

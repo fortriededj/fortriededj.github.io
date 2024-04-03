@@ -29,7 +29,6 @@ function addChartDiv(){				//Used only for lab work page
 
  margin = {top: 35, right: 14, bottom: 70, left: 45};
  width  = chartDiv.offsetWidth - margin.left - margin.right;
-	console.log(chartDiv.offsetWidth + " " + margin.left + " " + margin.right + " " + width);
  height = chartDiv.offsetHeight - margin.top - margin.bottom;
  xScale = d3.scaleBand().range([0, width]);
  yScale = d3.scaleLinear().range([height, 0]);

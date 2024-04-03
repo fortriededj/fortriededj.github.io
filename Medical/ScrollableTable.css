@@ -1,10 +1,10 @@
 :root {
 	--bg_headers:	darkviolet;
 	--bg_table:	black;
-	--fg_table:	white;
+	--fg_table:	ivory;
 	--bg_filtered:	rgb(255,255,0);
-	--bg_highlight: rgb(160,160,0,.50);
-	--bg_highlight_opaque: rgb(160,160,0,.50);
+	--bg_highlight: rgb(44,44,44);
+	--bg_highlight_opaque: rgb(44,44,44);
 	--contract_icon: "\1F50D- ";
 	--expand_icon:	"\1F50E+ ";
 }
@@ -28,8 +28,8 @@ thead:first-of-type th.filtered{
 	/*background-image: radial-gradient(var(--bg_table) 40%,
 				var(--bg_headers) 80%);*/
 }
-.High {		color:	red; }
-.Low {		color:	blue; }
+.High {		color:	salmon; }
+.Low {		color:	deepskyblue; }
 .xNorm {	color:	inherit; } /* Not really used */
 
 /* Background Colors */

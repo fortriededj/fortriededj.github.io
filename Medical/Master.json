@@ -13,14 +13,26 @@
 			"USERID": 	"DKF",
 			"jsonFile":	"DKF.json",
 			"labsURL":	"DKF_Labs.json",
-			"medicineFile":	"Daniel_Medicine_List.tsv",
-			"medicineType":	"tsv"
+			"Tables":   [
+                {
+					"title":	"Medicine",
+					"file":		"Daniel_Medicine_List.tsv",
+					"type":		"tsv",
+					"caption":	"ES - Express-Scripts<br>CVS = CVS in Target on Barr St. Muncie"
+				}
+			]
 		},{
 			"USERID": 	"JMF",
 			"jsonFile":	"JMF.json",
 			"labsURL":	"JMF_Labs.json",
-			"medicineFile":	"Jeanne_Medicine_List.tsv",
-			"medicineType":	"tsv"
-		}
-	]
+            "Tables":   [
+                {
+					"title":	"Medicine",
+					"file":		"Jeanne_Medicine_List.tsv",
+					"type":		"tsv",
+					"caption":	"ES - Express-Scripts<br>CVS = CVS in Target on Barr St. Muncie"
+                }
+            ]
+        }
+    ]
 }

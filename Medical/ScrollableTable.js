@@ -10,19 +10,17 @@ var lastFilteredRow=-1;
 var rows = 0;
 var cols = 0;
 var Dates;
-var xchartDiv;
+var whichOne;
 
 function loaded(){				//After window is loaded
-	//alert(window.innerWidth + " X " + window.innerHeight);
 	whichOne = window.location.search.substring(1);
 	__ReadFiles(whichOne,pageLoaded);	//Read file
 }						//Then go to loadPage
 
 function pageLoaded(fileContentsArray) {
-	// File 0 is our json file
 	myDoc = document.getElementById('myBody');
 	str = "";
-	arr = JSON.parse(fileContentsArray[0]);
+	arr = JSON.parse(fileContentsArray[whichOne]);
 
 	// Get array of dates
 	Dates = arr.Dates.reverse();
@@ -107,7 +105,7 @@ function pageLoaded(fileContentsArray) {
 	}
 
 	str = str + "</table><div id='chartDiv'></div></html>";
-	document.body.innerHTML = str;
+	myDoc.innerHTML = str;
 
 	/* Now build arrays of things we'll need later
 	   Columns 		Array of Col_x		<col>
