@@ -8,72 +8,51 @@ var today;
 var lastDate;
 var QuickLinks = [];
 var previousSection = false;
-var thisUSER;
 var userid;
 var fileContents;
-function personLoad(){
-	x = location.search;
-	if(location.search === ""){
-		alert("GO BACK");
+function personLoad(){                          // This page load
+	if(location.search === ""){                 // Must have a search
+		alert("GO BACK");                       // i.e. ?USERID string
 		return;
 	}
-	userid = location.search.substring(1);
-	__ReadFiles('Master.json',MasterRead);
+	userid = location.search.substring(1);      // Get the USERID
+                                                // Read the Master json file
+                                                // And this User's json file and 
+                                                // medicine list file
+	__ReadFiles(
+        'Master.json',
+        userid + '.json',
+        userid + '_Medicine_List.tsv',
+        loadPage);
 }
-function MasterRead(MASTER){
-	MasterArray = JSON.parse(MASTER["Master.json"]);
-	mUSERS = MasterArray.USERS;
-	/* Find entry for this user id */
-	for(i=0; i<mUSERS.length; i++){
-		if(userid == mUSERS[i].USERID){
-            thisUSER = mUSERS[i];
-            mFilesToLoad=[];
-            mFilesToLoad.push(mUSERS[i].jsonFile);      // Always load jsonFile
-            if(thisUSER.Tables !== undefined){          // Any files listed in tables
-                for (j=0; j<thisUSER.Tables.length; j++){
-                    mFilesToLoad.push(thisUSER.Tables[j].file);
-                }
-            }
-			windowLoaded(mFilesToLoad);
-			return;
-		}
-	}
-	alert("Unable to find " + userid);
-	window.location.replace("index.html");
-}
-function windowLoaded(...paths){	//After window is loaded
-	__ReadFiles(...paths[0],loadPage);	//Read list of files
-}					//Then go to loadPage
-
 /* This is the MAIN function to populate the page
  * We get here when all files have been loaded */
+
 function loadPage(filecontents) {
     fileContents = filecontents;                // Make returned object global in scope
-
 	//A few preliminaries
-	HASH = JSON.parse(filecontents[thisUSER.jsonFile]);
+    MasterArray = JSON.parse(filecontents["Master.json"]);
+	HASH = JSON.parse(filecontents[userid+".json"]);
 	DOC = document.getElementById('myspace');
 	today = new Date();
-	birthday = new Date(HASH.BIRTH);
+	birthday = new Date(HASH.PERSON["birth"]);
 
 	str = "<div id='main'>";
 
-    //addSection(Section_Type,title,parm1[,parm2])
-    addSection('Contact','Patient',HASH.ME);
-    addSection('Contact','Emergency Contacts',HASH.ICE);
-    addSection('Table','Prescriptions','Medicine');
-    addSection('Contact','Phramacies',HASH.PHARMACY);
-    addSection('List','Conditions',HASH.CONDITIONS);
-    addSection('Lab','Labs',thisUSER);
-    addSection('List','Immunizations',HASH.IMMUNIZATIONS);
-    addSection('Contact','Hospitalizations',HASH.HOSPITALIZATIONS);
-    addSection('Contact','Health Care Team',HASH.DOCTORS);
-	//All Done - show off our work
+    /* This section reads the PageLayout info from the Master.json file
+     * and displays the various Contacts, Tables, Lists and Links as
+     * defined therein */
+    PageLayout = MasterArray.PageLayout;
+    for(p=0; p<PageLayout.length; p++){
+        addSection(PageLayout[p].section[0],PageLayout[p].section[1],HASH[PageLayout[p].section[2]]);
+    }
 
+    // Add our menu area
 	str = str + "</div>\n</section>\n<div id='menu'>\n";
 	addQuickLinks();
 	str = str + "</div>\n";
-
+ 
+	//All Done - show off our work
 	DOC.innerHTML = str;
 }
 
@@ -101,6 +80,7 @@ function addSection(type,title,obj){
     previousSection = true;                 // We have now
 	str = str + "<section id='" + title + "'><h1>" + title + "</h1>\n";
 
+    if(!Array.isArray(obj)){obj = [obj];} // If not array, make it one
     /* Now handle various types of sections */
     switch(type){
         case 'Contact':                     // Contact cards
@@ -109,49 +89,56 @@ function addSection(type,title,obj){
         case 'List':                        // List format
             addListEntry(obj,title);
             break;
-        case 'Lab':                         // Labs = BloodTests
-            str = str + "<a href='Labs.html?" + obj.labsURL + 
-                    "'><img class='bloodtest' src='/images/BloodTest.png'></a>";
+        case 'Link':                         // Labs = BloodTests
+            addLink(obj,title);
             break;
         case 'Table':                       // Read file and convert to table
-            str = str + "<table class='medicine'>\n";
-            tArr = thisUSER.Tables;
-            for(t=0; t<tArr.length; t++){
-                if(tArr[t].title == obj){
-                    if(tArr[t].caption){
-                        str = str + "\t<caption>" + tArr[t].caption + "</caption>\n";
-                    }
-                    switch(tArr[t].type){
-                        case 'tsv':
-                            mArr = fileContents[tArr[t].file].split("\r");
-                            for(i=0; i<mArr.length-2; i++){
-                                str = str + '<tr><td>' + mArr[i].split("\t").join("</td><td>") + "</td></tr>\n";
-                            }
-                            str = str + '</table>\n';
-                            break;
-                        default:
-                            alert("Unknown format " + obj.medicineType);
-                    }
-                }
-            }
-            str = str + "</table>\n";
+            addTable(obj,title);
             break;
     }
 }
 
+function addLink(myObj,classid){
+    str = str + "<a href='" + myObj[0].url + "'>";
+    if(myObj[0].image !== undefined){
+        str = str + "<img class='bloodtest' src='" + myObj[0].image + "'>";
+    }
+    if(myObj[0].text !== undefined){
+        str = str + myObj[0].text;
+    }
+    str = str + "</a>";
+}
+
+function addTable(myObj,classid){
+    str = str + "<table class='" + classid + "'>\n";
+    let T = myObj[0];
+    if(T.caption !== undefined){
+        str = str + "\t<caption>" + T.caption + "</caption>\n";
+    }
+    switch(T.type){
+        case 'tsv':
+            mArr = fileContents[T.file].split("\r");
+            // Header row first
+            for(i=0; i<mArr.length-2; i++){
+                str = str + '<tr><td>' +
+                        mArr[i].split("\t").join("</td><td>") +
+                        "</td></tr>\n";
+            }
+            break;
+        default:
+            alert("Unknown format " + T.medicineType);
+    }
+    str = str + "</table>\n";
+}
 function addContacts(myObj,classid){			//Adds a contacts entry
 	for(let i=0; i<myObj.length; i++){		    //Do for each contact in array
-		str = str + "<div class='" + classid+ "'>\n";
+		str = str + "<div class='" + classid+ "' BEFORE>\n";
 		objSub = myObj[i];			            //For each contact entry
 		if(objSub.picture !== undefined){
 			myarr = objSub.picture;
-			if(Array.isArray(myarr)){
-				addPictureIcon(myarr[0]);
-				for(let j=1; j<myarr.length; j++){
-					addPictureIcon(myarr[j]);
-				}
-			} else {
-				addPictureIcon(myarr);
+            if(!Array.isArray(myarr)){myarr=[myarr];}
+			for(let j=0; j<myarr.length; j++){
+				addPictureIcon(myarr[j]);
 			}
 		}
 		if(objSub.dob !== undefined){ objSub.age = "today"; }
@@ -173,10 +160,10 @@ function addContacts(myObj,classid){			//Adds a contacts entry
             if(!Array.isArray(arr)){arr = [arr];}           //If not array, make it one
             classValue="";
             for(let i=0; i<arr.length; i++){
-                if(x === "portrait" || x === "image"){arr[i]=doPicture(arr[i],x);}
-                if(x === "date" || x === "dob"){arr[i]=doDate(arr[i])};
-                if(x === "age"){arr[i]=doAge(arr[i]);}
-                if(x === "phone"){arr[i]=addPhoneLink(arr[i]);}
+                if(x === "Portrait" || x === "Image"){arr[i]=doPicture(arr[i],x);}
+                if(x === "Date" || x === "Dob"){arr[i]=doDate(arr[i])};
+                if(x === "Age"){arr[i]=doAge(arr[i]);}
+                if(x === "Phone"){arr[i]=addPhoneLink(arr[i]);}
                 str = str + "  <p class='" + x + classValue + "'>" + arr[i] + "</p>\n";
                 classValue = "2";
             }
@@ -192,8 +179,8 @@ function addListEntry(myObj,classid){			//Add Entry - Here everything fits in ou
 	let obj = myObj.sort(titleSort);		    //Re-sort the data by title
 	for(let i=0; i<obj.length; i++){		    //For each Event
 		x = obj[i];
-		if(x.picture !== undefined){
-			arr = x.picture;
+		if(x.Picture !== undefined){
+			arr = x.Picture;
 			if(Array.isArray(arr)){
 				addPictureIcon(arr[0]);
 				for(let j=1; j<arr.length; j++){
@@ -203,10 +190,10 @@ function addListEntry(myObj,classid){			//Add Entry - Here everything fits in ou
 				addPictureIcon(arr);
 			}
 		}
-		str = str + "<ul>\n <li>" + x.title + "\n";
-		mydate = new Date(x.when);		    //Convert date to mmm yy string
-		if(x.what !== undefined){
-		  arr = x.what;
+		str = str + "<ul>\n <li>" + x.Title + "\n";
+		mydate = new Date(x.When);		    //Convert date to mmm yy string
+		if(x.What !== undefined){
+		  arr = x.What;
 		  if(Array.isArray(arr)) {		    //Is this an array, then show each element
 			str = str + "  <li><span>" + dateMonthYear(mydate) + "</span><span>" + arr[0] + "</span>\n";
 			for(let j=1; j<arr.length; j++){
@@ -233,8 +220,8 @@ function doPicture(imgname,classid){
 	}
 }
 function titleSort(a,b){				    //Sort by title string
-	const c1 = a.title.toUpperCase();
-	const c2 = b.title.toUpperCase();
+	const c1 = a.Title.toUpperCase();
+	const c2 = b.Title.toUpperCase();
 	let retval = 0;
 	if(c1 > c2) {
 		retval = 1;

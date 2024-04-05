@@ -8,7 +8,7 @@ div#main section {
 	break-inside:	avoid;
 }
 div#main h1 {
-	margin: 	1em 0em .5em 0em;
+	margin: 	0em 0em .5em 0em;
 	letter-spacing:	0.1em;
 }
 div#main div {
@@ -25,18 +25,18 @@ div#main section:nth-of-type(7n+4) div{	background-color: lavenderblush;}
 div#main section:nth-of-type(7n+5) div{	background-color: aliceblue;}
 div#main section:nth-of-type(7n+6) div{	background-color: bisque;}
 
-img.portrait,img.image{
+img.Portrait,img.Image{
 	float:		right;
 	max-width:	100px;
 	height:		auto;
 	margin:		0.2em 0.2em 0px 0px;
 	border:		1px solid blue;
 }
-img.image{
+img.Image{
 	max-width:	40px;
 	transition:	transform .2s;
 }
-img.image:hover{
+img.Image:hover{
 	transform: 	scale(2.5);
 }
 img.bloodtest{
@@ -53,21 +53,21 @@ div#main div p {
 	background-color: transparent;
 }
 
-ul {
+div#main ul {
 	margin:		2px 4px;
 	padding:	0px;
 	background-color: transparent;
 }
-li {
+div#main li {
 	list-style-type:none;
 	font-weight:	bold;
 }
-li span {
+div#main li span {
 	display:	inline-block;
 	vertical-align:	text-top;
 	font-weight:	normal;
 }
-li span:first-child {
+div#main li span:first-child {
 	min-width:	5em;
 	margin-right:	0.6em;
 	text-align:	right;
@@ -83,34 +83,16 @@ li span:first-child {
 	font-style:	italic;
 	color:		green;
 }
-.name,.procedure {
+.Name,.Procedure {
 	font-size:	130%;
 }
-
-[class^="address"]::before {content: "Address: ";}
-[class^="condition"]::before {content: "Condition: ";}
-[class^="date"]::before{content: "Date: "}
-[class^="age"]::before{content: "Age: "}
-[class^="weight"]::before{content: "Weight: "}
-[class^="height"]::before{content: "Height: "}
-[class^="insurance"]::before{content: "Insurance: "}
-[class^="location"]::before{content: "Location: "}
-[class^="phone"]::before {content: "Phone: ";}
-[class^="surgeon"]::before {content: "Surgeon: ";}
-[class^="specialty"]::before {content: "Specialty: "}
-[class^="title"]::before{content: "Procedure: "}
-[class^="race"]::before {content: "Race: ";}
-[class^="status"]::before{content: "Status: "}
-[class^="anesthesia"]::before{content: "Anesthesia: "}
-[class^="dob"]::before {content: "DOB: ";}
-[class^="sex"]::before {content: "Sex: ";}
-[class^="note"]::before {content: "Note: ";}
-[class^="phonetic"]::before {content: "Phonetic: ";}
-[class^="preferred"]::before {content: "Preferred: ";}
-[class^="relation"]::before {content: "Relationship: ";}
-[class^="critical"]::before {content: "Critical Information: ";}
-[class$="2"]::before {content: " ";}
-[class^="critical"]{
+[BEFORE] p::before{content: attr(class) ":"}
+[BEFORE] p[class$="2"]::before{content: " ";}
+[BEFORE] p[class="Procedure"]::before{display:none;}
+[BEFORE] p[class="Portrait"]::before{display:none;}
+[BEFORE] p[class="Image"]::before{display:none;}
+[BEFORE] p[class="Name"]::before{display:none;}
+[class^="Critical"]{
 	color:		red;
 	font-style:	italic;
 	font-weight:	bold;
@@ -120,28 +102,25 @@ li span:first-child {
 	font-weight:	bold;
 	color:		green;
 }
-caption{
-	font-size:	70%;
-	font-stretch:	condensed;
-	text-align:	left;
-	padding-left:	2em;
-}
-table {
+table.Prescriptions {
 	max-width:	360px;
 	border-collapse: collapse;
 	border:		1px solid  blue;
 	caption-side:	bottom;
 }
-td{	font-size:	90%;}
-tr:first-child{
+table.Prescriptions caption{
+	font-size:	70%;
+	font-stretch:	condensed;
+	text-align:	left;
+	padding-left:	2em;
+}
+table.Prescriptions td{	font-size:	90%;}
+table.Prescriptions tr:first-child{
 	background-color: royalblue;
 	color:		white;
 }
-tr:nth-child(2n){
+table.Prescriptions tr:nth-child(2n){
 	background-color: rgb(200,200,255);
-}
-td:nth-of-type(n+3){
-	text-align:	center;
 }
 div#menu{
 	font-family:	verdana;

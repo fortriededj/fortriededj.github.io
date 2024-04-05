@@ -1,137 +1,130 @@
-{	
-	"BIRTH":	"4/27/1956",
-	"ME":	[
-		{
-			"name":		"Jeanne M. Fortriede",
-			"height":	"4' 11, 59in., 1.5m.",
-			"weight":	"179lb, 81.2kg",
-			"insurance":	"Medicare and Anthem",
-			"phone":	"7657306606",
-			"note":		"<img src='/images/PDF Icon.png' style='height:40px;width:40px;vertical-align:middle;'><a href='/images/JMF Health Care Representative.pdf' type='application/pdf'>Health Care Representative Form</a>",
-			"address":	["1910 W Country Road 1000 N",
-					"Muncie, IN 47303-9745"],
-			"status":	"Retired",
-			"dob":		"4/27/1956",
-			"preferred":	"Jeanne",
-			"phonetic":	"Jean'-ee Fort'-reed",
-			"sex":		"Female",
-			"race":		"White",
-			"portrait":	"/images/JMF.png",
-			"critical":	["Type II Diabetes",
-					"Blood Type: AB+",
-					"No Known Allergies"]
-		}
-	],
-	"PHARMACY": [
-		{
-			"name":		"CVS Pharmacy #16860",
-			"address":	["Located in Muncie Target",
-					"3601 N. Barr",
-					"Muncie, IN 47303"],
-			"phone":	"7652549084",
-			"note":		"Used for Diabetic supplies (<i>test strips</i>) and non-maintenance prescriptions."
-		},
-		{	"name":		"Express Scripts",
-			"phone":	"8553158526",
-			"address":	["Express Scripts Medicare (PDP)",
-					"P.O. Box 66535",
-					"St. Louis, MO. 63166-6535"],
-			"note":		"Used for all other maintenance drugs. 90 Day refills. Some prior authorizations may be required."
-		}
-	],
-	"ICE": [
-		{
-			"name":		"Daniel K. Fortriede",
-			"phone":	"7657290388",
-			"address":	[ "1910 W Country Road 1000 N",
-					"Muncie, IN 47303-9745"],
-			"relation":	"Husband"
-		},
-		{
-			"phone":	"7657295767",
-			"relation":	"Son",
-			"name":		"Joshua D. Fortriede",
-			"address":	["5921 Monticello Ave",
-					"Cincinnati, OH 45224-2319"]
-		}
-	],
-	"IMMUNIZATIONS": [
-		{	"title":	"Covid",
-			"image":	"/images/Covid Jeanne.png",
-			"when":		"11/2/23",
-			"what":		["Pfizer lot #HG4589 11/2/23",
-					"Pfizer lot #GL0446 1/14/23",
-					"Pfizer lot #FP7139 7/22/22",
-					"Pfizer lot #FH8020 11/13/21",
-					"Pfizer lot #EN6208 4/7/21",
-					"Pfizer lot #EN6201 3/16/21"]
-		},
-		{	"title":	"Flu",
-			"when":		"10/24/23",
-			"what":		["Fluzone high-dose quad 10/24/23",
-					"Fluzone high-does quad 10/23/22",
-					"Fluzone high-does quad 10/19/21",
-					"Fluzone high-does quad 10/20/20",
-					"Flucelvax 11/6/18"]
-		},
-		{	"title":	"Pneumonia",
-			"when":		"9/19/21",
-			"what":		"Prevnar 13 on 9/19/21"
-		},
-		{	"title":	"Shingles",
-			"when":		"12/2/20",
-			"what":		["Shingrix 12/2/20","Shingrix 9/5/20"]
-		},
-		{	"title":	"Tdap",
-			"when":		"1/9/2015"
-		}
-	],
-	"CONDITIONS": [
-		{	"title":	"Diabetes Mellitis type 2",
-			"when":		"4/12/2001",
-			"what":		"Taking Tresiba"
-		},
-		{	"title":	"Hypertension",
-			"when":		"11/12/09",
-			"what":		"Generally controlled"
-		},
-		{	"title":	"Hypercholesteremia",
-			"when":		"9/18/12",
-			"what":		"Monitoring"
-		},
-		{	"title":	"Fibromyalgia",
-			"when":		"6/1/09",
-			"what":		"Monitoring"
-		}
-	],
-	"HOSPITALIZATIONS": [
-		{	"procedure":	"Laparoscropic Cholecystectomy",
-			"date":		"4/11/11",
-			"location":	"IU Ball Memorial",
-			"anesthesia":	"Yes"
-		},{
-			"procedure":	"Colonoscopy",
-			"date":		"9/22/11",
-			"anesthesia":	"Yes"
-		}
-	],
-	"DOCTORS": [
-		{
-			"portrait":	"/images/JohnPeterson.jpg",
-			"name":		"John C. Peterson MD",
-			"specialty":	"Primary Care Physician",
-			"phone":	["7652827475",
-					"7652827438"],
-			"address":	["2423 West Jackson",
-					"Muncie, IN"]
-		},{
-			"name":		"Garrett Zgunda, OD",
-			"portrait":	"/images/GarrettZgunda.jpg",
-			"specialty":	"Optometry",
-			"phone":	"7652887744",
-			"address":	["Family Vision Care",
-					"4801 W Bethel Ave",
-					"Muncie, IN 47304"]
-		}
-	]
+{
+    "MEDICINE": {
+        "file": "JMF_Medicine_List.tsv",
+        "type": "tsv"
+    },
+    "LABS":     {
+        "url": "Labs.html?JMF_Labs.json",
+        "image":    "/images/BloodTest.png"
+    },
+    "PERSON":    {
+        "Name":     "Jeanne M. Fortriede",
+        "Birth":    "4/27/1956",
+        "Height":   "4' 11, 59in., 1.5m.",
+        "Weight":   "179lb, 81.2kg",
+        "Insurance": "Medicare and Anthem",
+        "Phone":    "7657306606",
+        "Note":     "<img src='/images/PDF Icon.png' style='height:40px;width:40px;vertical-align:middle;'><a href='/images/JMF Health Care Representative.pdf' type='application/pdf'>Health Care Representative Form</a>",
+        "Address":  ["1910 W Country Road 1000 N", "Muncie, IN 47303-9745"],
+        "Status":   "Retired",
+        "Dob":      "4/27/1956",
+        "Preferred": "Jeanne",
+        "Phonetic": "Jean'-ee Fort'-reed",
+        "Sex":      "Female",
+        "Race":     "White",
+        "Portrait": "/images/JMF.png",
+        "Critical": ["Type II Diabetes", "Blood Type: AB+", "No Known Allergies"]
+    },
+    "PHARMACY": [
+        {
+            "Name":     "CVS Pharmacy #16860",
+            "Address":  ["Located in Muncie Target", "3601 N. Barr", "Muncie, IN 47303"],
+            "Phone":    "7652549084",
+            "Note":     "Used for Diabetic supplies (<i>test strips</i>) and non-maintenance prescriptions."
+        },
+        {    "Name":    "Express Scripts",
+            "Phone":    "8553158526",
+            "Address":  ["Express Scripts Medicare (PDP)", "P.O. Box 66535", "St. Louis, MO. 63166-6535"],
+            "Note":     "Used for all other maintenance drugs. 90 Day refills. Some prior authorizations may be required."
+        }
+    ],
+    "ICE": [
+        {
+            "Name":     "Daniel K. Fortriede",
+            "Phone":    "7657290388",
+            "Address":  ["1910 W Country Road 1000 N", "Muncie, IN 47303-9745"],
+            "Relation": "Husband"
+        },
+        {
+            "Phone":    "7657295767",
+            "Relation": "Son",
+            "Name":     "Joshua D. Fortriede",
+            "Address":  ["5921 Monticello Ave", "Cincinnati, OH 45224-2319"]
+        }
+    ],
+    "IMMUNIZATIONS": [
+        {   "Title":    "Covid",
+            "Image":    "/images/Covid Jeanne.png",
+            "When":     "11/2/23",
+            "What":     ["Pfizer lot #HG4589 11/2/23",
+                         "Pfizer lot #GL0446 1/14/23",
+                         "Pfizer lot #FP7139 7/22/22",
+                         "Pfizer lot #FH8020 11/13/21",
+                         "Pfizer lot #EN6208 4/7/21",
+                         "Pfizer lot #EN6201 3/16/21"]
+        },
+        {   "Title":    "Flu",
+            "When":     "10/24/23",
+            "What":     ["Fluzone high-dose quad 10/24/23",
+                         "Fluzone high-does quad 10/23/22",
+                         "Fluzone high-does quad 10/19/21",
+                         "Fluzone high-does quad 10/20/20",
+                         "Flucelvax 11/6/18"]
+        },
+        {   "Title":    "Pneumonia",
+            "When":     "9/19/21",
+            "What":     "Prevnar 13 on 9/19/21"
+        },
+        {   "Title":    "Shingles",
+            "When":     "12/2/20",
+            "What":     ["Shingrix 12/2/20","Shingrix 9/5/20"]
+        },
+        {   "Title":    "Tdap",
+            "When":     "1/9/2015"
+        }
+    ],
+    "CONDITIONS": [
+        {   "Title":    "Diabetes Mellitis type 2",
+            "When":     "4/12/2001",
+            "What":     "Taking Tresiba"
+        },
+        {   "Title":    "Hypertension",
+            "When":        "11/12/09",
+            "What":        "Generally controlled"
+        },
+        {   "Title":    "Hypercholesteremia",
+            "When":     "9/18/12",
+            "What":     "Monitoring"
+        },
+        {   "Title":    "Fibromyalgia",
+            "When":     "6/1/09",
+            "What":     "Monitoring"
+        }
+    ],
+    "HOSPITALIZATIONS": [
+        {   "Procedure":    "Laparoscropic Cholecystectomy",
+            "Date":         "4/11/11",
+            "Location":     "IU Ball Memorial",
+            "Anesthesia":   "Yes"
+        },{
+            "Procedure":    "Colonoscopy",
+            "Date":         "9/22/11",
+            "Anesthesia":   "Yes"
+        }
+    ],
+    "DOCTORS": [
+        {
+            "Portrait":     "/images/JohnPeterson.jpg",
+            "Name":         "John C. Peterson MD",
+            "Specialty":    "Primary Care Physician",
+            "Phone":        ["7652827475", "7652827438"],
+            "Address":      ["2423 West Jackson", "Muncie, IN"]
+        },{
+            "Name":         "Garrett Zgunda, OD",
+            "Portrait":     "/images/GarrettZgunda.jpg",
+            "Specialty":    "Optometry",
+            "Phone":        "7652887744",
+            "Address":      ["Family Vision Care", "4801 W Bethel Ave", "Muncie, IN 47304"]
+        }
+    ]
 }

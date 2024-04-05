@@ -1,38 +1,31 @@
 {
-	"ContactOrder": ["image","portrait",
-		"name", "procedure", 
-		"dob", "date", 
-		"age", "height", "weight",
-		"surgeon", "specialty", "condition",
-		"phone", "address", "location",
-		"anesthesia",
-		"sex", "race", "status", "preferred", "phonetic",
-		"relation", "critical", "insurance", "note"],
-	"USERS": [
-		{
-			"USERID": 	"DKF",
-			"jsonFile":	"DKF.json",
-			"labsURL":	"DKF_Labs.json",
-			"Tables":   [
-                {
-					"title":	"Medicine",
-					"file":		"Daniel_Medicine_List.tsv",
-					"type":		"tsv",
-					"caption":	"ES - Express-Scripts<br>CVS = CVS in Target on Barr St. Muncie"
-				}
-			]
-		},{
-			"USERID": 	"JMF",
-			"jsonFile":	"JMF.json",
-			"labsURL":	"JMF_Labs.json",
-            "Tables":   [
-                {
-					"title":	"Medicine",
-					"file":		"Jeanne_Medicine_List.tsv",
-					"type":		"tsv",
-					"caption":	"ES - Express-Scripts<br>CVS = CVS in Target on Barr St. Muncie"
-                }
-            ]
+    "USERS": [
+        {
+            "USERID":   "DKF",
+            "jsonFile": "DKF.json"
+        },{
+            "USERID":   "JMF",
+            "jsonFile": "JMF.json"
         }
-    ]
+    ],
+    "PageLayout": [
+        {"section": ["Contact","Patient","PERSON"]},
+        {"section": ["Contact","Emergency Contacts","ICE"]},
+        {"section": ["Table","Prescriptions","MEDICINE"]},
+        {"section": ["Contact","Pharmacies","PHARMACY"]},
+        {"section": ["List","Conditions","CONDITIONS"]},
+        {"section": ["Link","Labs","LABS"]},
+        {"section": ["List","Immunizations","IMMUNIZATIONS"]},
+        {"section": ["Contact","Hospitalizations","HOSPITALIZATIONS"]},
+        {"section": ["Contact","Health Care Team","DOCTORS"]}
+    ],
+    "ContactOrder": ["Image", "Portrait",
+                    "Name", "Procedure", 
+                    "Dob", "Date", 
+                    "Age", "Height", "Weight",
+                    "Surgeon", "Specialty", "Condition",
+                    "Phone", "Address", "Location",
+                    "Anesthesia",
+                    "Sex", "Race", "Status", "Preferred", "Phonetic",
+                    "Relation", "Critical", "Insurance", "Note"]
 }
