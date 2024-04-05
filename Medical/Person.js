@@ -46,7 +46,6 @@ function loadPage(filecontents) {
     for(p=0; p<PageLayout.length; p++){
         addSection(PageLayout[p].section[0],PageLayout[p].section[1],HASH[PageLayout[p].section[2]]);
     }
-
     // Add our menu area
 	str = str + "</div>\n</section>\n<div id='menu'>\n";
 	addQuickLinks();
@@ -56,6 +55,8 @@ function loadPage(filecontents) {
 	DOC.innerHTML = str;
 }
 
+/* Build a list (menu) of each section we've built on this page
+ * and turn it into a clickable menu */
 function addQuickLinks(){
 	str = str + "<p><a href='#top'>Top of Page</a></p>\n";
 	for(i = 0; i< QuickLinks.length; i++){
@@ -68,74 +69,79 @@ function addQuickLinks(){
 	 * bottom margin thickness in pt) times (*) number of menu items +
 	 * 2 (for "Menu" entry) */
 	offsetValue = (12 + 1 + 1)*(2 + QuickLinks.length)+2;
+    /* Position the menu */
 	str = str + "<style>div#menu{top: -" + offsetValue + "pt;}</style>\n";
 }
 
+/* This routine builds the <section> tag for each category */
 function addSection(type,title,obj){
-    /* First add the section */
-	QuickLinks.push(title);                     // Store for menu
+                                            /* First add the section */
+	QuickLinks.push(title);                 // Store for menu
 	if(previousSection){                    // Had we previously opened a section
 		str = str + "</section>\n";         // Yes, close it
 	}
     previousSection = true;                 // We have now
 	str = str + "<section id='" + title + "'><h1>" + title + "</h1>\n";
 
-    if(!Array.isArray(obj)){obj = [obj];} // If not array, make it one
-    /* Now handle various types of sections */
-    switch(type){
+    if(!Array.isArray(obj)){obj = [obj];}   // If not array, make it one
+
+    switch(type){                           // Now handle various types of sections 
         case 'Contact':                     // Contact cards
             addContacts(obj,title);
             break;
         case 'List':                        // List format
             addListEntry(obj,title);
             break;
-        case 'Link':                         // Labs = BloodTests
+        case 'Link':                        // Labs = BloodTests
             addLink(obj,title);
             break;
         case 'Table':                       // Read file and convert to table
             addTable(obj,title);
             break;
+        default:
+            alert("Unknown section type " + type);
     }
 }
 
-function addLink(myObj,classid){
+function addLink(myObj,classid){            // Add a link
+                                            // Link to destination URL
     str = str + "<a href='" + myObj[0].url + "'>";
-    if(myObj[0].image !== undefined){
+    if(myObj[0].image !== undefined){       // If img, include
         str = str + "<img class='bloodtest' src='" + myObj[0].image + "'>";
     }
-    if(myObj[0].text !== undefined){
+    if(myObj[0].text !== undefined){        // If text, include it
         str = str + myObj[0].text;
     }
     str = str + "</a>";
 }
 
-function addTable(myObj,classid){
+function addTable(myObj,classid){           // Create a table from a file
     str = str + "<table class='" + classid + "'>\n";
-    let T = myObj[0];
-    if(T.caption !== undefined){
+    let T = myObj[0];                       // For easier coding
+    if(T.caption !== undefined){            // If caption, add it
         str = str + "\t<caption>" + T.caption + "</caption>\n";
     }
-    switch(T.type){
-        case 'tsv':
+    switch(T.type){                         // We know only certain types of files
+        case 'tsv':                         // TSV (Tab Separated Values)
             mArr = fileContents[T.file].split("\r");
-            // Header row first
-            for(i=0; i<mArr.length-2; i++){
+            for(i=0; i<mArr.length-2; i++){ // For each row, split and rejoin
                 str = str + '<tr><td>' +
                         mArr[i].split("\t").join("</td><td>") +
                         "</td></tr>\n";
             }
             break;
-        default:
+        default:                            // Might add other types later
             alert("Unknown format " + T.medicineType);
     }
     str = str + "</table>\n";
 }
-function addContacts(myObj,classid){			//Adds a contacts entry
-	for(let i=0; i<myObj.length; i++){		    //Do for each contact in array
+function addContacts(myObj,classid){        //Adds a contacts entry
+	for(let i=0; i<myObj.length; i++){      //Do for each contact in array
+                                            //BEFORE clause fixes field titles
 		str = str + "<div class='" + classid+ "' BEFORE>\n";
-		objSub = myObj[i];			            //For each contact entry
-		if(objSub.picture !== undefined){
-			myarr = objSub.picture;
+		objSub = myObj[i];			        //For each contact entry
+		if(objSub.picture !== undefined){   //Are there pictures to include
+			myarr = objSub.picture;         //Add each on
             if(!Array.isArray(myarr)){myarr=[myarr];}
 			for(let j=0; j<myarr.length; j++){
 				addPictureIcon(myarr[j]);
@@ -147,9 +153,9 @@ function addContacts(myObj,classid){			//Adds a contacts entry
 		MasterArray.ContactOrder.forEach(addContactElement);//Add ordered list of contact parms
 		str = str + "</div>\n";
 	}
-	function addContactElement(x){			    //Add this particular parm
-		if(objSub[x] !== undefined){		    //Only if defined (of course)
-			arr = objSub[x];		            //Easier Reference
+	function addContactElement(x){          //Add this particular parm
+		if(objSub[x] !== undefined){		//Only if defined (of course)
+			arr = objSub[x];		        //Easier Reference
 			if(x.picture !== undefined){
 				myarr = x.picture;
                 if(!Array.isArray(myarr)){myarr = [myarr];} //If not array, make it one
@@ -157,9 +163,9 @@ function addContacts(myObj,classid){			//Adds a contacts entry
                     addPictureIcon(myarr[j]);
                 }
 			}
-            if(!Array.isArray(arr)){arr = [arr];}           //If not array, make it one
+            if(!Array.isArray(arr)){arr = [arr];} //If not array, make it one
             classValue="";
-            for(let i=0; i<arr.length; i++){
+            for(let i=0; i<arr.length; i++){//Handle special cases
                 if(x === "Portrait" || x === "Image"){arr[i]=doPicture(arr[i],x);}
                 if(x === "Date" || x === "Dob"){arr[i]=doDate(arr[i])};
                 if(x === "Age"){arr[i]=doAge(arr[i]);}
@@ -181,31 +187,28 @@ function addListEntry(myObj,classid){			//Add Entry - Here everything fits in ou
 		x = obj[i];
 		if(x.Picture !== undefined){
 			arr = x.Picture;
-			if(Array.isArray(arr)){
-				addPictureIcon(arr[0]);
-				for(let j=1; j<arr.length; j++){
-					addPictureIcon(arr[j]);
-				}
-			} else {
-				addPictureIcon(arr);
-			}
+            if(!Array.isArray(arr)){arr = [arr];}
+            for(let j=1; j<arr.length; j++){
+                addPictureIcon(arr[j]);
+            }
 		}
 		str = str + "<ul>\n <li>" + x.Title + "\n";
-		mydate = new Date(x.When);		    //Convert date to mmm yy string
+		mydate = new Date(x.When);              //Convert date to mmm yy string
 		if(x.What !== undefined){
 		  arr = x.What;
-		  if(Array.isArray(arr)) {		    //Is this an array, then show each element
+		  if(Array.isArray(arr)) {		        //Is this an array, then show each element
 			str = str + "  <li><span>" + dateMonthYear(mydate) + "</span><span>" + arr[0] + "</span>\n";
 			for(let j=1; j<arr.length; j++){
 				str = str + "  <li><span></span><span>" + arr[j] + "</span>\n";
 			}
-		  } else {				            //Just show the first one
+		  } else {				                //Just show the first one
 			str = str + "  <li><span>" + dateMonthYear(mydate) + "</span><span>" + arr + "</span>\n";
 		  }
 		} else {
+                                                //Here when just a label, no data
 			str = str + "  <li><span>" + dateMonthYear(mydate) + "</span><span></span>\n";
 		}
-		str = str + "</ul>\n";			    //Finish up
+		str = str + "</ul>\n";			        //Finish up
 	}
 	str = str + "</div>";
 }
@@ -233,6 +236,7 @@ function titleSort(a,b){				    //Sort by title string
 
 /* Format date to mmm yy */
 function dateMonthYear(x){ return MONTHS[x.getMonth()] + " '" + x.getFullYear().toString().substring(2); }
+/* Format date to m/dd/yy */
 function shortDate(x){
 	let m = x.getMonth()+1;
 	let d = x.getDate();
@@ -241,18 +245,22 @@ function shortDate(x){
 	return m + "/" + d + "/" + y;
 }
 
+/* Reformat telephone number */
 function addPhoneLink(p){
 	return '<a href="tel:' + p.substring(0,3) + "-" + 
 		p.substring(3,6) + "-" + p.substring(6,10) +  '">(' + 
 		p.substring(0,3) + ")-" + p.substring(3,6) + "-" + 
 		p.substring(6,10) + '</a>';
 }
+/* Calculate how old someone was on a certain date, or
+ * How long it has been since a specific date */
 function doAge(base){
 	if(base === "DOB" || base === "birthday"){base = birthday;}
 	if(base === "today"){base = today;}
 	let basex = calcDateDiff(base,lastDate);
 	return basex;
 }
+/* Get today's date in sort format */
 function doDate(d){
 	let x = new Date(d);
 	lastDate=x;
