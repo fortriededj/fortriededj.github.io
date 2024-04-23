@@ -123,7 +123,7 @@ function addTable(myObj,classid){           // Create a table from a file
     }
     switch(T.type){                         // We know only certain types of files
         case 'tsv':                         // TSV (Tab Separated Values)
-            mArr = fileContents[T.file].split("\r");
+            mArr = fileContents[T.file].split("\n");
             for(i=0; i<mArr.length-2; i++){ // For each row, split and rejoin
                 str = str + '<tr><td>' +
                         mArr[i].split("\t").join("</td><td>") +
