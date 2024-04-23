@@ -119,12 +119,11 @@ function addTable(myObj,classid){           // Create a table from a file
     str = str + "<table class='" + classid + "'>\n";
     let T = myObj[0];                       // For easier coding
     if(T.caption !== undefined){            // If caption, add it
-        str = str + "\t<caption>DAN" + T.caption + "</caption>\n";
+        str = str + "\t<caption>" + T.caption + "</caption>\n";
     }
     switch(T.type){                         // We know only certain types of files
         case 'tsv':                         // TSV (Tab Separated Values)
             mArr = fileContents[T.file].split("\n");
-            console.log('Lines = ' + mArr.length);
             for(i=0; i<mArr.length-2; i++){ // For each row, split and rejoin
                 str = str + '<tr><td>' +
                         mArr[i].split("\t").join("</td><td>") +
