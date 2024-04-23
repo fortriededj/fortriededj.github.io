@@ -119,7 +119,7 @@ function addTable(myObj,classid){           // Create a table from a file
     str = str + "<table class='" + classid + "'>\n";
     let T = myObj[0];                       // For easier coding
     if(T.caption !== undefined){            // If caption, add it
-        str = str + "\t<caption>" + T.caption + "</caption>\n";
+        str = str + "\t<caption>DAN" + T.caption + "</caption>\n";
     }
     switch(T.type){                         // We know only certain types of files
         case 'tsv':                         // TSV (Tab Separated Values)
