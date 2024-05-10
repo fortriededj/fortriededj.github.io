@@ -14624,8 +14624,8 @@
          "Lipid",
          "Urinalysis",
          "Urine Chemistry",
-         "Vitamins",
          "Tacrolimus",
+         "Vitamins",
          "Zinc",
          "Patient Measurements",
          "Iron",
@@ -15447,7 +15447,10 @@
                "Value" : "7.6"
             },
             "1708578000" : {
-               "Value" : 6.8
+               "Value" : "6.8"
+            },
+            "1715054400" : {
+               "Value" : 7.7
             },
             "Graphable" : "True",
             "High" : 20.0,
