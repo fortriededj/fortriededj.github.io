@@ -282,13 +282,21 @@
                             "550 University Blvd",
                             "Indianapolis, IN 46202"]
         },{
-            "Name":        "Shania Mayer",
+            "Name":        "Shania Mayer, PAC",
             "Specialty":   "Gastroenterology",
-            "Condition":   "[Pancreatitis", "May 2021"],
+            "Condition":   ["Pancreatitis", "May 2021"],
             "Phone":       "3179440980",
             "Address":     ["IU Health University",
                             "550 University Blvd",
                             "Indianapolis, IN 46202"]
+        },{
+            "Name":        "Lesley Greiner, SPL",
+            "Portrait":    "/images/Lesley-Greiner.jpg",
+            "Specialty":   "Speech Pathology",
+	    "Condition":   "Throat and Swallowing",
+	    "Phone":	   "7657512555",
+	    "Address":	   ["3300 Community Dr.",
+	    		   "Muncie, IN"]
         },{
             "Name":        "Elizabeth Peacock, MD",
             "Portrait":    "/images/ElizabethPeacock.png",
@@ -298,13 +306,6 @@
             "Address":     ["Lifetime Skin Care",
                            "401 W McGalliard Rd",
                            "Muncie, IN 47303"]
-        },{
-            "Name":        "Griener, Lesley, SLP",
-            "Portrait":    "/images/Lesley-Greiner.jpg",
-            "Condition":   "Throat issues",
-            "Phone":       "7652512555",
-            "Address":     ["3300 W. Community Dr,
-                            Muncie, IN."]
         },{
             "Name":        "Garrett Zgunda, OD",
             "Portrait":    "/images/GarrettZgunda.jpg",
