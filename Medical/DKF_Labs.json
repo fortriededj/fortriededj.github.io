@@ -16298,8 +16298,8 @@
          "Lipid",
          "Urinalysis",
          "Urine Chemistry",
-         "Patient Measurements",
          "Tacrolimus",
+         "Patient Measurements",
          "Routine Coagulation Studies",
          "Blood Bank Testing",
          "Iron",
@@ -16661,7 +16661,7 @@
                "Value" : "74"
             },
             "1726804800" : {
-               "Value" : 96
+               "Value" : 84
             },
             "Graphable" : "True",
             "High" : 100,
@@ -17241,7 +17241,10 @@
                "Value" : "6.9"
             },
             "1726459200" : {
-               "Value" : 5.9
+               "Value" : "5.9"
+            },
+            "1726804800" : {
+               "Value" : 2.9
             },
             "Graphable" : "True",
             "High" : 20.0,
