@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <div id="main" style="width: 95%;height:90%;"></div>
+    <div id="main" style="width: 95%;height:100%;"></div>
 
 </body>
 <style>
@@ -37,7 +37,8 @@
                 [
                     {
                         'date': '2024-09-05',
-                        'event': 'Transfusion'
+                        'event': 'Transfusion',
+                        'offset': 2
                     },
                     {
                         'date': '2021-05-26',
@@ -52,7 +53,7 @@
                     {
                         'date': '2024-07-25',
                         'event': 'Swallow Study 2',
-                        'offset': 1
+                        'offset': 0
                     },
                     {
                         'date': '2016-02-26',
@@ -115,7 +116,8 @@
                     },
                     {
                         'date': '2024-09-03',
-                        'event': 'ER: Malnutrition'
+                        'event': 'ER: Malnutrition',
+                        'offset': 1
                     },
                     {
                         'date': '2024-09-16',
@@ -158,8 +160,12 @@
             option = {
                 legend: {},
                 grid: {
-                    bottom: 70,
+                    top: 30,
+                    right: 50,
                 },
+                // grid: {
+                //     bottom: 70,
+                // },
                 xAxis: [{
                     type: 'category',
                     // axisLabel: {
@@ -235,11 +241,12 @@
                     feature: {
                         dataZoom: {
                             yAxisIndex: 'none',
-                            offset: 100
+                            offset: 10
                         },
                         restore: {},
                         saveAsImage: {}
-                    }
+                    },
+                    right: 80,
                 },
                 dataZoom: [
                     {
