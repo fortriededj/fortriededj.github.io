@@ -1,0 +1,467 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 1600px;height:800px;"></div>
+
+</body>
+<style>
+    body {
+        color: #c57000;
+    }
+</style>
+
+<script>
+    function initChart(option) {
+        var chartDom = document.getElementById('main');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        // option = {
+        //     color: colors,
+        //     tooltip: {
+        //         trigger: 'none',
+        //         axisPointer: {
+        //             type: 'cross'
+        //         }
+        //     },
+        //     legend: {},
+        //     grid: {
+        //         top: 70,
+        //         bottom: 50
+        //     },
+        //     xAxis: [
+        //         {
+        //             type: 'category',
+        //             axisTick: {
+        //                 alignWithLabel: true
+        //             },
+        //             axisLine: {
+        //                 onZero: false,
+        //                 lineStyle: {
+        //                     color: colors[1]
+        //                 }
+        //             },
+        //             axisPointer: {
+        //                 label: {
+        //                     formatter: function (params) {
+        //                         return (
+        //                             'Precipitation  ' +
+        //                             params.value +
+        //                             (params.seriesData.length ? '：' + params.seriesData[0].data : '')
+        //                         );
+        //                     }
+        //                 }
+        //             },
+        //             // prettier-ignore
+        //             data: ['2016-1', '2016-2', '2016-3', '2016-4', '2016-5', '2016-6', '2016-7', '2016-8', '2016-9', '2016-10', '2016-11', '2016-12']
+        //         },
+        //         {
+        //             type: 'category',
+        //             axisTick: {
+        //                 alignWithLabel: true
+        //             },
+        //             axisLine: {
+        //                 onZero: false,
+        //                 lineStyle: {
+        //                     color: colors[0]
+        //                 }
+        //             },
+        //             axisPointer: {
+        //                 label: {
+        //                     formatter: function (params) {
+        //                         return (
+        //                             'Precipitation  ' +
+        //                             params.value +
+        //                             (params.seriesData.length ? '：' + params.seriesData[0].data : '')
+        //                         );
+        //                     }
+        //                 }
+        //             },
+        //             // prettier-ignore
+        //             data: ['2015-1', '2015-2', '2015-3', '2015-4', '2015-5', '2015-6', '2015-7', '2015-8', '2015-9', '2015-10', '2015-11', '2015-12']
+        //         }
+        //     ],
+        //     yAxis: [
+        //         {
+        //             type: 'value'
+        //         }
+        //     ],
+        //     series: [
+        //         {
+        //             name: 'Precipitation(2015)',
+        //             type: 'line',
+        //             xAxisIndex: 1,
+        //             smooth: true,
+        //             emphasis: {
+        //                 focus: 'series'
+        //             },
+        //             data: [
+        //                 2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3
+        //             ]
+        //         },
+        //         {
+        //             name: 'Precipitation(2016)',
+        //             type: 'line',
+        //             smooth: true,
+        //             emphasis: {
+        //                 focus: 'series'
+        //             },
+        //             data: [
+        //                 3.9, 5.9, 11.1, 18.7, 48.3, 69.2, 231.6, 46.6, 55.4, 18.4, 10.3, 0.7
+        //             ]
+        //         }
+        //     ]
+        // };
+
+        option && myChart.setOption(option);
+    }
+</script>
+
+<script>
+    let url = 'DKF_Labs.json';
+
+    let data = {}
+
+    fetch(url)
+        .then(res => res.json())
+        .then(out => {
+            const colors = ['#1c9126', '#5470C6', '#910000', '#c57000'];
+
+            const events =
+                [
+                    {
+                        'date': '2019-12-16',
+                        'event': 'Spider Bite'
+                    },
+                    {
+                        'date': '2021-06-01',
+                        'event': 'TAVR'
+                    },
+                    {
+                        'date': '2021-06-02',
+                        'event': 'Pacemaker',
+                        'offset': 1
+                    },
+                    {
+                        'date': '2021-06-02',
+                        'event': 'Blood Transfusion',
+                        'offset': 1,
+                    },
+                    {
+                        'date': '2002/12/5',
+                        'event': 'Transplant'
+                    },
+                    {
+                        'date': '2022-03-03',
+                        'event': 'Heart Cath'
+                    },
+                    {
+                        'date': '2022-12-15',
+                        'event': 'Edema Hosp.',
+                        'offset': 1
+                    },
+                    {
+                        'date': '2021-07-23',
+                        'event': 'TEE',
+                    },
+                    {
+                        'date': '2021-04-29',
+                        'event': 'ER: Pleural Eff.',
+                        'offset': 1
+                    },
+                    {
+                        'date': '2021-04-01',
+                        'event': 'Pancreatic Stone'
+                    },
+                    {
+                        'date': '2024-09-03',
+                        'event': 'ER: Malnutrition'
+                    },
+                    {
+                        'date': '2024-09-16',
+                        'event': 'NJ Tube'
+                    },
+                    {
+                        'date': '2016-02-26',
+                        'event': 'Retirement'
+                    }
+                ]
+            const manualValues = {
+                "Patient Measurements": {
+                    "Weight": {
+                        '2024-09-20': 137,
+                        '2024-09-19': 155.6
+                    }
+                }
+            }
+            var epochs;
+            storeDates();
+
+            console.log("2024-09-19", epochs.indexOf('2024-09-19'));
+            console.log("2019-12-16", epochs.indexOf('2019-12-16'));
+
+            console.log('Checkout this JSON! ', out);
+
+            events.forEach(function (item) {
+                interjectDate(item['date']);
+            });
+
+            for (const [category, value] of Object.entries(manualValues)) {
+                for (const [key, data] of Object.entries(value)) {
+                    for (const [date, value] of Object.entries(data)) {
+                        addManualValue(category, key, date, value);
+                    }
+                }
+            }
+
+            console.log("2024-09-19", epochs.indexOf('2024-09-19'));
+            console.log("2019-12-16", epochs.indexOf('2019-12-16'));
+
+            var dataset = { 'source': [] };
+            dataset['dimensions'] =
+
+                console.log(dataset);
+
+            option = {
+                legend: {},
+                tooltip: {},
+                grid: {
+                    bottom: 100,
+                },
+                xAxis: [{
+                    type: 'category',
+                    axisLabel: {
+                        rotate: 30
+                    },
+                    data: out['Dates'].map(function (item) {
+                        // convert epoch to date
+                        return epochToDay(item);
+                    })
+                }]
+                ,
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: 'Weight',
+                        min: 100,
+                        max: 300,
+                        position: 'right',
+                        alignTicks: true,
+                        axisLine: {
+                            lineStyle: {
+                                color: colors[1]
+                            }
+                        },
+                        axisLabel: {
+                            formatter: '{value} lbs'
+                        },
+                        interval: 50
+                    }, {
+                        type: 'value',
+                        name: 'RBC',
+                        min: 0,
+                        max: 6,
+                        position: 'left',
+                        alignTicks: true,
+                        axisLine: {
+                            lineStyle: {
+                                color: colors[2]
+                            }
+                        },
+                        axisLabel: {
+                            formatter: '{value}'
+                        },
+                        splitNumber: 5
+                    }, {
+                        type: 'value',
+                        name: 'Creatinine',
+                        min: 0,
+                        max: 10,
+                        offset: 80,
+                        position: 'left',
+                        alignTicks: true,
+                        axisLine: {
+                            lineStyle: {
+                                color: colors[3]
+                            }
+                        },
+                        axisLabel: {
+                            formatter: '{value}'
+                        },
+                        splitNumber: 5
+                    }
+                ],
+                tooltip: [{
+                    order: 'valueDesc',
+                    trigger: 'axis'
+                }
+                ],
+                toolbox: {
+                    feature: {
+                        dataZoom: {
+                            yAxisIndex: 'none',
+                            offset: 100
+                        },
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                dataZoom: [
+                    {
+                        type: 'inside',
+                        start: 30,
+                        end: 100,
+                        xAxisIndex: [0]
+                    },
+                    {
+                        start: 90,  //Not sure why I need this but I do. 
+                        end: 100
+                    }
+                ],
+                series: [
+
+                    {
+                        type: 'line',
+                        name: 'Weight',
+                        color: colors[1],
+                        data: out['Dates'].map(function (epoch) {
+                            if (epoch in out['DATA']['Patient Measurements']['Weight']) {
+                                return out['DATA']['Patient Measurements']['Weight'][epoch]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        yAxisIndex: 0,
+                        markPoint: {
+                            data: [
+                                { type: 'max', name: 'Max' },
+                                { type: 'min', name: 'Min' },
+                            ]
+                        }
+                    },
+
+                    {
+                        type: 'line',
+                        name: 'RBC',
+                        color: colors[2],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['CBC']['RBC']) {
+                                return out['DATA']['CBC']['RBC'][item]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        yAxisIndex: 1
+                    },
+
+                    {
+                        type: 'line',
+                        name: 'Creatinine',
+                        color: colors[3],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['CMP']['Creatinine']) {
+                                return out['DATA']['CMP']['Creatinine'][item]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        yAxisIndex: 2,
+                    },
+                    {
+                        type: 'scatter',
+                        name: 'Events',
+                        // data: out['Dates'].map(function (item) {
+                        //     date = epochToDay(item);
+                        //     if (date in events) {
+                        //         return events[date]
+                        //     }
+                        //     return '';
+                        // }),
+                        markPoint: {
+                            label: {
+                                formatter: function (param) {
+                                    return param.name
+                                }
+                            },
+                            data: events.map(function (item) {
+                                return {
+                                    name: item['event'],
+                                    coord: [item['date'], 0],
+                                    symbol: 'pin',
+                                    symbolSize: [20, 30],
+                                    label: {
+                                        position: [0, -15],
+                                        offset: [0, -item['offset'] * 15 || 0]
+                                    }
+                                }
+                            })
+                            // [
+                            //     {
+                            //         name: 'Spider Bite',
+                            //         coord: ['2019-12-18', 0],
+                            //         symbol: 'pin',
+                            //         symbolSize: [20, 30],
+                            //         label: {
+                            //             position: 'top'
+                            //         }
+                            //     },
+                            // ],
+
+                        },
+                        symbol: 'pin',
+                        yAxisIndex: 1
+                    }
+
+                ]
+            };
+
+            console.log(option);
+
+            function interjectDate(date) {
+                indexof = epochs.indexOf(date);
+                if (indexof != -1) {
+                    console.log("Date already exists", date);
+                    return indexof;
+                }
+                console.log("Date does not exist", date);
+
+                epoch = new Date(date).valueOf() / 1000
+                out['Dates'].push(epoch)
+                out['Dates'].sort(function (a, b) { return a - b });
+                storeDates();
+            }
+
+            function addManualValue(category, key, date, value) {
+                indexof = interjectDate(date);
+
+                console.log("Index of", date, "is", indexof, out['Dates'][indexof]);
+                return out['DATA'][category][key][out['Dates'][indexof]] = { 'Value': value }
+            }
+
+            function storeDates() {
+                epochs = out['Dates'].map(function (item) {
+                    return epochToDay(item);
+                })
+
+            }
+            initChart(option);
+        }
+        )
+        .catch(err => console.log(err));
+
+    // console.log("Dataset:", dataset)
+
+    function epochToDay(epoch) {
+        var date = new Date(epoch * 1000);
+        var iso = date.toISOString().match(/(\d{4}\-\d{2}\-\d{2})T(\d{2}:\d{2}:\d{2})/)
+
+        return iso[1]
+    }
+
+</script>
+
+</html>
