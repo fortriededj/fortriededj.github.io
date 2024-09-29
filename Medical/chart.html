@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <div id="main" style="width: 1600px;height:800px;"></div>
+    <div id="main" style="width: 95%;height:90%;"></div>
 
 </body>
 <style>
@@ -19,104 +19,6 @@
         var chartDom = document.getElementById('main');
         var myChart = echarts.init(chartDom);
         var option;
-
-        // option = {
-        //     color: colors,
-        //     tooltip: {
-        //         trigger: 'none',
-        //         axisPointer: {
-        //             type: 'cross'
-        //         }
-        //     },
-        //     legend: {},
-        //     grid: {
-        //         top: 70,
-        //         bottom: 50
-        //     },
-        //     xAxis: [
-        //         {
-        //             type: 'category',
-        //             axisTick: {
-        //                 alignWithLabel: true
-        //             },
-        //             axisLine: {
-        //                 onZero: false,
-        //                 lineStyle: {
-        //                     color: colors[1]
-        //                 }
-        //             },
-        //             axisPointer: {
-        //                 label: {
-        //                     formatter: function (params) {
-        //                         return (
-        //                             'Precipitation  ' +
-        //                             params.value +
-        //                             (params.seriesData.length ? '：' + params.seriesData[0].data : '')
-        //                         );
-        //                     }
-        //                 }
-        //             },
-        //             // prettier-ignore
-        //             data: ['2016-1', '2016-2', '2016-3', '2016-4', '2016-5', '2016-6', '2016-7', '2016-8', '2016-9', '2016-10', '2016-11', '2016-12']
-        //         },
-        //         {
-        //             type: 'category',
-        //             axisTick: {
-        //                 alignWithLabel: true
-        //             },
-        //             axisLine: {
-        //                 onZero: false,
-        //                 lineStyle: {
-        //                     color: colors[0]
-        //                 }
-        //             },
-        //             axisPointer: {
-        //                 label: {
-        //                     formatter: function (params) {
-        //                         return (
-        //                             'Precipitation  ' +
-        //                             params.value +
-        //                             (params.seriesData.length ? '：' + params.seriesData[0].data : '')
-        //                         );
-        //                     }
-        //                 }
-        //             },
-        //             // prettier-ignore
-        //             data: ['2015-1', '2015-2', '2015-3', '2015-4', '2015-5', '2015-6', '2015-7', '2015-8', '2015-9', '2015-10', '2015-11', '2015-12']
-        //         }
-        //     ],
-        //     yAxis: [
-        //         {
-        //             type: 'value'
-        //         }
-        //     ],
-        //     series: [
-        //         {
-        //             name: 'Precipitation(2015)',
-        //             type: 'line',
-        //             xAxisIndex: 1,
-        //             smooth: true,
-        //             emphasis: {
-        //                 focus: 'series'
-        //             },
-        //             data: [
-        //                 2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3
-        //             ]
-        //         },
-        //         {
-        //             name: 'Precipitation(2016)',
-        //             type: 'line',
-        //             smooth: true,
-        //             emphasis: {
-        //                 focus: 'series'
-        //             },
-        //             data: [
-        //                 3.9, 5.9, 11.1, 18.7, 48.3, 69.2, 231.6, 46.6, 55.4, 18.4, 10.3, 0.7
-        //             ]
-        //         }
-        //     ]
-        // };
-
         option && myChart.setOption(option);
     }
 </script>
@@ -134,6 +36,40 @@
             const events =
                 [
                     {
+                        'date': '2024-09-05',
+                        'event': 'Transfusion'
+                    },
+                    {
+                        'date': '2021-05-26',
+                        'event': 'Cardiac Stents',
+                        'offset': 3
+                    },
+                    {
+                        'date': '2021-09-03',
+                        'event': 'Swallow Study 1',
+                        'offset': 1
+                    },
+                    {
+                        'date': '2024-07-25',
+                        'event': 'Swallow Study 2',
+                        'offset': 1
+                    },
+                    {
+                        'date': '2016-02-26',
+                        'event': 'CT: Stone',
+                        'offset': 1
+                    },
+                    {
+                        'date': '2021-02-26',
+                        'event': 'CT: Stone',
+                        'offset': 2
+                    },
+                    {
+                        'date': '2021-05-14',
+                        'event': 'Creon',
+                        'offset': 1
+                    },
+                    {
                         'date': '2019-12-16',
                         'event': 'Spider Bite'
                     },
@@ -148,11 +84,11 @@
                     },
                     {
                         'date': '2021-06-02',
-                        'event': 'Blood Transfusion',
-                        'offset': 1,
+                        'event': 'Transfusion',
+                        'offset': 2,
                     },
                     {
-                        'date': '2002/12/5',
+                        'date': '2002-12-05',
                         'event': 'Transplant'
                     },
                     {
@@ -200,10 +136,6 @@
             }
             var epochs;
             storeDates();
-
-            console.log("2024-09-19", epochs.indexOf('2024-09-19'));
-            console.log("2019-12-16", epochs.indexOf('2019-12-16'));
-
             console.log('Checkout this JSON! ', out);
 
             events.forEach(function (item) {
@@ -218,9 +150,6 @@
                 }
             }
 
-            console.log("2024-09-19", epochs.indexOf('2024-09-19'));
-            console.log("2019-12-16", epochs.indexOf('2019-12-16'));
-
             var dataset = { 'source': [] };
             dataset['dimensions'] =
 
@@ -228,7 +157,6 @@
 
             option = {
                 legend: {},
-                tooltip: {},
                 grid: {
                     bottom: 100,
                 },
@@ -297,7 +225,10 @@
                 ],
                 tooltip: [{
                     order: 'valueDesc',
-                    trigger: 'axis'
+                    trigger: 'axis',
+                    position: function (pt) {
+                        return [pt[0], '10%'];
+                    },
                 }
                 ],
                 toolbox: {
@@ -374,13 +305,7 @@
                     {
                         type: 'scatter',
                         name: 'Events',
-                        // data: out['Dates'].map(function (item) {
-                        //     date = epochToDay(item);
-                        //     if (date in events) {
-                        //         return events[date]
-                        //     }
-                        //     return '';
-                        // }),
+
                         markPoint: {
                             label: {
                                 formatter: function (param) {
@@ -399,17 +324,6 @@
                                     }
                                 }
                             })
-                            // [
-                            //     {
-                            //         name: 'Spider Bite',
-                            //         coord: ['2019-12-18', 0],
-                            //         symbol: 'pin',
-                            //         symbolSize: [20, 30],
-                            //         label: {
-                            //             position: 'top'
-                            //         }
-                            //     },
-                            // ],
 
                         },
                         symbol: 'pin',
