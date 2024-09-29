@@ -1,5 +1,11 @@
 <html>
 
+<!-- 
+TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/examples/en/editor.html?c=line-sections
+
+
+-->
+
 <head>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 </head>
@@ -10,7 +16,9 @@
 </body>
 <style>
     body {
-        color: #c57000;
+        color: rgb(122, 230, 238);
+        color: 'rgba(122, 230, 238, 0.4)';
+
     }
 </style>
 
@@ -31,7 +39,7 @@
     fetch(url)
         .then(res => res.json())
         .then(out => {
-            const colors = ['#1c9126', '#5470C6', '#910000', '#c57000'];
+            const colors = ['#1c9126', '#5470C6', '#910000', '#c57000', '#cf2929'];
 
             const events =
                 [
@@ -96,11 +104,11 @@
                         'date': '2022-03-03',
                         'event': 'Heart Cath'
                     },
-                    {
-                        'date': '2022-12-15',
-                        'event': 'Edema Hosp.',
-                        'offset': 1
-                    },
+                    // {
+                    //     'date': '2022-12-15',
+                    //     'event': 'Edema Hosp.',
+                    //     'offset': 1
+                    // },
                     {
                         'date': '2021-07-23',
                         'event': 'TEE',
@@ -114,11 +122,11 @@
                         'date': '2021-04-01',
                         'event': 'Pancreatic Stone'
                     },
-                    {
-                        'date': '2024-09-03',
-                        'event': 'ER: Malnutrition',
-                        'offset': 1
-                    },
+                    // {
+                    //     'date': '2024-09-03',
+                    //     'event': 'ER: Malnutrition',
+                    //     'offset': 1
+                    // },
                     {
                         'date': '2024-09-16',
                         'event': 'NJ Tube'
@@ -136,6 +144,37 @@
                     }
                 }
             }
+
+            const hospitalizations = [
+                {
+                    'start': '2024-09-03',
+                    // end date is current date
+                    'end': new Date().toISOString().match(/(\d{4}\-\d{2}\-\d{2})T(\d{2}:\d{2}:\d{2})/)[1],
+                    'reason': 'Malnutrition/Dehydration'
+                },
+                {
+                    'start': '2022-12-15',
+                    'end': '2022-12-18',
+                    'reason': 'Edema'
+                },
+                {
+                    'start': '2021-06-01',
+                    'end': '2021-06-03',
+                    'reason': 'TAVR'
+                },
+                {
+                    'start': '2021-04-30',
+                    'end': '2021-05-07',
+                    'reason': 'Fluid Overload'
+                },
+                {
+                    'start': '2018-12-30',
+                    'end': '2019-01-02',
+                    'reason': 'High Potassium'
+                }
+
+            ]
+
             var epochs;
             storeDates();
             console.log('Checkout this JSON! ', out);
@@ -152,13 +191,44 @@
                 }
             }
 
+            var hospital_maskArea = [];
+
+            for (const [index, hospitalization] of hospitalizations.entries()) {
+                console.log("Hospitalization", hospitalization);
+                interjectDate(hospitalization['start']);
+                interjectDate(hospitalization['end']);
+
+                hospital_maskArea.push(
+                    [
+                        {
+                            name: hospitalization['reason'],
+                            xAxis: hospitalization['start']
+                        },
+                        {
+                            xAxis: hospitalization['end'],
+                            yAxis: 5.8
+                        }
+                    ]
+                );
+            }
+
             var dataset = { 'source': [] };
             dataset['dimensions'] =
 
                 console.log(dataset);
 
             option = {
-                legend: {},
+                legend: {
+                    data: ['Weight', 'RBC', 'Creatinine', 'Albumin', 'Events'],
+                    selected: {
+                        'Weight': true,
+                        'RBC': true,
+                        'Creatinine': true,
+                        'Albumin': false,
+                        'Events': true
+                    },
+                    top: 5
+                },
                 grid: {
                     top: 30,
                     right: 50,
@@ -196,7 +266,7 @@
                         interval: 50
                     }, {
                         type: 'value',
-                        name: 'RBC',
+                        name: 'Blood',
                         min: 0,
                         max: 6,
                         position: 'left',
@@ -277,8 +347,11 @@
                         markPoint: {
                             data: [
                                 { type: 'max', name: 'Max' },
-                                { type: 'min', name: 'Min' },
+                                { type: 'min', name: 'Min' },   // , itemStyle: { color: 'green' } 
                             ]
+                        },
+                        lineStyle: {
+                            width: 4
                         }
                     },
 
@@ -289,6 +362,25 @@
                         data: out['Dates'].map(function (item) {
                             if (item in out['DATA']['CBC']['RBC']) {
                                 return out['DATA']['CBC']['RBC'][item]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        yAxisIndex: 1,
+                        lineStyle: {
+                            width: 4
+                        }
+                    },
+                    {
+                        type: 'line',
+                        name: 'Albumin',
+                        color: colors[4],
+                        lineStyle: {
+                            type: 'dashed'
+                        },
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['CMP']['Albumin']) {
+                                return out['DATA']['CMP']['Albumin'][item]['Value']
                             }
                             return '';
                         }),
@@ -332,6 +424,12 @@
                                 }
                             })
 
+                        },
+                        markArea: {
+                            itemStyle: {
+                                color: 'rgba(255, 173, 177, 0.4)'
+                            },
+                            data: hospital_maskArea
                         },
                         symbol: 'pin',
                         yAxisIndex: 1
