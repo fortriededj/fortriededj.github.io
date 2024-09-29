@@ -158,13 +158,13 @@
             option = {
                 legend: {},
                 grid: {
-                    bottom: 100,
+                    bottom: 70,
                 },
                 xAxis: [{
                     type: 'category',
-                    axisLabel: {
-                        rotate: 30
-                    },
+                    // axisLabel: {
+                    //     rotate: 30
+                    // },
                     data: out['Dates'].map(function (item) {
                         // convert epoch to date
                         return epochToDay(item);
@@ -317,7 +317,7 @@
                                     name: item['event'],
                                     coord: [item['date'], 0],
                                     symbol: 'pin',
-                                    symbolSize: [20, 30],
+                                    symbolSize: [10, 15],
                                     label: {
                                         position: [0, -15],
                                         offset: [0, -item['offset'] * 15 || 0]
