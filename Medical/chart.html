@@ -16,7 +16,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
 </body>
 <style>
     body {
-        color: rgb(122, 230, 238);
+        color: #034617;
         color: 'rgba(122, 230, 238, 0.4)';
 
     }
@@ -39,14 +39,14 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
     fetch(url)
         .then(res => res.json())
         .then(out => {
-            const colors = ['#1c9126', '#5470C6', '#910000', '#c57000', '#cf2929'];
+            const colors = ['#1c9126', '#5470C6', '#910000', '#c57000', '#cf2929', '#62028f', '#025313', '#0f0f0f', '#034617'];
 
             const events =
                 [
                     {
                         'date': '2024-09-05',
                         'event': 'Transfusion',
-                        'offset': 2
+                        'offset': 0
                     },
                     {
                         'date': '2021-05-26',
@@ -61,7 +61,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                     {
                         'date': '2024-07-25',
                         'event': 'Swallow Study 2',
-                        'offset': 0
+                        'offset': 1
                     },
                     {
                         'date': '2016-02-26',
@@ -79,7 +79,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                         'offset': 1
                     },
                     {
-                        'date': '2019-12-16',
+                        'date': '2018-12-16',
                         'event': 'Spider Bite'
                     },
                     {
@@ -104,11 +104,6 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                         'date': '2022-03-03',
                         'event': 'Heart Cath'
                     },
-                    // {
-                    //     'date': '2022-12-15',
-                    //     'event': 'Edema Hosp.',
-                    //     'offset': 1
-                    // },
                     {
                         'date': '2021-07-23',
                         'event': 'TEE',
@@ -122,11 +117,6 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                         'date': '2021-04-01',
                         'event': 'Pancreatic Stone'
                     },
-                    // {
-                    //     'date': '2024-09-03',
-                    //     'event': 'ER: Malnutrition',
-                    //     'offset': 1
-                    // },
                     {
                         'date': '2024-09-16',
                         'event': 'NJ Tube'
@@ -170,7 +160,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                 {
                     'start': '2018-12-30',
                     'end': '2019-01-02',
-                    'reason': 'High Potassium'
+                    'reason': 'Spider Bite'
                 }
 
             ]
@@ -219,12 +209,16 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
 
             option = {
                 legend: {
-                    data: ['Weight', 'RBC', 'Creatinine', 'Albumin', 'Events'],
+                    data: ['Weight', 'RBC', 'Creatinine', 'Potassium', 'Albumin', 'Magnesium', 'BUN', "BUN/Creat", 'Events'],
                     selected: {
                         'Weight': true,
                         'RBC': true,
                         'Creatinine': true,
+                        'Potassium': false,
                         'Albumin': false,
+                        'Magnesium': false,
+                        'BUN': false,
+                        'BUN/Creat': false,
                         'Events': true
                     },
                     top: 5
@@ -291,6 +285,24 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                         axisLine: {
                             lineStyle: {
                                 color: colors[3]
+                            }
+                        },
+                        axisLabel: {
+                            formatter: '{value}'
+                        },
+                        splitNumber: 5
+                    },
+                    {
+                        type: 'value',
+                        name: 'BUN',
+                        min: 0,
+                        max: 300,
+                        offset: 80,
+                        position: 'right',
+                        alignTicks: true,
+                        axisLine: {
+                            lineStyle: {
+                                color: colors[6]
                             }
                         },
                         axisLabel: {
@@ -375,9 +387,6 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                         type: 'line',
                         name: 'Albumin',
                         color: colors[4],
-                        lineStyle: {
-                            type: 'dashed'
-                        },
                         data: out['Dates'].map(function (item) {
                             if (item in out['DATA']['CMP']['Albumin']) {
                                 return out['DATA']['CMP']['Albumin'][item]['Value']
@@ -399,7 +408,69 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                             return '';
                         }),
                         connectNulls: true,
+                        lineStyle: {
+                            type: 'dashed'
+                        },
                         yAxisIndex: 2,
+                    },
+
+                    {
+                        type: 'line',
+                        name: 'Potassium',
+                        color: colors[8],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['CMP']['Potassium']) {
+                                return out['DATA']['CMP']['Potassium'][item]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        yAxisIndex: 2,
+                    },
+                    {
+                        type: 'line',
+                        name: 'Magnesium',
+                        color: colors[5],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['CMP']['Magnesium']) {
+                                return out['DATA']['CMP']['Magnesium'][item]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        yAxisIndex: 1,
+                    },
+                    {
+                        type: 'line',
+                        name: 'BUN',
+                        color: colors[6],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['CMP']['BUN']) {
+                                return out['DATA']['CMP']['BUN'][item]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        lineStyle: {
+                            type: 'dashed'
+                        },
+                        yAxisIndex: 3,
+                    },
+                    {
+                        type: 'line',
+                        name: 'BUN/Creat',
+                        color: colors[7],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['CMP']['BUN'] && item in out['DATA']['CMP']['Creatinine']) {
+                                return Math.round(out['DATA']['CMP']['BUN'][item]['Value'] / out['DATA']['CMP']['Creatinine'][item]['Value'], 2)
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        lineStyle: {
+                            type: 'dashed'
+                        },
+                        yAxisIndex: 3,
                     },
                     {
                         type: 'scatter',
