@@ -209,7 +209,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
 
             option = {
                 legend: {
-                    data: ['Wt', 'RBC', 'Hemo', 'Creat', 'Prot/Creat Urine', 'Phosphorus', 'Potassium', 'Albumin', 'Magnesium', 'BUN', "BUN/Creat", 'Events'],
+                    data: ['Wt', 'RBC', 'Hemo', 'Creat', 'Prot/Creat Urine', 'Phosphorus', 'Potassium', 'Albumin', 'Magnesium', 'BUN', "BUN/Creat", "Creat Urine", 'Events'],
                     selected: {
                         'Wt': true,
                         'RBC': true,
@@ -222,9 +222,13 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                         'Magnesium': false,
                         'BUN': false,
                         'BUN/Creat': false,
+                        "Creat Urine": false,
                         'Events': true
                     },
-                    top: 5
+                    top: 55,
+                    right: 60,
+                    orient: 'vertical',
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
                 },
                 grid: {
                     top: 30,
@@ -245,7 +249,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                 }]
                 ,
                 yAxis: [
-                    {
+                    {   // 0 
                         type: 'value',
                         name: 'Weight',
                         min: 100,
@@ -261,7 +265,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                             formatter: '{value} lbs'
                         },
                         interval: 50
-                    }, {
+                    }, { // 1
                         type: 'value',
                         name: 'Blood',
                         min: 0,
@@ -277,7 +281,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                             formatter: '{value}'
                         },
                         splitNumber: 5
-                    }, {
+                    }, { //2
                         type: 'value',
                         name: 'Creatinine',
                         min: 0,
@@ -295,7 +299,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                         },
                         splitNumber: 5
                     },
-                    {
+                    { //3
                         type: 'value',
                         name: 'BUN',
                         min: 0,
@@ -312,7 +316,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                             formatter: '{value}'
                         },
                         splitNumber: 5
-                    }, {
+                    }, { //4
                         type: 'value',
                         name: '',
                         show: false,
@@ -466,6 +470,22 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                             type: 'dashed'
                         },
                         yAxisIndex: 4,
+                    },
+                    {
+                        type: 'line',
+                        name: 'Creat Urine',
+                        color: colors[9],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['Urine Chemistry']['Creatinine, Urine']) {
+                                return out['DATA']['Urine Chemistry']['Creatinine, Urine'][item]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        lineStyle: {
+                            type: 'dashed'
+                        },
+                        yAxisIndex: 3,
                     },
 
                     {
