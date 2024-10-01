@@ -16,7 +16,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
 </body>
 <style>
     body {
-        color: #034617;
+        color: #945206;
         color: 'rgba(122, 230, 238, 0.4)';
 
     }
@@ -39,7 +39,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
     fetch(url)
         .then(res => res.json())
         .then(out => {
-            const colors = ['#1c9126', '#5470C6', '#910000', '#c57000', '#cf2929', '#62028f', '#025313', '#0f0f0f', '#034617'];
+            const colors = ['#1c9126', '#5470C6', '#910000', '#c57000', '#cf2929', '#62028f', '#025313', '#0f0f0f', '#034617', '#945206'];
 
             const events =
                 [
@@ -209,11 +209,14 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
 
             option = {
                 legend: {
-                    data: ['Weight', 'RBC', 'Creatinine', 'Potassium', 'Albumin', 'Magnesium', 'BUN', "BUN/Creat", 'Events'],
+                    data: ['Wt', 'RBC', 'Hemo', 'Creat', 'Prot/Creat Urine', 'Phosphorus', 'Potassium', 'Albumin', 'Magnesium', 'BUN', "BUN/Creat", 'Events'],
                     selected: {
-                        'Weight': true,
+                        'Wt': true,
                         'RBC': true,
-                        'Creatinine': true,
+                        'Hemo': false,
+                        'Creat': true,
+                        'Prot/Creat Urine': false,
+                        'Phosphorus': false,
                         'Potassium': false,
                         'Albumin': false,
                         'Magnesium': false,
@@ -309,7 +312,25 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                             formatter: '{value}'
                         },
                         splitNumber: 5
-                    }
+                    }, {
+                        type: 'value',
+                        name: '',
+                        show: false,
+                        min: 0,
+                        max: 19,
+                        offset: 80,
+                        position: 'left',
+                        alignTicks: true,
+                        axisLine: {
+                            lineStyle: {
+                                color: colors[3]
+                            }
+                        },
+                        axisLabel: {
+                            formatter: '{value}'
+                        },
+                        splitNumber: 5
+                    },
                 ],
                 tooltip: [{
                     order: 'valueDesc',
@@ -346,7 +367,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
 
                     {
                         type: 'line',
-                        name: 'Weight',
+                        name: 'Wt',
                         color: colors[1],
                         data: out['Dates'].map(function (epoch) {
                             if (epoch in out['DATA']['Patient Measurements']['Weight']) {
@@ -399,11 +420,61 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
 
                     {
                         type: 'line',
-                        name: 'Creatinine',
+                        name: 'Hemo',
+                        color: colors[2],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['CBC']['Hemoglobin']) {
+                                return out['DATA']['CBC']['Hemoglobin'][item]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        lineStyle: {
+                            type: 'dashed'
+                        },
+                        yAxisIndex: 4,
+                    },
+
+                    {
+                        type: 'line',
+                        name: 'Creat',
                         color: colors[3],
                         data: out['Dates'].map(function (item) {
                             if (item in out['DATA']['CMP']['Creatinine']) {
                                 return out['DATA']['CMP']['Creatinine'][item]['Value']
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        lineStyle: {
+                            type: 'dashed'
+                        },
+                        yAxisIndex: 2,
+                    },
+                    {
+                        type: 'line',
+                        name: 'Prot/Creat Urine',
+                        color: colors[8],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['Urine Chemistry']['Creatinine, Urine'] && item in out['DATA']['Urine Chemistry']['Protein Urine']) {
+                                return Math.round((out['DATA']['Urine Chemistry']['Protein Urine'][item]['Value'] / out['DATA']['Urine Chemistry']['Creatinine, Urine'][item]['Value'] + Number.EPSILON) * 100) / 100
+                            }
+                            return '';
+                        }),
+                        connectNulls: true,
+                        lineStyle: {
+                            type: 'dashed'
+                        },
+                        yAxisIndex: 4,
+                    },
+
+                    {
+                        type: 'line',
+                        name: 'Phosphorus',
+                        color: colors[9],
+                        data: out['Dates'].map(function (item) {
+                            if (item in out['DATA']['CMP']['Phosphorus']) {
+                                return out['DATA']['CMP']['Phosphorus'][item]['Value']
                             }
                             return '';
                         }),
