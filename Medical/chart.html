@@ -130,7 +130,8 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                 "Patient Measurements": {
                     "Weight": {
                         '2024-09-20': 137,
-                        '2024-09-19': 155.6
+                        '2024-09-19': 155.6,
+                        '2024-10-01': 140.2
                     }
                 }
             }
@@ -220,18 +221,21 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                         'Potassium': false,
                         'Albumin': false,
                         'Magnesium': false,
-                        'BUN': false,
+                        'BUN': true,
                         'BUN/Creat': false,
                         "Creat Urine": false,
                         'Events': true
                     },
-                    top: 55,
-                    right: 60,
-                    orient: 'vertical',
+                    top: 5,
+                    // left: 20,
+                    right: 200,
+                    // right: 60,
+                    // orient: 'vertical',
                     backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    type: 'scroll'
                 },
                 grid: {
-                    top: 30,
+                    top: 60,
                     right: 50,
                 },
                 // grid: {
