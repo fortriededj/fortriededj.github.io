@@ -362,7 +362,7 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                 dataZoom: [
                     {
                         type: 'inside',
-                        start: 30,
+                        start: 60,
                         end: 100,
                         xAxisIndex: [0]
                     },
@@ -453,6 +453,11 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                             }
                             return '';
                         }),
+                        markPoint: {
+                            data: [
+                                { type: 'max', name: 'Max' },
+                            ]
+                        },
                         connectNulls: true,
                         lineStyle: {
                             type: 'dashed'
@@ -545,6 +550,11 @@ TODO: Use Mask Areas to put in hospitalizations: https://echarts.apache.org/exam
                             }
                             return '';
                         }),
+                        markPoint: {
+                            data: [
+                                { type: 'max', name: 'Max' },
+                            ]
+                        },
                         connectNulls: true,
                         lineStyle: {
                             type: 'dashed'
