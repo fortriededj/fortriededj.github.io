@@ -561,7 +561,10 @@
                "Value" : "7.8"
             },
             "1775102400" : {
-               "Value" : 8.2
+               "Value" : "8.2"
+            },
+            "1789963200" : {
+               "Value" : 8.3
             },
             "Graphable" : "True",
             "High" : 5.6,
@@ -596,13 +599,16 @@
                "Value" : "55"
             },
             "1775102400" : {
-               "Value" : 51
+               "Value" : "51"
+            },
+            "1789963200" : {
+               "Value" : 75
             },
             "Graphable" : "True",
-            "High" : 125,
+            "High" : 104,
             "Info" : "Detects liver issues",
-            "Low" : 25,
-            "Range" : " 25 - 125",
+            "Low" : 35,
+            "Range" : " 35 - 104",
             "Title" : "ALP - an enzyme"
          },
          "ALT" : {
@@ -634,13 +640,16 @@
                "Value" : "18"
             },
             "1775102400" : {
-               "Value" : 20
+               "Value" : "20"
+            },
+            "1789963200" : {
+               "Value" : 23
             },
             "Graphable" : "True",
-            "High" : 52,
+            "High" : 35.00001,
             "Info" : "Used by liver to convert food to energy",
-            "Low" : 7,
-            "Range" : " 7 - 52",
+            "Low" : 0,
+            "Range" : "<=35",
             "Title" : "Alanine Aminotransferase - an enzyme"
          },
          "AST" : {
@@ -672,13 +681,16 @@
                "Value" : "19"
             },
             "1775102400" : {
-               "Value" : 21
+               "Value" : "21"
+            },
+            "1789963200" : {
+               "Value" : 31
             },
             "Graphable" : "True",
-            "High" : 39,
+            "High" : 35.00001,
             "Info" : "Used by liver to convert food to energy",
-            "Low" : 13,
-            "Range" : " 13 - 39",
+            "Low" : 0,
+            "Range" : "<=35",
             "Title" : "Aspartate Amniotransferase - an enzyme"
          },
          "Albumin" : {
@@ -710,13 +722,16 @@
                "Value" : "4.4"
             },
             "1775102400" : {
-               "Value" : 4.6
+               "Value" : "4.6"
+            },
+            "1789963200" : {
+               "Value" : 4.7
             },
             "Graphable" : "True",
-            "High" : 5.0,
+            "High" : 5.2,
             "Info" : "Helps to keep fluid in your blood stream",
             "Low" : 3.5,
-            "Range" : " 3.5 - 5",
+            "Range" : " 3.5 - 5.2",
             "Title" : "Albumin"
          },
          "Anion Gap" : {
@@ -736,13 +751,16 @@
                "Value" : "8"
             },
             "1775102400" : {
-               "Value" : 8
+               "Value" : "8"
+            },
+            "1789963200" : {
+               "Value" : 11
             },
             "Graphable" : "True",
-            "High" : 11,
+            "High" : 14,
             "Info" : "Acid level",
-            "Low" : 3,
-            "Range" : " 3 - 11",
+            "Low" : 7,
+            "Range" : " 7 - 14",
             "Title" : "Anion Gap"
          },
          "BUN" : {
@@ -774,13 +792,16 @@
                "Value" : "24"
             },
             "1775102400" : {
-               "Value" : 31
+               "Value" : "31"
+            },
+            "1789963200" : {
+               "Value" : 17
             },
             "Graphable" : "True",
-            "High" : 20,
+            "High" : 23,
             "Info" : "Kidney issues or high urea",
-            "Low" : 5,
-            "Range" : " 5 - 20",
+            "Low" : 8,
+            "Range" : " 8 - 23",
             "Title" : "Blood Urea Nitrogen"
          },
          "BUN/Creatinine Ratio" : {
@@ -832,13 +853,16 @@
                "Value" : "1.0"
             },
             "1775102400" : {
-               "Value" : 1.2
+               "Value" : "1.2"
+            },
+            "1789963200" : {
+               "Value" : 1.1
             },
             "Graphable" : "True",
-            "High" : 1.0,
+            "High" : 1.2,
             "Info" : "Used to help find jaundice, anemia and liver disease",
             "Low" : 0.0,
-            "Range" : " 0 - 1",
+            "Range" : " 0 - 1.2",
             "Title" : "Bilirubin"
          },
          "CO2" : {
@@ -870,7 +894,10 @@
                "Value" : "27"
             },
             "1775102400" : {
-               "Value" : 29
+               "Value" : "29"
+            },
+            "1789963200" : {
+               "Value" : 26
             },
             "Graphable" : "True",
             "High" : 29,
@@ -905,13 +932,16 @@
                "Value" : "9.2"
             },
             "1775102400" : {
-               "Value" : 9.5
+               "Value" : "9.5"
+            },
+            "1789963200" : {
+               "Value" : "10.0"
             },
             "Graphable" : "True",
-            "High" : 10.5,
+            "High" : 10.2,
             "Info" : "Bone development, kidney stones, heart and brain function",
-            "Low" : 8.5,
-            "Range" : " 8.5 - 10.5",
+            "Low" : 8.8,
+            "Range" : " 8.8 - 10.2",
             "Title" : "Calcium"
          },
          "Chloride" : {
@@ -943,12 +973,15 @@
                "Value" : "103"
             },
             "1775102400" : {
-               "Value" : 104
+               "Value" : "104"
+            },
+            "1789963200" : {
+               "Value" : 103
             },
             "Graphable" : "True",
-            "High" : 108,
+            "High" : 107,
             "Low" : 98,
-            "Range" : " 98 - 108"
+            "Range" : " 98 - 107"
          },
          "Creatinine" : {
             "1513832400" : {
@@ -979,13 +1012,16 @@
                "Value" : "0.82"
             },
             "1775102400" : {
-               "Value" : 0.84
+               "Value" : "0.84"
+            },
+            "1789963200" : {
+               "Value" : 0.66
             },
             "Graphable" : "True",
-            "High" : 1.2,
+            "High" : 0.95,
             "Info" : "Kidney issues or muscle loss",
-            "Low" : 0.6,
-            "Range" : " 0.6 - 1.2",
+            "Low" : 0.51,
+            "Range" : " 0.51 - 0.95",
             "Title" : "Chemical waste of normal muscle function"
          },
          "Creatinine Clearance" : {
@@ -1005,7 +1041,10 @@
                "Value" : "60"
             },
             "1775102400" : {
-               "Value" : 58
+               "Value" : "58"
+            },
+            "1789963200" : {
+               "Value" : 70
             },
             "Graphable" : "True",
             "High" : 10000000,
@@ -1061,7 +1100,10 @@
                "Value" : "101"
             },
             "1775102400" : {
-               "Value" : 111
+               "Value" : "111"
+            },
+            "1789963200" : {
+               "Value" : 109
             },
             "Graphable" : "True",
             "High" : 99,
@@ -1130,12 +1172,15 @@
                "Value" : "4.5"
             },
             "1775102400" : {
-               "Value" : 4.5
+               "Value" : "4.5"
+            },
+            "1789963200" : {
+               "Value" : 4.2
             },
             "Graphable" : "True",
-            "High" : 5.5,
+            "High" : 5.0,
             "Low" : 3.5,
-            "Range" : " 3.5 - 5.5"
+            "Range" : " 3.5 - 5"
          },
          "Protein" : {
             "1513832400" : {
@@ -1166,13 +1211,16 @@
                "Value" : "7.4"
             },
             "1775102400" : {
-               "Value" : 7.5
+               "Value" : "7.5"
+            },
+            "1789963200" : {
+               "Value" : 7.8
             },
             "Graphable" : "True",
-            "High" : 8.0,
+            "High" : 8.3,
             "Info" : "Help detect kidney or liver disease",
             "Low" : 6.4,
-            "Range" : " 6.4 - 8",
+            "Range" : " 6.4 - 8.3",
             "Title" : "Total protein"
          },
          "Sodium" : {
@@ -1204,12 +1252,15 @@
                "Value" : "138"
             },
             "1775102400" : {
-               "Value" : 141
+               "Value" : "141"
+            },
+            "1789963200" : {
+               "Value" : 140
             },
             "Graphable" : "True",
             "High" : 145,
-            "Low" : 135,
-            "Range" : " 135 - 145"
+            "Low" : 136,
+            "Range" : " 136 - 145"
          },
          "eGFR" : {
             "1513832400" : {
@@ -1240,7 +1291,10 @@
                "Value" : "78"
             },
             "1775102400" : {
-               "Value" : 75
+               "Value" : "75"
+            },
+            "1789963200" : {
+               "Value" : 90
             },
             "Graphable" : "True",
             "High" : 10000000,
@@ -1279,6 +1333,9 @@
             "1775102400" : {
                "Value" : "182"
             },
+            "1789963200" : {
+               "Value" : "203"
+            },
             "Graphable" : "True",
             "High" : 199,
             "Info" : "Fat-like substance used by the body",
@@ -1314,6 +1371,9 @@
             "1775102400" : {
                "Value" : "51"
             },
+            "1789963200" : {
+               "Value" : "51"
+            },
             "Graphable" : "True",
             "High" : 10000000,
             "Low" : 39,
@@ -1346,6 +1406,9 @@
             },
             "1775102400" : {
                "Value" : "92"
+            },
+            "1789963200" : {
+               "Value" : "103"
             },
             "Graphable" : "True",
             "High" : 99,
@@ -1387,6 +1450,9 @@
             },
             "1775102400" : {
                "Value" : "195"
+            },
+            "1789963200" : {
+               "Value" : "245"
             },
             "Graphable" : "True",
             "High" : 149,
@@ -1430,8 +1496,10 @@
          "CMP",
          "Lipid",
          "Urinalysis",
-         "TSH",
+         "Urine Chemistry",
          "Vitamins",
+         "Patient Measurements",
+         "TSH",
          "Other Hematology Tests"
       ],
       "PanelOrder_CBC" : [
@@ -1495,6 +1563,11 @@
       "PanelOrder_Other Hematology Tests" : [
          "Sed Rate"
       ],
+      "PanelOrder_Patient Measurements" : [
+         "Weight",
+         "Body Mass Index Measured",
+         "Peripheral Pulse Rate"
+      ],
       "PanelOrder_TSH" : [
          "TSH",
          "TSH 3rd Gen"
@@ -1513,10 +1586,44 @@
          "WBC",
          "WBC Esterase"
       ],
+      "PanelOrder_Urine Chemistry" : [
+         "Alb/Creat Ratio",
+         "Albumin Urn QN",
+         "Creatinine, Urine"
+      ],
       "PanelOrder_Vitamins" : [
          "Vitamin B12",
          "Vitamin D"
       ],
+      "Patient Measurements" : {
+         "Body Mass Index Measured" : {
+            "1789963200" : {
+               "Value" : 34.4
+            },
+            "Graphable" : "True",
+            "High" : null,
+            "Low" : null,
+            "Range" : "Not Established"
+         },
+         "Peripheral Pulse Rate" : {
+            "1789963200" : {
+               "Value" : 74
+            },
+            "Graphable" : "True",
+            "High" : 100,
+            "Low" : 60,
+            "Range" : " 60 - 100"
+         },
+         "Weight" : {
+            "1789963200" : {
+               "Value" : 168.0
+            },
+            "Graphable" : "True",
+            "High" : null,
+            "Low" : null,
+            "Range" : "Not Established"
+         }
+      },
       "TSH" : {
          "TSH" : {
             "1556510400" : {
@@ -1679,13 +1786,45 @@
             "Range" : "Not Established"
          }
       },
+      "Urine Chemistry" : {
+         "Alb/Creat Ratio" : {
+            "1789963200" : {
+               "Value" : "Incalculable mg/gm Cr"
+            },
+            "Graphable" : "False",
+            "High" : 20.00001,
+            "Low" : 0,
+            "Range" : "<=20"
+         },
+         "Albumin Urn QN" : {
+            "1789963200" : {
+               "Value" : 12
+            },
+            "Graphable" : "True",
+            "High" : null,
+            "Low" : null,
+            "Range" : "Not Established"
+         },
+         "Creatinine, Urine" : {
+            "1789963200" : {
+               "Value" : 33
+            },
+            "Graphable" : "True",
+            "High" : null,
+            "Low" : null,
+            "Range" : "Not Established"
+         }
+      },
       "Vitamins" : {
          "Vitamin B12" : {
             "1743480000" : {
                "Value" : "116"
             },
             "1775102400" : {
-               "Value" : 173
+               "Value" : "173"
+            },
+            "1789963200" : {
+               "Value" : 310
             },
             "Graphable" : "True",
             "High" : 1000,
@@ -1726,6 +1865,7 @@
       1684209600,
       1714968000,
       1743480000,
-      1775102400
+      1775102400,
+      1789963200
    ]
 }
